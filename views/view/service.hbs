@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <!-- fontawesome icon link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- output file link in below -->
+    <link rel="stylesheet" href=".styles/style.css">
+    {{!-- below link for font-family --}}
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@400;600&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<style>
+    /*our client with testimonial css start*/
+    .clientbg {
+        background-image: linear-gradient(to right, #bf8cb5 0%, #bea6a6 50%, #b5d397 100%);
+    }
+
+    /*our client with testimonial css end*/
+
+    body {
+        font-family: 'Poppins', 'Montserrat', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        /* Bold for headings */
+    }
+
+    /*NAVBAR CSS START HERE*/
+
+    .bggradientfooter {
+        background-image: linear-gradient(to right, #d8d4b5 0%, #decaca 50%, #c286a6 100%);
+
+    }
+
+
+    /* Company overview start here */
+    .custom-button {
+        border-left-width: 4px;
+        border-right-width: 4px;
+        border-top-width: 1px;
+        border-bottom-width: 4px;
+        border-color: transparent;
+        transition: border-color 0.3s;
+    }
+
+    .custom-button:hover {
+        border-color: rgb(187, 26, 223);
+    }
+
+    .custom-button2 {
+        border-left-width: 4px;
+        border-right-width: 4px;
+        border-color: transparent;
+        transition: border-color 0.3s;
+    }
+
+    .custom-button2:hover {
+        border-color: rgb(207, 130, 30);
+    }
+
+    /* Company overview end here */
+
+
+    /*css start for six images by hover incresase size*/
+    /* Adding transition effects */
+    .transition-transform {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .transition-z {
+        transition: z-index 0.3s ease-in-out;
+    }
+
+    .hover-z-10:hover {
+        z-index: 10;
+    }
+
+    .hover-scale-110:hover {
+        transform: scale(1.1);
+    }
+
+    /*css end for six images by hover incresase size*/
+
+
+
+    /*FOOTER start*/
+
+    .listchange {
+        list-style: none !important;
+        font-size: 14px !important;
+    }
+
+    .listchange i {
+        font-size: 10px !important;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .error-border {
+        border-color: red !important;
+    }
+
+    /* Custom CSS for border transition */
+    .border-transition {
+        transition: border-color 0.5s ease;
+    }
+
+    .focus\:border-blue-500:focus {
+        border-color: #3b82f6;
+        /* Tailwind's blue-500 color */
+    }
+
+    .gradientbgcolor {
+        background-image: linear-gradient(to right, #bcca87 0%, #dfd5d5 50%, #b8d28f 100%);
+        width: 100%;
+
+    }
+
+    /*Footer*/
+</style>
+
+<body>
+
+    <!-- NAVBAR  START HERE-->
+    {{>navbar}}
+    <!-- NAVBAR END HERE-->
+
+    <!-- CONTACTUS HOME PAGE IMAGE START HERE -->
+    <div class="overflow-hidden w-full relative h-auto b-8">
+        <div class="flex items-center absolute top-0 left-0 w-full h-full bg-black bg-opacity-0">
+            <div class="p-4 md:p-20 sm:p-20 sm:ml-1">
+                <h2
+                    class="lg:text-5xl md:text-3xl text-[10px] font-bold sm:my-4 sm:text-2xl sm:leading-normal text-green-600">
+                    Services </h2>
+                <p class="sm:my-3 pt-3 font-bold sm:text-xl text-[8px] md:text-1xl text-slate-500">
+                    World Class Services at Affordable Price
+                </p>
+                <a href="https://netedgecomputing.com/consultation/">
+                    <a href="">
+                        <button
+                            class="sm:mt-4 text-slate-100 px-3 sm:text-xl text-[8px]  md:text-1xl md:text-sm py-0.5 md:px-4 md:py-3 font-bold bg-[#001fab] hover:text-white rounded hover:bg-emerald-900">Book
+                            a Consultation</button></a>
+                </a>
+            </div>
+        </div>
+        <img src="..//images/services.jpg"
+            class="block w-full h-full sm:h-[40rem] object-cover bg-cover bg-center bg-no-repeat bg-opacity-50"
+            alt="img not found">
+    </div>
+    <!-- CONTACTUS HOME PAGE IMAGE END HERE -->
+
+    <!-- START  three link below in img  -->
+    <div class="gradientbgcolor">
+        <div class="container sm:w-3/4 mx-auto pt-4 sm:pt-8">
+            <ul class="flex list-none no-underline px-1" id="threelist">
+                <li><a href="https://netedgecomputing.com/index.php/services/cloud-transformation-solutions/"
+                        class="hover:text-orange-600 sm:text-[17px] text-[9px]"> Home <i
+                            class="fa fa-chevron-right text-orange-600 changesize text-[10px] sm:text-xs"></i>
+
+                    </a></li>
+                <li class="mx-8"><a
+                        href="https://netedgecomputing.com/index.php/services/cloud-transformation-solutions/"
+                        class="hover:text-orange-600 sm:text-[17px] text-[9px]"> Services <i
+                            class="fa fa-chevron-right text-orange-600 text-[10px] sm:text-xs"></i>
+                    </a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- END  three link below in img  -->
+
+
+    <!-- full middle part  start here -->
+    <div class="flex flex-wrap lg:flex-wrap gradientbgcolor xl:pt-16 py-8">
+        <!-- Left Side (70% width) -->
+        <div class="w-full p-4 lfex flex-col sm:px-12">
+            <div class="justify-center items-center">
+                <div class="text-left mb-8">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-blue-900">Our Service</h2>
+                    <div class="h-2 rounded-full bg-yellow-500 w-20  mt-2"></div>
+                </div>
+                <p>
+                    <span class="text-yellow-700 text-sm hover:text-slate-600">
+                        Digital Technologies are resulting
+                        in a
+                        far-reaching disruption to businesses across the industries. Today businesses are at an
+                        inflection
+                        point where they need multiple skills and competencies to realize the benefits of business
+                        transformation resulting from the use of these emerging technologies.
+                        <br><br>
+                        As organizations constantly iterate their business and IT strategies and try to reinvent
+                        themselves,
+                        NetEdge has honed its capabilities and methodologies for IT services to offer assistance right
+                        from
+                        conceptualization to implementation of new technologies and business models.
+                        <br><br>
+                        NetEdge’s Services address specific transition needs of enterprises to new business models by
+                        developing new offerings, product development, IT programs and data management fuelled by
+                        technologies like Cloud, IoT, Automation, AI/ML, Digitalization and Analytics. Clients benefit
+                        from
+                        seamless coordination across strategy, implementation and management of their digital technology
+                        transformation programs driven by NetEdge’s in-depth expertise in focused industries, strong
+                        quality
+                        orientation, cross-technology expertise and distributed project management capabilities.
+                        <br><br>
+                        The detailed set of best practices and processes developed by us over last two decades ensure
+                        that
+                        our services accommodate all business needs. We have a long and proven track record of providing
+                        quality services that has enabled companies of all sizes right from Startups, SMEs to Global 500
+                        to
+                        avail our services.
+                    </span>
+                </p>
+            </div>
+
+            {{!-- img six part start here--}}
+            <div class="gradientbgcolor w-full justify-center items-center h-auto  pt-12 ">
+
+
+
+                <!-- first part of three images start-->
+
+
+                <div class="">
+                    <div
+                        class="flex flex-col xl:flex-row text-center  items-center justify-center md:space-x-4 xl:space-x-16">
+
+                        <!-- ALL Card -->
+                        <div
+                            class="iotcloud rounded-lg  lg:w-1/5 text-center items-center justify-center sm:my-16 lg:mt-1 my-8">
+                            {{!-- <div class="justify-center items-center text-center m-auto"> --}}
+                                <h2 class="text-xl mb-4 text-indigo-700 font-bold hover:text-indigo-900">ALL
+                                </h2>
+                                <div
+                                    class="mb-16 h-1 xs:w-[310px] w-[200px]  rounded-full my-3 mx-auto bg-indigo-500 font-bold hover:bg-indigo-700">
+                                </div>
+
+                                <!-- <hr class="h-1 bg-slate-400 w-[310px] mb-16" /> -->
+
+                                {{!--
+                            </div> --}}
+                            <div class="">
+                                <div class="relative w-full sm:w-80 h-60 mx-auto image-hover-overlay">
+                                    <a href="https://netedgecomputing.com/services/iot-and-automation/">
+                                        <img src="../images/first.jpg"
+                                            class="w-full sm:w-64 sm:h-56 h-full object-cover transition-transform transition-z hover-z-10 hover-scale-110"
+                                            alt="image not found">
+                                    </a>
+                                </div>
+                                <div class="bg-orange-400 h-[6px] w-12 rounded-full my-2"></div>
+                                <div class="text-left my-2 relative w-full sm:w-72 h-auto">
+                                    <h class="text-indigo-600 text-[18px] hover:text-orange-600">
+                                        <a href="https://netedgecomputing.com/services/ai-and-cognitive-analytics-2/">
+                                            IT and Business Consulting
+                                        </a>
+                                    </h>
+                                    <p class="hover:text-indigo-600  text-slate-500  text-left mt-4 text-[14px]">
+                                        Unlocking Potential: IT and Business Consulting bridge the gap between
+                                        technology and strategy. We analyze your business goals, leverage cutting-edge
+                                        IT solutions, and craft a roadmap for success. We're your partner in innovation,
+                                        optimizing operations, and maximizing your competitive edge.
+                                    </p>
+                                </div>
+                                <div class="max-w-44">
+                                    <span
+                                        class="cursor-pointer text-indigo-900 font-bold hover:text-orange-500 flex items-center space-x-3 max-w-40">
+                                        <a href="#"><span>Read more&nbsp;</span><span class="text-orange-500"><i
+                                                    class="fas fa-chevron-right text-xs"></i></span></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- INNOVATION Card -->
+                        <div
+                            class="iotcloud rounded-lg  lg:w-1/5 text-center items-center justify-center sm:mt-16 lg:mt-1 my-8">
+                            {{!-- <div class="justify-center items-center text-center m-auto"> --}}
+                                <h2 class="text-xl mb-4 text-indigo-700 font-bold hover:text-indigo-900">INNOVATION
+                                </h2>
+                                <div
+                                    class="mb-16 h-1 xs:w-[310px] w-[200px]  rounded-full my-3 mx-auto bg-indigo-500 font-bold hover:bg-indigo-700">
+                                </div>
+
+                                <!-- <hr class="h-1 bg-slate-400 w-[310px] mb-16" /> -->
+
+                                {{!--
+                            </div> --}}
+                            <div class="">
+                                <div class="relative w-full sm:w-80 h-60 mx-auto image-hover-overlay">
+                                    <a href="https://netedgecomputing.com/services/iot-and-automation/">
+                                        <img src="../images/second.jpeg"
+                                            class="w-full sm:w-64 sm:h-56 h-full object-cover transition-transform transition-z hover-z-10 hover-scale-110"
+                                            alt="image not found">
+                                    </a>
+                                </div>
+                                <div class="bg-orange-400 h-[6px] w-12 rounded-full my-2"></div>
+                                <div class="text-left my-2 relative w-full sm:w-72 h-auto">
+                                    <h class="text-indigo-600 text-[18px] hover:text-orange-600">
+                                        <a href="https://netedgecomputing.com/services/ai-and-cognitive-analytics-2/">
+                                            IT and Business Consulting
+                                        </a>
+                                    </h>
+                                    <p class="hover:text-indigo-600  text-slate-500  text-left mt-4 text-[14px]">
+                                        In today's dynamic business landscape, staying ahead requires constant
+                                        innovation. Our IT and Business Consulting services act as the engine that
+                                        propels your company forward. We bridge the gap between technology and strategy,
+                                        analyzing your needs and seamlessly integrating cutting-edge IT solutions.
+                                    </p>
+                                </div>
+                                <div class="max-w-44">
+                                    <span
+                                        class="cursor-pointer text-indigo-900 font-bold hover:text-orange-500 flex items-center space-x-3 max-w-40">
+                                        <a href="#"><span>Read more&nbsp;</span><span class="text-orange-500"><i
+                                                    class="fas fa-chevron-right text-xs"></i></span></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!-- APPLICATION Card -->
+                        <div
+                            class="iotcloud rounded-lg  lg:w-1/5 text-center items-center justify-center sm:mt-16 lg:mt-1 my-8">
+                            {{!-- <div class="justify-center items-center text-center m-auto"> --}}
+                                <h2 class="text-xl mb-4 text-indigo-700 font-bold hover:text-indigo-900">APPLICATION
+                                </h2>
+                                <div
+                                    class="mb-16 h-1 xs:w-[310px] w-[200px]  rounded-full my-3 mx-auto bg-indigo-500 font-bold hover:bg-indigo-700">
+                                </div>
+
+                                <!-- <hr class="h-1 bg-slate-400 w-[310px] mb-16" /> -->
+
+                                {{!--
+                            </div> --}}
+                            <div class="">
+                                <div class="relative w-full sm:w-80 h-60 mx-auto image-hover-overlay">
+                                    <a href="https://netedgecomputing.com/services/iot-and-automation/">
+                                        <img src="../images/third.jpg"
+                                            class="w-full sm:w-64 sm:h-56 h-full object-cover transition-transform transition-z hover-z-10 hover-scale-110"
+                                            alt="image not found">
+                                    </a>
+                                </div>
+                                <div class="bg-orange-400 h-[6px] w-12 rounded-full my-2"></div>
+                                <div class="text-left my-2 relative w-full sm:w-72 h-auto">
+                                    <h class="text-indigo-600 text-[18px] hover:text-orange-600">
+                                        <a href="https://netedgecomputing.com/services/ai-and-cognitive-analytics-2/">
+                                            AI and Cognitive Analytics
+                                        </a>
+                                    </h>
+                                    <p class="hover:text-indigo-600  text-slate-500  text-left mt-4 text-[14px]">
+                                        NetEdge enables companies to develop AI strategies to improve performance in
+                                        business functions whereas Cognitive Analytics gives them deep insights to
+                                        improve operational efficiencyArtificial Intelligence (AI) and Cognitive
+                                        Analytics are powerful tools that are revolutionizing the way businesses
+                                        operate.
+                                    </p>
+                                </div>
+                                <div class="max-w-44">
+                                    <span
+                                        class="cursor-pointer text-indigo-900 font-bold hover:text-orange-500 flex items-center space-x-3 max-w-40">
+                                        <a href="#"><span>Read more&nbsp;</span><span class="text-orange-500"><i
+                                                    class="fas fa-chevron-right text-xs"></i></span></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!-- INFRASTRUCTURE Card -->
+
+                        <div
+                            class="iotcloud rounded-lg  lg:w-1/5 text-center items-center justify-center sm:mt-16 my-8">
+                            {{!-- <div class="justify-center items-center text-center m-auto"> --}}
+                                <h2 class="text-xl mb-4 text-indigo-700 font-bold hover:text-indigo-900">INFRASTRUCTURE
+                                </h2>
+                                <div
+                                    class="mb-16 h-1 xs:w-[310px] w-[200px]  rounded-full my-3 mx-auto bg-indigo-500 font-bold hover:bg-indigo-700">
+                                </div>
+
+                                <!-- <hr class="h-1 bg-slate-400 w-[310px] mb-16" /> -->
+
+                                {{!--
+                            </div> --}}
+                            <div class="">
+                                <div class="relative w-full sm:w-80 h-60 mx-auto image-hover-overlay">
+                                    <a href="https://netedgecomputing.com/services/iot-and-automation/">
+                                        <img src="../images/four.png"
+                                            class="w-full sm:w-64 sm:h-56 h-full object-cover transition-transform transition-z hover-z-10 hover-scale-110"
+                                            alt="image not found">
+                                    </a>
+                                </div>
+                                <div class="bg-orange-400 h-[6px] w-12 rounded-full my-2"></div>
+                                <div class="text-left my-2 relative w-full sm:w-72 h-auto">
+                                    <h class="text-indigo-600 text-[16px] hover:text-orange-600">
+                                        <a href="https://netedgecomputing.com/services/ai-and-cognitive-analytics-2/">
+                                            Enterprise Integration as a Service
+                                        </a>
+                                    </h>
+                                    <p class="hover:text-indigo-600  text-slate-500  text-left mt-4 text-[14px]">
+                                        Struggling with a cacophony of disconnected apps and data? EiaaS harmonizes your
+                                        IT landscape. This cloud-based maestro seamlessly integrates everything, from
+                                        legacy systems to cutting-edge cloud services. It translates data dialects,
+                                        automates workflows, and fosters information exchange.
+                                    </p>
+                                </div>
+                                <div class="max-w-44">
+                                    <span
+                                        class="cursor-pointer text-indigo-900 font-bold hover:text-orange-500 flex items-center space-x-3 max-w-40">
+                                        <a href="#"><span>Read more&nbsp;</span><span class="text-orange-500"><i
+                                                    class="fas fa-chevron-right text-xs"></i></span></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <!--  first part of three images end-->
+
+                <!-- second part of three images start-->
+
+                <div class="mb-28">
+                    <div
+                        class="flex flex-col xl:flex-row text-center  items-center justify-center space-y-4 md:space-y-0 md:space-x-4 xl:my-8  xl:space-x-16">
+                        <!-- ONE Card -->
+                        <div
+                            class="iotcloud rounded-lg  lg:w-1/5 text-center items-center justify-center sm:mt-16 my-8">
+                            <div class="xl:mt-8">
+                                <div class="relative w-full sm:w-80 h-60 mx-auto image-hover-overlay">
+                                    <a href="https://netedgecomputing.com/services/iot-and-automation/">
+                                        <img src="../images/five.webp"
+                                            class="w-full sm:w-64 sm:h-56 h-full object-cover transition-transform transition-z hover-z-10 hover-scale-110"
+                                            alt="image not found">
+                                    </a>
+                                </div>
+                                <div class="bg-orange-400 h-[6px] w-12 rounded-full my-2"></div>
+                                <div class="text-left my-2 relative w-full sm:w-72 h-auto">
+                                    <h class="text-indigo-600 text-[15px] hover:text-orange-600">
+                                        <a href="https://netedgecomputing.com/services/ai-and-cognitive-analytics-2/">
+                                            Outsourced Product Development
+                                        </a>
+                                    </h>
+                                    <p class="hover:text-indigo-600  text-slate-500  text-left mt-4 text-[14px]">
+                                        Turn your product vision into reality faster with outsourced product
+                                        development. It allows you to leverage external expertise for design,
+                                        development, and testing. This frees up your internal resources and accelerates
+                                        time-to-market. Access a global pool of talent, benefit from cost optimization,
+                                        and gain access to cutting-edge technologies. Outsourced development is ideal
+                                        for startups,established businesses.
+                                    </p>
+                                </div>
+                                <div class="max-w-44">
+                                    <span
+                                        class="cursor-pointer text-indigo-900 font-bold hover:text-orange-500 flex items-center space-x-3 max-w-40">
+                                        <a href="#"><span>Read more&nbsp;</span><span class="text-orange-500"><i
+                                                    class="fas fa-chevron-right text-xs"></i></span></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- TWO Card -->
+                        <div
+                            class="iotcloud rounded-lg  lg:w-1/5 text-center items-center justify-center sm:mt-16 lg:mt-1 my-8">
+                            <div class="">
+                                <div class="relative w-full sm:w-80 h-60 mx-auto image-hover-overlay">
+                                    <a href="https://netedgecomputing.com/services/iot-and-automation/">
+                                        <img src="../images/six.webp"
+                                            class="w-full sm:w-64 sm:h-56 h-full object-cover transition-transform transition-z hover-z-10 hover-scale-110"
+                                            alt="image not found">
+                                    </a>
+                                </div>
+                                <div class="bg-orange-400 h-[6px] w-12 rounded-full my-2"></div>
+                                <div class="text-left my-2 relative w-full sm:w-72 h-auto">
+                                    <h class="text-indigo-600 text-[18px] hover:text-orange-600">
+                                        <a href="https://netedgecomputing.com/services/ai-and-cognitive-analytics-2/">
+                                            Big Data and Analytics
+                                        </a>
+                                    </h>
+                                    <p class="hover:text-indigo-600  text-slate-500  text-left mt-4 text-[14px]">
+                                        Big Data holds immense potential, but unlocking it requires powerful tools.
+                                        Enter Big Data Analytics. It analyzes massive datasets, structured and
+                                        unstructured, revealing hidden patterns and trends. Imagine sifting through a
+                                        gold mine of information – Big Data Analytics helps you discover the nuggets of
+                                        valuable insights. Make data-driven decisions, optimize operations, and gain a
+                                        competitive edge by harnessing the power of Big Data and Analytics.
+                                    </p>
+                                </div>
+                                <div class="max-w-44">
+                                    <span
+                                        class="cursor-pointer text-indigo-900 font-bold hover:text-orange-500 flex items-center space-x-3 max-w-40">
+                                        <a href="#"><span>Read more&nbsp;</span><span class="text-orange-500"><i
+                                                    class="fas fa-chevron-right text-xs"></i></span></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- THREE Card -->
+                        <div
+                            class="iotcloud rounded-lg  lg:w-1/5 text-center items-center justify-center sm:mt-16 mb-16">
+                            <div class="">
+                                <div class="relative w-full sm:w-80 h-60 mx-auto image-hover-overlay">
+                                    <a href="https://netedgecomputing.com/services/iot-and-automation/">
+                                        <img src="../images/seven.jpeg"
+                                            class="w-full sm:w-64 sm:h-56 h-full object-cover transition-transform transition-z hover-z-10 hover-scale-110"
+                                            alt="image not found">
+                                    </a>
+                                </div>
+                                <div class="bg-orange-400 h-[6px] w-12 rounded-full my-2"></div>
+                                <div class="text-left my-2 relative w-full sm:w-72 h-auto">
+                                    <h class="text-indigo-600 text-[18px] hover:text-orange-600">
+                                        <a href="https://netedgecomputing.com/services/ai-and-cognitive-analytics-2/">
+                                            Infrastructure Management
+                                        </a>
+                                    </h>
+                                    <p class="hover:text-indigo-600  text-slate-500  text-left mt-4 text-[14px]">
+                                        It's the unseen force keeping your IT operations running smoothly.
+                                        Infrastructure Management oversees the hardware, software, and networks that
+                                        power your business. It ensures optimal performance, identifies potential
+                                        issues, and safeguards your data. Imagine a well-maintained bridge – that's the
+                                        stability Infrastructure Management brings, allowing your business to flow
+                                        seamlessly.
+                                    </p>
+                                </div>
+                                <div class="max-w-44">
+                                    <span
+                                        class="cursor-pointer text-indigo-900 font-bold hover:text-orange-500 flex items-center space-x-3 max-w-40">
+                                        <a href="#"><span>Read more&nbsp;</span><span class="text-orange-500"><i
+                                                    class="fas fa-chevron-right text-xs"></i></span></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FOUR Card -->
+                        <div
+                            class="iotcloud rounded-lg  lg:w-1/5 text-center items-center justify-center sm:mt-16 mb-16">
+                            <div class="xl:mt-8">
+                                <div class="relative w-full sm:w-80 h-60 mx-auto image-hover-overlay">
+                                    <a href="https://netedgecomputing.com/services/iot-and-automation/">
+                                        <img src="../images/eight.png"
+                                            class="w-full sm:w-64 sm:h-56 h-full object-cover transition-transform transition-z hover-z-10 hover-scale-110"
+                                            alt="image not found">
+                                    </a>
+                                </div>
+                                <div class="bg-orange-400 h-[6px] w-12 rounded-full my-2"></div>
+                                <div class="text-left my-2 relative w-full sm:w-72 h-auto">
+                                    <h class="text-indigo-600 text-[15px] hover:text-orange-600">
+                                        <a href="https://netedgecomputing.com/services/ai-and-cognitive-analytics-2/">
+                                            Enterprise Integration as a Service
+                                        </a>
+                                    </h>
+                                    <p class="hover:text-indigo-600  text-slate-500  text-left mt-4 text-[14px]">
+                                        EiaaS, or Enterprise Integration as a Service, acts as a bridge between your
+                                        company's data and applications. This cloud-based solution seamlessly connects
+                                        everything, from on-premise software to modern cloud apps. It translates data
+                                        formats, automates workflows, and simplifies information sharing. Imagine a
+                                        central hub where all your systems work together – that's the power of EiaaS. It
+                                        boosts efficiency, eliminates data silos, and unlocks new business opportunities
+                                        with effortless integration.
+                                    </p>
+                                </div>
+                                <div class="max-w-44">
+                                    <span
+                                        class="cursor-pointer text-indigo-900 font-bold hover:text-orange-500 flex items-center space-x-3 max-w-40">
+                                        <a href="#"><span>Read more&nbsp;</span><span class="text-orange-500"><i
+                                                    class="fas fa-chevron-right text-xs"></i></span></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!--  second part of three images end-->
+            </div>
+
+            {{!-- img six part end here--}}
+
+
+            <div class="">
+                <div class="text-left mb-8">
+                    <h2 class="text-2xl font-bold text-blue-900">How can we Help?</h2>
+                    <div class="h-2 rounded-full bg-yellow-500 w-24  mt-2"></div>
+                </div>
+                <p>
+                    <span class="text-yellow-700 text-sm hover:text-slate-600">
+                        Digital Technologies are resulting in a far-reaching disruption to businesses across the
+                        industries.
+                        Today businesses are at an inflection point where they need multiple skills and competencies
+                        to
+                        realize the benefits of business transformation resulting from the use of these emerging
+                        technologies.
+                        <br><br>
+                        As organizations constantly iterate their business and IT strategies and try to reinvent
+                        themselves,
+                        NetEdge has honed its capabilities and methodologies for IT services to offer assistance
+                        right from
+                        conceptualization to implementation of new technologies and business models.
+                        <br><br>
+                        NetEdge’s Services address specific transition needs of enterprises to new business models
+                        by
+                        developing new offerings, product development, IT programs and data management fuelled by
+                        technologies like Cloud, IoT, Automation, AI/ML, Digitalization and Analytics. Clients
+                        benefit from
+                        seamless coordination across strategy, implementation and management of their digital
+                        technology
+                        transformation programs driven by NetEdge’s in-depth expertise in focused industries, strong
+                        quality
+                        orientation, cross-technology expertise and distributed project management capabilities.
+                        <br> <br>
+                        The detailed set of best practices and processes developed by us over last two decades
+                        ensure that
+                        our services accommodate all business needs. We have a long and proven track record of
+                        providing
+                        quality services that has enabled companies of all sizes right from Startups, SMEs to Global
+                        500 to
+                        avail our services
+                        <br>
+                    </span>
+                </p>
+            </div>
+
+            <div class="">
+                <div class="text-left mb-8 mt-20">
+                    <h2 class="text-2xl font-bold text-blue-900">Our Partners</h2>
+                    <div class="h-2 rounded-full bg-yellow-500 w-24  mt-2"></div>
+                </div>
+                <p>
+                    <span class="text-yellow-700 text-sm hover:text-slate-600">
+                        NetEdge’s Services address specific transition needs of enterprises to new business models
+                        by
+                        developing new offerings, product development, IT programs and data management fuelled by
+                        technologies like Cloud, IoT, Automation, AI/ML, Digitalization and Analytics. Clients
+                        benefit from
+                        seamless coordination across strategy, implementation and management of their digital
+                        technology
+                        transformation programs driven by NetEdge’s in-depth expertise in focused industries, strong
+                        quality
+                        orientation, cross-technology expertise and distributed project management capabilities.
+                        <br><br>
+                        The detailed set of best practices and processes developed by us over last two decades
+                        ensure that
+                        our services accommodate all business needs. We have a long and proven track record of
+                        providing
+                        quality services that has enabled companies of all sizes right from Startups, SMEs to Global
+                        500 to
+                        avail our services.
+                    </span>
+                </p>
+            </div>
+
+        </div>
+    </div>
+    <!-- full middle part  end here -->
+
+
+    {{!-- signup page start here --}}
+    {{>signuppage}}
+    {{!-- signup page end here --}}
+
+
+    {{!-- Our client with Testimonial page start here --}}
+    <div class="pb-28 clientbg">
+        {{>clienttestimo}}
+    </div>
+    {{!-- Our client with Testimonial page end here --}}
+
+
+    {{!-- NetEdge At a Glance(video img) page start here --}}
+    {{>videoimg}}
+    {{!-- NetEdge At a Glance(video img) page end here --}}
+
+
+
+    <!--footer start  -->
+
+    <footer>
+        <!-- this div used to separate copyright div -->
+        <div
+            class="pl-6 pr-4 pt-16 pb-6 text-slate-600 leading-8 text-pretty bggradientfooter text-sm md:pl-16 lg:flex lg:justify-evenly lg:pl-4 lg:pr-4 lg:pt-16">
+            <!-- div for medium screen setup: Grouping logo, 1st list, services -->
+            <div class="md:flex md:mb-10">
+                <!-- div for medium screen setup: Grouping logo, 1st list -->
+                <div class="md:pr-52 lg:p-2 lg:m-2 lg:w-60">
+                    <!-- logo -->
+                    <div class="mb-6">
+                        <a href="">
+                            <img src="https://netedgecomputing.com/wp-content/uploads/2019/09/netedge-logo.png"
+                                alt="NetEdge Logo">
+                        </a>
+                    </div>
+                    <!-- logo end -->
+                    <!-- 1st list start -->
+                    <div class="mb-6">
+                        <ul class="list-inside listchange">
+                            <li><a href="https://netedgecomputing.com/about-us/"
+                                    class="hover:text-orange-600 text-cyan-600"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    About Us</a></li>
+                            <li><a href="https://netedgecomputing.com/index.php/about-us/value-proposition/"
+                                    class="hover:text-orange-600 text-cyan-600"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Value
+                                    Proposition</a></li>
+                            <li><a href="https://netedgecomputing.com/index.php/about-us/methodology/"
+                                    class="hover:text-orange-600 text-cyan-600"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Methodology</a>
+                            </li>
+                            <li><a href="https://netedgecomputing.com/index.php/about-us/team-netedge/"
+                                    class="hover:text-orange-600 text-cyan-600"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Team</a></li>
+                            <li><a href="https://netedgecomputing.com/index.php/about-us/management/"
+                                    class="hover:text-orange-600 text-cyan-600"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Management</a>
+                            </li>
+                            <li><a href="https://netedgecomputing.com/contact-us/"
+                                    class="hover:text-orange-600 text-cyan-600"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Contact us</a></li>
+                        </ul>
+                    </div>
+                    <!-- 1st list end -->
+                </div>
+                <!-- [div for medium screen setup: Grouping logo, 1st list] Ends here -->
+
+                <!-- Services start -->
+                <div class="mb-6 md:w-96 lg:p-2 lg:m-2 lg:w-60">
+                    <h4 class="font-bold text-orange-900 text-lg">Services</h4>
+                    <hr class="border-b-2 mt-2 mb-3">
+                    <ul class="list-inside listchange">
+                        <li><a href="https://netedgecomputing.com/index.php/services/cloud-transformation-solutions/"
+                                class="hover:text-orange-600 text-cyan-600"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Cloud
+                                Transformation Solutions</a></li>
+                        <li><a href="https://netedgecomputing.com/index.php/services/ai-and-cognitive-analytics/"
+                                class="hover:text-orange-600 text-cyan-600"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                AI and
+                                Cognitive Analytics</a></li>
+                        <li><a href="https://netedgecomputing.com/index.php/services/enterprise-cyber-security/"
+                                class="hover:text-orange-600 text-cyan-600"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Enterprise
+                                Cyber Security</a></li>
+                        <li><a href="https://netedgecomputing.com/index.php/services/iot-and-automation/"
+                                class="hover:text-orange-600 text-cyan-600"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                IoT and
+                                Automation</a></li>
+                        <li><a href="https://netedgecomputing.com/index.php/services/application-development/"
+                                class="hover:text-orange-600 text-cyan-600"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Application
+                                Development and
+                                <span class="ml-3">Maintenance</span></a></li>
+                        <li><a href="https://netedgecomputing.com/index.php/services/ebusiness-digital-solutions/"
+                                class="hover:text-orange-600 text-cyan-600"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                eBusiness
+                                Digital Solutions</a></li>
+                    </ul>
+                </div>
+                <!-- Services Ends-->
+            </div>
+            <!-- [div for medium screen setup: Grouping logo, 1st list, services] Ends here-->
+
+            <!-- div for medium screen setup: Grouping Recent Posts, Subscribe, Social Link-->
+            <div class="md:flex">
+                <!-- Recent Posts -->
+                <div class="mb-6 md:pr-7 lg:p-2 lg:m-2 lg:w-60">
+                    <h4 class="font-bold text-orange-900 text-lg">Recent Posts</h4>
+                    <hr class="border-b-2 mt-2 mb-3">
+                    <ul class="listchange list-inside">
+                        <li><a href="https://netedgecomputing.com/social-computing/designing-a-cost-effective-cloud-solution-for-your-business/"
+                                class="hover:text-orange-600 text-cyan-600"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Designing
+                                a Cost Effective Cloud <span class="ml-3">Solution for your business.</span></a>
+                        </li>
+                        <li><a href="https://netedgecomputing.com/social-computing/driving-innovation-and-automation-across-an-enterprise-to-growth-hacking/"
+                                class="hover:text-orange-600 text-cyan-600"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Driving
+                                Innovation and <span class="ml-3"> Automation across an Enterprise </span> <span
+                                    class="ml-3">to Growth Hacking.</span></a></li>
+                        <li><a href="https://netedgecomputing.com/social-computing/ecommerce-services-guide-right-from-concept-proof-of-concept-to-implementation/"
+                                class="hover:text-orange-600 text-cyan-600"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                E-Commerce
+                                Services Guide: <span class="ml-3">Right from Proof-of-Concept to</span>
+                                <span class="ml-3">simplementation.</span></a></li>
+                    </ul>
+                </div>
+                <!-- Recent Posts Ends -->
+
+                <!-- div for medium screen setup: Combining Subscribe, Social Link -->
+                <div class="md:pl-10 lg:p-2 lg:m-2 lg:w-60 xl:ml-16">
+                    <!-- Subscribe starts here -->
+                    <div class="mb-6">
+                        <h4 class="font-bold text-orange-900 text-lg">Subscribe</h4>
+                        <hr class="border-b-2 mt-2 mb-3 md:w-96 lg:w-full">
+                        <div class="mt-7">
+                            <input type="text"
+                                class="bg-slate-300  w-full h-12 md:w-96 lg:w-full px-4 border border-transparent outline-none focus:border-[3px] rounded border-transition focus:border-yellow-500"
+                                id="email-input" placeholder="ENTER YOUR EMAIL">
+                            <p id="error-message" class="text-red-500 text-sm mt-2 hidden">Field is required</p>
+                            <button type="submit" id="subscribe-button"
+                                class="bg-[#011bab] w-full h-12 text-white mt-5 rounded md:w-96 lg:w-full">Subscribe</button>
+
+                        </div>
+                    </div>
+                    <!-- Subscribe Ends here -->
+
+                    <!-- Social Link starts -->
+                    <div>
+                        <h4 class="font-bold text-orange-900 text-lg">Social Links</h4>
+                        <hr class="border-b-2 mt-2  md:w-96 lg:w-full">
+                        <div class="flex justify-center">
+                            <a target="_blank"
+                                href="http://www.linkedin.com/company/netedge-computing-solutions-pvt.-ltd."
+                                title="Follow us on Linkedin"><img
+                                    src="https://s.yimg.com/fz/api/res/1.2/oPmnuoHGZwDmud64pDGAcQ--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpdDtoPTI0MDtxPTgwO3c9MjQw/https://s.yimg.com/zb/imgv1/051c505f-dc29-3303-81b2-5828c6e3b2e2/t_500x300"
+                                    alt="LinkedIn" class="h-5 ml-2 mr-2 mt-2"></a>
+                            <a target="_blank"
+                                href="https://www.facebook.com/NetEdge-Computing-Solutions-2680989805274489/"
+                                title="Follow us on Facebook"><img
+                                    src="https://www.teahub.io/photos/full/11-115962_facebook-logo-png-transparent-background-facebook-png.png"
+                                    alt="Facebook" class="h-7 ml-2 mr-2 mt-1"></a>
+                            <a target="_blank" href="https://www.instagram.com/netedge_computing/"
+                                title="Follow us on Instagram"><img
+                                    src="http://clipart-library.com/images_k/instagram-transparent-png/instagram-transparent-png-4.png"
+                                    alt="Instagram" class="h-7 mt-1"></a>
+                            <a target="_blank" href="http://www.twitter.com/Net_Edge" title="Follow us on Twitter"><img
+                                    src="https://www.freeiconspng.com/uploads/circle-twitter-logo-png-photo-13.png"
+                                    alt="Twitter" class="h-6 ml-2 mr-2 mt-[5px]"></a>
+
+                        </div>
+                    </div>
+                    <!-- Social Link End -->
+                </div>
+                <!-- [div for medium screen setup: Combining Subscribe, Social Link] Ends here-->
+            </div>
+            <!-- [div for medium screen setup: Grouping Recent Posts, Subscribe, Social Link] Ends here-->
+        </div>
+
+        <!-- copyright starts here-->
+        <div class="bg-[#1e1f21] text-[#777676]  text-xs ">
+            <div
+                class="bg-[#1e1f21] text-[#777676] py-4 text-xs flex flex-col md:flex-row justify-center md:justify-between items-center w-full max-w-screen-lg mx-auto">
+                <div class="text-center md:text-left">
+                    <a href="https://netedgecomputing.com/index.php/copy-right/">©Copyright</a> 1992 - 2022, NetEdge
+                    Computing Solutions Pvt. Ltd. All Rights Reserved.
+                </div>
+                <div class="text-center md:text-right">
+                    <a href="https://netedgecomputing.com/index.php/privacy-policy/">Privacy Policy</a> |
+                    <a href="https://netedgecomputing.com/index.php/terms-condition/">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+        <!-- copyright Ends here-->
+    </footer>
+
+    <!--footer end  -->
+
+
+
+
+    <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+    <script>
+
+        // footer js star
+        const emailInput = document.getElementById('email-input');
+        const subscribeButton = document.getElementById('subscribe-button');
+        const errorMessage = document.getElementById('error-message');
+
+        subscribeButton.addEventListener('click', function () {
+            if (emailInput.value.trim() === '') {
+                errorMessage.classList.remove('hidden');
+                emailInput.classList.add('error-border');
+            } else {
+                errorMessage.classList.add('hidden');
+                emailInput.classList.remove('error-border');
+                // Add form submission logic here if needed
+            }
+        });
+
+        // its js for input border transition
+        emailInput.addEventListener('focus', function () {
+            errorMessage.classList.add('hidden');
+            emailInput.classList.remove('error-border');
+        });
+
+        emailInput.addEventListener('blur', function () {
+            emailInput.classList.remove('error-border');
+        });
+        // footer js end 
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{!--
+    <script src="https://cdn.tailwindcss.com"></script> --}}
+    <!-- tailwind css link by style.css for output -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <!-- outer css link by style1.css-->
+    <link rel="stylesheet" href="style1.css">
+    <!-- fontawesome icon link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>Home</title>
+
+    <!-- THIS LINK FOR USE GOOGLW RECAPTCH  -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
+    <style>
+        body {
+            font-family: 'Poppins', 'Montserrat', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            /* Bold for headings */
+        }
+
+        /*NAVBAR CSS START HERE*/
+        .gradient-background {
+            background-image: linear-gradient(to right, #b3d8a3 0%, #e0e0e0 50%, #acad9f 100%);
+        }
+
+        .gradientbackground {
+            background-image: linear-gradient(to right, #c6dea5 0%, #cacead 50%, #c6a19c 100%);
+
+        }
+
+        .gradientbgcolor {
+            background-image: linear-gradient(to right, #bcca87 0%, #dfd5d5 50%, #b8d28f 100%);
+        }
+
+        .clientbg {
+            background-image: linear-gradient(to right, #bf8cb5 0%, #bea6a6 50%, #b5d397 100%);
+        }
+
+        .dropdown-background {
+            background-image: linear-gradient(to right, #859a90 0%, #d2cfcf 50%, #cdb1b1 100%);
+        }
+
+        .bggradientfooter {
+            background-image: linear-gradient(to right, #d8d4b5 0%, #decaca 50%, #c286a6 100%);
+
+        }
+
+        /*rotate arrow icon of service link start css*/
+        .rotate-90 {
+            transform: rotate(90deg);
+        }
+
+        .transition-transform {
+            transition: transform 0.3s;
+        }
+
+        .hover\:rotate-90:hover {
+            transform: rotate(90deg);
+        }
+
+        .changepadding {
+            padding: 1px 8px !important;
+        }
+
+        /*rotate arrow icon of service link end css*/
+
+
+        /* hamber button functionlity start css */
+        .rotate-45 {
+            transform: rotate(45deg);
+        }
+
+        .-rotate-45 {
+            transform: rotate(-45deg);
+        }
+
+        /* .hidden {
+              opacity 0;
+            height0;
+            overflow: hidden;
+        }*/
+
+        .toggle-menu span:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+            background-color: rgb(0, 255, 102);
+        }
+
+        .toggle-menu span:nth-child(2) {
+            transform: translateY(0px) rotate(0deg);
+            background-color: rgb(251, 113, 7);
+            padding: 1px 1px;
+        }
+
+        .toggle-menu span:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+            background-color: rgb(0, 255, 102);
+
+        }
+
+        .toggle-menu span {
+            background-color: yellow;
+        }
+
+        .mobile-submenu {
+            transition: height 0.3s ease;
+        }
+
+        /* hamber button functionlity end css */
+
+        /*NAVBAR CSS END HERE*/
+
+
+
+
+
+        /*This css use for carousel section*/
+
+        /* Custom media query for additional styles */
+        @media (max-width: 640px) {
+
+            /* Tailwind's sm breakpoint is 640px */
+            .carousel-item img {
+                height: 50vh;
+                /* Example: Set height to 50% of viewport height for small screens */
+            }
+        }
+
+        /* Custom class for image hover overlay */
+        .image-hover-overlay {
+            position: relative;
+        }
+
+        .image-hover-overlay::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .image-hover-overlay:hover::before {
+            opacity: 1;
+        }
+
+        /*THIS CSS FOR SIGNUP PAGE ONLY START*/
+
+        .bg-gradient {
+            /* background-image: -webkit-radial-gradient(#367580 30%, #085f6d 50%);*/
+            background-image: linear-gradient(to right, #b3d8a3 0%, #e0e0e0 50%, #bdd2b2 100%);
+        }
+
+        .custom-select {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .custom-select select {
+            display: none;
+        }
+
+        .select-selected {
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .select-items {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            z-index: 99;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-top: none;
+            max-height: 150px;
+
+            /* Adjust the max height as needed */
+            overflow-y: auto;
+            /* Enable vertical scrolling */
+        }
+
+        .select-items div {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .error-message {
+            position: absolute;
+        }
+
+        .select-items div:hover {
+            background-color: rgb(216, 154, 20);
+        }
+
+        .select-hide {
+            display: none;
+        }
+
+        .select-arrow-active {
+            transform: rotate(180deg);
+        }
+
+        .companyproperty {
+            margin: 40px 0 !important;
+        }
+
+        .custom-button {
+            transition: background-color 0.3s ease;
+            /* Transition effect */
+        }
+
+        .custom-button:hover {
+            background-color: #fd9b27;
+            /* New background color on hover */
+        }
+
+        input {
+            outline: none;
+            color: rgb(59, 70, 74);
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* SPINNER FOR  RECAPTCHA START*/
+        /* Custom CSS for spinner animation */
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .spinner {
+            border-top-color: transparent;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            border-left-color: #0d5be1;
+            border-width: 4px;
+            border-style: solid;
+            border-radius: 50%;
+            width: 26px;
+            height: 26px;
+            animation: spin 1s linear infinite;
+        }
+
+        .privacyterms {
+            font-size: 10px !important;
+        }
+
+        /*SPINNER FOR RECAPTCHA END*/
+
+        /*THIS CSS FOR SIGNUP PAGE ONLY END*/
+
+
+        /*OUR CLIENT AND TESTIMONIAL SECTION START*/
+
+        .slider-container {
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 1s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            transition: opacity 1s ease-in-out;
+        }
+
+        /*OUR CLIENT AND TESTIMONIAL SECTION END*/
+
+        /*mission section img start*/
+
+        .bgimagemission {
+            /* background-image: url('https://netedgecomputing.com/wp-content/uploads/2019/09/vision_mission-2.jpg'); */
+            /* background-image: linear-gradient(to right, #ffffff 0%, #e2e4fa 50%, #fdddd9 100%);*/
+            background-image: url(https://moneyminiblog.com/wp-content/uploads/2020/02/produce-quality-work-worst-days.jpg);
+
+        }
+
+        /*mission section img end*/
+
+
+        /*FOOTER start*/
+
+        .listchange {
+            list-style: none !important;
+            font-size: 14px !important;
+        }
+
+        .listchange i {
+            font-size: 10px !important;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .error-border {
+            border-color: red !important;
+        }
+
+        /* Custom CSS for border transition */
+        .border-transition {
+            transition: border-color 0.5s ease;
+        }
+
+        .focus\:border-blue-500:focus {
+            border-color: #3b82f6;
+            /* Tailwind's blue-500 color */
+        }
+
+        /*Footer*/
+
+        /*this one media query for service item*/
+        @media(max-width:1120px) {
+            .serviceitem {
+                font-size: 20px !important;
+                font-weight: 800 !important;
+                margin-top: 10px !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="">
+
+
+    <!-- NAVBAR  START HERE -->
+    {{>navbar}}
+    <!-- NAVBAR  END HERE -->
+
+    <!-- Carousel(image slider section) start -->
+
+    <div class="bg-gray-100 flex items-center justify-center md:mb-12 xl:mb-0">
+        <div class="w-full mx-auto">
+            <div id="default-carousel" class="relative w-full" data-carousel="static">
+                <div class="overflow-hidden w-full relative h-[530px] sm:h-104 xl:h-112 2xl:h-120">
+                    <!-- Carousel items -->
+
+                    <!-- FIRST CAROUSEL ITEM -->
+                    <div class="hidden duration-700 ease-in-out w-full" data-carousel-item>
+                        <div class="flex items-center absolute top-0 left-0 w-full h-full bg-black bg-opacity-50">
+                            <div class="text-white text-1xl p-20 sm:p-20 sm:ml-1">
+                                <h2 class="lg:text-5xl md:text-3xl font-bold my-4 sm:text-2xl leading-normal">
+                                    Outsourced <span class="text-orange-500">Product</span><br>
+                                    Development </h2>
+                                <p class="my-3 pt-3 font-semibold text-[20px]">Innovation and Simplicity That Drives
+                                    <br>
+                                    Continuous
+                                    Business
+                                    Efficiency
+                                </p>
+
+                                <a href="/signuppage1">
+                                    <button
+                                        class="Consultation-btn mt-4 text-slate-100 px-16 py-2.5 font-bold hover:bg-indigo-900 hover:text-white rounded bg-emerald-900"
+                                        id="open-form-btn">Book
+                                        a Consultation</button></a>
+                            </div>
+                        </div>
+                        <img src="https://netedgecomputing.com/wp-content/uploads/2019/09/cognitive-analytics.jpg"
+                            class="block w-full h-full object-cover bg-cover bg-center bg-no-repeat bg-opacity-50"
+                            alt="Slide 1">
+                    </div>
+
+                    <!-- SECIND CAROUSEL ITEM -->
+                    <div class="hidden duration-700 ease-in-out w-full" data-carousel-item>
+                        <div class="flex items-center absolute top-0 left-0 w-full h-full bg-black bg-opacity-50">
+                            <div class="text-white text-1xl p-20 sm:p-20 sm:ml-1">
+                                <h2 class="lg:text-5xl md:text-3xl font-bold my-4 sm:text-2xl">
+                                    Integrated e-Commerce <br>
+                                    Solutions </h2>
+                                <p class="my-3 pt-3 font-semibold  text-[20px]">Creating secure and Scalable <br>
+                                    e-Commerce
+                                    Platform
+                                </p>
+                                <a href="/signuppage1">
+                                    <button
+                                        class="Consultation-btn mt-4 text-slate-100 px-16 py-2.5 font-bold hover:bg-indigo-900 hover:text-white rounded bg-emerald-900"
+                                        id="open-form-btn">Book
+                                        a Consultation</button></a>
+                            </div>
+                        </div>
+                        <img src="https://netedgecomputing.com/wp-content/uploads/2019/09/ecommerce-1024x361-1.jpg"
+                            class="block w-full h-full object-cover bg-cover bg-center bg-no-repeat bg-opacity-50"
+                            alt="Slide 2">
+                    </div>
+
+                    <!-- THIRD CAROUSEL ITEM -->
+                    <div class="hidden duration-700 ease-in-out w-full" data-carousel-item>
+                        <div class="flex items-center absolute top-0 left-0 w-full h-full bg-black bg-opacity-50">
+                            <div class="text-white text-1xl p-20 sm:p-20 sm:ml-1">
+                                <h2 class="lg:text-5xl md:text-3xl font-bold my-4 sm:text-2xl">
+                                    IoT And <br>
+                                    Automation </h2>
+                                <p class="my-3 pt-3 font-semibold  text-[20px]">We Enable Bussiness to Make What They
+                                    want
+                                    <br>
+                                    Of the Digital World
+                                </p>
+                                <a href="/signuppage1">
+                                    <button
+                                        class="Consultation-btn mt-4 text-slate-100 px-16 py-2.5 font-bold hover:bg-indigo-900 hover:text-white rounded bg-emerald-900"
+                                        id="open-form-btn">Book
+                                        a Consultation</button></a>
+                            </div>
+                        </div>
+                        <img src="	https://netedgecomputing.com/wp-content/uploads/2019/09/cognitive-analytics-1024x361-2.jpg"
+                            class="block w-full h-full object-cover bg-cover bg-center bg-no-repeat bg-opacity-50"
+                            alt="Slide 3">
+                    </div>
+
+                    <!-- FOURTH CAROUSEL ITEM -->
+                    <div class="hidden duration-700 ease-in-out w-full" data-carousel-item>
+                        <div class="flex items-center absolute top-0 left-0 w-full h-full bg-black bg-opacity-50">
+                            <div class="text-white text-1xl p-20 sm:p-20 sm:ml-1">
+                                <h2 class="lg:text-5xl md:text-3xl font-bold my-4 sm:text-2xl">
+                                    Innovative Digital Technology <br>
+                                    Solution </h2>
+                                <p class="my-3 pt-3 font-semibold  text-[20px]">Simplifying, Reinventing and Reshaping
+                                    <br>
+                                    Business Models to Drive Growth
+                                </p>
+                                <a href="/signuppage1">
+                                    <button
+                                        class="Consultation-btn mt-4 text-slate-100 px-16 py-2.5 font-bold hover:bg-indigo-900 hover:text-white rounded bg-emerald-900"
+                                        id="open-form-btn">Book
+                                        a Consultation</button></a>
+                            </div>
+                        </div>
+                        <img src="https://netedgecomputing.com/wp-content/uploads/2019/09/digital-1024x361-1.jpg"
+                            class="block w-full h-full object-cover bg-cover bg-center bg-no-repeat bg-opacity-50"
+                            alt="Slide 4">
+                    </div>
+
+                    <!-- FIVE CAROUSEL ITEM -->
+
+                    <div class=" hidden duration-700 ease-in-out w-full" data-carousel-item>
+                        <div class="flex items-center absolute top-0 left-0 w-full h-full bg-black bg-opacity-50">
+                            <div class="text-white text-1xl p-20 sm:p-20 sm:ml-1">
+                                <h2 class="lg:text-5xl md:text-3xl font-bold my-4 sm:text-2xl">
+                                    Outsourced Product <br>
+
+                                    Development
+                                </h2>
+                                <p class="my-3 pt-3 font-semibold  text-[20px]">Outperform and Outcompete Your
+                                    Competition
+                                    with
+
+                                </p>
+                                <p class="text-sky-400  text-[20px]">NetEdge Winning Team!
+                                </p>
+                                <a href="/signuppage1">
+                                    <button
+                                        class="Consultation-btn mt-4 text-slate-100 px-16 py-2.5 font-bold hover:bg-indigo-900 hover:text-white rounded bg-emerald-900"
+                                        id="open-form-btn">Book
+                                        a Consultation</button></a>
+                            </div>
+                        </div>
+                        <img src="https://netedgecomputing.com/wp-content/uploads/2019/09/outsourcing-banner4-1024x361-1.jpg"
+                            class="block w-full h-full object-cover bg-cover bg-center bg-no-repeat bg-opacity-50"
+                            alt="Slide 1">
+                    </div>
+
+                </div>
+
+                <!-- Navigation buttons -->
+                <!-- LEFT CAROUSEL BUTTON -->
+                <button type="button"
+                    class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
+                    data-carousel-prev>
+                    <span
+                        class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-emerald-600 hover:bg-orange-500 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
+                        <svg class="w-5 h-5 hover:text-black text-white sm:w-6 sm:h-6" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M15 19l-7-7 7-7">
+                            </path>
+                        </svg>
+                        <span class="hidden">Previous</span>
+                    </span>
+                </button>
+                <!-- RIGHT CAROUSEL BUTTON -->
+                <button type="button"
+                    class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
+                    data-carousel-next>
+                    <span
+                        class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-emerald-600 hover:bg-orange-500  group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
+                        <svg class="w-5 h-5 hover:text-black text-white sm:w-6 sm:h-6" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M9 5l7 7-7 7">
+                            </path>
+                        </svg>
+                        <span class="hidden">Next</span>
+                    </span>
+                </button>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- Carousel(image slider section) end -->
+
+
+    <!-- About us section start -->
+
+    <div
+        class="aboutus flex pb-12 pt-12 px-32 xxs:pl-1 gradientbackground xs:pl-8 xs:pr- w-full h-auto mx-auto flex-wrap md:mx-auto sm:mx-auto">
+
+        <!-- left part all paragrap below in about us with orange underline -->
+        <div class=" max-w-[650px] xs:max-w-[900px] md:py-8">
+            <h1 class="text-[26px] text-slate-700  font-400">About Us</h1>
+            <div class="w-20 h-4 rounded-t-full  border-orange-500 border-b-[7px]"></div>
+            <!-- above div for orange underline-->
+
+            <div class="my-4">
+                <p class="text-slate-600 leading-[30px] non-italic">NetEdge since its inception in June 1992 has
+                    established
+                    itself
+                    as an
+                    innovative IT Consulting,
+                    Software Development and Services Company. We work with clients
+                    <br> as a team to architect and
+                    implement solutions to meet business objectives and
+                </p>
+                <span class="italic font-semibold text-indigo-900 leading-[30px]">shorten the time to
+                    market.</span>
+                <p class="text-slate-600 leading-[30px] my-4">
+                    With over two decades of experience in serving companies of all sizes and across <br> multiple
+                    industry, we have amassed unparallel domain expertise. Our knowledge <br> and experience
+                    puts
+                    us in a unique position to deliver domain specific solutions <br> and services on-time and
+                    within
+                    budget.
+                </p>
+
+                <p class="text-slate-600 leading-[30px] my-4">
+                    NetEdge business philosophy is to <span
+                        class="italic font-semibold text-indigo-900 leading-[30px]">establish a partnership
+                        relationship with <br> our clients where
+                        our team believes in the success of &nbsp; our client as our <br> success.</span> We put our
+                    best
+                    efforts to ensure
+                    that every interaction with our client <br> is a positive and value driven.
+                </p>
+                <p class="text-slate-600 leading-[30px] my-4">
+                    NetEdge as a team believes that <span class="italic font-semibold text-indigo-900 leading-[30px]">
+                        No Matter how Complex the
+                        Business <br> Problem, </span> we have the
+                    <span class="italic font-semibold text-neutral-600 leading-[30px]"> Expertise and
+                        Experience</span> to keep our <span class="italic font-semibold text-indigo-900 leading-[30px]">
+                        Clients <br>Ahead of the
+                        Curve!</span>
+                </p>
+                <p class="text-slate-600 leading-[30px] my-4">
+                    We are committed to offer <span class="italic font-semibold text-neutral-600 leading-[30px]">
+                        Infinite Possibilities </span> with
+                    <span class="italic font-semibold text-neutral-600 leading-[30px]"> Endless
+                        Opportunities.</span>
+                </p>
+                <div class="max-w-24">
+                    <span
+                        class="cursor-pointer text-indigo-900 font-bold hover:text-orange-500 flex items-center space-x-2 max-w-30">
+                        <a href="#"><span class="">Read more</span><span> <i
+                                    class="fas fa-chevron-right text-xs"></i></span></a></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- right part of our expertise with card card -->
+        <div class=" max-w-[670px]">
+
+            <div class="xs:mt-16 xxs:mt-12 sm:mt-20 md:mt-4">
+                <h1 class="text-[26px] text-slate-700  font-400">Our Expertise</h1>
+                <div class="w-16 h-4 rounded-t-full  border-orange-500 border-b-[7px]"></div>
+            </div>
+
+            <!-- above div for orange underline-->
+
+            <!-- cards -->
+            <div class="sm:pr-56 md:pr-1">
+                <div
+                    class="flex flex-col sm:space-x-4 sm:flex-row md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4 my-4 mt-14 ">
+                    <div class="cardwdithheightsetting  w-60 flex-wrap  h-40 flex flex-col shadow-xl mx-auto mr-8 ps-5"
+                        style="box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.125);">
+                        <h1 class="font-bold text-black text-[42px]">1<span class="text-orange-500">,</span>065</h1>
+                        <p class="text-slate-700 mb-2">COMPLETED PROJECTS</p>
+                        <p class="text-slate-700">spread across the globe.</p>
+
+                    </div>
+                    <div class="cardwdithheightsetting w-60 h-40 flex flex-col shadow-xl  mr-8 px-8 sm:px-1   md:mr-1 xs:my-40 md:mt-1"
+                        style="box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.125);">
+                        <h1 class=" text-black text-[42px] font-extrabold">375</h1>
+                        <p class="text-slate-700 mb-2">SATISFIED CLIENTS</p>
+                        <p class="text-slate-700">across the industries</p>
+
+                    </div>
+                </div>
+                <div
+                    class="flex flex-col sm:space-x-4 sm:flex-row md:flex-row items-center justify-center space-y-4  md:space-x-4 mt-14">
+                    <div class="cardwdithheightsetting w-60 flex-wrap h-40 flex flex-col shadow-xl mx-auto mr-8 ps-5"
+                        style="box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.125);">
+                        <h1 class="font-bold text-black text-[42px]"><span class="text-indigo-500">98%</span></h1>
+                        <p class="text-slate-700 mb-2">CUSTOMER SATISFACTION</p>
+                        <p class="text-slate-700">with repeat orders</p>
+
+                    </div>
+                    <div class="cardwdithheightsetting w-60 h-40 flex flex-col shadow-xl ps-5 mr-8 xxs:my-40 xs:mr-8 md:mr-1 xs:my-40 md:mt-1"
+                        style="box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.125);">
+                        <h1 class="font-bold text-black text-[42px]">15</h1>
+                        <p class="text-slate-700 mb-2">AWARD WINNINGS</p>
+                        <p class="text-slate-700">on various competitions.</p>
+
+                    </div>
+                </div>
+                <div
+                    class="mr-8 xxs:my-10 xs:mr-8 md:mr-1 xs:my-12  flex flex-col sm:space-x-4 bothcard sm:flex-row md:flex-row items-center sm:mt-8  justify-center space-y-4 md:mt-8 md:space-x-4 ">
+                    <div class="cardwdithheightsetting w-60 flex-wrap py-4 flex shadow-xl ps-5 md:mt-4 justify-between px-10 sm:text-indigo-400"
+                        style="box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.125);">
+                        <div class="flex flex-col">
+                            <span class="font-bold text-black">ISO</span>
+                            <span class="font-bold text-black my-2">9001:</span>
+                            <span class="font-bold text-black">2015</span>
+                        </div>
+                        <div class="w-auto"><img
+                                src="https://netedgecomputing.com/wp-content/uploads/2021/03/ISO-9001-small-1-80x108.jpg"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="cardwdithheightsetting w-60 flex-wrap py-4 flex shadow-xl ps-5 justify-between px-10"
+                        style="box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.125);">
+                        <div class="flex flex-col">
+                            <span class="font-bold text-black">ISO</span>
+                            <span class="font-bold text-black my-2">9001:</span>
+                            <span class="font-bold text-black">2015</span>
+                        </div>
+                        <div class="w-auto"><img
+                                src="https://netedgecomputing.com/wp-content/uploads/2021/03/ISO-9001-small-1-80x108.jpg"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+    <!-- About us section end -->
+
+
+
+    <!-- OUR MISSION SECTION start -->
+    <div class="relative  h-96  bg-fixed bg-cover bg-center bgimagemission">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center  justify-center xl:justify-between px-40">
+            <div class="text-white text-center  w-[500px] ">
+                <h1 class="text-4xl font-bold mb-10 text-orange-500">Our Mission</h1>
+                <p class="mt-4 text-lg"><span class="text-[#fff] font-bold italic">To Produce Highest Quality Work for
+                        Every
+                        Client
+                        on Every Project within Budget
+                        and Time.</span> </p>
+            </div>
+        </div>
+    </div>
+    <!-- OUR MISSION SECTION end -->
+
+
+
+    <!-- Services sections start -->
+    <div class="gradientbgcolor h-auto lg:h-[94rem]  pt-24">
+
+
+        <div class="justify-center text-center">
+            <div class="justify-center text-center items-center">
+                <h1 class="text-3xl text-slate-700">What We Offer</h1>
+                <!-- <div class="w-20 h-4 rounded-t-full border-orange-500 border-b-[7px] mx-auto"></div> -->
+                <div class="bg-orange-400 h-[6px] w-20 rounded-full my-3 mx-auto"></div>
+                <!-- yello line below in above text-->
+                <p class="text-indigo-500 mt-4 text-[20px]">Infinite Possibilities. Endless Opportunities.</p>
+            </div>
+        </div>
+
+
+        <!-- first part of three images start-->
+
+
+        <div class="xl:pl-28 pl-1 lg:mt-16 lg:pr-10">
+            <div class="flex flex-col lg:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4">
+                <!-- Services Card -->
+                <div class="rounded-lg p-6  lg:w-1/3 text-center sm:mt-16 lg:mt-1 xl:mb-[20px]">
+                    <div class="justify-center items-center text-center m-auto">
+                        <h2 class="text-xl mb-4 text-slate-600 font-bold hover:text-indigo-800">SERVICES
+                        </h2>
+                        <div class="bg-slate-400 mb-16 h-1 xs:w-[310px] w-[200px]  rounded-full my-3 mx-auto"></div>
+
+                        <!-- <hr class="h-1 bg-slate-400 w-[310px] mb-16" /> -->
+
+                    </div>
+                    <div class="lg:mb-96">
+                        <div class="relative w-full sm:w-80 h-60 mx-auto image-hover-overlay">
+                            <a href="https://netedgecomputing.com/services/ai-and-cognitive-analytics-2/">
+                                <img src="https://netedgecomputing.com/wp-content/uploads/2021/03/AI-and-Cognitive-Analytics-1.jpg"
+                                    class="w-full h-full object-cover" alt="image not found">
+                            </a>
+                        </div>
+                        <div class="bg-orange-400 h-[6px] w-12 rounded-full mt-8 xl:ml-8"></div>
+                        <div class="text-left my-4 relative w-full sm:w-80 h-auto mx-auto">
+                            <h class="text-indigo-600 text-[18px] hover:text-orange-600">
+                                <a href="https://netedgecomputing.com/services/ai-and-cognitive-analytics-2/">AI and
+                                    Cognitive Analytics</a>
+                            </h>
+                            <p class="hover:text-indigo-600  text-slate-500 text-left mt-4 text-[14px]">NetEdge enables
+                                companies to develop AI
+                                strategies to improve performance in business functions whereas Cognitive Analytics
+                                gives them deep insights to improve operational efficiency.</p>
+                        </div>
+                        <div class="max-w-24 xl:ml-8">
+                            <span
+                                class="cursor-pointer text-indigo-900 font-bold hover:text-orange-500 flex items-center space-x-3 max-w-30">
+                                <a href="#"><span>Read more&nbsp;</span><span class="text-orange-500"><i
+                                            class="fas fa-chevron-right text-xs"></i></span></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Industries Card -->
+                <div class="iotcloud rounded-lg p-6  lg:w-1/3 text-center sm:mt-16 lg:mt-1">
+                    <div class="justify-center items-center text-center m-auto">
+                        <h2 class="text-xl mb-4 text-indigo-700 font-bold hover:text-indigo-900">INDUSTRIES
+                        </h2>
+                        <div
+                            class="mb-16 h-1 xs:w-[310px] w-[200px]  rounded-full my-3 mx-auto bg-indigo-500 font-bold hover:bg-indigo-700">
+                        </div>
+
+                        <!-- <hr class="h-1 bg-slate-400 w-[310px] mb-16" /> -->
+
+                    </div>
+                    <div class="lg:mb-96">
+                        <div class="relative w-full sm:w-80 h-60 mx-auto image-hover-overlay">
+                            <a href="https://netedgecomputing.com/services/iot-and-automation/">
+                                <img src="https://netedgecomputing.com/wp-content/uploads/2021/03/IOT-and-Automation-1-3.jpg"
+                                    class="w-full h-full object-cover" alt="image not found">
+                            </a>
+                        </div>
+                        <div class="bg-orange-400 h-[6px] w-12 rounded-full mt-8 xl:ml-8"></div>
+                        <div class="text-left my-4 relative w-full sm:w-80 h-auto mx-auto">
+                            <h class="text-indigo-600 text-[18px] hover:text-orange-600">
+                                <a href="https://netedgecomputing.com/services/ai-and-cognitive-analytics-2/">IoT and
+                                    Automation</a>
+                            </h>
+                            <p class="hover:text-indigo-600  text-slate-500  text-left mt-4 text-[14px]">NetEdge enables
+                                clients to harness
+                                sensors and actuators data by providing advanced analytics at the edge in real-time for
+                                better cross functional insight, thereby enabling them to reduce operational costs.</p>
+                        </div>
+                        <div class="max-w-24 xl:ml-8">
+                            <span
+                                class="cursor-pointer text-indigo-900 font-bold hover:text-orange-500 flex items-center space-x-3 max-w-30">
+                                <a href="#"><span>Read more&nbsp;</span><span class="text-orange-500"><i
+                                            class="fas fa-chevron-right text-xs"></i></span></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technologies Card -->
+                <div class="rounded-lg p-6  lg:w-1/3 text-center sm:mt-16 lg:mt-1">
+                    <div class="justify-center items-center text-center m-auto">
+                        <h2 class="text-xl mb-4 text-slate-600 font-bold hover:text-indigo-800">TECHNOLOGIES
+                        </h2>
+                        <div class="bg-slate-400 mb-16 h-1 xs:w-[310px] w-[200px]  rounded-full my-3 mx-auto"></div>
+
+                        <!-- <hr class="h-1 bg-slate-400 w-[310px] mb-16" /> -->
+
+                    </div>
+                    <div class="lg:mb-96">
+                        <div class="relative w-full sm:w-80 h-60 mx-auto image-hover-overlay">
+                            <a href="https://netedgecomputing.com/services/ebusiness-digital-solutions/">
+                                <img src="https://netedgecomputing.com/wp-content/uploads/2021/03/eBusiness-Solutions-1.jpg"
+                                    class="w-full h-full object-cover" alt="image not found">
+                            </a>
+                        </div>
+                        <div class="bg-orange-400 h-[6px] w-12 rounded-full mt-8 xl:ml-8"></div>
+                        <div class="text-left my-4 relative w-full sm:w-80 h-auto mx-auto">
+                            <h class="text-indigo-600 text-[18px] hover:text-orange-600">
+                                <a href="https://netedgecomputing.com/services/ai-and-cognitive-analytics-2/">eBusiness
+                                    Digital Solutions
+                                </a>
+                            </h>
+                            <p class="hover:text-indigo-600  text-slate-500 text-left mt-4 text-[14px]">NetEdge helps
+                                conceptualize, design and
+                                execute innovative eBusiness solutions that digitally transform client’s business
+                                operations for superior outcomes and generate value for the client.</p>
+                        </div>
+                        <div class="max-w-24 xl:ml-8">
+                            <span
+                                class="cursor-pointer text-indigo-900 font-bold hover:text-orange-500 flex items-center space-x-3 max-w-30">
+                                <a href="#"><span>Read more&nbsp;</span><span class="text-orange-500"><i
+                                            class="fas fa-chevron-right text-xs"></i></span></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  first part of three images end-->
+
+
+
+        <!-- second part of three images start-->
+
+
+        <div class="mainbox xl:pl-28 pl-1 lg:mt-16 lg:pr-10">
+            <div class="flex flex-col lg:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4">
+                <!-- Services Card -->
+                <div class="rounded-lg p-6  lg:w-1/3 text-center sm:mt-16 lg:mt-1 xl:mb-[20px]">
+                    <div class="lg:mb-96">
+                        <div class="relative w-full sm:w-80 h-60 mx-auto image-hover-overlay">
+                            <a href="https://netedgecomputing.com/services/ai-and-cognitive-analytics-2/">
+                                <img src="https://netedgecomputing.com/wp-content/uploads/2021/03/AI-and-Cognitive-Analytics-1.jpg"
+                                    class="w-full h-full object-cover" alt="image not found">
+                            </a>
+                        </div>
+                        <div class="bg-orange-400 h-[6px] w-12 rounded-full mt-8 xl:ml-8"></div>
+                        <div class="text-left my-4 relative w-full sm:w-80 h-auto mx-auto">
+                            <h class="text-indigo-600 text-[18px] hover:text-orange-600">
+                                <a href="https://netedgecomputing.com/services/ai-and-cognitive-analytics-2/">Mobile
+                                    Application Development
+                                </a>
+                            </h>
+                            <p class="hover:text-indigo-600  text-slate-500 text-left mt-4 text-[14px]">Lorem ipsum
+                                dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>
+                        </div>
+                        <div class="max-w-24 xl:ml-8">
+                            <span
+                                class="cursor-pointer text-indigo-900 font-bold hover:text-orange-500 flex items-center space-x-3 max-w-30">
+                                <a href="#"><span>Read more&nbsp;</span><span class="text-orange-500"><i
+                                            class="fas fa-chevron-right text-xs"></i></span></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Industries Card -->
+                <div class="iotcloud rounded-lg p-6  lg:w-1/3 text-center sm:mt-16 lg:mt-1">
+                    <div class="lg:mb-96">
+                        <div class="relative w-full sm:w-80 h-60 mx-auto image-hover-overlay">
+                            <a href="https://netedgecomputing.com/services/iot-and-automation/">
+                                <img src="https://netedgecomputing.com/wp-content/uploads/2021/03/IOT-and-Automation-1-3.jpg"
+                                    class="w-full h-full object-cover" alt="image not found">
+                            </a>
+                        </div>
+                        <div class="bg-orange-400 h-[6px] w-12 rounded-full mt-8 xl:ml-8"></div>
+                        <div class="text-left my-4 relative w-full sm:w-80 h-auto mx-auto">
+                            <h class="text-indigo-600 text-[18px] hover:text-orange-600">
+                                <a href="https://netedgecomputing.com/services/ai-and-cognitive-analytics-2/">Cloud
+                                    Transformation Solutions
+                                </a>
+                            </h>
+                            <p class="hover:text-indigo-600  text-slate-500  text-left mt-4 text-[14px]">NetEdge enables
+                                companies to use cloud computing to scale, optimize resources, become agile and reduce
+                                time to market by offering readiness assessments, application development and
+                                applications migrations.</p>
+                        </div>
+                        <div class="max-w-24 xl:ml-8">
+                            <span
+                                class="cursor-pointer text-indigo-900 font-bold hover:text-orange-500 flex items-center space-x-3 max-w-30">
+                                <a href="#"><span>Read more&nbsp;</span><span class="text-orange-500"><i
+                                            class="fas fa-chevron-right text-xs"></i></span></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technologies Card -->
+                <div class="rounded-lg p-6  lg:w-1/3 text-center sm:mt-16 lg:mt-1">
+                    <div class="lg:mb-96">
+                        <div class="relative w-full sm:w-80 h-60 mx-auto image-hover-overlay">
+                            <a href="https://netedgecomputing.com/services/ebusiness-digital-solutions/">
+                                <img src="https://netedgecomputing.com/wp-content/uploads/2021/03/eBusiness-Solutions-1.jpg"
+                                    class="w-full h-full object-cover" alt="image not found">
+                            </a>
+                        </div>
+                        <div class="bg-orange-400 h-[6px] w-12 rounded-full mt-8 xl:ml-8"></div>
+                        <div class="text-left my-4 relative w-full sm:w-80 h-auto mx-auto">
+                            <h class="text-indigo-600 text-[18px] hover:text-orange-600">
+                                <a href="https://netedgecomputing.com/services/ai-and-cognitive-analytics-2/">Enterprise
+                                    Cyber Security
+                                </a>
+                            </h>
+                            <p class="hover:text-indigo-600  text-slate-500  text-left mt-4 text-[14px]">
+                                NetEdge helps enterprises develop and deploy security systems to protect heterogeneous
+                                IT infrastructure by proactively detecting, responding and recovering from cyber risks
+                                and threats.</p>
+                        </div>
+                        <div class="max-w-24 xl:ml-8">
+                            <span
+                                class="cursor-pointer text-indigo-900 font-bold hover:text-orange-500 flex items-center space-x-3 max-w-30">
+                                <a href="#"><span>Read more&nbsp;</span><span class="text-orange-500"><i
+                                            class="fas fa-chevron-right text-xs"></i></span></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  second part of three images end-->
+    </div>
+
+    <!-- Services sections end -->
+
+
+    <!-- SIGNUP PAGE START -->
+    {{>signuppage}}
+    <!-- SIGNUP PAGE END -->
+
+
+    <!-- oUR CLIENT AND TESTIMONIAL SECTION START -->
+    <div class="clientbg">
+        <div class="container mx-auto px-4 pt-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Left side -->
+                <div>
+                    <!-- Title with underline -->
+                    <div class="text-center mb-16">
+                        <h2 class="text-2xl font-bold text-blue-900">Our Clients</h2>
+                        <div class="h-2 rounded-full bg-yellow-500 w-24 mx-auto mt-1"></div>
+                    </div>
+                    <!-- Grid of images -->
+                    <div class="grid grid-cols-3 gap-4 xl:px-4 gap-y-8">
+                        <!-- First row of images -->
+                        <img src="https://netedgecomputing.com/wp-content/uploads/2021/03/vodafone-2.jpg" alt="Image 1"
+                            class="w-full xl:w-40 h-auto">
+                        <img src="https://netedgecomputing.com/wp-content/uploads/2021/03/Argus-Logo-3.jpg"
+                            alt="Image 2" class="w-full xl:w-40  h-auto">
+                        <img src="https://netedgecomputing.com/wp-content/uploads/2021/03/Gum-Drops-2.jpg" alt="Image 3"
+                            class="w-full xl:w-40 h-auto">
+                        <!-- Second row of images -->
+                        <img src="https://netedgecomputing.com/wp-content/uploads/2021/03/Sky-slope-2.jpg" alt="Image 4"
+                            class="w-full xl:w-40 h-auto">
+                        <img src="https://netedgecomputing.com/wp-content/uploads/2021/03/Cabinet-Office-1-1.jpg"
+                            alt="Image 5" class="w-full xl:w-40 h-auto">
+                        <img src="https://netedgecomputing.com/wp-content/uploads/2021/03/John-Hopkins-2.jpg"
+                            alt="Image 6" class="w-full xl:w-40  h-auto">
+                    </div>
+                </div>
+                <!-- Right side with card -->
+                <div>
+                    <!-- Title with underline -->
+                    <div class="text-center mb-12">
+                        <h2 class="text-2xl font-bold text-blue-900">Testimonials</h2>
+                        <div class="h-2 rounded-full bg-yellow-500 w-24 mx-auto mt-2"></div>
+                    </div>
+                    <!-- Cards -->
+                    <div class="slider-container h-80">
+                        <div class="slider">
+                            <!-- First card -->
+                            <div class="slide flex flex-col">
+                                <img src="https://netedgecomputing.com/wp-content/uploads/2021/03/Argus-Logo-3.jpg"
+                                    alt="Card Image 1" class="mx-auto w-full sm:w-32 h-auto mb-4 cardslideimg">
+                                <p class="text-yellow-700 my-4 italic">“I have interacted with lot of development firms
+                                    and
+                                    NetEdge
+                                    is among the most responsive in terms of listening to our needs and striving to
+                                    excel at
+                                    them. We created a service at a fraction of cost of our competitors.”
+                                </p>
+                                <div>
+                                    <p class="mt-4 text-xl text-blue-600">Shanda</p>
+                                    <p class="text-blue-600">CEO, Gum Drops</p>
+                                </div>
+                            </div>
+                            <!-- Second card -->
+                            <div class="slide flex flex-col">
+                                <img src="https://netedgecomputing.com/wp-content/uploads/2021/03/earthlink-2.png"
+                                    alt="Card Image 2" class="mx-auto w-full sm:w-32 h-auto mb-4 cardslideimg">
+                                <p class="text-yellow-700 my-4  italic ">“So far, one of the best providers when it
+                                    comes
+                                    to
+                                    SEO and
+                                    Traffic Improvement. We will continue to work with NetEdge. Great Team!”
+                                </p>
+                                <p class="mt-4 text-xl text-blue-600">Smith Tyler</p>
+                                <p class="text-blue-600">CEO, SkySlopeInc., USA</p>
+                            </div>
+                            <!-- Third card -->
+                            <div class="slide flex flex-col">
+                                <img src="https://netedgecomputing.com/wp-content/uploads/2021/03/skyslope-1.png"
+                                    alt="Card Image 3" class="mx-auto w-full sm:w-32 h-auto mb-4 cardslideimg">
+                                <p class="text-yellow-700 my-4  italic">“NetEdge is one of the best companies I have
+                                    worked
+                                    with that
+                                    does offshore development. They are very quick and do things the way that were
+                                    discussed
+                                    and have exceeded what I wanted done”
+                                </p>
+                                <p class="mt-4 text-xl text-blue-600">
+                                    Mark Joseph </p>
+                                <p class="text-blue-600">Product Director, Global Network Services Vodafone , UK </p>
+                            </div>
+                            <!-- Fourth card -->
+                            <div class="slide flex flex-col">
+                                <img src="https://netedgecomputing.com/wp-content/uploads/2021/03/Gum-Drops-2.jpg"
+                                    alt="Card Image 4" class="mx-auto w-full sm:w-32 h-auto mb-4 cardslideimg">
+                                <p class="text-yellow-700 my-4  ">“NetEdge is one of the best companies I have
+                                    worked
+                                    with that
+                                    does offshore development. They are very quick and do things the way that were
+                                    discussed
+                                    and have exceeded what I wanted done”
+                                </p>
+                                <p class="mt-4 text-xl text-blue-600">Smith Tyler</p>
+                                <p class="text-blue-600">CEO, SkySlopeInc., USA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- OUR CLIENT AND TESTIMONIAL SECTION END -->
+
+
+
+    <!--footer start  -->
+
+    <footer>
+        <!-- this div used to separate copyright div -->
+        <div
+            class="pl-6 pr-4 pt-16 pb-6 text-slate-600 leading-8 text-pretty bggradientfooter text-sm md:pl-16 lg:flex lg:justify-evenly lg:pl-4 lg:pr-4 lg:pt-16">
+            <!-- div for medium screen setup: Grouping logo, 1st list, services -->
+            <div class="md:flex md:mb-10">
+                <!-- div for medium screen setup: Grouping logo, 1st list -->
+                <div class="md:pr-52 lg:p-2 lg:m-2 lg:w-60">
+                    <!-- logo -->
+                    <div class="mb-6">
+                        <a href="">
+                            <img src="https://netedgecomputing.com/wp-content/uploads/2019/09/netedge-logo.png"
+                                alt="NetEdge Logo">
+                        </a>
+                    </div>
+                    <!-- logo end -->
+                    <!-- 1st list start -->
+                    <div class="mb-6">
+                        <ul class="list-inside listchange">
+                            <li><a href="https://netedgecomputing.com/about-us/"
+                                    class="hover:text-orange-600 text-cyan-600"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    About Us</a></li>
+                            <li><a href="https://netedgecomputing.com/index.php/about-us/value-proposition/"
+                                    class="hover:text-orange-600 text-cyan-600"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Value
+                                    Proposition</a></li>
+                            <li><a href="https://netedgecomputing.com/index.php/about-us/methodology/"
+                                    class="hover:text-orange-600 text-cyan-600"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Methodology</a>
+                            </li>
+                            <li><a href="https://netedgecomputing.com/index.php/about-us/team-netedge/"
+                                    class="hover:text-orange-600 text-cyan-600"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Team</a></li>
+                            <li><a href="https://netedgecomputing.com/index.php/about-us/management/"
+                                    class="hover:text-orange-600 text-cyan-600"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Management</a>
+                            </li>
+                            <li><a href="https://netedgecomputing.com/contact-us/"
+                                    class="hover:text-orange-600 text-cyan-600"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Contact us</a></li>
+                        </ul>
+                    </div>
+                    <!-- 1st list end -->
+                </div>
+                <!-- [div for medium screen setup: Grouping logo, 1st list] Ends here -->
+
+                <!-- Services start -->
+                <div class="mb-6 md:w-96 lg:p-2 lg:m-2 lg:w-60">
+                    <h4 class="font-bold text-orange-900 text-lg">Services</h4>
+                    <hr class="border-b-2 mt-2 mb-3">
+                    <ul class="list-inside listchange">
+                        <li><a href="https://netedgecomputing.com/index.php/services/cloud-transformation-solutions/"
+                                class="hover:text-orange-600 text-cyan-600"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Cloud
+                                Transformation Solutions</a></li>
+                        <li><a href="https://netedgecomputing.com/index.php/services/ai-and-cognitive-analytics/"
+                                class="hover:text-orange-600 text-cyan-600"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                AI and
+                                Cognitive Analytics</a></li>
+                        <li><a href="https://netedgecomputing.com/index.php/services/enterprise-cyber-security/"
+                                class="hover:text-orange-600 text-cyan-600"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Enterprise
+                                Cyber Security</a></li>
+                        <li><a href="https://netedgecomputing.com/index.php/services/iot-and-automation/"
+                                class="hover:text-orange-600 text-cyan-600"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                IoT and
+                                Automation</a></li>
+                        <li><a href="https://netedgecomputing.com/index.php/services/application-development/"
+                                class="hover:text-orange-600 text-cyan-600"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Application
+                                Development and
+                                <span class="ml-3">Maintenance</span></a></li>
+                        <li><a href="https://netedgecomputing.com/index.php/services/ebusiness-digital-solutions/"
+                                class="hover:text-orange-600 text-cyan-600"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                eBusiness
+                                Digital Solutions</a></li>
+                    </ul>
+                </div>
+                <!-- Services Ends-->
+            </div>
+            <!-- [div for medium screen setup: Grouping logo, 1st list, services] Ends here-->
+
+            <!-- div for medium screen setup: Grouping Recent Posts, Subscribe, Social Link-->
+            <div class="md:flex">
+                <!-- Recent Posts -->
+                <div class="mb-6 md:pr-7 lg:p-2 lg:m-2 lg:w-60">
+                    <h4 class="font-bold text-orange-900 text-lg">Recent Posts</h4>
+                    <hr class="border-b-2 mt-2 mb-3">
+                    <ul class="listchange list-inside">
+                        <li><a href="https://netedgecomputing.com/social-computing/designing-a-cost-effective-cloud-solution-for-your-business/"
+                                class="hover:text-orange-600 text-cyan-600"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Designing
+                                a Cost Effective Cloud <span class="ml-3">Solution for your business.</span></a></li>
+                        <li><a href="https://netedgecomputing.com/social-computing/driving-innovation-and-automation-across-an-enterprise-to-growth-hacking/"
+                                class="hover:text-orange-600 text-cyan-600"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Driving
+                                Innovation and <span class="ml-3"> Automation across an Enterprise </span> <span
+                                    class="ml-3">to Growth Hacking.</span></a></li>
+                        <li><a href="https://netedgecomputing.com/social-computing/ecommerce-services-guide-right-from-concept-proof-of-concept-to-implementation/"
+                                class="hover:text-orange-600 text-cyan-600"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                E-Commerce
+                                Services Guide: <span class="ml-3">Right from Proof-of-Concept to</span>
+                                <span class="ml-3">simplementation.</span></a></li>
+                    </ul>
+                </div>
+                <!-- Recent Posts Ends -->
+
+                <!-- div for medium screen setup: Combining Subscribe, Social Link -->
+                <div class="md:pl-10 lg:p-2 lg:m-2 lg:w-60 xl:ml-16">
+                    <!-- Subscribe starts here -->
+                    <div class="mb-6">
+                        <h4 class="font-bold text-orange-900 text-lg">Subscribe</h4>
+                        <hr class="border-b-2 mt-2 mb-3 md:w-96 lg:w-full">
+                        <div class="mt-7">
+                            <input type="text"
+                                class="bg-slate-300  w-full h-12 md:w-96 lg:w-full px-4 border border-transparent outline-none focus:border-[3px] rounded border-transition focus:border-yellow-500"
+                                id="email-input" placeholder="ENTER YOUR EMAIL">
+                            <p id="error-message" class="text-red-500 text-sm mt-2 hidden">Field is required</p>
+                            <button type="submit" id="subscribe-button"
+                                class="bg-[#011bab] w-full h-12 text-white mt-5 rounded md:w-96 lg:w-full">Subscribe</button>
+
+                        </div>
+                    </div>
+                    <!-- Subscribe Ends here -->
+
+                    <!-- Social Link starts -->
+                    <div>
+                        <h4 class="font-bold text-orange-900 text-lg">Social Links</h4>
+                        <hr class="border-b-2 mt-2  md:w-96 lg:w-full">
+                        <div class="flex justify-center">
+                            <a target="_blank"
+                                href="http://www.linkedin.com/company/netedge-computing-solutions-pvt.-ltd."
+                                title="Follow us on Linkedin"><img
+                                    src="https://s.yimg.com/fz/api/res/1.2/oPmnuoHGZwDmud64pDGAcQ--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpdDtoPTI0MDtxPTgwO3c9MjQw/https://s.yimg.com/zb/imgv1/051c505f-dc29-3303-81b2-5828c6e3b2e2/t_500x300"
+                                    alt="LinkedIn" class="h-5 ml-2 mr-2 mt-2"></a>
+                            <a target="_blank"
+                                href="https://www.facebook.com/NetEdge-Computing-Solutions-2680989805274489/"
+                                title="Follow us on Facebook"><img
+                                    src="https://www.teahub.io/photos/full/11-115962_facebook-logo-png-transparent-background-facebook-png.png"
+                                    alt="Facebook" class="h-7 ml-2 mr-2 mt-1"></a>
+                            <a target="_blank" href="https://www.instagram.com/netedge_computing/"
+                                title="Follow us on Instagram"><img
+                                    src="http://clipart-library.com/images_k/instagram-transparent-png/instagram-transparent-png-4.png"
+                                    alt="Instagram" class="h-7 mt-1"></a>
+                            <a target="_blank" href="http://www.twitter.com/Net_Edge" title="Follow us on Twitter"><img
+                                    src="https://www.freeiconspng.com/uploads/circle-twitter-logo-png-photo-13.png"
+                                    alt="Twitter" class="h-6 ml-2 mr-2 mt-[5px]"></a>
+
+                        </div>
+                    </div>
+                    <!-- Social Link End -->
+                </div>
+                <!-- [div for medium screen setup: Combining Subscribe, Social Link] Ends here-->
+            </div>
+            <!-- [div for medium screen setup: Grouping Recent Posts, Subscribe, Social Link] Ends here-->
+        </div>
+
+        <!-- copyright starts here-->
+        <div class="bg-[#1e1f21] text-[#777676] pl-4 pr-4 pt-8 text-xs pb-2">
+            <p class="text-center md:text-left">© <a
+                    href="https://netedgecomputing.com/index.php/copy-right/">Copyright</a> 1992 - 2022, NetEdge
+                Computing Solutions Pvt. Ltd. All Rights Reserved.</p>
+            <div class="text-center md:text-right">
+                <a href="https://netedgecomputing.com/index.php/privacy-policy/">Privacy Policy</a> |
+                <a href="https://netedgecomputing.com/index.php/terms-condition/">Terms & Conditions</a>
+            </div>
+        </div>
+        <!-- copyright Ends here-->
+    </footer>
+
+    <!--footer end  -->
+
+
+    <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+    <script>
+
+
+        // OUR CLIENT AND TESTIMONIAL SECTION START 
+        // JavaScript for cycling through cards with sliding effect
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slide');
+        let currentIndex = 0;
+
+        function slide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+            if (currentIndex === slides.length - 1) {
+                setTimeout(() => {
+                    slider.style.transition = 'none';
+                    slider.style.transform = `translateX(0)`;
+                    currentIndex = 0;
+                    setTimeout(() => {
+                        slider.style.transition = 'transform 1s ease-in-out';
+                    }, 50);
+                }, 1000);
+            }
+        }
+
+        setInterval(slide, 5000);
+        // OUR CLIENT AND TESTIMONIAL SECTION END 
+
+
+        // footer js star
+        const emailInput = document.getElementById('email-input');
+        const subscribeButton = document.getElementById('subscribe-button');
+        const errorMessage = document.getElementById('error-message');
+
+        subscribeButton.addEventListener('click', function () {
+            if (emailInput.value.trim() === '') {
+                errorMessage.classList.remove('hidden');
+                emailInput.classList.add('error-border');
+            } else {
+                errorMessage.classList.add('hidden');
+                emailInput.classList.remove('error-border');
+                // Add form submission logic here if needed
+            }
+        });
+
+        // its js for input border transition
+        emailInput.addEventListener('focus', function () {
+            errorMessage.classList.add('hidden');
+            emailInput.classList.remove('error-border');
+        });
+
+        emailInput.addEventListener('blur', function () {
+            emailInput.classList.remove('error-border');
+        });
+        // footer js end 
+
+
+    </script>
+</body>
+
+</html>

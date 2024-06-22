@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwind css link by style.css for output -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <!-- outer css link by style1.css-->
+    <link rel="stylesheet" href="style1.css">
+    <!-- fontawesome icon link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>navbar</title>
+
+    <!-- THIS LINK FOR USE GOOGLW RECAPTCH  -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
+    <style>
+        body {
+            font-family: 'Poppins', 'Montserrat', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            /* Bold for headings */
+        }
+
+        /*NAVBAR CSS START HERE*/
+        .dropdown-backgroundmobile {
+            background-image: linear-gradient(to right, #ca6b41 0%, #e7a1a1 50%, #93c588 100%);
+        }
+
+        .gradient-background {
+            background-image: linear-gradient(to right, #b3d8a3 0%, #e0e0e0 50%, #acad9f 100%);
+        }
+
+        .gradientbackground {
+            background-image: linear-gradient(to right, #c6dea5 0%, #cacead 50%, #c6a19c 100%);
+
+        }
+
+        .rotate-45 {
+            transform: rotate(45deg);
+        }
+
+        .gradientbgcolor {
+            background-image: linear-gradient(to right, #bcca87 0%, #dfd5d5 50%, #b8d28f 100%);
+        }
+
+
+        .dropdown-background {
+            background-image: linear-gradient(to right, #859a90 0%, #d2cfcf 50%, #cdb1b1 100%);
+        }
+
+
+
+        /*rotate arrow icon of service link start css*/
+        .rotate-90 {
+            transform: rotate(90deg);
+        }
+
+        .transition-transform {
+            transition: transform 0.3s;
+        }
+
+        .hover\:rotate-90:hover {
+            transform: rotate(90deg);
+        }
+
+        .changepadding {
+            padding: 1px 8px !important;
+        }
+
+        /*rotate arrow icon of service link end css*/
+
+
+        /* hamber button functionlity start css */
+        .rotate-45 {
+            transform: rotate(45deg);
+        }
+
+        .-rotate-45 {
+            transform: rotate(-45deg);
+        }
+
+        /* .hidden {
+              opacity 0;
+            height0;
+            overflow: hidden;
+        }*/
+
+        .toggle-menu span:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+            background-color: rgb(0, 255, 102);
+        }
+
+        .toggle-menu span:nth-child(2) {
+            transform: translateY(0px) rotate(0deg);
+            background-color: rgb(251, 113, 7);
+            padding: 1px 1px;
+        }
+
+        .toggle-menu span:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+            background-color: rgb(0, 255, 102);
+
+        }
+
+        .toggle-menu span {
+            background-color: yellow;
+        }
+
+        .mobile-submenu {
+            transition: height 0.3s ease;
+        }
+
+        /* hamber button functionlity end css */
+
+        /*NAVBAR CSS END HERE*/
+    </style>
+</head>
+
+<body class="">
+
+
+
+    <!-- NAVBAR  START HERE -->
+
+    <div class="gradient-background">
+        <!-- Navigation bar container -->
+        <nav class="shadow-md w-full z-10 ">
+            <div class="max-w-7xl mx-auto">
+                <div class="relative flex items-center justify-between h-24">
+                    <!-- Logo and navigation links -->
+                    <div class="flex-1 flex items-center">
+                        <!-- Logo -->
+                        <div class="flex-shrink-0 px-8 xl:px-1">
+                            <img class="h-11 w-auto"
+                                src="https://netedgecomputing.com/wp-content/uploads/2019/09/netedge-logo.png"
+                                alt="NetEdge">
+                        </div>
+
+                        <!-- Desktop navigation links -->
+                        <div class="hidden lg:block md:ml-6">
+                            <div class="flex space-x-4">
+                                <!-- Home link -->
+                                <div class="relative group">
+                                    <a href="/">
+                                        <button
+                                            class="text-slate-600 font-semibold px-3 py-2 rounded-md text-md  hover:text-blue-700 active:text-blue-800">Home
+                                        </button>
+                                    </a>
+                                    <div
+                                        class="absolute left-0  w-48 border-y-2 border-x-2 border-blue-500  dropdown-background rounded-md shadow-lg hidden group-hover:block  z-50">
+                                        <a href="/Value-Proposition"
+                                            class="block px-4 py-2 text-slate-700 hover:font-md hover:bg-black hover:text-white">Value
+                                            Proposition
+                                        </a>
+                                        <a href="/vision"
+                                            class="block px-4 py-2 text-slate-700 hover:font-md hover:bg-black hover:text-white">Vision
+                                        </a>
+                                        <a href="/aboutus"
+                                            class="block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">About
+                                            Us</a>
+                                        <a href="/my-team"
+                                            class="block px-4 py-2 text-gray-800 hover:bg-black hover:text-white"> My
+                                            Team</a>
+                                    </div>
+                                </div>
+
+                                <!-- Services dropdown menu -->
+                                <div class="relative group">
+                                    <a href="/services">
+                                        <button
+                                            class="text-slate-600 font-semibold px-3 py-2 rounded-md text-base  hover:text-blue-700 active:text-blue-800">Services</button></a>
+                                    <div
+                                        class="absolute  dropdown-background rounded-md shadow-lg hidden group-hover:block -right-[20rem] z-50">
+                                        <!--  -->
+                                        <div class="flex text-sm w-[640px] pb-5 pt-5 text-center">
+                                            <div class="py-1 border-r-2 text-left justify-evenly leading-loose w-80">
+
+                                                <div class="pl-4">
+
+
+                                                    <!-- Hover Effect 1 -->
+                                                    <div class="flex items-center rotateicon">
+                                                        <span class="changepadding rounded-full bg-red-500"> <i
+                                                                class="fa-sharp fa-solid fa-arrow-right transition-transform text-white font-bold  hover:rotate-90"></i></span>
+                                                        <a href="#"
+                                                            class="block px-4 py-2 text-gray-800 hover:text-blue-600 transition-colors">
+                                                            Training
+                                                        </a>
+                                                    </div>
+
+                                                    <!-- Hover Effect 2-->
+                                                    <div class="flex items-center rotateicon">
+                                                        <span class="changepadding rounded-full bg-red-500"> <i
+                                                                class="fa-sharp fa-solid fa-arrow-right transition-transform text-white font-bold  hover:rotate-90"></i></span>
+                                                        <a href="/internship"
+                                                            class="block px-4 py-2 text-gray-800 hover:text-blue-600 transition-colors">
+                                                            Internship
+                                                        </a>
+                                                    </div>
+
+                                                    <!-- Hover Effect 3-->
+                                                    <div class="flex items-center rotateicon">
+                                                        <span class="changepadding rounded-full bg-red-500"> <i
+                                                                class="fa-sharp fa-solid fa-arrow-right transition-transform text-white font-bold  hover:rotate-90"></i></span>
+                                                        <a href="/placement"
+                                                            class="block px-4 py-2 text-gray-800 hover:text-blue-600 transition-colors">
+                                                            Placement
+                                                        </a>
+                                                    </div>
+
+                                                    <!-- Hover Effect 4-->
+                                                    <div class="flex items-center rotateicon">
+                                                        <span class="changepadding rounded-full bg-red-500"> <i
+                                                                class="fa-sharp fa-solid fa-arrow-right transition-transform text-white font-bold  hover:rotate-90"></i></span>
+                                                        <a href="#"
+                                                            class="block px-4 py-2 text-gray-800 hover:text-blue-600 transition-colors">
+                                                            Software Services
+                                                        </a>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="py-1 border-r-2 text-left justify-evenly leading-loose w-80">
+                                                <div class="pl-4">
+                                                    <!-- Hover Effect 1 -->
+                                                    <div class="flex items-center rotateicon">
+                                                        <span class="changepadding rounded-full bg-red-500"> <i
+                                                                class="fa-sharp fa-solid fa-arrow-right transition-transform text-white font-bold  hover:rotate-90"></i></span>
+                                                        <a href="#"
+                                                            class="block px-4 py-2 text-gray-800 hover:text-blue-600 transition-colors">
+                                                            Application
+                                                            Development
+                                                        </a>
+                                                    </div>
+                                                    <!-- Hover Effect 2 -->
+                                                    <div class="flex items-center rotateicon">
+                                                        <span class="changepadding rounded-full bg-red-500"> <i
+                                                                class="fa-sharp fa-solid fa-arrow-right transition-transform text-white font-bold  hover:rotate-90"></i></span>
+                                                        <a href="/infrastructure-management"
+                                                            class="block px-4 py-2 text-gray-800 hover:text-blue-600 transition-colors">
+                                                            Infrastructure Management
+                                                        </a>
+                                                    </div>
+                                                    <!-- Hover Effect 3-->
+                                                    <div class="flex items-center rotateicon">
+                                                        <span class="changepadding rounded-full bg-red-500"> <i
+                                                                class="fa-sharp fa-solid fa-arrow-right transition-transform text-white font-bold  hover:rotate-90"></i></span>
+                                                        <a href="#"
+                                                            class="block px-4 py-2 text-gray-800 hover:text-blue-600 transition-colors">
+                                                            Ongoing Training
+                                                        </a>
+                                                    </div>
+                                                    <!-- Hover Effect 4 -->
+                                                    <div class="flex items-center rotateicon">
+                                                        <span class="changepadding rounded-full bg-red-500"> <i
+                                                                class="fa-sharp fa-solid fa-arrow-right transition-transform text-white font-bold  hover:rotate-90"></i></span>
+                                                        <a href="#"
+                                                            class="block px-4 py-2 text-gray-800 hover:text-blue-600 transition-colors">
+                                                            Testimonial
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Training dropdown menu -->
+                                <div class="relative group">
+                                    <a href="/training">
+                                        <button
+                                            class="text-slate-600 font-semibold px-3 py-2 rounded-md text-base  hover:text-blue-700 active:text-blue-800">Training</button></a>
+                                    <div
+                                        class="absolute  dropdown-background rounded-md shadow-lg hidden group-hover:block -right-[20rem] z-50">
+                                        <!--  -->
+                                        <div class="flex text-sm w-[740px] pb-5 pt-5 text-center">
+                                            <div
+                                                class="py-1 border-r-2 text-left justify-evenly leading-loose w-[500px]">
+                                                <div class="pl-4">
+                                                    <span>
+                                                        <h1 class="xl:text-xl mb-8 text-slate-600 text-center">Tech
+                                                            Training
+                                                        </h1>
+                                                    </span>
+
+                                                    <div class="flex justify-between">
+
+                                                        <div class="">
+                                                            <span
+                                                                class="xl:text-sm text-rose-800 text-center font-bold">
+                                                                Full Stack Development
+
+                                                            </span>
+                                                            <!-- Hover Effect 2 -->
+                                                            <div class="flex items-center rotateicon">
+                                                                <span class="changepadding rounded-full bg-red-500"> <i
+                                                                        class="fa-sharp fa-solid fa-arrow-right transition-transform text-white font-bold  hover:rotate-90"></i></span>
+                                                                <a href="#"
+                                                                    class="block px-4 py-2 text-gray-800 hover:text-blue-600 transition-colors">
+                                                                    HTML/CSS/JS
+                                                                </a>
+                                                            </div>
+                                                            <!-- Hover Effect 2 -->
+                                                            <div class="flex items-center rotateicon">
+                                                                <span class="changepadding rounded-full bg-red-500"> <i
+                                                                        class="fa-sharp fa-solid fa-arrow-right transition-transform text-white font-bold  hover:rotate-90"></i></span>
+                                                                <a href="#"
+                                                                    class="block px-4 py-2 text-gray-800 hover:text-blue-600 transition-colors">
+                                                                    MERN/MEAN STACK
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <hr>
+                                                        <hr>
+
+                                                        <div class="">
+                                                            <span
+                                                                class="xl:text-sm text-rose-800 text-center font-bold">
+                                                                Block
+                                                                Chain Technology
+                                                            </span>
+                                                            <!-- Hover Effect 1-->
+                                                            <div class="flex items-center rotateicon">
+                                                                <span class="changepadding rounded-full bg-red-500"> <i
+                                                                        class="fa-sharp fa-solid fa-arrow-right transition-transform text-white font-bold  hover:rotate-90"></i></span>
+                                                                <a href=""
+                                                                    class="block px-4 py-2 text-gray-800 hover:text-blue-600 transition-colors">
+                                                                    Quantum Computing
+                                                                </a>
+                                                            </div>
+
+                                                            <!-- Hover Effect 2-->
+                                                            <div class="flex items-center rotateicon">
+                                                                <span class="changepadding rounded-full bg-red-500"> <i
+                                                                        class="fa-sharp fa-solid fa-arrow-right transition-transform text-white font-bold  hover:rotate-90"></i></span>
+                                                                <a href="#"
+                                                                    class="block px-4 py-2 text-gray-800 hover:text-blue-600 transition-colors">
+                                                                    Cyber Security
+                                                                </a>
+                                                            </div>
+                                                            <!-- Hover Effect 3-->
+                                                            <div class="flex items-center rotateicon">
+                                                                <span class="changepadding rounded-full bg-red-500"> <i
+                                                                        class="fa-sharp fa-solid fa-arrow-right transition-transform text-white font-bold  hover:rotate-90"></i></span>
+                                                                <a href="#"
+                                                                    class="block px-4 py-2 text-gray-800 hover:text-blue-600 transition-colors">
+                                                                    IOT
+                                                                </a>
+                                                            </div> <!-- Hover Effect 4-->
+                                                            <div class="flex items-center rotateicon">
+                                                                <span class="changepadding rounded-full bg-red-500"> <i
+                                                                        class="fa-sharp fa-solid fa-arrow-right transition-transform text-white font-bold  hover:rotate-90"></i></span>
+                                                                <a href="#"
+                                                                    class="block px-4 py-2 text-gray-800 hover:text-blue-600 transition-colors">
+                                                                    Mobile App Development </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="py-1 text-left justify-evenly leading-loose w-80">
+                                                <div class="pl-4">
+                                                    <span>
+                                                        <h1 class="xl:text-xl text-slate-600 mb-8 text-center">Soft
+                                                            Skill
+                                                        </h1>
+                                                    </span>
+                                                    <!-- Hover Effect 1 -->
+                                                    <div class="flex items-center rotateicon">
+                                                        <span class="changepadding rounded-full bg-red-500"> <i
+                                                                class="fa-sharp fa-solid fa-arrow-right transition-transform text-white font-bold  hover:rotate-90"></i></span>
+                                                        <a href="#"
+                                                            class="block px-4 py-2 text-gray-800 hover:text-blue-600 transition-colors">
+                                                            Personalty traits
+                                                        </a>
+                                                    </div>
+                                                    <!-- Hover Effect 2 -->
+                                                    <div class="flex items-center rotateicon">
+                                                        <span class="changepadding rounded-full bg-red-500"> <i
+                                                                class="fa-sharp fa-solid fa-arrow-right transition-transform text-white font-bold  hover:rotate-90"></i></span>
+                                                        <a href=""
+                                                            class="block px-4 py-2 text-gray-800 hover:text-blue-600 transition-colors">
+                                                            AI/tools/training
+                                                        </a>
+                                                    </div>
+                                                    <!-- Hover Effect 3-->
+                                                    <div class="flex items-center rotateicon">
+                                                        <span class="changepadding rounded-full bg-red-500"> <i
+                                                                class="fa-sharp fa-solid fa-arrow-right transition-transform text-white font-bold  hover:rotate-90"></i></span>
+                                                        <a href="#"
+                                                            class="block px-4 py-2 text-gray-800 hover:text-blue-600 transition-colors">
+                                                            Interview
+                                                        </a>
+                                                    </div>
+                                                    <!-- Hover Effect 4 -->
+                                                    <div class="flex items-center rotateicon">
+                                                        <span class="changepadding rounded-full bg-red-500"> <i
+                                                                class="fa-sharp fa-solid fa-arrow-right transition-transform text-white font-bold  hover:rotate-90"></i></span>
+                                                        <a href="#"
+                                                            class="block px-4 py-2 text-gray-800 hover:text-blue-600 transition-colors">
+                                                            Problem-solving
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- Products dropdown menu -->
+                                <div class="relative group">
+                                    <button
+                                        class="text-slate-600 font-semibold px-3 py-2 rounded-md text-base hover:text-blue-700 active:text-blue-800"><a
+                                            href="/product">Products</a></button>
+                                    <div
+                                        class="absolute left-0 w-48 dropdown-background rounded-md shadow-lg hidden group-hover:block z-50">
+                                        <a href="#"
+                                            class="block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">EGuru</a>
+                                        <a href="#"
+                                            class="block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">EShop</a>
+                                        <a href="#"
+                                            class="block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">LiRA</a>
+                                        <a href="#"
+                                            class="block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">Resource
+                                            Datamine</a>
+                                    </div>
+                                </div>
+
+                                <!-- Initiatives dropdown menu -->
+                                <div class="relative group">
+                                    <button
+                                        class=" px-3 py-2 rounded-md text-base text-slate-600 font-semibold hover:text-blue-700 active:text-blue-800">Initiatives
+                                    </button>
+                                    <div
+                                        class="absolute left-0 w-48 dropdown-background rounded-md shadow-lg hidden group-hover:block z-50">
+                                        <a href="#"
+                                            class="block px-4 py-2 text-md text-gray-800 hover:bg-black hover:text-white">NetEdge
+                                            Consulting</a>
+                                        <a href="#"
+                                            class="block px-4 py-2 text-gray-800 text-md  hover:bg-black hover:text-white">
+                                            COE –
+                                            AI/ML and DS
+                                        </a>
+                                        <a href="#"
+                                            class="text-md block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">
+                                            OnDem
+                                            Services</a>
+                                        <a href="#"
+                                            class="text-md block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">
+                                            NetEdge Incublator</a>
+                                        <a href="#"
+                                            class="text-md block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">
+                                            netCubicles </a>
+
+                                        <a href="#"
+                                            class="text-md block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">ThinkEdge
+                                            Consulting</a>
+
+                                        <a href="#"
+                                            class="text-md block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">
+                                            Learning for Career </a>
+                                        <a href="#"
+                                            class="text-md block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">My
+                                            Learning is Fun </a>
+                                        <a href="#"
+                                            class="text-md block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">
+                                            NetEdge </a>
+                                        <a href="#"
+                                            class="text-md block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">Online
+                                        </a>
+
+                                    </div>
+                                </div>
+
+                                <!-- Portfolio dropdown menu -->
+                                <div class="relative group">
+                                    <button
+                                        class="text-slate-600 font-semibold px-3 py-2 rounded-md text-base  hover:text-blue-700 active:text-blue-800">Portfolio</button>
+                                    <div
+                                        class="absolute left-0  w-48 dropdown-background rounded-md shadow-lg hidden group-hover:block z-50">
+                                        <a href="#"
+                                            class="block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">Industries</a>
+                                        <a href="#"
+                                            class="block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">Case
+                                            Studies</a>
+                                    </div>
+                                </div>
+
+                                <!-- Resource Center dropdown menu -->
+                                <div class="relative group">
+                                    <button
+                                        class="text-slate-600 font-semibold px-3 py-2 rounded-md text-base  hover:text-blue-700 active:text-blue-800">
+                                        <a href="/resourcecenter">Resource
+                                            Center</a></button>
+                                    <div
+                                        class="absolute left-0 w-48 dropdown-background rounded-md shadow-lg hidden group-hover:block z-50">
+                                        <a href="#"
+                                            class="block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">Blog</a>
+                                        <a href="#"
+                                            class="block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">Press
+                                            Releases</a>
+                                        <a href="#"
+                                            class="block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">Whitepapers</a>
+                                        <a href="#"
+                                            class="block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">News &
+                                            Events</a>
+                                    </div>
+                                </div>
+
+
+                                <!--  Participate dropdown menu -->
+                                <div class="relative group">
+                                    <button
+                                        class="text-gray-900 px-3 py-2 rounded-md text-base text-slate-600 font-semibold hover:text-blue-700 active:text-blue-800">Participate
+                                    </button>
+                                    <div
+                                        class="absolute left-0 w-48 dropdown-background rounded-md shadow-lg hidden group-hover:block z-50">
+                                        <a href="#"
+                                            class="block px-4 py-2 text-gray-800 hover:bg-black hover:text-white"> Join
+                                            the Discussion</a>
+                                        <a href="#"
+                                            class="block px-4 py-2 text-gray-800 hover:bg-black hover:text-white"> Share
+                                            Ideas
+                                        </a>
+                                        <a href="#"
+                                            class="block px-4 py-2 text-gray-800 hover:bg-black hover:text-white"> Give
+                                            Suggestion</a>
+                                        <a href="#"
+                                            class="block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">
+                                            Investor Relations
+                                        </a>
+                                        <a href="#"
+                                            class="block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">Seminars/
+                                            Events
+                                        </a><a href="#"
+                                            class="block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">Book
+                                            Appoinment
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- careers navbar item button -->
+                                <div class="relative group">
+                                    <button
+                                        class="text-slate-600 font-semibold px-3 py-2 rounded-md text-base font-medium hover:text-blue-700 active:text-blue-800">Careers</button>
+                                </div>
+
+                                <!-- Enrolled navbar item button -->
+                                <div class="relative group">
+                                    <button
+                                        class="text-slate-600 font-semibold px-3 py-2 rounded-md text-base  hover:text-blue-700 active:text-blue-800"><a
+                                            href="/signuppage1">Enrolled
+                                        </a></button>
+                                    <div
+                                        class="absolute left-0  w-48 dropdown-background rounded-md shadow-lg hidden group-hover:block z-50">
+                                        <a href="/signuppage1"
+                                            class="block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">Register</a>
+
+                                    </div>
+                                </div>
+                                <!-- Contact navbar item button -->
+                                <div class="relative group">
+                                    <button
+                                        class="text-slate-600 font-semibold px-3 py-2 rounded-md text-base  hover:text-blue-700 active:text-blue-800"><a
+                                            href="/contactus">Contact
+                                            Us</a></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Mobile menu button-->
+                    <!-- Mobile hamburger menu button -->
+                    <div class="lg:hidden flex items-center px-8 xl:px-4">
+                        <button id="menu-toggle"
+                            class="text-gray-900 focus:outline-none relative w-8 h-8 flex flex-col justify-center items-center">
+                            <span class="block w-8 h-2 bg-indigo-700 my-1 transition-all duration-300"></span>
+                            <span class="block w-8 h-2 bg-rose-500 my-1 transition-all duration-300"></span>
+                            <span class="block w-8 h-2 bg-yellow-700 my-1 transition-all duration-300"></span>
+                        </button>
+                    </div>
+                    <!-- hamberger button end here -->
+                </div>
+            </div>
+
+            <!-- Mobile navigation menu -->
+            <div class="hidden dropdown-backgroundmobile " id="mobile-menu">
+
+                <!-- Home navbar item button -->
+                <div class="relative">
+                    <button id="home-button"
+                        class="text-[#fefeff] flex justify-between items-center w-full text-left w-full py-2 px-3  text-base font-medium hover:underline hover:text-[#ff9900] hover:bg-slate-500">
+                        Home
+                        <svg id="home-icon" class="w-5 h-5 transition-transform duration-300" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4">
+                            </path>
+                        </svg>
+                    </button>
+                    <div id="home-dropdown" class="hidden  font-sm w-full bg-black text-white font-bold">
+                        <a href="/Value-Proposition"
+                            class="block px-4 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">Value
+                            Proposition</a>
+                        <a href="/vision"
+                            class="block px-4 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">Vision</a>
+                        <a href="/aboutus"
+                            class="block px-4 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">About
+                            Us</a>
+                        <a href="/my-team"
+                            class="block px-4 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">My
+                            Team</a>
+                    </div>
+                </div>
+
+                <!-- Services navbar item button -->
+                <div class="relative">
+                    <button id="services-button"
+                        class="text-[#fefeff] flex justify-between items-center w-full text-left px-3 py-2  text-base font-medium hover:underline hover:text-[#ff9900] hover:bg-slate-500">
+                        Services
+                        <svg id="services-icon" class="w-5 h-5 transition-transform duration-300" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4">
+                            </path>
+                        </svg>
+                    </button>
+                    <div id="services-dropdown" class="hidden  bg-black text-white font-bold w-full text-sm">
+                        <a href="#"
+                            class="block px-4 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">Training</a>
+                        <a href="/internship"
+                            class="block px-4 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">Internship</a>
+                        <a href="/placement"
+                            class="block px-4 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">Placement</a>
+                        <a href="#"
+                            class="block px-4 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">Software
+                            Services</a>
+                        <a href="#"
+                            class="block px-4 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">Application
+                            Development</a>
+                        <a href="/infrastructure-management"
+                            class="block px-4 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">Infrastructure-Management</a>
+                        <a href="#"
+                            class="block px-4 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">Ongoing
+                            Training</a>
+                        <a href="#"
+                            class="block px-4 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">Testimonial</a>
+                    </div>
+                </div>
+
+                <!-- Training navbar item button -->
+                <div class="relative">
+                    <button id="Training-button"
+                        class="text-[#fefeff] flex justify-between items-center w-full text-left px-3 py-2  text-base font-medium hover:underline hover:text-[#ff9900] hover:bg-slate-500">
+                        Training
+                        <svg id="Training-icon" class="w-5 h-5 transition-transform duration-300" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4">
+                            </path>
+                        </svg>
+                    </button>
+                    <div id="Training-dropdown" class="hidden  bg-black text-white font-bold w-full text-sm">
+                        <span>
+                            <h1 class="xl:text-xl mt-4 mb-2 text-indigo-600">Tech-Training>Full Stack Development
+                            </h1>
+                        </span>
+                        <a href="#"
+                            class="block px-4 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">
+                            HTML/CSS/JS
+                        </a>
+                        <a href="#"
+                            class="block px-4 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">
+                            MERN/MEAN STACK
+                        </a>
+                        <span>
+                            <h1 class="xl:text-xl mt-8 mb-2 text-indigo-600">Tech-Training>Block Chain Technology
+                            </h1>
+                        </span>
+                        <a href="#"
+                            class="block px-4 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">
+                            Cyber Security
+                        </a>
+                        <a href="#"
+                            class="block px-4 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">
+                            Mobile App Development
+                        </a>
+                        <a href="#"
+                            class="block px-4 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">
+                            IOT
+                        </a>
+                        <a href="#"
+                            class="block px-4 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">
+                            Quantum Computing
+                        </a>
+                        <span>
+                            <h1 class="xl:text-xl mt-8 mb-2 text-indigo-600">SOFT SKILL
+                            </h1>
+                        </span>
+                        <a href="#"
+                            class="block px-4 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">
+                            Personal traits
+
+                        </a>
+                        <a href="#"
+                            class="block px-4 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">
+                            AI/tools/training
+                        </a>
+                        <a href="#"
+                            class="block px-4 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">
+                            Interview
+                        </a>
+                        <a href="#"
+                            class="block px-4 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">
+                            Problem-solving
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Products button -->
+                <div class="relative">
+                    <button id="products-button"
+                        class="text-[#fefeff] flex justify-between items-center w-full text-left px-3 py-2  text-base font-medium hover:underline hover:text-[#ff9900] hover:bg-slate-500">
+                        <span><a href="/product">Products</a></span>
+                        <svg id="products-icon" class="w-5 h-5 transition-transform duration-300" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4">
+                            </path>
+                        </svg>
+                    </button>
+                    <div id="products-dropdown"
+                        class="hidden pt-1 bg-black text-white font-bold w-full text-sm transition-all duration-300 overflow-hidden">
+                        <a href="#"
+                            class="block px-3 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">EGuru</a>
+                        <a href="#"
+                            class="block px-3 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">EShop</a>
+                        <a href="#"
+                            class="block px-3 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">LiRA</a>
+                        <a href="#"
+                            class="block px-3 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">Resource
+                            Datamine</a>
+                    </div>
+                </div>
+
+
+                <!-- Initiatives navbar item button -->
+                <div class="relative">
+                    <button id="Initiatives-button"
+                        class="text-[#fefeff] flex justify-between items-center w-full text-left px-3 py-2  text-base font-medium hover:underline hover:text-[#ff9900] hover:bg-slate-500">
+                        <span><a href="/Initiatives">Initiatives</a></span>
+                        <svg id="Initiatives-icon" class="w-5 h-5 transition-transform duration-300" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4">
+                            </path>
+                        </svg>
+                    </button>
+                    <div id="Initiatives-dropdown"
+                        class="hidden pt-1 bg-black text-white font-bold w-full text-sm transition-all duration-300 overflow-hidden">
+                        <a href="#"
+                            class="block px-4 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">NetEdge
+                            Consulting</a>
+                        <a href="#"
+                            class="block px-4 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">
+                            COE –
+                            AI/ML and DS
+                        </a>
+                        <a href="#"
+                            class="block px-4 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">
+                            OnDem
+                            Services</a>
+                        <a href="#"
+                            class="block px-4 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">
+                            NetEdge Incublator</a>
+                        <a href="#"
+                            class="block px-4 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">
+                            netCubicles </a>
+
+                        <a href="#"
+                            class="block px-4 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">ThinkEdge
+                            Consulting</a>
+
+                        <a href="#"
+                            class="block px-4 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">
+                            Learning for Career </a>
+                        <a href="#"
+                            class="block px-4 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">My
+                            Learning is Fun </a>
+                        <a href="#"
+                            class="block px-4 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">
+                            NetEdge </a>
+                        <a href="#"
+                            class="block px-4 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">Online
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Portfolio navbar item button -->
+                <div class="relative">
+                    <button id="Portfolio-button"
+                        class="text-[#fefeff] flex justify-between items-center w-full text-left px-3 py-2  text-base font-medium hover:underline hover:text-[#ff9900] hover:bg-slate-500">
+                        <span><a href="/Portfolio">Portfolio</a></span>
+                        <svg id="products-icon" class="w-5 h-5 transition-transform duration-300" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4">
+                            </path>
+                        </svg>
+                    </button>
+                    <div id="Portfolio-dropdown"
+                        class="hidden  bg-black text-white font-bold w-full text-sm transition-all duration-300 overflow-hidden">
+                        <a href="#"
+                            class="hover:underline text-red-500 hover:bg-purple-400 hover:font-md block px-3 py-2 ">Industries</a>
+                        <a href="#"
+                            class="hover:underline text-red-500 hover:bg-purple-400 hover:font-md block px-3 py-2">Case
+                            Studies</a>
+                    </div>
+                </div>
+
+
+                <!-- Resource Center navbar item button -->
+                <div class="relative">
+                    <button id="Resource-button"
+                        class="text-[#fefeff] flex justify-between items-center w-full text-left px-3 py-2  text-base font-medium hover:underline hover:text-[#ff9900] hover:bg-slate-500">
+                        <span><a href="/Resource">Resource Center</a></span>
+                        <svg id="Resource-icon" class="w-5 h-5 transition-transform duration-300" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4">
+                            </path>
+                        </svg>
+                    </button>
+                    <div id="Resource-dropdown"
+                        class="hidden  bg-black text-white font-bold w-full text-sm transition-all duration-300 overflow-hidden">
+                        <a href="#"
+                            class="block px-3 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">Blog</a>
+                        <a href="#"
+                            class="block px-3 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">Press
+                            Releases</a>
+                        <a href="#"
+                            class="block px-3 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">Whitepapers</a>
+                        <a href="#"
+                            class="block px-3 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">News
+                            &
+                            Events</a>
+                    </div>
+                </div>
+
+                <!-- Participate Center navbar item button -->
+                <div class="relative">
+                    <button id="Participate-button"
+                        class="text-[#fefeff] flex justify-between items-center w-full text-left px-3 py-2  text-base font-medium hover:underline hover:text-[#ff9900] hover:bg-slate-500">
+                        <span><a href="/Participate">Participate</a></span>
+                        <svg id="Participate-icon" class="w-5 h-5 transition-transform duration-300" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4">
+                            </path>
+                        </svg>
+                    </button>
+                    <div id="Participate-dropdown"
+                        class="hidden bg-black text-white font-bold w-full text-sm transition-all duration-300 overflow-hidden">
+                        <a href="#"
+                            class="hover:underline text-red-500 hover:bg-purple-400 hover:font-md block px-3 py-2 ">
+                            Join
+                            the Discussion</a>
+                        <a href="#"
+                            class="block px-3 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">
+                            Share
+                            Ideas
+                        </a>
+                        <a href="#"
+                            class="block px-3 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">
+                            Give
+                            Suggestion</a>
+                        <a href="#"
+                            class="block px-3 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md ">
+                            Investor Relations
+                        </a>
+                        <a href="#"
+                            class="block px-3 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">Seminars/
+                            Events
+                        </a><a href="#"
+                            class="block px-3 py-2 hover:underline text-red-500 hover:bg-purple-400 hover:font-md">Book
+                            Appoinment
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Careers navbar item button -->
+                <div class="relative">
+                    <button id="Careers-button"
+                        class="text-[#fefeff] flex justify-between items-center w-full text-left px-3 py-2  text-base font-medium hover:underline hover:text-[#ff9900] hover:bg-slate-500">
+                        <span><a href="/Careers">Careers</a></span>
+                        <svg id="Careers-icon" class="w-5 h-5 transition-transform duration-300" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4">
+                            </path>
+                        </svg>
+                    </button>
+                    <div id="Careers-dropdown" </div>
+                    </div>
+                </div>
+
+                <!-- Enrolled navbar item button -->
+                <div class="relative">
+                    <button id="enrolled-button"
+                        class="text-[#fefeff] flex justify-between items-center w-full text-left px-3 py-2  text-base font-medium hover:underline hover:text-[#ff9900] hover:bg-slate-500">
+                        <span><a href="/signuppage1">Enrolled</a></span>
+                        <svg id="enrolled-icon" class="w-5 h-5 transition-transform duration-300" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4">
+                            </path>
+                        </svg>
+                    </button>
+                    <div id="enrolled-dropdown"
+                        class="hidden  bg-black text-white font-bold w-full text-sm transition-all duration-300 overflow-hidden">
+                        <a href="/signuppage1"
+                            class="hover:underline text-red-500 hover:bg-purple-400 hover:font-md block px-3 py-2 ">Register</a>
+                    </div>
+                </div>
+
+
+                <!-- Contact us navbar item button-->
+                <div class="relative">
+                    <button id="contact-button"
+                        class="text-[#fefeff] flex justify-between items-center w-full text-left px-3 py-2  text-base font-medium hover:underline hover:text-[#ff9900] hover:bg-slate-500">
+                        <span><a href="/contactus">Contact Us</a></span>
+                        <svg id="contact-icon" class="w-5 h-5 transition-transform duration-300" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4">
+                            </path>
+                        </svg>
+                    </button>
+                    <div id="contact-dropdown" </div>
+                    </div>
+
+                </div>
+
+            </div>
+    </div>
+    </div>
+    </nav>
+
+
+    <!-- component attached with nav bar -->
+    <div class="bg-[#1e1f21] text-[#fefeff] flex-col text-xs font-[Times New Roman] hidden" id="attached">
+        <div class="w-full h-1 bg-red-600"></div>
+        <!-- changes for larger screen starts here -->
+        <div class="md:flex md:justify-evenly md:h-28 md:pt-10">
+            <!-- changes for mediam screen start her-->
+            <div class="sm:flex">
+                <div
+                    class="w-full h-20 text-start pt-14 pl-12 flex sm:pt-9 md:w-auto md:h-auto md:pl-0 md:pr-0 md:pt-0 md:pb-0 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="Orange" class="size-4">
+                        <path fill-rule="evenodd"
+                            d="m9.69 18.933.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 0 0 .281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 1 0 3 9c0 3.492 1.698 5.988 3.355 7.584a13.731 13.731 0 0 0 2.273 1.765 11.842 11.842 0 0 0 .976.544l.062.029.018.008.006.003ZM10 11.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    212 714 0177 <span class="text-[#666767] "> &nbsp; &nbsp; Free call</span>
+                </div>
+                <div
+                    class="w-full h-20 text-start pt-7 pl-12 flex sm:pt-9 sm:pl-0 md:w-auto md:h-auto md:pl-16 md:pr-0 md:pt-0 md:pb-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="Orange" class="size-4">
+                        <path fill-rule="evenodd"
+                            d="m9.69 18.933.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 0 0 .281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 1 0 3 9c0 3.492 1.698 5.988 3.355 7.584a13.731 13.731 0 0 0 2.273 1.765 11.842 11.842 0 0 0 .976.544l.062.029.018.008.006.003ZM10 11.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    Mon - Sat 8.00 - 18.00 <span class="text-[#666767] "> &nbsp; &nbsp; Sunday CLOSED</span>
+                </div>
+                <!-- changes for mediam screen Ends here-->
+
+            </div>
+            <div class="w-full h-20 text-start pt-0 pl-12 flex md:w-auto md:h-auto md:pl-0 md:pr-0 md:pt-0 md:pb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="Orange" class="size-4">
+                    <path fill-rule="evenodd"
+                        d="m9.69 18.933.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 0 0 .281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 1 0 3 9c0 3.492 1.698 5.988 3.355 7.584a13.731 13.731 0 0 0 2.273 1.765 11.842 11.842 0 0 0 .976.544l.062.029.018.008.006.003ZM10 11.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5Z"
+                        clip-rule="evenodd" />
+                </svg>
+                1010 Avenue of the Moon <span class="text-[#666767]">&nbsp; &nbsp; New York, NY 10018 US.</span>
+            </div>
+        </div>
+    </div>
+    <!-- changes for larger screen Ends here -->
+
+
+    <!-- NAVBAR  END HERE -->
+
+
+
+    <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+    <script>
+
+        /*NAVBAR JS START HERE*/
+
+
+        //  start here js for automatically show ('component attached with nav bar') after five second
+        const attached = document.getElementById('attached');
+
+        // Use setTimeout to delay for 5 seconds
+        setTimeout(() => {
+            attached.classList.remove('hidden');
+        }, 5000);
+
+        //  end here js for automatically show ('component attached with nav bar') after five second
+
+        //JS START HERE FOR DROPDWON COLLPASE WITH PLUS ICON ROTATE
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add event listeners to buttons
+            const buttons = [
+                { button: 'home-button', dropdown: 'home-dropdown', icon: 'home-icon' },
+                { button: 'services-button', dropdown: 'services-dropdown', icon: 'services-icon' },
+                { button: 'Training-button', dropdown: 'Training-dropdown', icon: 'Training-icon' },
+                { button: 'products-button', dropdown: 'products-dropdown', icon: 'products-icon' },
+                { button: 'Initiatives-button', dropdown: 'Initiatives-dropdown', icon: 'Initiatives-icon' },
+                { button: 'Portfolio-button', dropdown: 'Portfolio-dropdown', icon: 'Portfolio-icon' },
+                { button: 'Resource-button', dropdown: 'Resource-dropdown', icon: 'Resource-icon' },
+                { button: 'Participate-button', dropdown: 'Participate-dropdown', icon: 'Participate-icon' },
+                { button: 'Careers-button', dropdown: 'Careers-dropdown', icon: 'Careers-icon' },
+                { button: 'enrolled-button', dropdown: 'enrolled-dropdown', icon: 'enrolled-icon' },
+                { button: 'contact-button', dropdown: 'contact-dropdown', icon: 'contact-icon' }
+
+            ];
+
+            buttons.forEach(({ button, dropdown, icon }) => {
+                document.getElementById(button).addEventListener('click', function () {
+                    const dropdownEl = document.getElementById(dropdown);
+                    const iconEl = document.getElementById(icon);
+
+                    // Toggle visibility and height for dropdown
+                    dropdownEl.classList.toggle('hidden');
+                    dropdownEl.classList.toggle('max-h-0');
+                    dropdownEl.classList.toggle('max-h-screen');
+
+                    // Rotate icon
+                    iconEl.classList.toggle('rotate-45');
+
+                    // Close other dropdowns
+                    buttons.forEach(({ button: btn, dropdown: dd, icon: ic }) => {
+                        if (btn !== button) {
+                            const otherDropdownEl = document.getElementById(dd);
+                            const otherIconEl = document.getElementById(ic);
+                            otherDropdownEl.classList.add('hidden');
+                            otherDropdownEl.classList.remove('max-h-screen');
+                            otherIconEl.classList.remove('rotate-45');
+                        }
+                    });
+                });
+            });
+        });
+
+        //JS START HERE FOR DROPDWON COLLPASE WITH PLUS ICON ROTATE
+
+
+        //const dropdownButtons = document.querySelectorAll('#mobile-menu .relative > button');
+
+
+
+
+
+        // mobile me link collapse end here
+
+
+        // hamberburger button functionlity start
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuToggle.classList.toggle('toggle-menu');
+        });
+
+        document.querySelectorAll('.plus-icon').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const submenu = button.parentElement.nextElementSibling;
+                submenu.classList.toggle('hidden');
+                button.querySelector('i').classList.toggle('fa-plus');
+                button.querySelector('i').classList.toggle('fa-times');
+            });
+        });
+
+        // hamberger button functiolity end
+
+
+        // js start here for rotate service items icon
+        const rotateiconElements = document.querySelectorAll('.rotateicon');
+
+        rotateiconElements.forEach(element => {
+            element.addEventListener('mouseenter', () => {
+                element.querySelector('i').classList.add('rotate-90');
+                element.querySelector('a').classList.add('text-blue-600');
+            });
+
+            element.addEventListener('mouseleave', () => {
+                element.querySelector('i').classList.remove('rotate-90');
+                element.querySelector('a').classList.remove('text-blue-600');
+            });
+        });
+        // js end here for rotate service items icon
+
+
+        /*NAVBAR JS END HERE*/
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <!-- fontawesome icon link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <!-- output file link in below -->
+    <link rel="stylesheet" href="output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @media(max-width:1130px) {
+            .navitemmodify {
+                font-size: 2px !important;
+            }
+        }
+
+        .bggradientfooter {
+            background-image: linear-gradient(to right, #d8d4b5 0%, #decaca 50%, #c286a6 100%);
+
+        }
+
+        .bgcolor {
+            background-image: linear-gradient(to right, #afcb93 0%, #decaca 50%, #c286a6 100%);
+        }
+
+
+
+        /*two link below in home page img css start*/
+        .listchange {
+            list-style: none !important;
+        }
+
+        /*two link below in home page img css end*/
+
+        /* START COLLAPSE MAP BY CLICK PLUS ICON CSS */
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+
+        /*END COLLAPSE MAP BY CLICK PLUS ICON CSS */
+
+
+
+        /*CSS START of form field*/
+        .custom-select {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .custom-select select {
+            display: none;
+        }
+
+        .select-selected {
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .select-items {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            z-index: 99;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-top: none;
+            max-height: 150px;
+
+            /* Adjust the max height as needed */
+            overflow-y: auto;
+            /* Enable vertical scrolling */
+        }
+
+        .select-items div {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .error-message {
+            position: absolute;
+        }
+
+        .select-items div:hover {
+            background-color: #fd9b28;
+            color: white;
+            font-weight: bold;
+        }
+
+        .select-hide {
+            display: none;
+        }
+
+        .select-arrow-active {
+            transform: rotate(180deg);
+        }
+
+        .companyproperty {
+            margin: 40px 0 !important;
+        }
+
+        .custom-button {
+            transition: background-color 0.3s ease;
+            /* Transition effect */
+        }
+
+        .custom-button:hover {
+            background-color: #fd9b28 !important;
+            color: black;
+            font-weight: bold;
+            /* New background color on hover */
+        }
+
+        .custom-icon:hover {
+
+            color: black;
+            font-weight: bold;
+            /* New background color on hover */
+        }
+
+
+        input {
+            outline: none;
+            color: rgb(59, 70, 74);
+        }
+
+
+        /* SPINNER FOR RECAPTCHA START CSS*/
+        /* Custom CSS for spinner animation */
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .spinner {
+            border-top-color: transparent;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            border-left-color: #0d5be1;
+            border-width: 4px;
+            border-style: solid;
+            border-radius: 50%;
+            width: 26px;
+            height: 26px;
+            animation: spin 1s linear infinite;
+        }
+
+        .privacyterms {
+            font-size: 10px !important;
+        }
+
+        /*SPINNER FOR RECAPTCHA END CSS*/
+
+        /*CSS END of form field*/
+
+        /*it's transition for border show by click start*/
+        .border-yellow-500 {
+            border-color: #fd9b28;
+            border-width: 2px !important;
+        }
+
+        .transition-border {
+            transition: border-color 1s ease;
+        }
+
+        /*it's transition for border show by click end*/
+
+
+
+
+        /*  FOOTER START HERE.... */
+
+        .listchange {
+            list-style: none !important;
+            font-size: 14px !important;
+        }
+
+        .listchange i {
+            font-size: 10px !important;
+        }
+
+        .error-border {
+            border-color: red !important;
+        }
+
+        /* Custom CSS for border transition */
+        .border-transition {
+            transition: border-color 0.5s ease;
+        }
+
+        .focus\:border-blue-500:focus {
+            border-color: #3b82f6;
+            /* Tailwind's blue-500 color */
+        }
+
+
+        /*  FOOTER END HERE.... */
+    </style>
+</head>
+
+<body>
+
+
+    {{>navbar}}
+
+
+    <!-- CONTACTUS HOME PAGE IMAGE START HERE -->
+
+    <div class="overflow-hidden w-full relative h-auto">
+        <div class="flex items-center absolute top-0 left-0 w-full h-full bg-black bg-opacity-30 hover:bg-opacity-40">
+            <div class="p-4 md:p-20 sm:p-20 sm:ml-1">
+                <h2
+                    class="lg:text-5xl md:text-3xl text-[10px] font-bold sm:my-4 sm:text-2xl sm:leading-normal text-black">
+                    Contact Us </h2>
+                <p class="sm:my-3 pt-3 font-md sm:text-xl text-[8px]  md:text-1xl text-black">
+                    We are Here to Help
+                    <br>
+                    With Our Global Presence
+                </p>
+                <a href="https://netedgecomputing.com/consultation/">
+                    <a href="/consultation">
+                        <button
+                            class="sm:mt-4 text-slate-100 px-3 sm:text-xl text-[8px]  md:text-1xl md:text-sm py-0.5 md:px-4 md:py-3 font-bold bg-[#001fab] hover:text-white rounded hover:bg-emerald-900">Book
+                            a Consultation</button></a>
+                </a>
+            </div>
+        </div>
+        <img src="https://netedgecomputing.com/wp-content/uploads/2019/09/Contact-Us-banner-2-2.jpg"
+            class="block w-full h-full object-cover bg-cover bg-center bg-no-repeat bg-opacity-50" alt="Slide 1">
+    </div>
+
+    <!-- CONTACTUS HOME PAGE IMAGE END HERE -->
+
+
+    <!-- START  three link below in img  -->
+    <div class="bgcolor">
+        <div class="container sm:w-3/4 mx-auto sm:pt-8">
+            <ul class="flex list-none no-underline px-1" id="threelist">
+                <li><a href="https://netedgecomputing.com/index.php/services/cloud-transformation-solutions/"
+                        class="hover:text-orange-600 sm:text-[17px] text-[9px]"> Home <i
+                            class="fa fa-chevron-right text-orange-600 changesize text-[10px] sm:text-xs"></i>
+
+                    </a></li>
+                <li class="mx-8"><a
+                        href="https://netedgecomputing.com/index.php/services/cloud-transformation-solutions/"
+                        class="hover:text-orange-600 sm:text-[17px] text-[9px]"> Contact Us <i
+                            class="fa fa-chevron-right text-orange-600 text-[10px] sm:text-xs"></i>
+                    </a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- END  three link below in img  -->
+
+
+    <!-- CONACT DETAILS START HERE WITH MAP -->
+    <!-- <div class="w-full mx-auto bg-white my-32 md:px-12 px-2"> -->
+    <div class="flex flex-col lg:flex-row justify-around w-full mx-auto bgcolor  py-16 sm:py-32 md:px-12 px-2">
+        <!-- Contact Details Section -->
+        <!-- left part -->
+        <div class="xl:pl-20">
+            <form id="signup-form" action="#" method="post">
+                <h2 class="text-2xl md:text-[30px] text-gray-500 mb-2">Contact Details</h2>
+                <div class="h-[6px] bg-[#fd9b28] w-20 rounded-full mb-8"></div>
+
+                <h3 class="text-xl text-slate-900 mb-4">Global Headquarter</h3>
+                <div class="mb-4 flex mt-8">
+                    <i class="fa-solid fa-location-dot w-6 h-6 mr-2 text-[#fd9b28]"></i>
+                    <div class="text-slate-600 text-sm">
+                        <p>NetEdge Tower</p>
+                        <p>C - 56/39, Sector - 62</p>
+                        <p>NOIDA - 201 301</p>
+                        <p>India</p>
+                    </div>
+                </div>
+                <div class="mb-4 mt-8 flex text-slate-600 text-sm">
+                    <i class="fa-solid fa-phone w-6 h-6 mr-2 text-[#fd9b28]"></i>
+                    <p>+ 1800 572 8820</p>
+                </div>
+                <div class="mb-4 mt-8 flex text-slate-600 text-sm">
+                    <i class="fa-solid fa-envelope  w-6 h-6 mr-2 text-[#fd9b28]"></i>
+                    <p class="hover:underline">info@netedgecomputing.com</p>
+                </div>
+                <div class="mb-4 mt-8 text-slate-600 text-md">
+                    Fields marked with <span class="text-[#ff912a] text-xl">*</span> are required to be filled.
+                </div>
+
+                <!-- form start field -->
+                <!-- first field -->
+                <div>
+                    <!-- <label class="block text-sm font-medium text-gray-700">Full Name</label> -->
+                    <input type="text" id="full-name" placeholder="Full Name*"
+                        class="block w-full transition-border mt-8  p-[10px]  border border-gray-300 font-bold">
+                    <p id="full-name-error" class="error-message font-bold  text-red-500 text-sm mt-1 hidden">This field
+                        is
+                        required</p>
+                </div>
+                <!-- second field -->
+
+                <div>
+                    <input type="text"
+                        class="block w-full transition-border mt-8  p-[10px]  border border-gray-300 font-bold"
+                        placeholder="Email*" id="email">
+                    <p id="email-error" class="text-red-500 text-sm mt-1 hidden error-message font-bold">This field is
+                        required
+                    </p>
+
+                </div>
+
+                <!-- third field -->
+
+                <div class="companyproperty">
+                    <input type="text" id="company" placeholder="Company"
+                        class="block w-full mt-8 transition-border p-[10px]  border border-gray-300 font-bold">
+                    <p id="company-error" class="error-message text-red-500 font-bold text-sm p-[10px]  hidden">This
+                        field is
+                        required
+                    </p>
+                </div>
+
+                <!-- four field -->
+                <div>
+                    <input type="text" id="phone-number"
+                        class="block w-full mt-8 transition-border p-[10px]  border border-gray-300 font-bold"
+                        placeholder="Phone Number">
+                    <p id="phone-number-error" class="error-message text-red-500 font-bold text-sm mt-1 hidden">
+                        This
+                        field is
+                        required</p>
+                </div>
+
+                <!-- five field -->
+                <div class="custom-select w-full max-w-md mt-8">
+                    <div class="select-selected items-center" id="select-box">
+                        <span class="font-bold text-gray-400">--Support--</span>
+
+                        <i class="fa fa-sort-desc text-gray-400" aria-hidden="true"></i>
+                    </div>
+                    <div class="select-items select-hide" id="select-options">
+                        <div class="py-2 px-4">Complaint</div>
+                        <div class="py-2 px-4">Support</div>
+                        <div class="py-2 px-4">Suggestion</div>
+                        <div class="py-2 px-4">Feedback</div>
+
+                    </div>
+                    <p class="text-red-500 text-sm mt-1 hidden font-bold error-message">This field is required</p>
+                </div>
+                <!-- six field -->
+                <div>
+                    <textarea
+                        class="xl:w-full sm:w-96 mt-8 p-2 border border-gray-300 font-bold outline-none transition-border"
+                        rows="6" id="message" placeholder="Message*"></textarea>
+                </div>
+
+                <!-- seven field -->
+                <!-- RECAPTCHA START NEW -->
+                <div>
+
+                    <div class="bg-[#fff] shadow-xl p-4 flex items-center justify-between sm:w-80"
+                        style="margin:15px 0 0 0;">
+                        <!-- Left side with checkbox and spinner of captcha-->
+                        <div class="flex items-center space-x-4">
+                            <div class="relative">
+                                <input id="captcha-checkbox" type="checkbox" class="hidden">
+                                <div id="checkbox-container"
+                                    class="w-6 h-6 border border-gray-400 rounded flex items-center justify-center cursor-pointer">
+                                    <!-- Checkmark icon -->
+                                    <svg id="checkmark-icon" xmlns="http://www.w3.org/2000/svg"
+                                        class="hidden w-20 h-20 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 10-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <!-- Spinner -->
+                                <div id="spinner" class="hidden absolute inset-0  items-center justify-center">
+                                    <div class="spinner"></div>
+                                </div>
+                            </div>
+                            <label for="captcha-checkbox" class="cursor-pointer">I'm not a robot</label>
+                        </div>
+
+                        <!-- Right side with image and links of captch -->
+                        <div class="flex flex-col items-center space-y-2">
+                            <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="Captcha Logo"
+                                class="w-7 h-7">
+                            <div class="flex privacyterms">
+                                <a href="https://policies.google.com/privacy?hl=en"
+                                    class="text-gray-600 mx-2 hover:underline">Privacy-Terms </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- RECAPTCHA END NEW -->
+
+                    <p id="recaptcha-error" class="text-red-500 font-bold text-sm mt-1 hidden">This field is required
+                    </p>
+                </div>
+                <!-- eight field or submit button -->
+                <button type="sub9mit"
+                    class="bg-black border custom-button9  text-white font-bold p-2 mt-8 mx-auto  w-30 sm:w-60 md:w-80  xl:w-full">Submit
+                    <i class="fa fa-chevron-right custom-butt9on px-1 " id="ic9on"></i></button>
+                <!-- form end -->
+            </form>
+        </div>
+
+
+
+
+
+
+
+        <!-- right part -->
+        <!-- Map Section -->
+        <div class="mt-6 map w-full lg:w-1/2 flex flex-col">
+            <!-- NOT COLLAPSE MAP (OPEN MAP) -->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14001.828723673397!2d77.36485335!3d28.6188014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce56248c19a4f%3A0xfba114b2054e9a9!2sStellar%20IT%20Park%2C%20C-25%2C%20Sector%2062%2C%20Noida%2C%20Uttar%20Pradesh%20201309%2C%20India!5e0!3m2!1sen!2sus!4v1623042007510!5m2!1sen!2sus"
+                allowfullscreen="" loading="lazy" class=" lg:h-[500px] w-full h-64 border-0 my-12 lg:my-1"
+                title="Google Map">
+            </iframe>
+
+
+            <!-- FIRST COLLAPSE MAP -->
+            <button
+                class="toggle-btn flex justify-between items-center w-full h-12 bg-[#fd9b28] text-white px-4 rounded transition-all"
+                onclick="toggleContent('content1', 'icon1')">
+                <span class="font-bold text-white">Global Innovation Center</span>
+                <svg id="icon1" xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4 transform transition-transform text-black" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M12 4v16m8-8H4" />
+                </svg>
+            </button>
+            <div id="content1" class="content hidden w-full transition-all overflow-hidden">
+                <iframe class="w-full h-64 lg:h-96 border-0"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14001.828723673397!2d77.36485335!3d28.6188014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce56248c19a4f%3A0xfba114b2054e9a9!2sStellar%20IT%20Park%2C%20C-25%2C%20Sector%2062%2C%20Noida%2C%20Uttar%20Pradesh%20201309%2C%20India!5e0!3m2!1sen!2sus!4v1623042007510!5m2!1sen!2sus"
+                    allowfullscreen="" loading="lazy"></iframe>
+                <div class="mb-4 flex mt-8">
+                    <i class="fa-solid fa-location-dot w-6 h-6 mr-2 text-[#fd9b28]"></i>
+                    <div class="text-slate-600 text-sm">
+                        <p>NetEdge Tower</p>
+                        <p>C - 56/39, Sector - 62</p>
+                        <p>NOIDA - 201 301</p>
+                        <p>India</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECOND COLLAPSE MAP -->
+
+            <button
+                class="toggle-btn flex justify-between items-center w-full h-12 bg-[#fd9b28] text-white px-4 rounded transition-all"
+                onclick="toggleContent('content2', 'icon2')">
+                <span class="font-bold text-white">Global Delivery Center</span>
+                <svg id="icon2" xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4 text-black transform transition-transform" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M12 4v16m8-8H4" />
+                </svg>
+            </button>
+            <div id="content2" class="content hidden w-full transition-all overflow-hidden">
+                <iframe class="w-full h-64 lg:h-96 border-0"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14001.828723673397!2d77.36485335!3d28.6188014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce56248c19a4f%3A0xfba114b2054e9a9!2sStellar%20IT%20Park%2C%20C-25%2C%20Sector%2062%2C%20Noida%2C%20Uttar%20Pradesh%20201309%2C%20India!5e0!3m2!1sen!2sus!4v1623042007510!5m2!1sen!2sus"
+                    allowfullscreen="" loading="lazy"></iframe>
+                <div class="mb-4 flex mt-8">
+                    <i class="fa-solid fa-location-dot w-6 h-6 mr-2 text-[#fd9b28]"></i>
+                    <div class="text-slate-600 text-sm">
+                        <p>NetEdge Tower</p>
+                        <p>C - 56/39, Sector - 62</p>
+                        <p>NOIDA - 201 301</p>
+                        <p>India</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- THIRD COLLAPSE MAP -->
+            <button
+                class="toggle-btn flex justify-between items-center w-full h-12 bg-[#fd9b28] text-white px-4 rounded transition-all"
+                onclick="toggleContent('content3', 'icon3')">
+                <span class="font-bold text-white">Worldwide Office - USA</span>
+                <svg id="icon3" xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4 text-black transform transition-transform" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M12 4v16m8-8H4" />
+                </svg>
+            </button>
+            <div id="content3" class="content hidden w-full transition-all overflow-hidden">
+                <iframe class="w-full h-64 lg:h-96 border-0"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14001.828723673397!2d77.36485335!3d28.6188014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce56248c19a4f%3A0xfba114b2054e9a9!2sStellar%20IT%20Park%2C%20C-25%2C%20Sector%2062%2C%20Noida%2C%20Uttar%20Pradesh%20201309%2C%20India!5e0!3m2!1sen!2sus!4v1623042007510!5m2!1sen!2sus"
+                    allowfullscreen="" loading="lazy"></iframe>
+                <div class="mb-4 flex mt-8">
+                    <i class="fa-solid fa-location-dot w-6 h-6 mr-2 text-[#fd9b28]"></i>
+                    <div class="text-slate-600 text-sm">
+                        <p>NetEdge Tower</p>
+                        <p>C - 56/39, Sector - 62</p>
+                        <p>NOIDA - 201 301</p>
+                        <p>India</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FOUR COLLAPSE MAP -->
+            <button
+                class="toggle-btn flex justify-between items-center w-full h-12 bg-[#fd9b28] text-white px-4 rounded transition-all"
+                onclick="toggleContent('content4', 'icon4')">
+                <span class="font-bold text-white">Worldwide Office - UK</span>
+                <svg id="icon4" xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4 text-black transform transition-transform" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M12 4v16m8-8H4" />
+                </svg>
+            </button>
+            <div id="content4" class="content hidden w-full transition-all overflow-hidden">
+                <iframe class="w-full h-64 lg:h-96 border-0"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14001.828723673397!2d77.36485335!3d28.6188014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce56248c19a4f%3A0xfba114b2054e9a9!2sStellar%20IT%20Park%2C%20C-25%2C%20Sector%2062%2C%20Noida%2C%20Uttar%20Pradesh%20201309%2C%20India!5e0!3m2!1sen!2sus!4v1623042007510!5m2!1sen!2sus"
+                    allowfullscreen="" loading="lazy"></iframe>
+                <div class="mb-4 flex mt-8">
+                    <i class="fa-solid fa-location-dot w-6 h-6 mr-2 text-[#fd9b28]"></i>
+                    <div class="text-slate-600 text-sm">
+                        <p>NetEdge Tower</p>
+                        <p>C - 56/39, Sector - 62</p>
+                        <p>NOIDA - 201 301</p>
+                        <p>India</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+
+    <!-- CONTACT DETAILS END HERE WITH MAP -->
+
+
+
+    <!-- OUR CLIENT AND TESTIMONIAL SECTION START -->
+    {{>clienttestimo}}
+    <!-- OUR CLIENT AND TESTIMONIAL SECTION END -->
+
+
+
+    <!-- NETEDGE AT A GLANCE(BULE IMG) SECTION START HERE... -->
+    {{>videoimg}}
+    <!-- NETEDGE AT A GLANCE(BULE IMG) SECTION END HERE.... -->
+
+
+    <!--FOOTER START HERE....  -->
+
+    <footer>
+        <!-- this div used to separate copyright div -->
+        <div
+            class="pl-6 pr-4 pt-16 pb-6 text-slate-600 leading-8 text-pretty bggradientfooter text-sm md:pl-16 lg:flex lg:justify-evenly lg:pl-4 lg:pr-4 lg:pt-16">
+            <!-- div for medium screen setup: Grouping logo, 1st list, services -->
+            <div class="md:flex md:mb-10">
+                <!-- div for medium screen setup: Grouping logo, 1st list -->
+                <div class="md:pr-52 lg:p-2 lg:m-2 lg:w-60">
+                    <!-- logo -->
+                    <div class="mb-6">
+                        <a href="">
+                            <img src="https://netedgecomputing.com/wp-content/uploads/2019/09/netedge-logo.png"
+                                alt="NetEdge Logo">
+                        </a>
+                    </div>
+                    <!-- logo end -->
+                    <!-- 1st list start -->
+                    <div class="mb-6">
+                        <ul class="list-inside listchange">
+                            <li><a href="https://netedgecomputing.com/about-us/" class="hover:text-orange-600"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    About Us</a></li>
+                            <li><a href="https://netedgecomputing.com/index.php/about-us/value-proposition/"
+                                    class="hover:text-orange-600"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Value
+                                    Proposition</a></li>
+                            <li><a href="https://netedgecomputing.com/index.php/about-us/methodology/"
+                                    class="hover:text-orange-600"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Methodology</a>
+                            </li>
+                            <li><a href="https://netedgecomputing.com/index.php/about-us/team-netedge/"
+                                    class="hover:text-orange-600"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Team</a></li>
+                            <li><a href="https://netedgecomputing.com/index.php/about-us/management/"
+                                    class="hover:text-orange-600"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Management</a>
+                            </li>
+                            <li><a href="https://netedgecomputing.com/contact-us/" class="hover:text-orange-600"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Contact us</a></li>
+                        </ul>
+                    </div>
+                    <!-- 1st list end -->
+                </div>
+                <!-- [div for medium screen setup: Grouping logo, 1st list] Ends here -->
+
+                <!-- Services start -->
+                <div class="mb-6 md:w-96 lg:p-2 lg:m-2 lg:w-60">
+                    <h4 class="font-bold text-slate-950 text-lg">Services</h4>
+                    <hr class="border-b-2 mt-2 mb-3">
+                    <ul class="list-inside listchange">
+                        <li><a href="https://netedgecomputing.com/index.php/services/cloud-transformation-solutions/"
+                                class="hover:text-orange-600"><i class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Cloud
+                                Transformation Solutions</a></li>
+                        <li><a href="https://netedgecomputing.com/index.php/services/ai-and-cognitive-analytics/"
+                                class="hover:text-orange-600"><i class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                AI and
+                                Cognitive Analytics</a></li>
+                        <li><a href="https://netedgecomputing.com/index.php/services/enterprise-cyber-security/"
+                                class="hover:text-orange-600"><i class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Enterprise
+                                Cyber Security</a></li>
+                        <li><a href="https://netedgecomputing.com/index.php/services/iot-and-automation/"
+                                class="hover:text-orange-600"><i class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                IoT and
+                                Automation</a></li>
+                        <li><a href="https://netedgecomputing.com/index.php/services/application-development/"
+                                class="hover:text-orange-600"><i class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Application
+                                Development and
+                                <span class="ml-3">Maintenance</span></a></li>
+                        <li><a href="https://netedgecomputing.com/index.php/services/ebusiness-digital-solutions/"
+                                class="hover:text-orange-600"><i class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                eBusiness
+                                Digital Solutions</a></li>
+                    </ul>
+                </div>
+                <!-- Services Ends-->
+            </div>
+            <!-- [div for medium screen setup: Grouping logo, 1st list, services] Ends here-->
+
+            <!-- div for medium screen setup: Grouping Recent Posts, Subscribe, Social Link-->
+            <div class="md:flex">
+                <!-- Recent Posts -->
+                <div class="mb-6 md:pr-7 lg:p-2 lg:m-2 lg:w-60">
+                    <h4 class="font-bold text-slate-950 text-lg">Recent Posts</h4>
+                    <hr class="border-b-2 mt-2 mb-3">
+                    <ul class="listchange list-inside">
+                        <li><a href="https://netedgecomputing.com/social-computing/designing-a-cost-effective-cloud-solution-for-your-business/"
+                                class="hover:text-orange-600"><i class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Designing
+                                a Cost Effective Cloud <span class="ml-3">Solution for your business.</span></a></li>
+                        <li><a href="https://netedgecomputing.com/social-computing/driving-innovation-and-automation-across-an-enterprise-to-growth-hacking/"
+                                class="hover:text-orange-600"><i class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Driving
+                                Innovation and <span class="ml-3"> Automation across an Enterprise </span> <span
+                                    class="ml-3">to Growth Hacking.</span></a></li>
+                        <li><a href="https://netedgecomputing.com/social-computing/ecommerce-services-guide-right-from-concept-proof-of-concept-to-implementation/"
+                                class="hover:text-orange-600"><i class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                E-Commerce
+                                Services Guide: <span class="ml-3">Right from Proof-of-Concept to</span>
+                                <span class="ml-3">simplementation.</span></a></li>
+                    </ul>
+                </div>
+                <!-- Recent Posts Ends -->
+
+                <!-- div for medium screen setup: Combining Subscribe, Social Link -->
+                <div class="md:pl-10 lg:p-2 lg:m-2  lg:w-60">
+                    <!-- Subscribe starts here -->
+                    <div class="mb-6 xl:ml-10">
+                        <h4 class="font-bold text-slate-950 text-lg">Subscribe</h4>
+                        <hr class="border-b-2 mt-2 mb-3 md:w-96 lg:w-full">
+                        <div class="mt-7">
+                            <input type="text"
+                                class="bg-[#cbcacb] w-full h-12 md:w-96 lg:w-full px-4 border border-transparent outline-none focus:border-[3px] rounded border-transition focus:border-yellow-500"
+                                id="email-input" placeholder="Enter your email">
+                            <p id="error-message" class="text-red-500 text-sm mt-2 hidden">Field is required</p>
+                            <button type="submit" id="subscribe-button"
+                                class="bg-[#011bab] w-full h-12 text-white mt-5 rounded md:w-96 lg:w-full">Subscribe</button>
+
+                        </div>
+                    </div>
+                    <!-- Subscribe Ends here -->
+
+                    <!-- Social Link starts -->
+                    <div class="xl:ml-10">
+                        <h4 class="font-bold text-slate-950 text-lg">Social Links</h4>
+                        <hr class="border-b-2 mt-2 mb-3 md:w-96 lg:w-full">
+                        <div class="flex justify-center">
+                            <a target="_blank"
+                                href="http://www.linkedin.com/company/netedge-computing-solutions-pvt.-ltd."
+                                title="Follow us on Linkedin"><img
+                                    src="https://s.yimg.com/fz/api/res/1.2/oPmnuoHGZwDmud64pDGAcQ--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpdDtoPTI0MDtxPTgwO3c9MjQw/https://s.yimg.com/zb/imgv1/051c505f-dc29-3303-81b2-5828c6e3b2e2/t_500x300"
+                                    alt="LinkedIn" class="h-5 ml-2 mr-2 mt-2"></a>
+                            <a target="_blank"
+                                href="https://www.facebook.com/NetEdge-Computing-Solutions-2680989805274489/"
+                                title="Follow us on Facebook"><img
+                                    src="https://www.teahub.io/photos/full/11-115962_facebook-logo-png-transparent-background-facebook-png.png"
+                                    alt="Facebook" class="h-7 ml-2 mr-2 mt-1"></a>
+                            <a target="_blank" href="https://www.instagram.com/netedge_computing/"
+                                title="Follow us on Instagram"><img
+                                    src="http://clipart-library.com/images_k/instagram-transparent-png/instagram-transparent-png-4.png"
+                                    alt="Instagram" class="h-7 mt-1"></a>
+                            <a target="_blank" href="http://www.twitter.com/Net_Edge" title="Follow us on Twitter"><img
+                                    src="https://www.freeiconspng.com/uploads/circle-twitter-logo-png-photo-13.png"
+                                    alt="Twitter" class="h-6 ml-2 mr-2 mt-[5px]"></a>
+
+
+                        </div>
+                    </div>
+                    <!-- Social Link End -->
+                </div>
+                <!-- [div for medium screen setup: Combining Subscribe, Social Link] Ends here-->
+            </div>
+            <!-- [div for medium screen setup: Grouping Recent Posts, Subscribe, Social Link] Ends here-->
+        </div>
+
+        <!-- copyright starts here-->
+        <div class="bg-[#1e1f21] text-[#777676] pl-4 pr-4 pt-8 text-xs pb-2">
+            <p class="text-center md:text-left">© <a
+                    href="https://netedgecomputing.com/index.php/copy-right/">Copyright</a> 1992 - 2022, NetEdge
+                Computing Solutions Pvt. Ltd. All Rights Reserved.</p>
+            <div class="text-center md:text-right">
+                <a href="https://netedgecomputing.com/index.php/privacy-policy/">Privacy Policy</a> |
+                <a href="https://netedgecomputing.com/index.php/terms-condition/">Terms & Conditions</a>
+            </div>
+        </div>
+        <!-- copyright Ends here-->
+    </footer>
+
+    <!-- FOOTER END HERE....  -->
+
+
+    <script>
+        // JS START HERE FOR COLLAPSE MAP BY CLICK PLUS ICON
+        function toggleContent(contentId, iconId) {
+            // Get the current content and icon
+            const content = document.getElementById(contentId);
+            const icon = document.getElementById(iconId);
+
+            // If the content is currently hidden, show it and hide the others
+            if (content.classList.contains('hidden')) {
+                // Hide all content and reset all icons
+                document.querySelectorAll('.content').forEach(c => c.classList.add('hidden'));
+                document.querySelectorAll('.toggle-btn svg').forEach(i => {
+                    i.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />';
+                });
+
+                // Show the current content and change the icon to minus
+                content.classList.remove('hidden');
+                icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" />';
+            } else {
+                // If the content is already shown, hide it and reset the icon to plus
+                content.classList.add('hidden');
+                icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />';
+            }
+        }
+
+
+        // JS END HERE FOR COLLAPSE MAP BY CLICK PLUS ICON
+
+
+        // FOOTER JS START HERE ....
+        const emailInput = document.getElementById('email-input');
+        const subscribeButton = document.getElementById('subscribe-button');
+        const errorMessage = document.getElementById('error-message');
+
+        subscribeButton.addEventListener('click', function () {
+            if (emailInput.value.trim() === '') {
+                errorMessage.classList.remove('hidden');
+                emailInput.classList.add('error-border');
+            } else {
+                errorMessage.classList.add('hidden');
+                emailInput.classList.remove('error-border');
+                // Add form submission logic here if needed
+            }
+        });
+
+        // its js for input border transition
+        emailInput.addEventListener('focus', function () {
+            errorMessage.classList.add('hidden');
+            emailInput.classList.remove('error-border');
+        });
+
+        emailInput.addEventListener('blur', function () {
+            emailInput.classList.remove('error-border');
+        });
+        // FOOTER JS END HERE....
+
+
+    </script>
+    <!-- JS START FOR FORM FIELD HERE.. -->
+    <script src="./js/signup.js"></script>
+    <!-- // JS END FOR FORM FIELD HERE.. -->
+</body>
+
+</html>

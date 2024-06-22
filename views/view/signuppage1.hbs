@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwind css link by style.css for output -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <!-- outer css link by style1.css-->
+    <link rel="stylesheet" href="style1.css">
+    <!-- fontawesome icon link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>Home</title>
+
+    <!-- THIS LINK FOR USE GOOGLW RECAPTCH  -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
+    <style>
+        /*THIS CSS FOR SIGNUP PAGE ONLY START*/
+
+        .bg-gradient {
+            /* background-image: -webkit-radial-gradient(#367580 30%, #085f6d 50%);*/
+            background-image: linear-gradient(to right, #b3d8a3 0%, #e0e0e0 50%, #bdd2b2 100%);
+        }
+
+        .custom-select {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .custom-select select {
+            display: none;
+        }
+
+        .select-selected {
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .select-items {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            z-index: 99;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-top: none;
+            max-height: 150px;
+
+            /* Adjust the max height as needed */
+            overflow-y: auto;
+            /* Enable vertical scrolling */
+        }
+
+        .select-items div {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .error-message {
+            position: absolute;
+        }
+
+        .select-items div:hover {
+            background-color: rgb(216, 154, 20);
+        }
+
+        .select-hide {
+            display: none;
+        }
+
+        .select-arrow-active {
+            transform: rotate(180deg);
+        }
+
+        .companyproperty {
+            margin: 40px 0 !important;
+        }
+
+        .custom-button {
+            transition: background-color 0.3s ease;
+            /* Transition effect */
+        }
+
+        .custom-button:hover {
+            background-color: #fd9b27;
+            /* New background color on hover */
+        }
+
+        input {
+            outline: none;
+            color: rgb(59, 70, 74);
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* SPINNER FOR  RECAPTCHA START*/
+        /* Custom CSS for spinner animation */
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .spinner {
+            border-top-color: transparent;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            border-left-color: #0d5be1;
+            border-width: 4px;
+            border-style: solid;
+            border-radius: 50%;
+            width: 26px;
+            height: 26px;
+            animation: spin 1s linear infinite;
+        }
+
+        .privacyterms {
+            font-size: 10px !important;
+        }
+
+        /*SPINNER FOR RECAPTCHA END*/
+
+        /*it's transition for border show by click start*/
+        .border-yellow-500 {
+            border-color: #fd9b28;
+            border-width: 2px !important;
+        }
+
+        .transition-border {
+            transition: border-color 1s ease;
+        }
+
+        /* CSS for focus outline */
+        .outline-orange-500 {
+            outline: 3px solid orange;
+            transition: outline 0.3s;
+        }
+
+        /*it's transition for border show by click end*/
+        /*THIS CSS FOR SIGNUP PAGE ONLY END*/
+    </style>
+</head>
+
+<body>
+
+    <!-- SIGNUP PAGE START -->
+    <div class="bg-gradient">
+        <div class="text-center">
+            <h1 class="text-rose-500 text-2xl sm:text-5xl pt-8">Register/Signup</h1>
+        </div>
+
+        <div class="px-8 sm:px-28 py-12 sm:py-28  w-full flex h-[100vh]  flex-col xl:flex-row" id="request-form">
+
+            <!-- button for close form -->
+            <a href="/">
+                <button id="close-form-btn"
+                    class="absolute top-8 right-12 text-white text-3xl bg-[#fd9b27;]  rounded px-4 pb-2  hover:bg-black ">&times;</button>
+            </a>
+
+            <!-- Left Text Section -->
+            <div class=" w-full xl:w-1/3 xl:my-8 md:mb-0 md:mr-8">
+                <div class="text-3xl font-bold xl:mb-4 text-white flex textchange">
+                    <div class="text-[#fd9b27;] mr-4 xl:text-4xl">Book</div>
+                    An Appointment.
+                </div>
+                <p class="text-white leading-9 mb-12 xl:mb-1">Would you like to speak to one of our Business Innovation
+                    Consultant to
+                    know more about our services and how they can help your business?
+
+                    <br> Just submit your details and we will be in touch with you shortly.
+                </p>
+            </div>
+
+            <!-- Middle Form Section -->
+            <div class="xl:w-1/3 flex-1 xl:mr-8">
+                <form id="signup-form" class="space-y-4">
+                    <div>
+                        <!-- <label class="block text-sm font-medium text-gray-700">Full Name</label> -->
+                        <input type="text" id="full-name" placeholder="Full Name"
+                            class="block w-full  p-[10px] outline-none font-bold">
+                        <p id="full-name-error" class="error-message font-bold  text-red-500 text-sm mt-1 hidden">This
+                            field
+                            is
+                            required</p>
+                    </div>
+                    <div class="companyproperty">
+                        <input type="text" id="company" placeholder="Company" class="block w-full p-[10px]  font-bold">
+                        <p id="company-error" class="error-message text-red-500 font-bold text-sm p-[10px]  hidden">This
+                            field is
+                            required
+                        </p>
+                    </div>
+                    <div>
+                        <input type="text" id="phone-number"
+                            class="block w-full my-16 sm:my-1  p-[10px]  border border-gray-300 font-bold"
+                            placeholder="Phone Number">
+                        <p id="phone-number-error" class="error-message text-red-500 font-bold text-sm mt-1 hidden">This
+                            field is
+                            required</p>
+                    </div>
+                    <!-- <div class="" style="margin:50px 0;"> -->
+                    <!-- <div class="g-recaptcha" style="margin:50px 0;" data-sitekey="YOUR_SITE_KEY"
+                    data-expired-callback="onCaptchaExpired">
+                </div> -->
+
+                    <!-- RECAPTCHA START NEW -->
+                    <div class="bg-[#fff] p-4 flex items-center justify-between w-full max-w-xs" style="margin:50px 0;">
+                        <!-- Left side with checkbox and spinner -->
+                        <div class="flex items-center space-x-4">
+                            <div class="relative">
+                                <input id="captcha-checkbox" type="checkbox" class="hidden">
+                                <div id="checkbox-container"
+                                    class="w-6 h-6 border border-gray-400 rounded flex items-center justify-center cursor-pointer">
+                                    <!-- Checkmark icon -->
+                                    <svg id="checkmark-icon" xmlns="http://www.w3.org/2000/svg"
+                                        class="hidden w-20 h-20 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 10-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <!-- Spinner -->
+                                <div id="spinner" class="hidden absolute inset-0  items-center justify-center">
+                                    <div class="spinner"></div>
+                                </div>
+                            </div>
+                            <label for="captcha-checkbox" class="cursor-pointer">I'm not a robot</label>
+                        </div>
+
+                        <!-- Right side with image and links -->
+                        <div class="flex flex-col items-center space-y-2">
+                            <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="Captcha Logo"
+                                class="w-7 h-7">
+                            <div class="flex privacyterms">
+                                <a href="https://policies.google.com/privacy?hl=en"
+                                    class="text-gray-600 mx-2 hover:underline">Privacy-Terms </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- RECAPTCHA END NEW -->
+
+                    <p id="recaptcha-error" class="text-red-500 font-bold text-sm mt-1 hidden">This field is required
+                    </p>
+                    <!-- </div> -->
+
+            </div>
+
+            <!-- Right Select and Message Section -->
+            <div class="xl:w-1/3">
+                <div class="space-y-10">
+
+                    <div class="custom-select w-full max-w-md">
+                        <div class="select-selected items-center" id="select-box">
+                            <span class="font-bold text-gray-400" id="dropdown">--Select an option--</span>
+
+                            <i class="fa fa-sort-desc text-gray-400" aria-hidden="true"></i>
+                        </div>
+                        <div class="select-items select-hide" id="select-options">
+                            <div class="py-2 px-4">AI and Cognitive Analytics</div>
+                            <div class="py-2 px-4">Application Development & Maintenance</div>
+                            <div class="py-2 px-4">Big Data and Analytics</div>
+                            <div class="py-2 px-4">Cloud Transformation Solutions</div>
+                            <div class="py-2 px-4">eBusiness Digital Solutions</div>
+                            <div class="py-2 px-4">Enterprise Cyber Security</div>
+                            <div class="py-2 px-4">Enterprise Integration As a Service</div>
+                            <div class="py-2 px-4">Infrastructure Management</div>
+                            <div class="py-2 px-4">IoT and Automation</div>
+                            <div class="py-2 px-4">IT and Business Consulting</div>
+                            <div class="py-2 px-4">Mobile Application Development</div>
+                            <div class="py-2 px-4">Outsourced Product Development</div>
+
+                        </div>
+                        <p class="text-red-500 text-sm mt-1 hidden font-bold error-message" id="dropdown-error">This
+                            field
+                            is required</p>
+                    </div>
+                    <div>
+                        <input type="email" class="font-bold block w-full  p-[10px] " placeholder="Email" id="email">
+                        <p id="email-error" class="text-red-500 text-sm mt-1 hidden error-message font-bold">This field
+                            is
+                            required
+                        </p>
+
+                    </div>
+                    <div>
+                        <textarea class="block w-full mt-1 p-2 border border-gray-300 font-bold" style="outline:none;"
+                            rows="6" placeholder="Message" id="message"></textarea>
+                    </div>
+                </div>
+                <button type="submit"
+                    class="bg-black border custom-button  text-white font-bold p-2 mt-8 mx-auto  w-30 sm:w-60 md:w-80  xl:w-full">Submit
+                    <i class="fa fa-chevron-right px-1"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- SIGNUP PAGE END -->
+    <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+    <script>
+        // THIS JS FOR SIGNUP PAGE START 
+        document.getElementById('signup-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            let isValid = true;
+
+            // Full Name validation
+            const fullName = document.getElementById('full-name').value.trim();
+            const fullNameError = document.getElementById('full-name-error');
+            if (!fullName) {
+                fullNameError.classList.remove('hidden');
+                isValid = false;
+            } else {
+                fullNameError.classList.add('hidden');
+            }
+
+            // Company validation
+            const company = document.getElementById('company').value.trim();
+            const companyError = document.getElementById('company-error');
+            if (!company) {
+                companyError.classList.remove('hidden');
+                isValid = false;
+            } else {
+                companyError.classList.add('hidden');
+            }
+
+
+
+
+
+
+            // Email validation
+            const email = document.getElementById('email').value.trim();
+            const emailerror = document.getElementById('email-error');
+            if (!email) {
+                emailerror.classList.remove('hidden');
+                isValid = false;
+            } else {
+                emailerror.classList.add('hidden');
+            }
+
+            // Phone Number validation
+            const phoneNumber = document.getElementById('phone-number').value.trim();
+            const phoneNumberError = document.getElementById('phone-number-error');
+            if (!phoneNumber) {
+                phoneNumberError.classList.remove('hidden');
+                isValid = false;
+            } else {
+                phoneNumberError.classList.add('hidden');
+            }
+
+
+            // Validate Dropdown
+            const dropdownText = document.getElementById('dropdown').textContent.trim();
+            const dropdownError = document.getElementById('dropdown-error');
+            if (dropdownText === '--Select an option--') {
+                dropdownError.classList.remove('hidden');
+                isValid = false;
+            } else {
+                dropdownError.classList.add('hidden');
+            }
+
+
+
+            // Submit the form if all fields are valid
+            if (isValid) {
+                alert('Registered successfull');
+                // Replace console.log with your form submission logic
+            } else {
+                alert('Form validation failed');
+                // Replace console.log with any handling you want to do when form is invalid
+            }
+
+        });
+
+        //  start js this js for select option
+        document.addEventListener('DOMContentLoaded', function () {
+            const selectBox = document.getElementById('select-box');
+            const selectOptions = document.getElementById('select-options');
+            const icon = selectBox.querySelector('i');
+
+            selectBox.addEventListener('click', function () {
+                selectOptions.classList.toggle('select-hide');
+                icon.classList.toggle('select-arrow-active');
+            });
+
+            selectOptions.addEventListener('click', function (e) {
+                if (e.target.tagName === 'DIV') {
+                    selectBox.querySelector('span').textContent = e.target.textContent;
+                    selectOptions.classList.add('select-hide');
+                    icon.classList.remove('select-arrow-active');
+                }
+            });
+
+            document.addEventListener('click', function (e) {
+                if (!selectBox.contains(e.target)) {
+                    selectOptions.classList.add('select-hide');
+                    icon.classList.remove('select-arrow-active');
+                }
+            });
+        });
+
+
+        //  end js this js for select option 
+
+        // RECAPTCHA START
+        // JavaScript for simulating captcha functionality
+        const captchaCheckbox = document.getElementById('captcha-checkbox');
+        const checkboxContainer = document.getElementById('checkbox-container');
+        const spinner = document.getElementById('spinner');
+        const checkmarkIcon = document.getElementById('checkmark-icon');
+
+        checkboxContainer.addEventListener('click', () => {
+            if (!captchaCheckbox.checked) {
+                setTimeout(() => {
+                    spinner.classList.remove('hidden');
+                    checkboxContainer.classList.add('border-transparent');
+
+                    setTimeout(() => {
+                        spinner.classList.add('hidden');
+                        captchaCheckbox.checked = true;
+                        checkmarkIcon.classList.remove('hidden');
+                        checkboxContainer.classList.remove('border-transparent');
+                        checkboxContainer.classList.add('border-green-500');
+                    }, 2000); // 2 seconds spinner
+                }, 500); // 0.5 seconds delay before spinner starts
+            }
+        });
+        //RECAPTCHA END
+
+        //THIS JS FOR SIGNUP PAGE END 
+        document.addEventListener('DOMContentLoaded', function () {
+            // Function to handle focus
+            function handleFocus(event) {
+                event.target.classList.add('outline-orange-500');
+                event.target.classList.add('outline-[3px]');
+            }
+
+            // Function to handle blur
+            function handleBlur(event) {
+                event.target.classList.remove('outline-orange-500');
+                event.target.classList.remove('outline-[3px]');
+            }
+
+            // Select textarea
+            const messageInput = document.getElementById('message');
+            if (messageInput) {
+                messageInput.addEventListener('focus', handleFocus);
+                messageInput.addEventListener('blur', handleBlur);
+            }
+
+            // Select all input fields
+            const inputs = document.querySelectorAll('input[type="text"], input[type="email"], select, #message');
+
+            // Add event listeners to all input fields
+            inputs.forEach(input => {
+                input.addEventListener('focus', handleFocus);
+                input.addEventListener('blur', handleBlur);
+            });
+
+            // Add event listener to the document to handle clicks outside input fields
+            document.addEventListener('click', function (event) {
+                const isInput = event.target.matches('input[type="text"], input[type="email"], select,#message');
+                if (!isInput) {
+                    inputs.forEach(input => {
+                        input.classList.remove('outline-orange-500');
+                        input.classList.remove('outline-[3px]');
+                    });
+                    if (messageInput) {
+                        messageInput.classList.remove('outline-orange-500');
+                        messageInput.classList.remove('outline-[3px]');
+                    }
+                }
+            });
+        });
+
+    </script>
+    <!-- <script src="signup.js"></script> -->
+</body>
+
+</html>

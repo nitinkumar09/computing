@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultation</title>
+    <!-- tailwind css link by style.css for output -->
+    <link rel="stylesheet" href="output.css">
+    <!-- fontawesome icon link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<style>
+    /*THIS CSS FOR SIGNUP PAGE  START HERE*/
+
+    .custom-select {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+    }
+
+    .custom-select select {
+        display: none;
+    }
+
+    .select-selected {
+        background-color: white;
+        border: 1px solid #ccc;
+        padding: 10px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .select-items {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 99;
+        background-color: white;
+        border: 1px solid #ccc;
+        border-top: none;
+        max-height: 150px;
+
+        /* Adjust the max height as needed */
+        overflow-y: auto;
+        /* Enable vertical scrolling */
+    }
+
+    .select-items div {
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .error-message {
+        position: absolute;
+    }
+
+    .select-items div:hover {
+        background-color: rgb(216, 154, 20);
+    }
+
+    .select-hide {
+        display: none;
+    }
+
+    .select-arrow-active {
+        transform: rotate(180deg);
+    }
+
+    .companyproperty {
+        margin: 40px 0 !important;
+    }
+
+    .custom-button {
+        transition: background-color 0.3s ease;
+        /* Transition effect */
+    }
+
+    .custom-button:hover {
+        background-color: #fd9b27;
+        /* New background color on hover */
+    }
+
+    input {
+        outline: none;
+        color: rgb(59, 70, 74);
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    /* SPINNER FOR  RECAPTCHA START*/
+    /* Custom CSS for spinner animation */
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .spinner {
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: #0d5be1;
+        border-width: 4px;
+        border-style: solid;
+        border-radius: 50%;
+        width: 26px;
+        height: 26px;
+        animation: spin 1s linear infinite;
+    }
+
+    .privacyterms {
+        font-size: 10px !important;
+    }
+
+    /*SPINNER FOR RECAPTCHA END*/
+    /*it's transition for border show by click start*/
+    .border-yellow-500 {
+        border-color: #fd9b28;
+        border-width: 2px !important;
+    }
+
+    .transition-border {
+        transition: border-color 1s ease;
+    }
+
+    /*it's transition for border show by click end*/
+
+    /*THIS CSS FOR SIGNUP PAGE  END HERE*/
+
+    /*FOOTER start*/
+
+    .listchange {
+        list-style: none !important;
+        font-size: 14px !important;
+    }
+
+    .listchange i {
+        font-size: 10px !important;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .error-border {
+        border-color: red !important;
+    }
+
+    /* Custom CSS for border transition */
+    .border-transition {
+        transition: border-color 0.5s ease;
+    }
+
+    .focus\:border-blue-500:focus {
+        border-color: #3b82f6;
+        /* Tailwind's blue-500 color */
+    }
+
+    /*Footer*/
+</style>
+
+<body>
+
+    {{!-- NAVBAR START --}}
+
+    {{>navbar}}
+
+    {{!-- NAVBAR END --}}
+
+
+    <!-- FIRST IMG PART START -->
+    <div class="overflow-hidden w-full relative h-[430px] sm:h-104 xl:h-112 2xl:h-120">
+        <div class="duration-700 ease-in-out w-full" data-carousel-item>
+            <div class="flex items-center absolute top-0 left-0 w-full h-full  bg-black bg-opacity-0">
+                <div class="px-12 sm:px-40">
+                    <h2 class="text-sm sm:text-5xl font-bold mb-4 text-black">
+                        Book a Consultation
+                    </h2>
+                    <p class="mb-10 sm:mb-8 font-semibold text-black sm:text-xl">
+                        Lorem ispum
+                    </p>
+                </div>
+            </div>
+            <img src="https://netedgecomputing.com/wp-content/uploads/2019/09/IT-and-Business-Consulting-banner.jpg"
+                class="block w-full h-[430px] object-cover bg-cover bg-center bg-no-repeat bg-opacity-10" alt="Slide 1">
+        </div>
+    </div>
+
+    <!-- start  two link below in img  -->
+    <div class="px-3 md:px-1 sm:container sm:w-3/4 mx-auto mt-8">
+        <ul class="flex list-none no-underline" id="threelist">
+            <li><a href="https://netedgecomputing.com/index.php/services/cloud-transformation-solutions/"
+                    class="hover:text-orange-600 text-[13px] sm:text-[17px]"> Home <i
+                        class="fa fa-chevron-right text-orange-600 text-[11px] sm:text-[17px]"></i>
+
+                </a></li>
+            <li class="mx-8"><a href="https://netedgecomputing.com/index.php/services/cloud-transformation-solutions/"
+                    class="hover:text-orange-600 text-[12px] sm:text-[17px]"> Book a Consultation
+
+                </a></li>
+        </ul>
+    </div>
+    <!-- start  three link below in img  -->
+
+
+    <!-- SIGNUP PAGE START HERE-->
+
+    <div class="bg-gradient px-8  sm:px-28 py-16   w-full mx-4 flex flex-col xl:flex-row">
+
+
+        <!-- left Form Section -->
+        <div class="xl:w-1/3 flex-1 xl:mr-8">
+            <form id="signup-form" action="#" method="post">
+                <!-- form start field -->
+                <!-- first field -->
+                <div>
+                    <!-- <label class="block text-sm font-medium text-gray-700">Full Name</label> -->
+                    <input type="text" id="full-name" placeholder="Full Name*"
+                        class="block w-full transition-border  p-[10px]  border border-gray-300 font-bold">
+                    <p id="full-name-error" class="error-message font-bold  text-red-500 text-sm mt-1 hidden">This field
+                        is
+                        required</p>
+                </div>
+                <!-- second field -->
+
+
+
+                <!-- third field -->
+
+                <div class="companyproperty">
+                    <input type="text" id="company" placeholder="Company"
+                        class="block w-full transition-border p-[10px]  border border-gray-300 font-bold">
+                    <p id="company-error" class="error-message text-red-500 font-bold text-sm p-[10px]  hidden">This
+                        field is
+                        required
+                    </p>
+                </div>
+
+
+                <div>
+                    <input type="text" id="phone-number"
+                        class="block w-full mt-8 transition-border p-[10px]  border border-gray-300 font-bold"
+                        placeholder="Phone Number">
+                    <p id="phone-number-error" class="error-message text-red-500 font-bold text-sm mt-1 hidden">
+                        This
+                        field is
+                        required</p>
+                </div>
+
+                <!-- seven field -->
+                <!-- RECAPTCHA START NEW -->
+                <div>
+
+                    <div class="bg-gray-100  p-4 flex items-center justify-between sm:w-80" style="margin:15px 0 0 0;">
+                        <!-- Left side with checkbox and spinner of captcha-->
+                        <div class="flex items-center space-x-4">
+                            <div class="relative">
+                                <input id="captcha-checkbox" type="checkbox" class="hidden">
+                                <div id="checkbox-container"
+                                    class="w-6 h-6 border border-gray-400 rounded flex items-center justify-center cursor-pointer">
+                                    <!-- Checkmark icon -->
+                                    <svg id="checkmark-icon" xmlns="http://www.w3.org/2000/svg"
+                                        class="hidden w-20 h-20 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 10-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <!-- Spinner -->
+                                <div id="spinner" class="hidden absolute inset-0  items-center justify-center">
+                                    <div class="spinner"></div>
+                                </div>
+                            </div>
+                            <label for="captcha-checkbox" class="cursor-pointer">I'm not a robot</label>
+                        </div>
+
+                        <!-- Right side with image and links of captch -->
+                        <div class="flex flex-col items-center space-y-2">
+                            <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="Captcha Logo"
+                                class="w-7 h-7">
+                            <div class="flex privacyterms">
+                                <a href="https://policies.google.com/privacy?hl=en"
+                                    class="text-gray-600 mx-2 hover:underline">Privacy-Terms </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- RECAPTCHA END NEW -->
+
+                    <p id="recaptcha-error" class="text-red-500 font-bold text-sm mt-1 hidden">This field is required
+                    </p>
+                </div>
+        </div>
+
+        <!-- Right Select and Message Section -->
+        <div class="xl:w-1/3">
+            <div class="my-8 xl:my-1 space-y-10">
+
+                <div class="custom-select w-full max-w-md">
+                    <div class="select-selected items-center" id="select-box">
+                        <span class="font-bold text-gray-400">--Select an option--</span>
+
+                        <i class="fa fa-sort-desc text-gray-400" aria-hidden="true"></i>
+                    </div>
+                    <div class="select-items select-hide" id="select-options">
+                        <div class="py-2 px-4">AI and Cognitive Analytics</div>
+                        <div class="py-2 px-4">Application Development & Maintenance</div>
+                        <div class="py-2 px-4">Big Data and Analytics</div>
+                        <div class="py-2 px-4">Cloud Transformation Solutions</div>
+                        <div class="py-2 px-4">eBusiness Digital Solutions</div>
+                        <div class="py-2 px-4">Enterprise Cyber Security</div>
+                        <div class="py-2 px-4">Enterprise Integration As a Service</div>
+                        <div class="py-2 px-4">Infrastructure Management</div>
+                        <div class="py-2 px-4">IoT and Automation</div>
+                        <div class="py-2 px-4">IT and Business Consulting</div>
+                        <div class="py-2 px-4">Mobile Application Development</div>
+                        <div class="py-2 px-4">Outsourced Product Development</div>
+
+                    </div>
+                    <p class="text-red-500 text-sm mt-1 hidden font-bold error-message">This field is required</p>
+                </div>
+                <div>
+                    <input type="text" class="font-bold border border-gray-300 block w-full transition-border p-[10px] "
+                        placeholder="Email" id="email">
+                    <p id="email-error" class="text-red-500 text-sm mt-1 hidden error-message font-bold">This field is
+                        required
+                    </p>
+
+                </div>
+                <div>
+                    <textarea
+                        class="xl:w-full sm:w-96 p-2 border border-gray-300 font-bold outline-none transition-border"
+                        rows="6" id="message" placeholder="Message*"></textarea>
+                </div>
+            </div>
+            <button type="submit"
+                class="bg-black border custom-button  text-white font-bold p-2 mt-8 mx-auto  w-30 sm:w-60 md:w-80  xl:w-full">Submit
+                <i class="fa fa-chevron-right px-1"></i></button>
+            </form>
+        </div>
+    </div>
+    <!-- SIGNUP PAGE END HERE-->
+
+
+    <!--footer start  -->
+
+    <footer>
+        <!-- this div used to separate copyright div -->
+        <div
+            class="pl-6 pr-4 pt-16 pb-6 text-slate-600 leading-8 text-pretty bg-[#f2f2f2] text-sm md:pl-16 lg:flex lg:justify-evenly lg:pl-4 lg:pr-4 lg:pt-16">
+            <!-- div for medium screen setup: Grouping logo, 1st list, services -->
+            <div class="md:flex md:mb-10">
+                <!-- div for medium screen setup: Grouping logo, 1st list -->
+                <div class="md:pr-52 lg:p-2 lg:m-2 lg:w-60">
+                    <!-- logo -->
+                    <div class="mb-6">
+                        <a href="">
+                            <img src="https://netedgecomputing.com/wp-content/uploads/2019/09/netedge-logo.png"
+                                alt="NetEdge Logo">
+                        </a>
+                    </div>
+                    <!-- logo end -->
+                    <!-- 1st list start -->
+                    <div class="mb-6">
+                        <ul class="list-inside listchange">
+                            <li><a href="https://netedgecomputing.com/about-us/" class="hover:text-orange-600"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    About Us</a></li>
+                            <li><a href="https://netedgecomputing.com/index.php/about-us/value-proposition/"
+                                    class="hover:text-orange-600"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Value
+                                    Proposition</a></li>
+                            <li><a href="https://netedgecomputing.com/index.php/about-us/methodology/"
+                                    class="hover:text-orange-600"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Methodology</a>
+                            </li>
+                            <li><a href="https://netedgecomputing.com/index.php/about-us/team-netedge/"
+                                    class="hover:text-orange-600"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Team</a></li>
+                            <li><a href="https://netedgecomputing.com/index.php/about-us/management/"
+                                    class="hover:text-orange-600"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Management</a>
+                            </li>
+                            <li><a href="https://netedgecomputing.com/contact-us/" class="hover:text-orange-600"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Contact us</a></li>
+                        </ul>
+                    </div>
+                    <!-- 1st list end -->
+                </div>
+                <!-- [div for medium screen setup: Grouping logo, 1st list] Ends here -->
+
+                <!-- Services start -->
+                <div class="mb-6 md:w-96 lg:p-2 lg:m-2 lg:w-60">
+                    <h4 class="font-bold text-slate-950 text-lg">Services</h4>
+                    <hr class="border-b-2 mt-2 mb-3">
+                    <ul class="list-inside listchange">
+                        <li><a href="https://netedgecomputing.com/index.php/services/cloud-transformation-solutions/"
+                                class="hover:text-orange-600"><i class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Cloud
+                                Transformation Solutions</a></li>
+                        <li><a href="https://netedgecomputing.com/index.php/services/ai-and-cognitive-analytics/"
+                                class="hover:text-orange-600"><i class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                AI and
+                                Cognitive Analytics</a></li>
+                        <li><a href="https://netedgecomputing.com/index.php/services/enterprise-cyber-security/"
+                                class="hover:text-orange-600"><i class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Enterprise
+                                Cyber Security</a></li>
+                        <li><a href="https://netedgecomputing.com/index.php/services/iot-and-automation/"
+                                class="hover:text-orange-600"><i class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                IoT and
+                                Automation</a></li>
+                        <li><a href="https://netedgecomputing.com/index.php/services/application-development/"
+                                class="hover:text-orange-600"><i class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Application
+                                Development and
+                                <span class="ml-3">Maintenance</span></a></li>
+                        <li><a href="https://netedgecomputing.com/index.php/services/ebusiness-digital-solutions/"
+                                class="hover:text-orange-600"><i class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                eBusiness
+                                Digital Solutions</a></li>
+                    </ul>
+                </div>
+                <!-- Services Ends-->
+            </div>
+            <!-- [div for medium screen setup: Grouping logo, 1st list, services] Ends here-->
+
+            <!-- div for medium screen setup: Grouping Recent Posts, Subscribe, Social Link-->
+            <div class="md:flex">
+                <!-- Recent Posts -->
+                <div class="mb-6 md:pr-7 lg:p-2 lg:m-2 lg:w-60">
+                    <h4 class="font-bold text-slate-950 text-lg">Recent Posts</h4>
+                    <hr class="border-b-2 mt-2 mb-3">
+                    <ul class="listchange list-inside">
+                        <li><a href="https://netedgecomputing.com/social-computing/designing-a-cost-effective-cloud-solution-for-your-business/"
+                                class="hover:text-orange-600"><i class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Designing
+                                a Cost Effective Cloud <span class="ml-3">Solution for your business.</span></a></li>
+                        <li><a href="https://netedgecomputing.com/social-computing/driving-innovation-and-automation-across-an-enterprise-to-growth-hacking/"
+                                class="hover:text-orange-600"><i class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Driving
+                                Innovation and <span class="ml-3"> Automation across an Enterprise </span> <span
+                                    class="ml-3">to Growth Hacking.</span></a></li>
+                        <li><a href="https://netedgecomputing.com/social-computing/ecommerce-services-guide-right-from-concept-proof-of-concept-to-implementation/"
+                                class="hover:text-orange-600"><i class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                E-Commerce
+                                Services Guide: <span class="ml-3">Right from Proof-of-Concept to</span>
+                                <span class="ml-3">simplementation.</span></a></li>
+                    </ul>
+                </div>
+                <!-- Recent Posts Ends -->
+
+                <!-- div for medium screen setup: Combining Subscribe, Social Link -->
+                <div class="md:pl-10 lg:p-2 lg:m-2 lg:w-60">
+                    <!-- Subscribe starts here -->
+                    <div class="mb-6">
+                        <h4 class="font-bold text-slate-950 text-lg">Subscribe</h4>
+                        <hr class="border-b-2 mt-2 mb-3 md:w-96 lg:w-full">
+                        <div class="mt-7">
+                            <input type="text"
+                                class="bg-[#cbcacb] w-full h-12 md:w-96 lg:w-full px-4 border border-transparent outline-none focus:border-[3px] rounded border-transition focus:border-yellow-500"
+                                id="email-input" placeholder="Enter your email">
+                            <p id="error-message" class="text-red-500 text-sm mt-2 hidden">Field is required</p>
+                            <button type="submit" id="subscribe-button"
+                                class="bg-[#011bab] w-full h-12 text-white mt-5 rounded md:w-96 lg:w-full">Subscribe</button>
+
+                        </div>
+                    </div>
+                    <!-- Subscribe Ends here -->
+
+                    <!-- Social Link starts -->
+                    <div>
+                        <h4 class="font-bold text-slate-950 text-lg">Social Links</h4>
+                        <hr class="border-b-2 mt-2 mb-3 md:w-96 lg:w-full">
+                        <div class="flex justify-center">
+                            <a target="_blank"
+                                href="http://www.linkedin.com/company/netedge-computing-solutions-pvt.-ltd."
+                                title="Follow us on Linkedin"><img
+                                    src="https://s.yimg.com/fz/api/res/1.2/oPmnuoHGZwDmud64pDGAcQ--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpdDtoPTI0MDtxPTgwO3c9MjQw/https://s.yimg.com/zb/imgv1/051c505f-dc29-3303-81b2-5828c6e3b2e2/t_500x300"
+                                    alt="LinkedIn" class="h-5 ml-2 mr-2"></a>
+                            <a target="_blank"
+                                href="https://www.facebook.com/NetEdge-Computing-Solutions-2680989805274489/"
+                                title="Follow us on Facebook"><img
+                                    src="https://s.yimg.com/fz/api/res/1.2/bfhuQx02Fd0qgLXZbH1dww--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpdDtoPTI0MDtxPTgwO3c9MjQw/https://s.yimg.com/zb/imgv1/ff6c2336-05c2-34bf-8d42-c8eb48fbacf1/t_500x300"
+                                    alt="Facebook" class="h-5 ml-2 mr-2"></a>
+                            <a target="_blank" href="https://www.instagram.com/netedge_computing/"
+                                title="Follow us on Instagram"><img
+                                    src="https://s.yimg.com/fz/api/res/1.2/cOPIKde2EAdEq77xXlSqFA--~C/YXBwaWQ9c3JjaGRkO2g9MTkyO3E9ODA7dz0xOTI-/https://s.yimg.com/zb/imgv1/e9d6381f-6a16-39d9-b6f9-1467838c022c/t_500x300"
+                                    alt="Instagram" class="h-5 ml-2 mr-2"></a>
+                            <a target="_blank" href="http://www.twitter.com/Net_Edge" title="Follow us on Twitter"><img
+                                    src="https://s.yimg.com/fz/api/res/1.2/TZ1bP68dTRP80mKIjgPcyA--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpdDtoPTI0MDtxPTgwO3c9MzMy/https://s.yimg.com/zb/imgv1/540bfd67-d7a1-3da0-8dee-ebab64f2bbbf/t_500x300"
+                                    alt="Twitter" class="h-5 ml-2 mr-2"></a>
+
+                        </div>
+                    </div>
+                    <!-- Social Link End -->
+                </div>
+                <!-- [div for medium screen setup: Combining Subscribe, Social Link] Ends here-->
+            </div>
+            <!-- [div for medium screen setup: Grouping Recent Posts, Subscribe, Social Link] Ends here-->
+        </div>
+
+        <!-- copyright starts here-->
+        <div class="bg-[#1e1f21] text-[#777676] pl-4 pr-4 pt-8 text-xs pb-2">
+            <p class="text-center md:text-left">© <a
+                    href="https://netedgecomputing.com/index.php/copy-right/">Copyright</a> 1992 - 2022, NetEdge
+                Computing Solutions Pvt. Ltd. All Rights Reserved.</p>
+            <div class="text-center md:text-right">
+                <a href="https://netedgecomputing.com/index.php/privacy-policy/">Privacy Policy</a> |
+                <a href="https://netedgecomputing.com/index.php/terms-condition/">Terms & Conditions</a>
+            </div>
+        </div>
+        <!-- copyright Ends here-->
+    </footer>
+
+    <!--footer end  -->
+
+
+    {{!-- FOOTER START --}}
+    {{!-- {{>footer}} --}}
+    {{!-- FOOTER END --}}
+
+
+    <script src="./js/signup.js"></script>
+    <script>
+        // footer js star
+        const emailInput = document.getElementById('email-input');
+        const subscribeButton = document.getElementById('subscribe-button');
+        const errorMessage = document.getElementById('error-message');
+
+        subscribeButton.addEventListener('click', function () {
+            if (emailInput.value.trim() === '') {
+                errorMessage.classList.remove('hidden');
+                emailInput.classList.add('error-border');
+            } else {
+                errorMessage.classList.add('hidden');
+                emailInput.classList.remove('error-border');
+                // Add form submission logic here if needed
+            }
+        });
+
+        // its js for input border transition
+        emailInput.addEventListener('focus', function () {
+            errorMessage.classList.add('hidden');
+            emailInput.classList.remove('error-border');
+        });
+
+        emailInput.addEventListener('blur', function () {
+            emailInput.classList.remove('error-border');
+        });
+        // footer js end 
+
+
+    </script>
+    <script src="js/signup.js"></script>
+</body>
+
+</html>

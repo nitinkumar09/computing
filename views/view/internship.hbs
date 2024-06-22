@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship</title>
+    <!-- fontawesome icon link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- output file link in below -->
+    <link rel="stylesheet" href=".styles/style.css">
+    {{!-- below link for font-family --}}
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@400;600&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<style>
+    /*our client with testimonial css start*/
+    .clientbg {
+        background-image: linear-gradient(to right, #bf8cb5 0%, #bea6a6 50%, #b5d397 100%);
+    }
+
+    /*our client with testimonial css end*/
+
+    body {
+        font-family: 'Poppins', 'Montserrat', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        /* Bold for headings */
+    }
+
+    /*NAVBAR CSS START HERE*/
+
+    .bggradientfooter {
+        background-image: linear-gradient(to right, #d4edbb 0%, #f2d3d3 50%, #ecb5d3 100%);
+
+    }
+
+    .card {
+        padding: 20px;
+        box-shadow: 10px 14px 8px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        color: #333;
+        text-align: center;
+        margin: 20px auto;
+        border: 2px solid white;
+    }
+
+    .card:hover {
+        box-shadow: none;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+
+    /* Company overview start here */
+    .custom-button {
+        border-left-width: 4px;
+        border-right-width: 4px;
+        border-top-width: 1px;
+        border-bottom-width: 4px;
+        border-color: transparent;
+        transition: border-color 0.3s;
+    }
+
+    .custom-button:hover {
+        border-color: rgb(187, 26, 223);
+    }
+
+    .custom-button2 {
+        border-left-width: 4px;
+        border-right-width: 4px;
+        border-color: transparent;
+        transition: border-color 0.3s;
+    }
+
+    .custom-button2:hover {
+        border-color: rgb(207, 130, 30);
+    }
+
+    /* Company overview end here */
+
+
+
+
+    /*FOOTER start*/
+
+    .listchange {
+        list-style: none !important;
+        font-size: 14px !important;
+    }
+
+    .listchange i {
+        font-size: 10px !important;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .error-border {
+        border-color: red !important;
+    }
+
+    /* Custom CSS for border transition */
+    .border-transition {
+        transition: border-color 0.5s ease;
+    }
+
+    .focus\:border-blue-500:focus {
+        border-color: #3b82f6;
+        /* Tailwind's blue-500 color */
+    }
+
+    .gradientbgcolor {
+        background-image: linear-gradient(to right, #bcca87 0%, #dfd5d5 50%, #b8d28f 100%);
+    }
+
+    /*Footer*/
+
+    /* this css for company image move left to right start here */
+    .marquee-container {
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .marquee {
+        display: inline-flex;
+        animation: marquee 20s linear infinite;
+    }
+
+    .marquee:hover {
+        animation-play-state: paused;
+    }
+
+    @keyframes marquee {
+        0% {
+            transform: translateX(0%);
+        }
+
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+    /* this css for company image move left to right end here */
+</style>
+
+<body>
+
+    <!-- NAVBAR  START HERE-->
+    {{>navbar}}
+    <!-- NAVBAR END HERE-->
+
+    <!-- CONTACTUS HOME PAGE IMAGE START HERE -->
+    <div class="overflow-hidden w-full relative h-auto b-8">
+        <div class="flex items-center absolute top-0 left-0 w-full h-full bg-black bg-opacity-0">
+            <div class="p-4 md:p-20 sm:p-20 sm:ml-1 xl:mb-20">
+                <h2
+                    class="lg:text-7xl md:text-3xl text-[10px] font-bold sm:mt-4 sm:text-2xl sm:leading-normal text-green-600">
+                    INTERNSHIP </h2>
+                <a href="https://netedgecomputing.com/consultation/">
+                    <a href="">
+                        <button
+                            class="mt-4 text-slate-100 px-3 sm:text-xl text-[8px]  md:text-1xl md:text-sm py-0.5 md:px-4 md:py-3 font-bold bg-[#001fab] hover:text-white rounded hover:bg-emerald-900">Book
+                            a Consultation</button></a>
+                </a>
+            </div>
+        </div>
+        <img src="../images/internships.jpg"
+            class="block w-full h-full sm:h-[40rem] r bg-cover bg-center bg-no-repeat bg-opacity-50"
+            alt="img not found">
+    </div>
+    <!-- CONTACTUS HOME PAGE IMAGE END HERE -->
+
+    <!-- full middle part  start here -->
+    <div class="flex flex-wrap lg:flex-wrap gradientbgcolor xl:pt-16 py-40">
+
+        <div class="w-full p-4">
+
+            {{!-- new 1part start here --}}
+            <div class="container mx-auto flex px-5 py-12 items-center justify-center flex-col">
+                <div class="text-center">
+                    <h2 class="sm:text-6xl text-2xl font-bold text-red-500">INTERNSHIP</h2>
+                    <div class="h-1 rounded-full bg-green-500   mt-2"></div>
+                </div>
+                <img class="lg:w-2/6 md:w-3/6 w-5/6 sm:mt-32 mb-10 object-cover object-center rounded" alt="hero"
+                    src="../images/interships1.jpeg">
+                <div class="text-center lg:w-2/3 w-full">
+                    <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-green-600">Overview</h1>
+                    <p class="mb-8 leading-relaxed text-rose-800"> Our internship program is designed to provide
+                        students with hands-on experience in their field of study.
+                        Follow the roadmap below to see the stages of our internship program.</p>
+                </div>
+            </div>
+
+
+            {{!-- new 4part start here for cards --}}
+            <div class="container px-5  mb-20 mx-auto">
+                <div class="flex flex-col text-center w-full mb-20">
+                    <h2 class="text-xs text-blue-900 tracking-widest font-medium title-font mb-1">SUCCESS STORIES</h2>
+                </div>
+                {{!-- first card --}}
+                <div class="flex flex-wrap -m-4 ">
+                    <div class="p-4 sm:px-8  w-full">
+                        <div class="h-full card p-8 rounded">
+                            <h2 class="text-lg text-purple-800 font-medium title-font mb-2">Orientation</h2>
+                            <p class="leading-relaxed mb-6 text-orange-800 hover:text-slate-600">Introduction to the
+                                company, meeting your team, and understanding the goals of the internship.</p>
+                        </div>
+                    </div>
+                </div>
+
+                {{!-- second card --}}
+                <div class="flex flex-wrap -m-4">
+                    <div class="p-4 sm:px-8 w-full">
+                        <div class="h-full card p-8 rounded">
+                            <h2 class="text-lg text-purple-800 font-medium title-font mb-2">Training</h2>
+                            <p class="leading-relaxed mb-6 text-orange-800 hover:text-slate-600">Hands-on training
+                                sessions and workshops to develop the necessary skills for your role.</p>
+                        </div>
+                    </div>
+                </div>
+
+                {{!-- third card --}}
+                <div class="flex flex-wrap -m-4">
+                    <div class="p-4 sm:px-8 w-full">
+                        <div class="h-full card p-8 rounded">
+                            <h2 class="text-lg text-purple-800 font-medium title-font mb-2">Project Work</h2>
+                            <p class="leading-relaxed mb-6 text-orange-800 hover:text-slate-600">Work on real projects
+                                under the guidance of your mentor, applying what you've learned.</p>
+                        </div>
+                    </div>
+                </div>
+
+                {{!-- four card --}}
+                <div class="flex flex-wrap -m-4">
+                    <div class="p-4 sm:mx-8 w-full">
+                        <div class="h-full card p-8 rounded">
+                            <h2 class="text-lg text-purple-800 font-medium title-font mb-2">Evaluation</h2>
+                            <p class="leading-relaxed mb-6 text-orange-800 hover:text-slate-600">Receive feedback on
+                                your performance, identify areas for improvement, and celebrate achievements.</p>
+                        </div>
+                    </div>
+                </div>
+
+                {{!-- five card --}}
+                <div class="flex flex-wrap -m-4">
+                    <div class="p-4 sm:px-16 w-full">
+                        <div class="h-full card p-8 rounded">
+                            <h2 class="text-lg text-purple-800 font-medium title-font mb-2">Conclusion</h2>
+                            <p class="leading-relaxed mb-6 text-orange-800 hover:text-slate-600">Wrap up the internship,
+                                present your project, and discuss future opportunities with the company.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{!-- new 5part start here for company imgages move --}}
+            <div class="marquee-container">
+                <div class="marquee mt-20">
+                    <div class="flex items-center justify-start">
+                        <img src="/images/hcl1.png" alt="Company Icon" class="sm:h-12 h-4  mx-4">
+                        <img src="/images/infosys1.webp" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                        <img src="/images/Wipro.png" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                        <img src="/images/Mahindra-logo.png" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                        <img src="/images/TCS.png" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                        <img src="/images/accenture1.webp" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- full middle part  end here -->
+
+
+    {{!-- signup page start here --}}
+    {{>signuppage}}
+    {{!-- signup page end here --}}
+
+
+    {{!-- Our client with Testimonial page start here --}}
+    <div class="pb-28 clientbg">
+        {{>clienttestimo}}
+    </div>
+    {{!-- Our client with Testimonial page end here --}}
+
+
+    {{!-- NetEdge At a Glance(video img) page start here --}}
+    {{>videoimg}}
+    {{!-- NetEdge At a Glance(video img) page end here --}}
+
+
+
+    <!--footer start  -->
+
+    <footer>
+        <!-- this div used to separate copyright div -->
+        <div
+            class="pl-6 pr-4 pt-16 pb-6 text-slate-600 leading-8 text-pretty bggradientfooter text-sm md:pl-16 lg:flex lg:justify-evenly lg:pl-4 lg:pr-4 lg:pt-16">
+            <!-- div for medium screen setup: Grouping logo, 1st list, services -->
+            <div class="md:flex md:mb-10">
+                <!-- div for medium screen setup: Grouping logo, 1st list -->
+                <div class="md:pr-52 lg:p-2 lg:m-2 lg:w-60">
+                    <!-- logo -->
+                    <div class="mb-6">
+                        <a href="">
+                            <img src="https://netedgecomputing.com/wp-content/uploads/2019/09/netedge-logo.png"
+                                alt="NetEdge Logo">
+                        </a>
+                    </div>
+                    <!-- logo end -->
+                    <!-- 1st list start -->
+                    <div class="mb-6">
+                        <ul class="list-inside listchange">
+                            <li><a href="https://netedgecomputing.com/about-us/"
+                                    class="hover:text-orange-600 text-cyan-600"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    About Us</a></li>
+                            <li><a href="https://netedgecomputing.com/index.php/about-us/value-proposition/"
+                                    class="hover:text-orange-600 text-cyan-600"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Value
+                                    Proposition</a></li>
+                            <li><a href="https://netedgecomputing.com/index.php/about-us/methodology/"
+                                    class="hover:text-orange-600 text-cyan-600"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Methodology</a>
+                            </li>
+                            <li><a href="https://netedgecomputing.com/index.php/about-us/team-netedge/"
+                                    class="hover:text-orange-600 text-cyan-600"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Team</a></li>
+                            <li><a href="https://netedgecomputing.com/index.php/about-us/management/"
+                                    class="hover:text-orange-600 text-cyan-600"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Management</a>
+                            </li>
+                            <li><a href="https://netedgecomputing.com/contact-us/"
+                                    class="hover:text-orange-600 text-cyan-600"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Contact us</a></li>
+                        </ul>
+                    </div>
+                    <!-- 1st list end -->
+                </div>
+                <!-- [div for medium screen setup: Grouping logo, 1st list] Ends here -->
+
+                <!-- Services start -->
+                <div class="mb-6 md:w-96 lg:p-2 lg:m-2 lg:w-60">
+                    <h4 class="font-bold text-orange-900 text-lg">Services</h4>
+                    <hr class="border-b-2 mt-2 mb-3">
+                    <ul class="list-inside listchange">
+                        <li><a href="https://netedgecomputing.com/index.php/services/cloud-transformation-solutions/"
+                                class="hover:text-orange-600 text-cyan-600"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Cloud
+                                Transformation Solutions</a></li>
+                        <li><a href="https://netedgecomputing.com/index.php/services/ai-and-cognitive-analytics/"
+                                class="hover:text-orange-600 text-cyan-600"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                AI and
+                                Cognitive Analytics</a></li>
+                        <li><a href="https://netedgecomputing.com/index.php/services/enterprise-cyber-security/"
+                                class="hover:text-orange-600 text-cyan-600"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Enterprise
+                                Cyber Security</a></li>
+                        <li><a href="https://netedgecomputing.com/index.php/services/iot-and-automation/"
+                                class="hover:text-orange-600 text-cyan-600"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                IoT and
+                                Automation</a></li>
+                        <li><a href="https://netedgecomputing.com/index.php/services/application-development/"
+                                class="hover:text-orange-600 text-cyan-600"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Application
+                                Development and
+                                <span class="ml-3">Maintenance</span></a></li>
+                        <li><a href="https://netedgecomputing.com/index.php/services/ebusiness-digital-solutions/"
+                                class="hover:text-orange-600 text-cyan-600"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                eBusiness
+                                Digital Solutions</a></li>
+                    </ul>
+                </div>
+                <!-- Services Ends-->
+            </div>
+            <!-- [div for medium screen setup: Grouping logo, 1st list, services] Ends here-->
+
+            <!-- div for medium screen setup: Grouping Recent Posts, Subscribe, Social Link-->
+            <div class="md:flex">
+                <!-- Recent Posts -->
+                <div class="mb-6 md:pr-7 lg:p-2 lg:m-2 lg:w-60">
+                    <h4 class="font-bold text-orange-900 text-lg">Recent Posts</h4>
+                    <hr class="border-b-2 mt-2 mb-3">
+                    <ul class="listchange list-inside">
+                        <li><a href="https://netedgecomputing.com/social-computing/designing-a-cost-effective-cloud-solution-for-your-business/"
+                                class="hover:text-orange-600 text-cyan-600"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Designing
+                                a Cost Effective Cloud <span class="ml-3">Solution for your business.</span></a>
+                        </li>
+                        <li><a href="https://netedgecomputing.com/social-computing/driving-innovation-and-automation-across-an-enterprise-to-growth-hacking/"
+                                class="hover:text-orange-600 text-cyan-600"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Driving
+                                Innovation and <span class="ml-3"> Automation across an Enterprise </span> <span
+                                    class="ml-3">to Growth Hacking.</span></a></li>
+                        <li><a href="https://netedgecomputing.com/social-computing/ecommerce-services-guide-right-from-concept-proof-of-concept-to-implementation/"
+                                class="hover:text-orange-600 text-cyan-600"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                E-Commerce
+                                Services Guide: <span class="ml-3">Right from Proof-of-Concept to</span>
+                                <span class="ml-3">simplementation.</span></a></li>
+                    </ul>
+                </div>
+                <!-- Recent Posts Ends -->
+
+                <!-- div for medium screen setup: Combining Subscribe, Social Link -->
+                <div class="md:pl-10 lg:p-2 lg:m-2 lg:w-60 xl:ml-16">
+                    <!-- Subscribe starts here -->
+                    <div class="mb-6">
+                        <h4 class="font-bold text-orange-900 text-lg">Subscribe</h4>
+                        <hr class="border-b-2 mt-2 mb-3 md:w-96 lg:w-full">
+                        <div class="mt-7">
+                            <input type="text"
+                                class="bg-slate-300  w-full h-12 md:w-96 lg:w-full px-4 border border-transparent outline-none focus:border-[3px] rounded border-transition focus:border-yellow-500"
+                                id="email-input" placeholder="ENTER YOUR EMAIL">
+                            <p id="error-message" class="text-red-500 text-sm mt-2 hidden">Field is required</p>
+                            <button type="submit" id="subscribe-button"
+                                class="bg-[#011bab] w-full h-12 text-white mt-5 rounded md:w-96 lg:w-full">Subscribe</button>
+
+                        </div>
+                    </div>
+                    <!-- Subscribe Ends here -->
+
+                    <!-- Social Link starts -->
+                    <div>
+                        <h4 class="font-bold text-orange-900 text-lg">Social Links</h4>
+                        <hr class="border-b-2 mt-2  md:w-96 lg:w-full">
+                        <div class="flex justify-center">
+                            <a target="_blank"
+                                href="http://www.linkedin.com/company/netedge-computing-solutions-pvt.-ltd."
+                                title="Follow us on Linkedin"><img
+                                    src="https://s.yimg.com/fz/api/res/1.2/oPmnuoHGZwDmud64pDGAcQ--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpdDtoPTI0MDtxPTgwO3c9MjQw/https://s.yimg.com/zb/imgv1/051c505f-dc29-3303-81b2-5828c6e3b2e2/t_500x300"
+                                    alt="LinkedIn" class="h-5 ml-2 mr-2 mt-2"></a>
+                            <a target="_blank"
+                                href="https://www.facebook.com/NetEdge-Computing-Solutions-2680989805274489/"
+                                title="Follow us on Facebook"><img
+                                    src="https://www.teahub.io/photos/full/11-115962_facebook-logo-png-transparent-background-facebook-png.png"
+                                    alt="Facebook" class="h-7 ml-2 mr-2 mt-1"></a>
+                            <a target="_blank" href="https://www.instagram.com/netedge_computing/"
+                                title="Follow us on Instagram"><img
+                                    src="http://clipart-library.com/images_k/instagram-transparent-png/instagram-transparent-png-4.png"
+                                    alt="Instagram" class="h-7 mt-1"></a>
+                            <a target="_blank" href="http://www.twitter.com/Net_Edge" title="Follow us on Twitter"><img
+                                    src="https://www.freeiconspng.com/uploads/circle-twitter-logo-png-photo-13.png"
+                                    alt="Twitter" class="h-6 ml-2 mr-2 mt-[5px]"></a>
+
+                        </div>
+                    </div>
+                    <!-- Social Link End -->
+                </div>
+                <!-- [div for medium screen setup: Combining Subscribe, Social Link] Ends here-->
+            </div>
+            <!-- [div for medium screen setup: Grouping Recent Posts, Subscribe, Social Link] Ends here-->
+        </div>
+
+        <!-- copyright starts here-->
+        <div
+            class="container px-5 py-8 mx-auto flex bg-blue-900 text-white body-font items-center sm:flex-row flex-col">
+            <p class="text-sm text-center sm:text-left">© 2024 Mantrabytes Innovations — All rights reserved</p>
+        </div>
+        <!-- copyright Ends here-->
+    </footer>
+
+    <!--footer end  -->
+
+
+
+
+    <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+    <script>
+
+        // footer js star
+        const emailInput = document.getElementById('email-input');
+        const subscribeButton = document.getElementById('subscribe-button');
+        const errorMessage = document.getElementById('error-message');
+
+        subscribeButton.addEventListener('click', function () {
+            if (emailInput.value.trim() === '') {
+                errorMessage.classList.remove('hidden');
+                emailInput.classList.add('error-border');
+            } else {
+                errorMessage.classList.add('hidden');
+                emailInput.classList.remove('error-border');
+                // Add form submission logic here if needed
+            }
+        });
+
+        // its js for input border transition
+        emailInput.addEventListener('focus', function () {
+            errorMessage.classList.add('hidden');
+            emailInput.classList.remove('error-border');
+        });
+
+        emailInput.addEventListener('blur', function () {
+            emailInput.classList.remove('error-border');
+        });
+        // footer js end 
+    </script>
+
+</body>
+
+</html>

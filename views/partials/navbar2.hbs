@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwind css link by style.css for output -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <!-- outer css link by style1.css-->
+    <link rel="stylesheet" href="style1.css">
+    <!-- fontawesome icon link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>navbar</title>
+
+    <!-- THIS LINK FOR USE GOOGLW RECAPTCH  -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
+    <style>
+        /*NAVBAR CSS START HERE*/
+
+        body {
+            font-family: 'Poppins', 'Montserrat', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            /* Bold for headings */
+        }
+
+        /*NAVBAR CSS START HERE*/
+        .gradient-background {
+            background-image: linear-gradient(to right, #b3d8a3 0%, #e0e0e0 50%, #acad9f 100%);
+        }
+
+        .gradientbackground {
+            background-image: linear-gradient(to right, #c6dea5 0%, #cacead 50%, #c6a19c 100%);
+
+        }
+
+        .gradientbgcolor {
+            background-image: linear-gradient(to right, #bcca87 0%, #dfd5d5 50%, #b8d28f 100%);
+        }
+
+        .dropdown-background {
+            background-image: linear-gradient(to right, #859a90 0%, #d2cfcf 50%, #cdb1b1 100%);
+        }
+
+        /*rotate arrow icon of service link start css*/
+        .rotate-90 {
+            transform: rotate(90deg);
+        }
+
+        .transition-transform {
+            transition: transform 0.3s;
+        }
+
+        .hover\:rotate-90:hover {
+            transform: rotate(90deg);
+        }
+
+        .changepadding {
+            padding: 1px 8px !important;
+        }
+
+        /*rotate arrow icon of service link end css*/
+
+
+        /* hamber button functionlity start css */
+        .rotate-45 {
+            transform: rotate(45deg);
+        }
+
+        .-rotate-45 {
+            transform: rotate(-45deg);
+        }
+
+        /* .hidden {
+              opacity 0;
+            height0;
+            overflow: hidden;
+        }*/
+
+        .toggle-menu span:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+            background-color: rgb(0, 255, 102);
+        }
+
+        .toggle-menu span:nth-child(2) {
+            transform: translateY(0px) rotate(0deg);
+            background-color: rgb(251, 113, 7);
+            padding: 1px 1px;
+        }
+
+        .toggle-menu span:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+            background-color: rgb(0, 255, 102);
+
+        }
+
+        .toggle-menu span {
+            background-color: yellow;
+        }
+
+        .mobile-submenu {
+            transition: height 0.3s ease;
+        }
+
+        /* hamber button functionlity end css */
+
+        /*NAVBAR CSS END HERE*/
+    </style>
+</head>
+
+<body class="">
+
+
+
+    <!-- NAVBAR  START HERE -->
+
+    <div class="gradient-background">
+        <!-- Navigation bar container -->
+        <nav class="shadow-md w-full z-10 ">
+            <div class="max-w-7xl mx-auto">
+                <div class="relative flex items-center justify-between h-24">
+                    <!-- Logo and navigation links -->
+                    <div class="flex-1 flex items-center">
+                        <!-- Logo -->
+                        <div class="flex-shrink-0 px-8 xl:px-1">
+                            <img class="h-11 w-auto"
+                                src="https://netedgecomputing.com/wp-content/uploads/2019/09/netedge-logo.png"
+                                alt="NetEdge">
+                        </div>
+
+                        <!-- Desktop navigation links -->
+                        <div class="hidden lg:block md:ml-6">
+                            <div class="flex space-x-4">
+                                <!-- Home link -->
+                                <a href="/">
+                                    <button
+                                        class="text-slate-600 font-semibold px-3 py-2 rounded-md text-md  hover:text-blue-700 active:text-blue-800">2Home
+                                    </button>
+                                </a>
+
+                                <!-- About Us dropdown menu -->
+                                <div class="relative group">
+                                    <a href="/aboutus">
+                                        <button
+                                            class="text-slate-600 font-semibold px-3 py-2 rounded-md text-md  hover:text-blue-700 active:text-blue-800">About
+                                            Us</button></a>
+                                    <div
+                                        class="absolute left-0  w-48 border-y-2 border-x-2 border-blue-500  xl:dropdown-background rounded-md shadow-lg hidden group-hover:block  z-50">
+                                        <a href="#"
+                                            class="block px-4 py-2 text-slate-700 hover:font-md hover:bg-black hover:text-white">Value
+                                            Proposition</a>
+                                        <a href="#"
+                                            class="block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">Methodology</a>
+                                        <a href="#"
+                                            class="block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">Team</a>
+                                        <a href="#"
+                                            class="block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">Management</a>
+                                        <a href="#"
+                                            class="block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">Partners</a>
+                                    </div>
+                                </div>
+
+                                <!-- Services dropdown menu -->
+                                <div class="relative group">
+                                    <button
+                                        class="text-slate-600 font-semibold px-3 py-2 rounded-md text-base  hover:text-blue-700 active:text-blue-800">Services</button>
+                                    <div
+                                        class="absolute  xl:dropdown-background rounded-md shadow-lg hidden group-hover:block -right-[40rem] z-50">
+                                        <!--  -->
+                                        <div class="flex text-sm w-[950px] pb-5 pt-5 text-center">
+                                            <div class="py-1 border-r-2 text-left justify-evenly leading-loose w-80">
+                                                <h3
+                                                    class="block px-4 py-2 text-gray-800 hover:bg-gray-200 font-bold text-center cursor-pointer">
+                                                    Innovation</h3>
+                                                <div class="pl-4">
+
+
+                                                    <!-- Hover Effect 1 -->
+                                                    <div class="flex items-center rotateicon">
+                                                        <span class="changepadding rounded-full bg-red-500"> <i
+                                                                class="fa-sharp fa-solid fa-arrow-right transition-transform text-white font-bold  hover:rotate-90"></i></span>
+                                                        <a href="#"
+                                                            class="block px-4 py-2 text-gray-800 hover:text-blue-600 transition-colors">
+                                                            IT & Business
+                                                        </a>
+                                                    </div>
+
+                                                    <!-- Hover Effect 2-->
+                                                    <div class="flex items-center rotateicon">
+                                                        <span class="changepadding rounded-full bg-red-500"> <i
+                                                                class="fa-sharp fa-solid fa-arrow-right transition-transform text-white font-bold  hover:rotate-90"></i></span>
+                                                        <a href="#"
+                                                            class="block px-4 py-2 text-gray-800 hover:text-blue-600 transition-colors">
+                                                            ConsultingAI
+                                                            & Cognitive
+                                                        </a>
+                                                    </div>
+
+                                                    <!-- Hover Effect 3-->
+                                                    <div class="flex items-center rotateicon">
+                                                        <span class="changepadding rounded-full bg-red-500"> <i
+                                                                class="fa-sharp fa-solid fa-arrow-right transition-transform text-white font-bold  hover:rotate-90"></i></span>
+                                                        <a href="#"
+                                                            class="block px-4 py-2 text-gray-800 hover:text-blue-600 transition-colors">
+                                                            AnalyticsIoT
+                                                            &
+                                                            AutomationeBusiness
+                                                        </a>
+                                                    </div>
+
+                                                    <!-- Hover Effect 4-->
+                                                    <div class="flex items-center rotateicon">
+                                                        <span class="changepadding rounded-full bg-red-500"> <i
+                                                                class="fa-sharp fa-solid fa-arrow-right transition-transform text-white font-bold  hover:rotate-90"></i></span>
+                                                        <a href="#"
+                                                            class="block px-4 py-2 text-gray-800 hover:text-blue-600 transition-colors">
+                                                            Digital
+                                                            Solutions
+                                                        </a>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="py-1 border-r-2 text-left justify-evenly leading-loose w-80">
+                                                <h3
+                                                    class="block px-4 py-2 text-gray-800 hover:bg-gray-200 font-bold text-center cursor-pointer">
+                                                    Application</h3>
+                                                <div class="pl-4">
+                                                    <!-- Hover Effect 1 -->
+                                                    <div class="flex items-center rotateicon">
+                                                        <span class="changepadding rounded-full bg-red-500"> <i
+                                                                class="fa-sharp fa-solid fa-arrow-right transition-transform text-white font-bold  hover:rotate-90"></i></span>
+                                                        <a href="#"
+                                                            class="block px-4 py-2 text-gray-800 hover:text-blue-600 transition-colors">
+                                                            Application
+                                                            Development & Maintenance
+                                                        </a>
+                                                    </div>
+                                                    <!-- Hover Effect 2 -->
+                                                    <div class="flex items-center rotateicon">
+                                                        <span class="changepadding rounded-full bg-red-500"> <i
+                                                                class="fa-sharp fa-solid fa-arrow-right transition-transform text-white font-bold  hover:rotate-90"></i></span>
+                                                        <a href="#"
+                                                            class="block px-4 py-2 text-gray-800 hover:text-blue-600 transition-colors">
+                                                            Outsourced
+                                                            Product Development
+                                                        </a>
+                                                    </div>
+                                                    <!-- Hover Effect 3-->
+                                                    <div class="flex items-center rotateicon">
+                                                        <span class="changepadding rounded-full bg-red-500"> <i
+                                                                class="fa-sharp fa-solid fa-arrow-right transition-transform text-white font-bold  hover:rotate-90"></i></span>
+                                                        <a href="#"
+                                                            class="block px-4 py-2 text-gray-800 hover:text-blue-600 transition-colors">
+                                                            Mobile
+                                                            Application Development
+                                                        </a>
+                                                    </div>
+                                                    <!-- Hover Effect 4 -->
+                                                    <div class="flex items-center rotateicon">
+                                                        <span class="changepadding rounded-full bg-red-500"> <i
+                                                                class="fa-sharp fa-solid fa-arrow-right transition-transform text-white font-bold  hover:rotate-90"></i></span>
+                                                        <a href="#"
+                                                            class="block px-4 py-2 text-gray-800 hover:text-blue-600 transition-colors">
+                                                            Big
+                                                            Data & Analytics
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="py-1 border-r-2 text-left justify-evenly leading-loose w-80">
+                                                <h3
+                                                    class="block px-4 py-2 text-gray-800 hover:bg-gray-200 font-bold text-center cursor-pointer">
+                                                    Infrastructure</h3>
+                                                <div class="pl-4">
+                                                    <!-- Hover Effect 1 -->
+                                                    <div class="flex items-center rotateicon">
+                                                        <span class="changepadding rounded-full bg-red-500"> <i
+                                                                class="fa-sharp fa-solid fa-arrow-right transition-transform text-white font-bold  hover:rotate-90"></i></span>
+                                                        <a href="#"
+                                                            class="block px-4 py-2 text-gray-800 hover:text-blue-600 transition-colors">
+                                                            Enterprise
+                                                            Integration as a Service
+                                                        </a>
+                                                    </div>
+                                                    <!-- Hover Effect 2 -->
+                                                    <div class="flex items-center rotateicon">
+                                                        <span class="changepadding rounded-full bg-red-500"> <i
+                                                                class="fa-sharp fa-solid fa-arrow-right transition-transform text-white font-bold  hover:rotate-90"></i></span>
+                                                        <a href="#"
+                                                            class="block px-4 py-2 text-gray-800 hover:text-blue-600 transition-colors">
+                                                            Cloud
+                                                            Transformation Solutions
+                                                        </a>
+                                                    </div>
+
+                                                    <!-- Hover Effect 3 -->
+                                                    <div class="flex items-center rotateicon">
+                                                        <span class="changepadding rounded-full bg-red-500"> <i
+                                                                class="fa-sharp fa-solid fa-arrow-right transition-transform text-white font-bold  hover:rotate-90"></i></span>
+                                                        <a href="#"
+                                                            class="block px-4 py-2 text-gray-800 hover:text-blue-600 transition-colors">
+                                                            Infrastructure
+                                                            Management
+                                                        </a>
+                                                    </div>
+
+                                                    <!-- Hover Effect 4 -->
+                                                    <div class="flex items-center rotateicon">
+                                                        <span class="changepadding rounded-full bg-red-500"> <i
+                                                                class="fa-sharp fa-solid fa-arrow-right transition-transform text-white font-bold  hover:rotate-90"></i></span>
+                                                        <a href="#"
+                                                            class="block px-4 py-2 text-gray-800 hover:text-blue-600 transition-colors">
+                                                            Enterprise
+                                                            Cyber Security
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Products dropdown menu -->
+                                <div class="relative group">
+                                    <button
+                                        class="text-slate-600 font-semibold px-3 py-2 rounded-md text-base hover:text-blue-700 active:text-blue-800"><a
+                                            href="/product">Products</a></button>
+                                    <div
+                                        class="absolute left-0 w-48 dropdown-background rounded-md shadow-lg hidden group-hover:block z-50">
+                                        <a href="#"
+                                            class="block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">EGuru</a>
+                                        <a href="#"
+                                            class="block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">EShop</a>
+                                        <a href="#"
+                                            class="block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">LiRA</a>
+                                        <a href="#"
+                                            class="block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">Resource
+                                            Datamine</a>
+                                    </div>
+                                </div>
+
+                                <!-- Initiatives dropdown menu -->
+                                <div class="relative group">
+                                    <button
+                                        class=" px-3 py-2 rounded-md text-base text-slate-600 font-semibold hover:text-blue-700 active:text-blue-800">Initiatives
+                                    </button>
+                                    <div
+                                        class="absolute left-0 w-48 dropdown-background rounded-md shadow-lg hidden group-hover:block z-50">
+                                        <a href="#"
+                                            class="block px-4 py-2 text-md text-gray-800 hover:bg-black hover:text-white">NetEdge
+                                            Consulting</a>
+                                        <a href="#"
+                                            class="block px-4 py-2 text-gray-800 text-md  hover:bg-black hover:text-white">
+                                            COE –
+                                            AI/ML and DS
+                                        </a>
+                                        <a href="#"
+                                            class="text-md block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">
+                                            OnDem
+                                            Services</a>
+                                        <a href="#"
+                                            class="text-md block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">
+                                            NetEdge Incublator</a>
+                                        <a href="#"
+                                            class="text-md block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">
+                                            netCubicles </a>
+
+                                        <a href="#"
+                                            class="text-md block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">ThinkEdge
+                                            Consulting</a>
+
+                                        <a href="#"
+                                            class="text-md block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">
+                                            Learning for Career </a>
+                                        <a href="#"
+                                            class="text-md block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">My
+                                            Learning is Fun </a>
+                                        <a href="#"
+                                            class="text-md block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">
+                                            NetEdge </a>
+                                        <a href="#"
+                                            class="text-md block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">Online
+                                        </a>
+
+                                    </div>
+                                </div>
+
+                                <!-- Portfolio dropdown menu -->
+                                <div class="relative group">
+                                    <button
+                                        class="text-slate-600 font-semibold px-3 py-2 rounded-md text-base  hover:text-blue-700 active:text-blue-800">Portfolio</button>
+                                    <div
+                                        class="absolute left-0  w-48 dropdown-background rounded-md shadow-lg hidden group-hover:block z-50">
+                                        <a href="#"
+                                            class="block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">Industries</a>
+                                        <a href="#"
+                                            class="block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">Case
+                                            Studies</a>
+                                    </div>
+                                </div>
+
+                                <!-- Resource Center dropdown menu -->
+                                <div class="relative group">
+                                    <button
+                                        class="text-slate-600 font-semibold px-3 py-2 rounded-md text-base  hover:text-blue-700 active:text-blue-800">
+                                        <a href="/resourcecenter">Resource
+                                            Center</a></button>
+                                    <div
+                                        class="absolute left-0 w-48 dropdown-background rounded-md shadow-lg hidden group-hover:block z-50">
+                                        <a href="#"
+                                            class="block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">Blog</a>
+                                        <a href="#"
+                                            class="block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">Press
+                                            Releases</a>
+                                        <a href="#"
+                                            class="block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">Whitepapers</a>
+                                        <a href="#"
+                                            class="block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">News &
+                                            Events</a>
+                                    </div>
+                                </div>
+
+
+                                <!--  Participate dropdown menu -->
+                                <div class="relative group">
+                                    <button
+                                        class="text-gray-900 px-3 py-2 rounded-md text-base text-slate-600 font-semibold hover:text-blue-700 active:text-blue-800">Participate
+                                    </button>
+                                    <div
+                                        class="absolute left-0 w-48 dropdown-background rounded-md shadow-lg hidden group-hover:block z-50">
+                                        <a href="#"
+                                            class="block px-4 py-2 text-gray-800 hover:bg-black hover:text-white"> Join
+                                            the Discussion</a>
+                                        <a href="#"
+                                            class="block px-4 py-2 text-gray-800 hover:bg-black hover:text-white"> Share
+                                            Ideas
+                                        </a>
+                                        <a href="#"
+                                            class="block px-4 py-2 text-gray-800 hover:bg-black hover:text-white"> Give
+                                            Suggestion</a>
+                                        <a href="#"
+                                            class="block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">
+                                            Investor Relations
+                                        </a>
+                                        <a href="#"
+                                            class="block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">Seminars/
+                                            Events
+                                        </a><a href="#"
+                                            class="block px-4 py-2 text-gray-800 hover:bg-black hover:text-white">Book
+                                            Appoinment
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- careers navbar item button -->
+                                <div class="relative group">
+                                    <button
+                                        class="text-slate-600 font-semibold px-3 py-2 rounded-md text-base font-medium hover:text-blue-700 active:text-blue-800">Careers</button>
+                                </div>
+
+                                <!-- Contact navbar item button -->
+                                <div class="relative group">
+                                    <button
+                                        class="text-slate-600 font-semibold px-3 py-2 rounded-md text-base  hover:text-blue-700 active:text-blue-800"><a
+                                            href="/contactus">Contact
+                                            Us</a></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Mobile menu button-->
+                    <!-- Mobile hamburger menu button -->
+                    <div class="lg:hidden flex items-center px-8 xl:px-4">
+                        <button id="menu-toggle"
+                            class="text-gray-900 focus:outline-none relative w-8 h-8 flex flex-col justify-center items-center">
+                            <span class="block w-8 h-1 bg-gray-900 my-1 transition-all duration-300"></span>
+                            <span class="block w-8 h-1 bg-gray-900 my-1 transition-all duration-300"></span>
+                            <span class="block w-8 h-1 bg-gray-900 my-1 transition-all duration-300"></span>
+                        </button>
+                    </div>
+                    <!-- hamberger button end here -->
+                </div>
+            </div>
+
+            <!-- Mobile navigation menu -->
+            <div class="hidden dropdown-background" id="mobile-menu">
+
+                <!-- Home navbar item button -->
+                <a href="/"
+                    class="text-[#fefeff] block px-3 py-2  rounded-md text-base font-medium hover:underline hover:text-[#ff9900] hover:bg-slate-500 ">Home</a>
+
+                <!-- About navbar item button -->
+                <div class="relative">
+                    <a href="/aboutus">
+                        <button
+                            class="text-[#fefeff] block w-full text-left w-full py-2 px-2 rounded-md text-base font-medium   hover:underline hover:text-[#ff9900] hover:bg-slate-500 ">About
+                            us </button>
+                    </a>
+                    <div class="hidden mt-1 font-sm dropdown-background  w-full">
+                        <a href="#"
+                            class="text-gray-900 block px-3 py-2 rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500">Value
+                            Proposition</a>
+                        <a href="#"
+                            class="text-gray-900 block px-3 py-2 rounded-md text-base  hover:text-white hover:underline hover:bg-slate-500">Methodology</a>
+                        <a href="#"
+                            class="text-gray-900 block px-3 py-2 rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500">Team</a>
+                        <a href="#"
+                            class="text-gray-900 block px-3 py-2 rounded-md text-base  hover:text-white  hover:underline hover:bg-slate-500">Management</a>
+                        <a href="#"
+                            class="text-gray-900 block px-3 py-2 rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500">Partners</a>
+                    </div>
+                </div>
+
+
+                <!-- Services navbar item button -->
+                <div class="relative">
+                    <button
+                        class="text-[#fefeff] block w-full text-left px-3 py-2 rounded-md text-base font-medium  hover:underline hover:text-[#ff9900] hover:bg-slate-500">Services</button>
+                    <div class="hidden mt-1 dropdown-background">
+                        <a href="#"
+                            class="text-gray-900 block px-3 py-2 rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500 serviceitem">Innovation</a>
+                        <a href="#"
+                            class="text-gray-900 block px-3 py-2 rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500">IT
+                            &
+                            Business Consulting</a>
+                        <a href="#"
+                            class="text-gray-900 block px-3 py-2 rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500">AI
+                            &
+                            Cognitive Analytics</a>
+                        <a href="#"
+                            class="text-gray-900 block px-3 py-2 rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500">IoT
+                            &
+                            Automation</a>
+                        <a href="#"
+                            class="text-gray-900 block px-3 py-2 rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500">eBusiness
+                            Digital Solutions</a>
+                        <a href="#"
+                            class="text-gray-900 block px-3 py-2 rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500 serviceitem">Application</a>
+                        <a href="#"
+                            class="text-gray-900 block px-3 py-2 rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500">Application
+                            Development & Maintenance</a>
+                        <a href="#"
+                            class="text-gray-900 block px-3 py-2 rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500">Outsourced
+                            Product Development</a>
+                        <a href="#"
+                            class="text-gray-900 block px-3 py-2 rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500">Mobile
+                            Application Development</a>
+                        <a href="#"
+                            class="text-gray-900 block px-3 py-2 rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500">Big
+                            Data
+                            & Analytics</a>
+                        <a href="#"
+                            class="text-gray-900 block px-3 py-2 rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500 serviceitem">Infrastructure</a>
+                        <a href="#"
+                            class="text-gray-900 block px-3 py-2 rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500">Enterprise
+                            Integration as a Service</a>
+                        <a href="#"
+                            class="text-gray-900 block px-3 py-2 rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500">Cloud
+                            Transformation Solutions</a>
+                        <a href="#"
+                            class="text-gray-900 block px-3 py-2 rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500">Infrastructure
+                            Management</a>
+                        <a href="#"
+                            class="text-gray-900 block px-3 py-2 rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500">Enterprise
+                            Cyber
+                            Security</a>
+                    </div>
+                </div>
+
+
+                <!-- Products button -->
+                <div class="relative">
+                    <button
+                        class="text-[#fefeff] block w-full text-left px-3 py-2 rounded-md text-base font-medium  hover:underline hover:text-[#ff9900] hover:bg-slate-500"><a
+                            href="/product">Products</a></button>
+                    <div class="hidden mt-1 dropdown-background">
+                        <a href="#"
+                            class="text-gray-900 block px-3 py-2 rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500">EGuru</a>
+                        <a href="#"
+                            class="text-gray-900 block px-3 py-2 rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500">EShop</a>
+                        <a href="#"
+                            class="text-gray-900 block px-3 py-2 rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500">LiRA</a>
+                        <a href="#"
+                            class="text-gray-900 block px-3 py-2 rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500">Resource
+                            Datamine</a>
+                    </div>
+                </div>
+
+                <!-- Initiatives navbar item button -->
+                <div class="relative">
+                    <button
+                        class="text-[#fefeff] block w-full text-left px-3 py-2 rounded-md text-base font-medium  hover:underline hover:text-[#ff9900] hover:bg-slate-500">Initiatives</button>
+                    <div class="hidden mt-1 dropdown-background">
+                        <a href="#"
+                            class="block px-4 py-2 text-gray-900 block rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500">NetEdge
+                            Consulting</a>
+                        <a href="#"
+                            class="block px-4 py-2 text-gray-900 block rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500">
+                            COE –
+                            AI/ML and DS
+                        </a>
+                        <a href="#"
+                            class="block px-4 py-2 text-gray-900 block rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500">
+                            OnDem
+                            Services</a>
+                        <a href="#"
+                            class="block px-4 py-2 text-gray-900 block rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500">
+                            NetEdge Incublator</a>
+                        <a href="#"
+                            class="block px-4 py-2 text-gray-900 block rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500">
+                            netCubicles </a>
+
+                        <a href="#"
+                            class="block px-4 py-2 text-gray-900 block rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500">ThinkEdge
+                            Consulting</a>
+
+                        <a href="#"
+                            class="block px-4 py-2 text-gray-900 block rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500">
+                            Learning for Career </a>
+                        <a href="#"
+                            class="block px-4 py-2 text-gray-900 block rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500">My
+                            Learning is Fun </a>
+                        <a href="#"
+                            class="block px-4 py-2 text-gray-900 block rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500">
+                            NetEdge </a>
+                        <a href="#"
+                            class="block px-4 py-2 text-gray-900 block rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500">Online
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- Portfolio navbar item button -->
+                <div class="relative">
+                    <button
+                        class="text-[#fefeff] block w-full text-left px-3 py-2 rounded-md text-base font-medium  hover:underline hover:text-[#ff9900] hover:bg-slate-500">Portfolio</button>
+                    <div class="hidden mt-1 dropdown-background">
+                        <a href="#"
+                            class="text-gray-900 block px-3 py-2 rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500">Industries</a>
+                        <a href="#"
+                            class="text-gray-900 block px-3 py-2 rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500">Case
+                            Studies</a>
+                    </div>
+                </div>
+
+                <!-- Resource Center navbar item button -->
+                <div class="relative">
+                    <button
+                        class="text-[#fefeff] block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:font-bold  hover:text-[#ff9900] hover:bg-slate-500"><a
+                            href="/resourcecenter">Resource
+                            Center</a>
+                    </button>
+                    <div class="hidden mt-1 dropdown-background">
+                        <a href="#"
+                            class="text-gray-900 block px-3 py-2 rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500">Blog</a>
+                        <a href="#"
+                            class="text-gray-900 block px-3 py-2 rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500">Press
+                            Releases</a>
+                        <a href="#"
+                            class="text-gray-900 block px-3 py-2 rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500">Whitepapers</a>
+                        <a href="#"
+                            class="text-gray-900 block px-3 py-2 rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500">News
+                            &
+                            Events</a>
+                    </div>
+                </div>
+
+                <!-- Participate Center navbar item button -->
+                <div class="relative">
+                    <button
+                        class="text-[#fefeff] block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:font-bold  hover:text-[#ff9900] hover:bg-slate-500">Participate
+                    </button>
+                    <div class="hidden mt-1 dropdown-background">
+                        <a href="#"
+                            class="text-gray-900 block px-3 py-2 rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500">
+                            Join
+                            the Discussion</a>
+                        <a href="#"
+                            class="text-gray-900 block px-3 py-2 rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500">
+                            Share
+                            Ideas
+                        </a>
+                        <a href="#"
+                            class="text-gray-900 block px-3 py-2 rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500">
+                            Give
+                            Suggestion</a>
+                        <a href="#"
+                            class="text-gray-900 block px-3 py-2 rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500">
+                            Investor Relations
+                        </a>
+                        <a href="#"
+                            class="text-gray-900 block px-3 py-2 rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500">Seminars/
+                            Events
+                        </a><a href="#"
+                            class="text-gray-900 block px-3 py-2 rounded-md text-base   hover:text-white hover:underline hover:bg-slate-500">Book
+                            Appoinment
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Careers navbar item button -->
+                <a href="#"
+                    class="text-[#fefeff] block px-3 hover:underline   py-2 rounded-md text-base font-medium  hover:text-[#ff9900] hover:bg-slate-500">Careers</a>
+
+                <!-- Contact us navbar item button-->
+                <a href="/contactus"
+                    class="text-[#fefeff] block hover:underline px-3 py-2 rounded-md text-base font-mediumhover:underline hover:text-[#ff9900] hover:bg-slate-500">Contact
+                    Us</a>
+            </div>
+    </div>
+    </div>
+    </nav>
+
+
+    <!-- component attached with nav bar -->
+    <div class="bg-[#1e1f21] text-[#fefeff] flex-col text-xs font-[Times New Roman] hidden" id="attached">
+        <div class="w-full h-1 bg-red-600"></div>
+        <!-- changes for larger screen starts here -->
+        <div class="md:flex md:justify-evenly md:h-28 md:pt-10">
+            <!-- changes for mediam screen start her-->
+            <div class="sm:flex">
+                <div
+                    class="w-full h-20 text-start pt-14 pl-12 flex sm:pt-9 md:w-auto md:h-auto md:pl-0 md:pr-0 md:pt-0 md:pb-0 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="Orange" class="size-4">
+                        <path fill-rule="evenodd"
+                            d="m9.69 18.933.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 0 0 .281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 1 0 3 9c0 3.492 1.698 5.988 3.355 7.584a13.731 13.731 0 0 0 2.273 1.765 11.842 11.842 0 0 0 .976.544l.062.029.018.008.006.003ZM10 11.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    212 714 0177 <span class="text-[#666767] "> &nbsp; &nbsp; Free call</span>
+                </div>
+                <div
+                    class="w-full h-20 text-start pt-7 pl-12 flex sm:pt-9 sm:pl-0 md:w-auto md:h-auto md:pl-16 md:pr-0 md:pt-0 md:pb-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="Orange" class="size-4">
+                        <path fill-rule="evenodd"
+                            d="m9.69 18.933.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 0 0 .281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 1 0 3 9c0 3.492 1.698 5.988 3.355 7.584a13.731 13.731 0 0 0 2.273 1.765 11.842 11.842 0 0 0 .976.544l.062.029.018.008.006.003ZM10 11.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    Mon - Sat 8.00 - 18.00 <span class="text-[#666767] "> &nbsp; &nbsp; Sunday CLOSED</span>
+                </div>
+                <!-- changes for mediam screen Ends here-->
+
+            </div>
+            <div class="w-full h-20 text-start pt-0 pl-12 flex md:w-auto md:h-auto md:pl-0 md:pr-0 md:pt-0 md:pb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="Orange" class="size-4">
+                    <path fill-rule="evenodd"
+                        d="m9.69 18.933.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 0 0 .281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 1 0 3 9c0 3.492 1.698 5.988 3.355 7.584a13.731 13.731 0 0 0 2.273 1.765 11.842 11.842 0 0 0 .976.544l.062.029.018.008.006.003ZM10 11.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5Z"
+                        clip-rule="evenodd" />
+                </svg>
+                1010 Avenue of the Moon <span class="text-[#666767]">&nbsp; &nbsp; New York, NY 10018 US.</span>
+            </div>
+        </div>
+    </div>
+    <!-- changes for larger screen Ends here -->
+
+
+    <!-- NAVBAR  END HERE -->
+
+
+    <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+    <script>
+
+        /*NAVBAR JS START HERE*/
+
+
+        //  start here js for automatically show ('component attached with nav bar') after five second
+        const attached = document.getElementById('attached');
+
+        // Use setTimeout to delay for 5 seconds
+        setTimeout(() => {
+            attached.classList.remove('hidden');
+        }, 5000);
+
+        //  end here js for automatically show ('component attached with nav bar') after five second
+
+
+
+        // mobile me link collapse end here
+
+
+        const dropdownButtons = document.querySelectorAll('#mobile-menu .relative > button');
+
+        dropdownButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const clickedDropdown = this.nextElementSibling; // Get clicked dropdown
+
+                // Toggle visibility of clicked dropdown
+                clickedDropdown.classList.toggle('hidden');
+
+                // Find all parent elements with class 'mobile-menu'
+                const parentMenu = this.closest('#mobile-menu');
+
+                // Find all sibling dropdown buttons within the same parent menu
+                const siblingButtons = parentMenu.querySelectorAll('.relative > button');
+
+                // Hide dropdowns of sibling buttons (excluding clicked one)
+                siblingButtons.forEach(siblingButton => {
+                    if (siblingButton !== this) {
+                        const siblingDropdown = siblingButton.nextElementSibling;
+                        siblingDropdown.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+
+
+        // mobile me link collapse end here
+
+
+        // hamber button functionlity start
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuToggle.classList.toggle('toggle-menu');
+        });
+
+        document.querySelectorAll('.plus-icon').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const submenu = button.parentElement.nextElementSibling;
+                submenu.classList.toggle('hidden');
+                button.querySelector('i').classList.toggle('fa-plus');
+                button.querySelector('i').classList.toggle('fa-times');
+            });
+        });
+
+        // hamberger button functiolity end
+
+
+        // js start here for rotate service items icon
+        const rotateiconElements = document.querySelectorAll('.rotateicon');
+
+        rotateiconElements.forEach(element => {
+            element.addEventListener('mouseenter', () => {
+                element.querySelector('i').classList.add('rotate-90');
+                element.querySelector('a').classList.add('text-blue-600');
+            });
+
+            element.addEventListener('mouseleave', () => {
+                element.querySelector('i').classList.remove('rotate-90');
+                element.querySelector('a').classList.remove('text-blue-600');
+            });
+        });
+        // js end here for rotate service items icon
+
+
+        /*NAVBAR JS END HERE*/
+
+
+
+
+    </script>
+</body>
+
+</html>

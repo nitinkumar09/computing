@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resoure-center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- this below style1.css link for using some media query for responsive  -->
+    <link rel="stylesheet" href="style1.css">
+    <!-- tailwind css link by style.css for output -->
+    <link rel="stylesheet" href="output.css">
+    <!-- fontawesome icon link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+    /*our client with testimonial css start*/
+    .clientbg {
+        background-image: linear-gradient(to right, #bf8cb5 0%, #bea6a6 50%, #b5d397 100%);
+    }
+
+    /*our client with testimonial css end*/
+    body {
+        font-family: 'Poppins', 'Montserrat', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        /* Bold for headings */
+    }
+
+    .resoucebg {
+        background-image: linear-gradient(to right, #afcea9 0%, #bea6a6 90%, #be8cc2 100%);
+    }
+
+    .bggradientfooter {
+        background-image: linear-gradient(to right, #d8d4b5 0%, #decaca 50%, #c8b0bd 100%);
+
+    }
+
+    .bggradientfooter:hover {
+        background-image: linear-gradient(to right, #3f3e3c 0%, #4f4c4c 50%, #3d3b3c 100%);
+        color: white !important;
+        font-weight: bold !important;
+    }
+
+    .productbg1 {
+        background-image: linear-gradient(to right, #92b187 0%, #bea6a6 50%, #afcea9 100%);
+    }
+
+    .changesize {
+        font-size: 13px !important;
+        margin: 0 5px;
+        font-weight: bold !important;
+    }
+
+    .size {
+        font-size: 30px !important;
+        margin-top: 10px !important;
+    }
+
+    /*signup page css start*/
+    /* Custom class for image hover overlay */
+    .image-hover-overlay {
+        position: relative;
+    }
+
+    .image-hover-overlay::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .image-hover-overlay:hover::before {
+        opacity: 1;
+    }
+
+    /*THIS CSS FOR SIGNUP PAGE ONLY START*/
+
+    .bg-gradient {
+        background-image: -webkit-radial-gradient(#367580 30%, #085f6d 50%);
+    }
+
+    .custom-select {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+    }
+
+    .custom-select select {
+        display: none;
+    }
+
+    .select-selected {
+        background-color: white;
+        border: 1px solid #ccc;
+        padding: 10px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .select-items {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 99;
+        background-color: white;
+        border: 1px solid #ccc;
+        border-top: none;
+        max-height: 150px;
+
+        /* Adjust the max height as needed */
+        overflow-y: auto;
+        /* Enable vertical scrolling */
+    }
+
+    .select-items div {
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .error-message {
+        position: absolute;
+    }
+
+    .select-items div:hover {
+        background-color: rgb(216, 154, 20);
+    }
+
+    .select-hide {
+        display: none;
+    }
+
+    .select-arrow-active {
+        transform: rotate(180deg);
+    }
+
+    .companyproperty {
+        margin: 40px 0 !important;
+    }
+
+    .custom-button {
+        transition: background-color 0.3s ease;
+        /* Transition effect */
+    }
+
+    .custom-button:hover {
+        background-color: #fd9b27;
+        /* New background color on hover */
+    }
+
+    input {
+        outline: none;
+        color: rgb(59, 70, 74);
+    }
+
+
+    /* SPINNER FOR RECAPTCHA START CSS*/
+    /* Custom CSS for spinner animation */
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .spinner {
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: #0d5be1;
+        border-width: 4px;
+        border-style: solid;
+        border-radius: 50%;
+        width: 26px;
+        height: 26px;
+        animation: spin 1s linear infinite;
+    }
+
+    .privacyterms {
+        font-size: 10px !important;
+    }
+
+    /*SPINNER FOR RECAPTCHA END CSS*/
+
+    /*THIS CSS FOR SIGNUP PAGE ONLY END*/
+    /*signup page css end*/
+
+
+    /* OUR CLIENT AND TESTIMONIAL SECTION START CSS*/
+    .slider-container {
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+    }
+
+    .slider {
+        display: flex;
+        transition: transform 1s ease-in-out;
+    }
+
+    .slide {
+        min-width: 100%;
+        transition: opacity 1s ease-in-out;
+    }
+
+    /* OUR CLIENT AND TESTIMONIAL SECTION END CSS */
+
+
+    /*css for hover image than size incressing start here....*/
+    /* Adding transition effects */
+    .transition-transform {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .transition-z {
+        transition: z-index 0.3s ease-in-out;
+    }
+
+    .hover-z-10:hover {
+        z-index: 10;
+    }
+
+    .hover-scale-110:hover {
+        transform: scale(1.1);
+    }
+
+    /*css for hover image than size incressing end here....*/
+
+
+    /*CSS START FOR FOOTER*/
+
+    .listchange {
+        list-style: none !important;
+        font-size: 14px !important;
+    }
+
+    .listchange i {
+        font-size: 10px !important;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .error-border {
+        border-color: red !important;
+    }
+
+    /* Custom CSS for border transition */
+    .border-transition {
+        transition: border-color 0.5s ease;
+    }
+
+    .focus\:border-blue-500:focus {
+        border-color: #3b82f6;
+        /* Tailwind's blue-500 color */
+    }
+
+    /*CSS END FOR FOOTER*/
+</style>
+
+<body>
+
+    {{>navbar}}
+
+    <!-- FIRST IMG PART START -->
+    <div class="overflow-hidden w-full relative h-[430px] sm:h-104 xl:h-112 2xl:h-120">
+        <div class="duration-700 ease-in-out w-full" data-carousel-item>
+            <div
+                class="flex items-center absolute top-0 left-0 w-full h-full  bg-black bg-opacity-30 hover:bg-opacity-50">
+                <div class="text-rose-600 px-16 sm:px-40">
+                    <h2 class="font-bold mb-4 text-3xl sm:text-6xl ">
+                        Blog
+                    </h2>
+                    <p class="mb-10 sm:mb-8 font-semibold text-orange-600 hover:text-slate-800 text-xl sm:text-1xl">
+                        World Class Services at Affordable Price
+                    </p>
+                </div>
+            </div>
+            <img src="../images/blog.jpg"
+                class="block w-full h-[730px] object-cover bg-cover bg-center bg-no-repeat bg-opacity-10" alt="Slide 1">
+        </div>
+    </div>
+
+    <!-- start  three link below in img  -->
+    <div class="productbg1">
+        <div class="container sm:w-3/4 mx-auto pt-8">
+            <ul class="flex list-none no-underline" id="threelist">
+                <li><a href="https://netedgecomputing.com/index.php/services/cloud-transformation-solutions/"
+                        class="hover:text-orange-600 text-[14px] sm:text-[17px]"> Home <i
+                            class="fa fa-chevron-right text-orange-600 changesize"></i>
+
+                    </a></li>
+                <li class="mx-8"><a
+                        href="https://netedgecomputing.com/index.php/services/cloud-transformation-solutions/"
+                        class="hover:text-orange-600 text-[14px] sm:text-[17px]"> Blog <i
+                            class="fa fa-chevron-right text-orange-600 changesize"></i>
+
+                    </a></li>
+
+            </ul>
+        </div>
+    </div>
+    <!-- start  three link below in img  -->
+
+
+    <!--    THIRD SECTION START  -->
+    <!-- New Page Content (Initially Hidden) -->
+    <div class="productbg1">
+        <div class="container mx-auto px-4 py-16">
+            <!-- Grid layout for left and right columns -->
+            <div class="flex flex-col space-y-8">
+                <!-- Card 1 -->
+                <div
+                    class="flex flex-col sm:flex-row items-center  sm:items-start space-x-4 p-4 rounded-lg shadow-md hover:shadow-none">
+                    <a
+                        href="https://netedgecomputing.com/social-computing/designing-a-cost-effective-cloud-solution-for-your-business/">
+                        <img src="../images/cloud.jpg" alt="Placeholder Image"
+                            class="w-84 h-52 rounded mb-12 sm:mb-1 sm:mt-1 transition-transform transition-z hover-z-10 hover-scale-110"></a>
+                    <div class="flex flex-col px-8">
+                        <h3 class="text-xl font-bold text-rose-600 mb-2 hover:text-orange-500 ">Designing a Cost
+                            Effective
+                            Cloud Solution for your business.</h3>
+                        <p class="hover:text-green-700 text-indigo-600 leading-7">Supported by a robust sales force and
+                            tight cost controls,
+                            Pharm
+                            Ltd. experienced sustained double-digit growth over a number of years, only to find that
+                            their
+                            supply chain struggled to keep pace.</p>
+                        <div class="max-w-24 my-4">
+                            <span
+                                class="cursor-pointer text-indigo-900 font-bold hover:text-orange-500 flex items-center space-x-3 max-w-30">
+                                <a
+                                    href="https://netedgecomputing.com/social-computing/designing-a-cost-effective-cloud-solution-for-your-business/"><span>Read
+                                        more&nbsp;</span><span class="text-orange-500"><i
+                                            class="fas fa-chevron-right text-xs"></i></span></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div
+                    class="flex flex-col sm:flex-row items-center  sm:items-start space-x-4 p-4 rounded-lg shadow-md  hover:shadow-none">
+                    <a
+                        href="https://netedgecomputing.com/social-computing/driving-innovation-and-automation-across-an-enterprise-to-growth-hacking/">
+                        <img src="../images/innovation.jpg" alt="Placeholder Image"
+                            class="w-[410px] h-52 rounded mb-12 sm:mb-1 sm:mt-1 transition-transform transition-z hover-z-10 hover-scale-110"></a>
+                    <div class="flex flex-col px-8">
+                        <h3 class="text-xl font-bold text-rose-600 mb-2 hover:text-orange-500 ">Driving Innovation and
+                            Automation across an Enterprise to Growth Hacking.</h3>
+                        <p class="hover:text-green-700 text-indigo-600 leading-7">Supported by a robust sales force and
+                            tight cost controls,
+                            Pharm
+                            Ltd. experienced sustained double-digit growth over a number of years, only to find that
+                            their
+                            supply chain struggled to keep pace.</p>
+                        <div class="max-w-24 my-4">
+                            <span
+                                class="cursor-pointer text-indigo-900 font-bold hover:text-orange-500 flex items-center space-x-3 max-w-30">
+                                <a
+                                    href="https://netedgecomputing.com/social-computing/designing-a-cost-effective-cloud-solution-for-your-business/"><span>Read
+                                        more&nbsp;</span><span class="text-orange-500"><i
+                                            class="fas fa-chevron-right text-xs"></i></span></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div
+                    class="flex flex-col sm:flex-row items-center  sm:items-start space-x-4 p-4 rounded-lg shadow-md  hover:shadow-none">
+                    <a
+                        href="https://netedgecomputing.com/social-computing/ecommerce-services-guide-right-from-concept-proof-of-concept-to-implementation/">
+                        <img src="../images/ecommerce.webp" alt="Placeholder Image"
+                            class="w-[540px] h-52 rounded mb-12 sm:mb-1 sm:mt-1 transition-transform transition-z hover-z-10 hover-scale-110"></a>
+                    <div class="flex flex-col px-8">
+                        <h3 class="text-xl font-bold text-rose-600 mb-2 hover:text-orange-500 ">eCommerce Services
+                            Guide:
+                            Right from Proof-of-Concept to implementation.</h3>
+                        <p class="hover:text-green-700 text-indigo-600 leading-7">Many businesses, large and small, have
+                            a huge source of
+                            great
+                            ideas that can help them improve, innovate, and grow, and yet so many of these companies
+                            never
+                            think of using this amazing corporate asset. What is this highly valuable asset? Its own
+                            people.</p>
+                        <div class="max-w-24 my-4">
+                            <span
+                                class="cursor-pointer text-indigo-900 font-bold hover:text-orange-500 flex items-center space-x-3 max-w-30">
+                                <a
+                                    href="https://netedgecomputing.com/social-computing/designing-a-cost-effective-cloud-solution-for-your-business/"><span>Read
+                                        more&nbsp;</span><span class="text-orange-500"><i
+                                            class="fas fa-chevron-right text-xs"></i></span></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End section of product feature -->
+        </div>
+    </div>
+    <!-- THIRD SECTION END -->
+
+
+    {{!-- signup page start here --}}
+    {{>signuppage}}
+    {{!-- signup page end here --}}
+
+
+    {{!-- Our client with Testimonial page start here --}}
+    <div class="pb-28 clientbg">
+        {{>clienttestimo}}
+    </div>
+    {{!-- Our client with Testimonial page end here --}}
+
+
+    <!-- FOOTER START -->
+
+    <footer>
+        <!-- this div used to separate copyright div -->
+        <div
+            class="pl-6 pr-4 pt-16 pb-6 text-slate-600 leading-8 text-pretty resoucebg text-sm md:pl-16 lg:flex lg:justify-evenly lg:pl-4 lg:pr-4 lg:pt-16">
+            <!-- div for medium screen setup: Grouping logo, 1st list, services -->
+            <div class="md:flex md:mb-10">
+                <!-- div for medium screen setup: Grouping logo, 1st list -->
+                <div class="md:pr-52 lg:p-2 lg:m-2 lg:w-60">
+                    <!-- logo -->
+                    <div class="mb-6">
+                        <a href="">
+                            <img src="https://netedgecomputing.com/wp-content/uploads/2019/09/netedge-logo.png"
+                                alt="NetEdge Logo">
+                        </a>
+                    </div>
+                    <!-- logo end -->
+                    <!-- 1st list start -->
+                    <div class="mb-6">
+                        <ul class="list-inside listchange">
+                            <li><a href="https://netedgecomputing.com/about-us/" class="hover:text-orange-600"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    About Us</a></li>
+                            <li><a href="https://netedgecomputing.com/index.php/about-us/value-proposition/"
+                                    class="hover:text-orange-600"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Value
+                                    Proposition</a></li>
+                            <li><a href="https://netedgecomputing.com/index.php/about-us/methodology/"
+                                    class="hover:text-orange-600"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Methodology</a>
+                            </li>
+                            <li><a href="https://netedgecomputing.com/index.php/about-us/team-netedge/"
+                                    class="hover:text-orange-600"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Team</a></li>
+                            <li><a href="https://netedgecomputing.com/index.php/about-us/management/"
+                                    class="hover:text-orange-600"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Management</a>
+                            </li>
+                            <li><a href="https://netedgecomputing.com/contact-us/" class="hover:text-orange-600"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Contact us</a></li>
+                        </ul>
+                    </div>
+                    <!-- 1st list end -->
+                </div>
+                <!-- [div for medium screen setup: Grouping logo, 1st list] Ends here -->
+
+                <!-- Services start -->
+                <div class="mb-6 md:w-96 lg:p-2 lg:m-2 lg:w-60">
+                    <h4 class="font-bold text-slate-950 text-lg">Services</h4>
+                    <hr class="border-b-2 mt-2 mb-3">
+                    <ul class="list-inside listchange">
+                        <li><a href="https://netedgecomputing.com/index.php/services/cloud-transformation-solutions/"
+                                class="hover:text-orange-600"><i class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Cloud
+                                Transformation Solutions</a></li>
+                        <li><a href="https://netedgecomputing.com/index.php/services/ai-and-cognitive-analytics/"
+                                class="hover:text-orange-600"><i class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                AI and
+                                Cognitive Analytics</a></li>
+                        <li><a href="https://netedgecomputing.com/index.php/services/enterprise-cyber-security/"
+                                class="hover:text-orange-600"><i class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Enterprise
+                                Cyber Security</a></li>
+                        <li><a href="https://netedgecomputing.com/index.php/services/iot-and-automation/"
+                                class="hover:text-orange-600"><i class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                IoT and
+                                Automation</a></li>
+                        <li><a href="https://netedgecomputing.com/index.php/services/application-development/"
+                                class="hover:text-orange-600"><i class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Application
+                                Development and
+                                <span class="ml-3">Maintenance</span></a></li>
+                        <li><a href="https://netedgecomputing.com/index.php/services/ebusiness-digital-solutions/"
+                                class="hover:text-orange-600"><i class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                eBusiness
+                                Digital Solutions</a></li>
+                    </ul>
+                </div>
+                <!-- Services Ends-->
+            </div>
+            <!-- [div for medium screen setup: Grouping logo, 1st list, services] Ends here-->
+
+            <!-- div for medium screen setup: Grouping Recent Posts, Subscribe, Social Link-->
+            <div class="md:flex">
+                <!-- Recent Posts -->
+                <div class="mb-6 md:pr-7 lg:p-2 lg:m-2 lg:w-60">
+                    <h4 class="font-bold text-slate-950 text-lg">Recent Posts</h4>
+                    <hr class="border-b-2 mt-2 mb-3">
+                    <ul class="listchange list-inside">
+                        <li><a href="https://netedgecomputing.com/social-computing/designing-a-cost-effective-cloud-solution-for-your-business/"
+                                class="hover:text-orange-600"><i class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Designing
+                                a Cost Effective Cloud <span class="ml-3">Solution for your business.</span></a></li>
+                        <li><a href="https://netedgecomputing.com/social-computing/driving-innovation-and-automation-across-an-enterprise-to-growth-hacking/"
+                                class="hover:text-orange-600"><i class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Driving
+                                Innovation and <span class="ml-3"> Automation across an Enterprise </span> <span
+                                    class="ml-3">to Growth Hacking.</span></a></li>
+                        <li><a href="https://netedgecomputing.com/social-computing/ecommerce-services-guide-right-from-concept-proof-of-concept-to-implementation/"
+                                class="hover:text-orange-600"><i class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                E-Commerce
+                                Services Guide: <span class="ml-3">Right from Proof-of-Concept to</span>
+                                <span class="ml-3">simplementation.</span></a></li>
+                    </ul>
+                </div>
+                <!-- Recent Posts Ends -->
+
+                <!-- div for medium screen setup: Combining Subscribe, Social Link -->
+                <div class="md:pl-10 lg:p-2 lg:m-2 lg:w-60">
+                    <!-- Subscribe starts here -->
+                    <div class="mb-6">
+                        <h4 class="font-bold text-slate-950 text-lg">Subscribe</h4>
+                        <hr class="border-b-2 mt-2 mb-3 md:w-96 lg:w-full">
+                        <div class="mt-7">
+                            <input type="text"
+                                class="bg-[#cbcacb] w-full h-12 md:w-96 lg:w-full px-4 border border-transparent outline-none focus:border-[3px] rounded border-transition focus:border-yellow-500"
+                                id="email-input" placeholder="Enter your email">
+                            <p id="error-message" class="text-red-500 text-sm mt-2 hidden">Field is required</p>
+                            <button type="submit" id="subscribe-button"
+                                class="bg-[#011bab] w-full h-12 text-white mt-5 rounded md:w-96 lg:w-full">Subscribe</button>
+
+                        </div>
+                    </div>
+                    <!-- Subscribe Ends here -->
+
+                    <!-- Social Link starts -->
+                    <div>
+                        <h4 class="font-bold text-slate-950 text-lg">Social Links</h4>
+                        <hr class="border-b-2 mt-2 mb-3 md:w-96 lg:w-full">
+                        <div class="flex justify-center">
+                            <a target="_blank"
+                                href="http://www.linkedin.com/company/netedge-computing-solutions-pvt.-ltd."
+                                title="Follow us on Linkedin"><img
+                                    src="https://s.yimg.com/fz/api/res/1.2/oPmnuoHGZwDmud64pDGAcQ--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpdDtoPTI0MDtxPTgwO3c9MjQw/https://s.yimg.com/zb/imgv1/051c505f-dc29-3303-81b2-5828c6e3b2e2/t_500x300"
+                                    alt="LinkedIn" class="h-5 ml-2 mr-2 mt-2"></a>
+                            <a target="_blank"
+                                href="https://www.facebook.com/NetEdge-Computing-Solutions-2680989805274489/"
+                                title="Follow us on Facebook"><img
+                                    src="https://www.teahub.io/photos/full/11-115962_facebook-logo-png-transparent-background-facebook-png.png"
+                                    alt="Facebook" class="h-7 ml-2 mr-2 mt-1"></a>
+                            <a target="_blank" href="https://www.instagram.com/netedge_computing/"
+                                title="Follow us on Instagram"><img
+                                    src="http://clipart-library.com/images_k/instagram-transparent-png/instagram-transparent-png-4.png"
+                                    alt="Instagram" class="h-7 mt-1"></a>
+                            <a target="_blank" href="http://www.twitter.com/Net_Edge" title="Follow us on Twitter"><img
+                                    src="https://www.freeiconspng.com/uploads/circle-twitter-logo-png-photo-13.png"
+                                    alt="Twitter" class="h-6 ml-2 mr-2 mt-[5px]"></a>
+                        </div>
+                    </div>
+                    <!-- Social Link End -->
+                </div>
+                <!-- [div for medium screen setup: Combining Subscribe, Social Link] Ends here-->
+            </div>
+            <!-- [div for medium screen setup: Grouping Recent Posts, Subscribe, Social Link] Ends here-->
+        </div>
+
+        <!-- copyright starts here-->
+        <div class="bggradientfooter">
+            <div
+                class="text-slate-800 bggradientfooter py-4 text-xs flex flex-col md:flex-row justify-center md:justify-between items-center w-full max-w-screen-lg mx-auto">
+                <div class="text-center md:text-left">
+                    <a href="https://netedgecomputing.com/index.php/copy-right/">©Copyright</a> 1992 - 2022, NetEdge
+                    Computing Solutions Pvt. Ltd. All Rights Reserved.
+                </div>
+                <div class="text-center md:text-right">
+                    <a href="https://netedgecomputing.com/index.php/privacy-policy/">Privacy Policy</a> |
+                    <a href="https://netedgecomputing.com/index.php/terms-condition/">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+        <!-- copyright Ends here-->
+    </footer>
+
+    <!-- FOOTER END -->
+
+
+    <script>
+
+        // JS START FOR FOOTER
+        const emailInput = document.getElementById('email-input');
+        const subscribeButton = document.getElementById('subscribe-button');
+        const errorMessage = document.getElementById('error-message');
+
+        subscribeButton.addEventListener('click', function () {
+            if (emailInput.value.trim() === '') {
+                errorMessage.classList.remove('hidden');
+                emailInput.classList.add('error-border');
+            } else {
+                errorMessage.classList.add('hidden');
+                emailInput.classList.remove('error-border');
+                // Add form submission logic here if needed
+            }
+        });
+
+        // its js for input border transition
+        emailInput.addEventListener('focus', function () {
+            errorMessage.classList.add('hidden');
+            emailInput.classList.remove('error-border');
+        });
+
+        emailInput.addEventListener('blur', function () {
+            emailInput.classList.remove('error-border');
+        });
+        //JS END FOR FOOTER
+
+    </script>
+
+</body>
+
+</html>

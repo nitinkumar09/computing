@@ -1,0 +1,92 @@
+ /* Custom media query for additional styles */
+ @media (max-width: 500px) {
+
+     /* Tailwind's sm breakpoint is 440px */
+     .Consultation-btn {
+         padding: 10px 2rem !important;
+     }
+
+     .g-recaptcha {
+         display: none !important;
+         margin: 30px 0 !important;
+     }
+
+     .changesize {
+         margin-left: 10px !important;
+     }
+ }
+
+ @media(max-width:640px) {
+     .cardslideimg {
+         max-width: 129px !important;
+     }
+
+     .textchange {
+         font-size: 20px !important;
+     }
+ }
+
+ @media(min-width:1025px) {
+     .mainbox {
+         margin-top: -390px !important;
+     }
+
+     .iotcloud {
+         margin-top: 20px !important;
+     }
+ }
+
+ @media(max-width:400px) {
+     .aboutus {
+         padding-left: 64px !important;
+     }
+ }
+
+ @media(max-width:340px) {
+     .aboutus {
+         padding-left: 44px !important;
+     }
+ }
+
+ @media(max-width:350px) {
+     .changesize {
+         display: none !important;
+     }
+ }
+
+ @media(max-width:300px) {
+     .cardwdithheightsetting {
+         overflow-x: hidden !important;
+         /* margin-right: 270px !important; */
+         /* margin-left: -30px !important; */
+         width: 190px !important;
+         height: 150px !important;
+     }
+
+     .bothcard {
+         padding: -10px !important;
+     }
+
+     .textchange {
+         font-size: 12px !important;
+     }
+
+     .signupchnage {
+         padding: 0 0 !important;
+     }
+
+     .bgimagemission {
+         /* width: 150px; */
+         display: none !important;
+         /* Example width for max-width 300px breakpoint */
+     }
+ }
+
+ @media (max-width:380px) {
+
+     /* Tailwind's sm breakpoint is 440px */
+     .Consultation-btn {
+         padding: 8px 1.8rem !important;
+         font-size: 10px !important;
+     }
+ }
