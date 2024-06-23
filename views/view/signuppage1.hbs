@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
+    {{!--
+    <script src="https://cdn.tailwindcss.com"></script> --}}
     <!-- tailwind css link by style.css for output -->
     <link rel="stylesheet" href="./styles/style.css">
     <!-- outer css link by style1.css-->
@@ -160,34 +161,58 @@
             transition: outline 0.3s;
         }
 
+        .heightset {
+            padding-top: 100px !important;
+            padding-bottom: 100px !important;
+        }
+
+        .topheigthset {
+            top: 70px !important;
+        }
+
+        .textchange {
+            color: rgb(240, 117, 95);
+        }
+
         /*it's transition for border show by click end*/
         /*THIS CSS FOR SIGNUP PAGE ONLY END*/
+
+        /*below css for submit button*/
+        .bg-rose-300 {
+            background-color: #632eeb;
+            /* Adjust color as per your design */
+        }
     </style>
 </head>
 
 <body>
 
     <!-- SIGNUP PAGE START -->
-    <div class="bg-gradient">
+    <div class="bg-gradient h-auto">
+        <button id="submit-btn" type="submit"
+            class="bg-rose-500 text-white font-bold py-2 px-4 w-full transition-colors duration-300 hover:bg-[#fd9b27]">
+            <a href="/login">
+                GO TO LOGIN
+                <i class="fa fa-chevron-right px-1"></i></a>
+        </button>
         <div class="text-center">
             <h1 class="text-rose-500 text-2xl sm:text-5xl pt-8">Register/Signup</h1>
         </div>
-
-        <div class="px-8 sm:px-28 py-12 sm:py-28  w-full flex h-[100vh]  flex-col xl:flex-row" id="request-form">
-
-            <!-- button for close form -->
-            <a href="/">
-                <button id="close-form-btn"
-                    class="absolute top-8 right-12 text-white text-3xl bg-[#fd9b27;]  rounded px-4 pb-2  hover:bg-black ">&times;</button>
-            </a>
+        <!-- button for close form -->
+        <a href="/">
+            <button id="close-form-btn"
+                class="absolute topheigthset right-12 text-white text-3xl bg-rose-500  rounded px-4 pb-2  hover:bg-black hover:bg-rose-300">&times;</button>
+        </a>
+        <div class="px-8 sm:px-28 heightset  w-full flex flex-col xl:flex-row" id="request-form">
 
             <!-- Left Text Section -->
             <div class=" w-full xl:w-1/3 xl:my-8 md:mb-0 md:mr-8">
-                <div class="text-3xl font-bold xl:mb-4 text-white flex textchange">
-                    <div class="text-[#fd9b27;] mr-4 xl:text-4xl">Book</div>
+                <div class="text-3xl font-bold xl:mb-4 flex textchange">
+                    Book
                     An Appointment.
                 </div>
-                <p class="text-white leading-9 mb-12 xl:mb-1">Would you like to speak to one of our Business Innovation
+                <p class="text-rose-400 leading-9 mb-12 xl:mb-1">Would you like to speak to one of our Business
+                    Innovation
                     Consultant to
                     know more about our services and how they can help your business?
 
@@ -202,14 +227,16 @@
                         <!-- <label class="block text-sm font-medium text-gray-700">Full Name</label> -->
                         <input type="text" id="full-name" placeholder="Full Name"
                             class="block w-full  p-[10px] outline-none font-bold">
-                        <p id="full-name-error" class="error-message font-bold  text-red-500 text-sm mt-1 hidden">This
+                        <p id="full-name-error" class="error-message font-bold  text-red-500 text-sm mt-1 hidden">
+                            This
                             field
                             is
                             required</p>
                     </div>
                     <div class="companyproperty">
                         <input type="text" id="company" placeholder="Company" class="block w-full p-[10px]  font-bold">
-                        <p id="company-error" class="error-message text-red-500 font-bold text-sm p-[10px]  hidden">This
+                        <p id="company-error" class="error-message text-red-500 font-bold text-sm p-[10px]  hidden">
+                            This
                             field is
                             required
                         </p>
@@ -218,7 +245,8 @@
                         <input type="text" id="phone-number"
                             class="block w-full my-16 sm:my-1  p-[10px]  border border-gray-300 font-bold"
                             placeholder="Phone Number">
-                        <p id="phone-number-error" class="error-message text-red-500 font-bold text-sm mt-1 hidden">This
+                        <p id="phone-number-error" class="error-message text-red-500 font-bold text-sm mt-1 hidden">
+                            This
                             field is
                             required</p>
                     </div>
@@ -263,7 +291,8 @@
                     </div>
                     <!-- RECAPTCHA END NEW -->
 
-                    <p id="recaptcha-error" class="text-red-500 font-bold text-sm mt-1 hidden">This field is required
+                    <p id="recaptcha-error" class="text-red-500 font-bold text-sm mt-1 hidden">This field is
+                        required
                     </p>
                     <!-- </div> -->
 
@@ -300,7 +329,8 @@
                     </div>
                     <div>
                         <input type="email" class="font-bold block w-full  p-[10px] " placeholder="Email" id="email">
-                        <p id="email-error" class="text-red-500 text-sm mt-1 hidden error-message font-bold">This field
+                        <p id="email-error" class="text-red-500 text-sm mt-1 hidden error-message font-bold">This
+                            field
                             is
                             required
                         </p>
@@ -312,7 +342,7 @@
                     </div>
                 </div>
                 <button type="submit"
-                    class="bg-black border custom-button  text-white font-bold p-2 mt-8 mx-auto  w-30 sm:w-60 md:w-80  xl:w-full">Submit
+                    class="bg-rose-500 text-white font-bold hover:bg-rose-300 xl:w-full transition-colors duration-300  p-2 mt-8 mx-auto  w-30 sm:w-60 md:w-80  xl:w-full">Submit
                     <i class="fa fa-chevron-right px-1"></i></button>
                 </form>
             </div>
@@ -496,6 +526,17 @@
             });
         });
 
+        // submit button js
+        document.addEventListener('DOMContentLoaded', function () {
+            const submitButton = document.getElementById('submit-btn');
+
+            submitButton.addEventListener('mouseenter', function () {
+                submitButton.classList.add('bg-rose-300');
+            });
+            submitButton.addEventListener('mouseleave', function () {
+                submitButton.classList.remove('bg-rose-300');
+            });
+        });
     </script>
     <!-- <script src="signup.js"></script> -->
 </body>

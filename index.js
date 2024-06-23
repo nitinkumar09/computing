@@ -15,9 +15,14 @@ app.get('/', (req, res) => {
 app.get('/signuppage1', (req, res) => {
     res.render('signuppage1')
 });
-
+app.get('/login', (req, res) => {
+    res.render('login')
+});
 app.get('/product', (req, res) => {
     res.render('product')
+});
+app.get('/partners-with-us', (req, res) => {
+    res.render('partners-with-us')
 });
 app.get('/resourcecenter', (req, res) => {
     res.render('resourcecenter')

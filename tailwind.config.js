@@ -1,6 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
+  content: [
+    './views/**/*.hbs',
+    './public/**/*.html',
+    './public/**/*.js'
+    // Add any other paths where Tailwind classes are used
+  ],
   theme: {
     extend: {
       maxHeight: {
@@ -9,6 +14,8 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ],
 }
 
