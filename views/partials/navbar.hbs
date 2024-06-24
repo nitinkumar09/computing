@@ -125,6 +125,12 @@
         /* hamber button functionlity end css */
 
         /*NAVBAR CSS END HERE*/
+
+        /*css for navbar logo*/
+        .transition-transform {
+            transition: transform 1s ease;
+            /* Adjust duration and timing function as needed */
+        }
     </style>
 </head>
 
@@ -143,9 +149,11 @@
                     <div class="flex-1 flex items-center">
                         <!-- Logo -->
                         <div class="flex-shrink-0 xl:ml-8">
-                            <img class="sm:h-56 sm:w-68 h-48 w-52    transform hover:scale-105 transition duration-300"
+                            <img id="mantraLogo"
+                                class="sm:h-56 sm:w-68 h-48 w-52 transform transition-transform duration-1000"
                                 src="/images/mantralogo.png" alt="MantraBytes Logo">
                         </div>
+
 
 
                         <!-- Desktop navigation links -->
@@ -1063,6 +1071,28 @@
 
 
         /*NAVBAR JS END HERE*/
+
+
+        // this js start here for navbar logo
+        // JavaScript to add continuous scaling effect to the logo
+        const logo = document.getElementById('mantraLogo');
+
+        let scaleDirection = 1;
+        let scaleFactor = 0.05; // Change this value to adjust the scaling intensity
+
+        function animateLogo() {
+            let currentScale = parseFloat(window.getComputedStyle(logo).getPropertyValue('transform').split(',')[3]);
+            let newScale = currentScale + scaleFactor * scaleDirection;
+
+            if (newScale >= 1.1 || newScale <= 0.9) {
+                scaleDirection *= -1; // Reverse direction if scale exceeds limits
+            }
+
+            logo.style.transform = `scale(${newScale})`;
+            requestAnimationFrame(animateLogo);
+        }
+
+        animateLogo();
 
 
 
