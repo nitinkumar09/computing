@@ -21,8 +21,12 @@ app.get('/login', (req, res) => {
 app.get('/product', (req, res) => {
     res.render('product')
 });
+app.get('/As-a-trainer', (req, res) => {
+    res.render('asatrainer')
+});
+
 app.get('/partners-with-us', (req, res) => {
-    res.render('partners-with-us')
+    res.render('partnerswithus')
 });
 app.get('/resourcecenter', (req, res) => {
     res.render('resourcecenter')
