@@ -49,9 +49,9 @@ app.get('/Value-Proposition', (req, res) => {
 app.get('/services', (req, res) => {
     res.render('service')
 });
-app.get('/my-team', (req, res) => {
-    res.render('myteam');
-});
+// app.get('/my-team', (req, res) => {
+//     res.render('myteam');
+// });
 app.get('/vision', (req, res) => {
     res.render('vision');
 });
@@ -61,8 +61,14 @@ app.get('/placement', (req, res) => {
 app.get('/internship', (req, res) => {
     res.render('internship');
 });
+app.get('/blockchain', (req, res) => {
+    res.render('blockchain');
+});
 app.get('/infrastructure-management', (req, res) => {
     res.render('infrastructuremanagement');
+});
+app.get('/fullstack', (req, res) => {
+    res.render('fullstack');
 });
 app.listen(port, (req, res) => {
     console.log(`server is runing port no. ${port}`);

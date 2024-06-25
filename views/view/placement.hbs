@@ -192,6 +192,36 @@
     }
 
     /* this css for company image move left to right end here */
+
+    /*footer logo css*/
+    /* Styles for the animated logo */
+    #mantraLogo {
+        animation: changeColor 5s infinite alternate;
+        cursor: pointer;
+    }
+
+    /* Keyframes for color change animation */
+    @keyframes changeColor {
+        0% {
+            color: #FF9900;
+        }
+
+        25% {
+            color: #FF00FF;
+        }
+
+        50% {
+            color: #00FF00;
+        }
+
+        75% {
+            color: #00FFFF;
+        }
+
+        100% {
+            color: #FF0000;
+        }
+    }
 </style>
 
 <body>
@@ -424,11 +454,10 @@
                 <!-- div for medium screen setup: Grouping logo, 1st list -->
                 <div class="md:pr-52 lg:p-2 lg:m-2 lg:w-60">
                     <!-- logo -->
-                    <div class="">
-                        <a href="">
-                            <img src="/images/mantra.png" alt="mantrabytes Logo" class="xl:w-60 h-20 xl:pr-32">
-                        </a>
-                    </div>
+                    <!-- Animated Logo -->
+                    <h4 id="mantraLogo" class="font-bold text-lg relative z-10">MantraBytes</h4>
+                    <hr class="border-b-2 mt-2 mb-3">
+                    <!-- Animated Logo end -->
                     <!-- logo end -->
                     <!-- 1st list start -->
                     <div class="mb-6">
@@ -611,6 +640,26 @@
             emailInput.classList.remove('error-border');
         });
         // footer js end 
+        //footer  logo js start here
+        // JavaScript to add diagonal movement to the logo
+        // JavaScript to add size change and diagonal movement to the logo
+        const logo = document.getElementById('mantraLogo');
+
+        let angle = 0;
+        let amplitude = 10;
+        let frequency = 0.03;
+        let baseFontSize = 13; // Initial font size in pixels
+
+        function animateLogo() {
+            angle += frequency;
+            let translateY = Math.sin(angle) * amplitude;
+            let newSize = baseFontSize + Math.abs(translateY); // Adjust font size based on translateY
+            logo.style.transform = `translateY(${translateY}px)`;
+            logo.style.fontSize = `${newSize}px`; // Apply new font size
+            requestAnimationFrame(animateLogo);
+        }
+
+        animateLogo();
     </script>
 
 </body>
