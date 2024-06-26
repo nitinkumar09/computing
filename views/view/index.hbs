@@ -477,6 +477,24 @@
                 color: #FF0000;
             }
         }
+
+        /*expertise cards css start here...*/
+        /* Define the default and hover styles */
+        .card {
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            background-color: #1f2937;
+            /* Adjust to your desired hover background color */
+        }
+
+        .card:hover p {
+            color: #ffffff;
+            /* Change paragraph text to white on hover */
+        }
+
+        /*expertise cards css start here...*/
     </style>
 </head>
 
@@ -741,6 +759,7 @@
                 </div>
             </div>
 
+
             <div class="expertise pb-12 pt-12 px-8 sm:px-12 md:px-32 gradientbackground w-full h-auto mx-auto">
                 <div class="max-w-[900px] mx-auto text-center">
                     <h1 class="text-[26px] text-blue-600 font-semibold">Our Expertise</h1>
@@ -750,6 +769,7 @@
                     </div>
                 </div>
             </div>
+
 
 
 
@@ -1456,14 +1476,13 @@
 
                 cardsData.forEach(card => {
                     const cardElement = document.createElement('div');
-                    cardElement.classList.add('p-4', 'sm:px-20', 'w-full', 'sm:w-1/2', 'lg:w-1/3');
+                    cardElement.classList.add('p-4', 'sm:px-20', 'w-full');
                     cardElement.innerHTML = `
-                   <div class="h-full card p-8 rounded shadow-lg group">
-                    <h2 class="text-lg font-medium mb-2 text-blue-600 group-hover:text-orange-500">${card.title}</h2>
-                    <p class="leading-relaxed text-slate-300 font-md">${card.description}</p>
-                    </div>
-
-                `;
+            <div class="h-full card p-8 rounded shadow-lg group transition-all duration-300 ease-in-out">
+                <h2 class="text-lg font-medium mb-2 text-blue-600">${card.title}</h2>
+                <p class="leading-relaxed text-slate-600 font-md transition-all duration-300 ease-in-out">${card.description}</p>
+            </div>
+        `;
                     cardsContainer.appendChild(cardElement);
                 });
             });
