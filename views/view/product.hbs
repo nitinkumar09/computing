@@ -962,27 +962,7 @@
         emailInput.addEventListener('blur', function () {
             emailInput.classList.remove('error-border');
         });
-        //JS END FOR FOOTER
-        //footer  logo js start here
-        // JavaScript to add diagonal movement to the logo
-        // JavaScript to add size change and diagonal movement to the logo
-        const logo = document.getElementById('mantraLogo');
 
-        let angle = 0;
-        let amplitude = 10;
-        let frequency = 0.03;
-        let baseFontSize = 13; // Initial font size in pixels
-
-        function animateLogo() {
-            angle += frequency;
-            let translateY = Math.sin(angle) * amplitude;
-            let newSize = baseFontSize + Math.abs(translateY); // Adjust font size based on translateY
-            logo.style.transform = `translateY(${translateY}px)`;
-            logo.style.fontSize = `${newSize}px`; // Apply new font size
-            requestAnimationFrame(animateLogo);
-        }
-
-        animateLogo();
     </script>
 
 </body>

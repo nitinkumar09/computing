@@ -8,8 +8,10 @@
     <!-- fontawesome icon link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- output file link in below -->
-    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="styles/style.css">
     {{!-- below link for font-family --}}
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@400;600&display=swap"
         rel="stylesheet">
@@ -180,11 +182,11 @@
         <!-- Left Side (70% width) -->
         <div class="w-full lg:w-7/10 p-4">
             <div class="text-left mb-8">
-                <h2 class="text-2xl font-bold text-blue-900">Company Overview</h2>
-                <div class="h-2 rounded-full bg-yellow-500 w-24 mt-2"></div>
+                <h2 class="text-2xl font-bold text-blue-600">Company Overview</h2>
+                <div class="h-2 rounded-full bg-orange-400 w-24 mt-2"></div>
             </div>
             <p>
-                <span class="text-yellow-700 text-sm hover:text-rose-300 leading-8">
+                <span class="text-sm text-slate-600 leading-8">
                     Mantrabytes, established in June 1992, has become a pioneer in computer science consulting and
                     development. We foster strong partnerships with our clients, and our team is deeply invested in
                     their success.
@@ -195,7 +197,7 @@
                     consistently deliver within agreed time and budget.
                 </span>
 
-                <span class="text-indigo-900 text-sm hover:text-rose-700 leading-8">
+                <span class="text-slate-600 text-sm leading-8">
                     Mantrabytes empowers businesses of all sizes across various industries. Our expertise spans sectors
                     like e-commerce, retail, technology, healthcare, finance, and more. This deep understanding
                     positions us uniquely to deliver domain-specific solutions and services that leverage the latest
@@ -209,7 +211,7 @@
 
                 <br>
 
-                <span class="text-yellow-500 text-sm hover:text-rose-900 leading-8">
+                <span class="text-slate-600 text-sm  leading-8">
                     Mantrabytes prioritizes exceeding client expectations by ensuring every interaction is positive and
                     value-driven. Our commitment to "last-mile redundancy" guarantees that we deliver on our promises.
                 </span>
@@ -221,7 +223,7 @@
 
                 <br>
 
-                <span class="text-sm text-blue-600 hover:text-rose-300 leading-8">
+                <span class="text-sm text-slate-600 leading-8">
                     Mantrabytes serves a wide range of clients, from startups and SMEs to Fortune 500 companies, across
                     various industries globally.
                 </span>
@@ -231,41 +233,46 @@
         <!-- Right Side (30% width) -->
         <div class="w-full lg:w-3/10 pt-24 flex flex-col space-y-4">
             <!-- Card 1 -->
-            <div class="card bg-gray-300 p-4 rounded shadow hover:bg-blue-500 transition duration-300 ease-in-out">
-                <div class="card-header text-center text-xl font-bold text-white hover:text-yellow-600 cursor-pointer">
+            <div
+                class="bg-gray-300 p-4 hover:shadow-xl  shadow-sm border hover:bg-blue-100 group/edit transition duration-300 ease-in-out">
+                <div
+                    class="card-header text-center group-hover/edit:text-white text-xl group/item font-bold text-blue-600 cursor-pointer">
                     Value Proposition
                 </div>
-                <div class="card-content mt-2 text-md text-rose-600">
+                <div class="card-content mt-2 text-sm text-slate-600 group-hover/edit:text-green-500">
                     <p>Discover the unique value that Mantrabytes brings to your business, leveraging cutting-edge
                         technology and innovative solutions.</p>
                 </div>
             </div>
             <!-- Card 2 -->
-            <div class="card bg-gray-300 p-4 rounded shadow hover:bg-blue-500 transition duration-300 ease-in-out">
-                <div class="card-header text-center text-xl font-bold text-white hover:text-yellow-600 cursor-pointer">
+            <div
+                class="bg-gray-300 p-4 hover:shadow-xl  shadow-sm border hover:bg-blue-100 transition duration-300 ease-in-out">
+                <div class="card-header text-center text-xl font-bold text-blue-600 cursor-pointer">
                     Methodology
                 </div>
-                <div class="card-content mt-2 text-md text-rose-600 ">
+                <div class="card-content mt-2 text-sm text-slate-600">
                     <p>Learn about our structured approach to problem-solving, integrating industry best practices and
                         computer science principles.</p>
                 </div>
             </div>
             <!-- Card 3 -->
-            <div class="card bg-gray-300 p-4 rounded shadow hover:bg-blue-500 transition duration-300 ease-in-out">
-                <div class="card-header text-center text-xl font-bold text-white hover:text-yellow-600 cursor-pointer">
+            <div
+                class="bg-gray-300 p-4 hover:shadow-xl hover:bg-blue-100  shadow-sm border transition duration-300 ease-in-out">
+                <div class="card-header text-center text-xl font-bold text-blue-600 cursor-pointer">
                     Team
                 </div>
-                <div class="card-content mt-2 text-md text-rose-600 ">
+                <div class="card-content mt-2 text-sm text-slate-600">
                     <p>Meet our dedicated team of experts who are passionate about driving technological innovation and
                         excellence.</p>
                 </div>
             </div>
             <!-- Card 4 -->
-            <div class="card bg-gray-300 p-4 rounded shadow hover:bg-blue-500 transition duration-300 ease-in-out">
-                <div class="card-header text-center text-xl font-bold text-white hover:text-yellow-600 cursor-pointer">
+            <div
+                class="bg-gray-300 p-4 hover:shadow-xl  hover:bg-blue-100 shadow-sm border transition duration-300 ease-in-out">
+                <div class="card-header text-center text-xl font-bold text-blue-600 cursor-pointer">
                     Management
                 </div>
-                <div class="card-content mt-2 text-md text-rose-600 ">
+                <div class="card-content mt-2 text-sm text-slate-600 ">
                     <p>Explore our management strategies that align with modern business goals and technological
                         advancements.</p>
                 </div>
@@ -305,32 +312,32 @@
                 <div class="md:pr-52 lg:p-2 lg:m-2 lg:w-60">
                     <!-- logo -->
                     <!-- Animated Logo -->
-                    <h4 id="mantraLogo" class="font-bold text-lg relative z-10">MantraBytes</h4>
+                    <h4 class="font-bold text-lg text-blue-600 relative z-10">MantraBytes</h4>
                     <hr class="border-b-2 mt-2 mb-3">
                     <!-- Animated Logo end -->
                     <!-- logo end -->
                     <!-- 1st list start -->
                     <div class="mb-6">
                         <ul class="list-inside listchange">
-                            <li><a href="/" class="hover:text-orange-600 text-cyan-600"><i
+                            <li><a href="/" class="text-slate-600 hover:underline"><i
                                         class="fa fa-chevron-right text-orange-600"></i>&nbsp;
                                     About Us</a></li>
-                            <li><a href="/" class="hover:text-orange-600 text-cyan-600"><i
+                            <li><a href="/" class="text-slate-600 hover:underline"><i
                                         class="fa fa-chevron-right text-orange-600"></i>&nbsp;
                                     Value
                                     Proposition</a></li>
-                            <li><a href="/" class="hover:text-orange-600 text-cyan-600"><i
+                            <li><a href="/" class="text-slate-600 hover:underline"><i
                                         class="fa fa-chevron-right text-orange-600"></i>&nbsp;
                                     Methodology</a>
                             </li>
-                            <li><a href="/" class="hover:text-orange-600 text-cyan-600"><i
+                            <li><a href="/" class="text-slate-600 hover:underline"><i
                                         class="fa fa-chevron-right text-orange-600"></i>&nbsp;
                                     Team</a></li>
-                            <li><a href="/" class="hover:text-orange-600 text-cyan-600"><i
+                            <li><a href="/" class="text-slate-600 hover:underline"><i
                                         class="fa fa-chevron-right text-orange-600"></i>&nbsp;
                                     Management</a>
                             </li>
-                            <li><a href="/" class="hover:text-orange-600 text-cyan-600"><i
+                            <li><a href="/" class="text-slate-600 hover:underline"><i
                                         class="fa fa-chevron-right text-orange-600"></i>&nbsp;
                                     Contact us</a></li>
                         </ul>
@@ -341,31 +348,31 @@
 
                 <!-- Services start -->
                 <div class="mb-6 md:w-96 lg:p-2 lg:m-2 lg:w-60">
-                    <h4 class="font-bold text-orange-900 text-lg">Services</h4>
+                    <h4 class="font-bold  text-blue-600 text-lg">Services</h4>
                     <hr class="border-b-2 mt-2 mb-3">
                     <ul class="list-inside listchange">
-                        <li><a href="/" class="hover:text-orange-600 text-cyan-600"><i
+                        <li><a href="/" class="text-slate-600 hover:underline"><i
                                     class="fa fa-chevron-right text-orange-600"></i>&nbsp;
                                 Cloud
                                 Transformation Solutions</a></li>
-                        <li><a href="/" class="hover:text-orange-600 text-cyan-600"><i
+                        <li><a href="/" class="text-slate-600 hover:underline"><i
                                     class="fa fa-chevron-right text-orange-600"></i>&nbsp;
                                 AI and
                                 Cognitive Analytics</a></li>
-                        <li><a href="/" class="hover:text-orange-600 text-cyan-600"><i
+                        <li><a href="/" class="text-slate-600 hover:underline"><i
                                     class="fa fa-chevron-right text-orange-600"></i>&nbsp;
                                 Enterprise
                                 Cyber Security</a></li>
-                        <li><a href="/" class="hover:text-orange-600 text-cyan-600"><i
+                        <li><a href="/" class="text-slate-600 hover:underline"><i
                                     class="fa fa-chevron-right text-orange-600"></i>&nbsp;
                                 IoT and
                                 Automation</a></li>
-                        <li><a href="/" class="hover:text-orange-600 text-cyan-600"><i
+                        <li><a href="/" class="text-slate-600 hover:underline"><i
                                     class="fa fa-chevron-right text-orange-600"></i>&nbsp;
                                 Application
                                 Development and
                                 <span class="ml-3">Maintenance</span></a></li>
-                        <li><a href="/" class="hover:text-orange-600 text-cyan-600"><i
+                        <li><a href="/" class="text-slate-600 hover:underline"><i
                                     class="fa fa-chevron-right text-orange-600"></i>&nbsp;
                                 eBusiness
                                 Digital Solutions</a></li>
@@ -379,20 +386,21 @@
             <div class="md:flex">
                 <!-- Recent Posts -->
                 <div class="mb-6 md:pr-7 lg:p-2 lg:m-2 lg:w-60">
-                    <h4 class="font-bold text-orange-900 text-lg">Recent Posts</h4>
-                    <hr class="border-b-2 mt-2 mb-3">
-                    <ul class="listchange list-inside">
-                        <li><a href="/" class="hover:text-orange-600 text-cyan-600"><i
-                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
-                                Designing
-                                a Cost Effective Cloud <span class="ml-3">Solution for your business.</span></a>
+                    <h4 class="font-bold  text-blue-600 text-lg">Recent Posts</h4>
+                    <hr class="border-b-1 mt-2 mb-3">
+                    <ul class="listchange">
+                        <li><a href="/" class="text-slate-600 hover:underline"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>
+                                Designing a Cost
+                                Effective Cloud Solution for your
+                                business.</a>
                         </li>
-                        <li><a href="/" class="hover:text-orange-600 text-cyan-600"><i
+                        <li><a href="/" class="text-slate-600 hover:underline"><i
                                     class="fa fa-chevron-right text-orange-600"></i>&nbsp;
                                 Driving
-                                Innovation and <span class="ml-3"> Automation across an Enterprise </span> <span
-                                    class="ml-3">to Growth Hacking.</span></a></li>
-                        <li><a href="/" class="hover:text-orange-600 text-cyan-600"><i
+                                Innovation and <span class="ml-3"> Automation across an Enterprise
+                                </span> <span class="ml-3">to Growth Hacking.</span></a></li>
+                        <li><a href="/" class="text-slate-600 hover:underline"><i
                                     class="fa fa-chevron-right text-orange-600"></i>&nbsp;
                                 E-Commerce
                                 Services Guide: <span class="ml-3">Right from Proof-of-Concept to</span>
@@ -405,13 +413,14 @@
                 <div class="md:pl-10 lg:p-2 lg:m-2 lg:w-60 xl:ml-16">
                     <!-- Subscribe starts here -->
                     <div class="mb-6">
-                        <h4 class="font-bold text-orange-900 text-lg">Subscribe</h4>
-                        <hr class="border-b-2 mt-2 mb-3 md:w-96 lg:w-full">
+                        <h4 class="font-bold  text-blue-600 text-lg">Subscribe</h4>
+                        <hr class="border-b-1 mt-2 mb-3 md:w-96 lg:w-full">
                         <div class="mt-7">
                             <input type="text"
-                                class="bg-slate-300  w-full h-12 md:w-96 lg:w-full px-4 border border-transparent outline-none focus:border-[3px] rounded border-transition focus:border-yellow-500"
+                                class="bg-slate-300  w-full h-12 md:w-96 lg:w-full px-4 border border-transparent outline-none focus:border-[1px] rounded border-transition"
                                 id="email-input" placeholder="ENTER YOUR EMAIL">
-                            <p id="error-message" class="text-red-500 text-sm mt-2 hidden">Field is required</p>
+                            <p id="error-message" class="text-red-500 text-sm mt-2 hidden">Field is
+                                required</p>
                             <button type="submit" id="subscribe-button"
                                 class="bg-[#011bab] w-full h-12 text-white mt-5 rounded md:w-96 lg:w-full">Subscribe</button>
 
@@ -421,8 +430,8 @@
 
                     <!-- Social Link starts -->
                     <div>
-                        <h4 class="font-bold text-orange-900 text-lg">Social Links</h4>
-                        <hr class="border-b-2 mt-2  md:w-96 lg:w-full">
+                        <h4 class="font-bold  text-blue-600 text-lg">Social Links</h4>
+                        <hr class="border-b-1 mt-2 md:w-96 lg:w-full">
                         <div class="flex justify-center">
                             <a target="_blank" href="http://www.linkedin.com" title="Follow us on Linkedin"><img
                                     src="https://s.yimg.com/fz/api/res/1.2/oPmnuoHGZwDmud64pDGAcQ--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpdDtoPTI0MDtxPTgwO3c9MjQw/https://s.yimg.com/zb/imgv1/051c505f-dc29-3303-81b2-5828c6e3b2e2/t_500x300"
@@ -449,7 +458,8 @@
         <!-- copyright starts here-->
         <div
             class="container px-5 py-8 mx-auto flex bg-blue-900 text-white body-font items-center sm:flex-row flex-col">
-            <p class="text-sm text-center sm:text-left">© 2024 Mantrabytes Innovations — All rights reserved</p>
+            <p class="text-sm text-center sm:text-left">© 2024 Mantrabytes Innovations — All rights
+                reserved</p>
         </div>
         <!-- copyright Ends here-->
 
@@ -489,26 +499,6 @@
             emailInput.classList.remove('error-border');
         });
         // footer js end 
-        //footer  logo js start here
-        // JavaScript to add diagonal movement to the logo
-        // JavaScript to add size change and diagonal movement to the logo
-        const logo = document.getElementById('mantraLogo');
-
-        let angle = 0;
-        let amplitude = 10;
-        let frequency = 0.03;
-        let baseFontSize = 13; // Initial font size in pixels
-
-        function animateLogo() {
-            angle += frequency;
-            let translateY = Math.sin(angle) * amplitude;
-            let newSize = baseFontSize + Math.abs(translateY); // Adjust font size based on translateY
-            logo.style.transform = `translateY(${translateY}px)`;
-            logo.style.fontSize = `${newSize}px`; // Apply new font size
-            requestAnimationFrame(animateLogo);
-        }
-
-        animateLogo();
     </script>
 
 </body>

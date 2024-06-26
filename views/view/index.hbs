@@ -37,6 +37,102 @@
             /* Bold for headings */
         }
 
+        /*Preloader css start here*/
+        /* Preloader styles */
+        /* Preloader styles */
+        .loader-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            /* Background color of the preloader container */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            /* Ensure it's above other content */
+        }
+
+        .loader {
+            background: linear-gradient(90deg,
+                    #6f22ff,
+                    #00aaff,
+                    #2cc92c,
+                    #00aaff,
+                    #6f22ff);
+            background-size: 600% 600%;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: neonRotate 10s linear infinite;
+            position: relative;
+        }
+
+        .circleMiddle {
+            background-color: rgb(255, 255, 255);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            z-index: 99;
+        }
+
+        .worm {
+            position: absolute;
+            width: 20px;
+            height: 105px;
+            background-color: hsl(0, 0%, 100%);
+            border-radius: 5px;
+            animation: rotateWorm 4s linear infinite;
+            z-index: 80;
+        }
+
+        @keyframes neonRotate {
+
+            0%,
+            100% {
+                background-position: 0% 0%;
+            }
+
+            25%,
+            75% {
+                background-position: 100% 0%;
+            }
+
+            50% {
+                background-position: 0% 100%;
+            }
+        }
+
+        @keyframes rotateWorm {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+
+        /*Preloader css end here*/
+
+        body {
+            font-family: 'Poppins', 'Montserrat', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            /* Bold for headings */
+        }
+
         /*NAVBAR CSS START HERE*/
         .gradient-background {
             background-image: linear-gradient(to right, #b3d8a3 0%, #e0e0e0 50%, #acad9f 100%);
@@ -387,6 +483,18 @@
 <body class="">
 
 
+    <!-- Preloader section start here-->
+    <div class="loader-container">
+        <!-- Custom preloader -->
+        <div class="loader">
+            <div class="worm"></div>
+            <div class="circleMiddle"></div>
+        </div>
+    </div>
+
+    <!-- Preloader section end here-->
+
+
     <!-- NAVBAR  START HERE -->
     {{>navbar}}
     <!-- NAVBAR  END HERE -->
@@ -575,39 +683,52 @@
             <div class="aboutus pb-12 pt-12 px-8 sm:px-12 md:px-32 gradientbackground w-full h-auto mx-auto">
                 <!-- About Us Section -->
                 <div class="max-w-[900px] mx-auto">
-                    <h1 class="text-[26px] text-slate-700 font-400">About Us</h1>
+                    <h1 class="text-[26px] text-blue-600 font-400">About Us</h1>
                     <div class="w-20 h-4 rounded-t-full border-orange-500 border-b-[7px]"></div>
                     <!-- Orange underline -->
                     <div class="my-4">
-                        <p class="text-slate-600 leading-[30px] non-italic">
-                            Mantrabytes, launched in June 2024, has become a pioneer in computer science consulting and
-                            development. We collaborate closely with clients to design and implement solutions that
-                            address
-                            their specific needs and accelerate their journey towards achieving their goals.
+                        <p class="text-slate-600 leading-[30px]">
+                            In today's rapidly evolving technological landscape, the gap between academic knowledge and
+                            industry requirements has become increasingly evident. “Mantrabytes Innovations” stands as a
+                            pioneering force dedicated to bridging this gap through comprehensive technical training
+                            programs. Our mission is to equip students, professionals, and organizations with the skills
+                            and knowledge demanded by the modern workforce, positioning “Mantrabytes Innovations” as
+                            more than just a training company, but a catalyst for transformative growth in the tech
+                            sector.
+
                         </p>
-                        <span class="italic font-semibold text-indigo-900 leading-[30px]">Shaping the Future of
-                            Computing</span>
+                        <span class="italic font-semibold text-indigo-900 leading-[30px]"> “Mantrabytes
+                            Innovations”</span>
                         <p class="text-slate-600 leading-[30px] my-4">
-                            With over two decades of experience in the industry, we've cultivated an unmatched depth of
-                            knowledge in computer science. This expertise positions us uniquely to deliver cutting-edge
-                            solutions that are tailored to your specific requirements, ensuring on-time and
-                            budget-friendly
-                            project completion.
-                        </p>
-                        <p class="text-slate-600 leading-[30px] my-4">
-                            At Mantrabytes, we believe in fostering strong partnerships with our clients. Our team is
-                            deeply
-                            invested in your success, and we strive to make every interaction positive and value-driven.
-                        </p>
-                        <p class="text-slate-600 leading-[30px] my-4">
-                            Our team of passionate computer scientists tackles even the most intricate problems. We
-                            leverage our
-                            expertise and experience to keep our clients at the forefront of technological advancements.
+                            “Mantrabytes Innovations” offers a diverse range of training programs in fields such as
+                            software development, data science, cybersecurity, and artificial intelligence. Our courses
+                            are meticulously crafted with input from industry experts to provide in-depth knowledge and
+                            practical skills. Whether upskilling professionals or preparing fresh graduates, our
+                            programs are tailored to meet each learner's unique needs.
+
                         </p>
                         <p class="text-slate-600 leading-[30px] my-4">
-                            Mantrabytes is dedicated to unlocking infinite possibilities through innovative computer
-                            science
-                            solutions, offering endless opportunities for our clients.
+                            Our team of seasoned instructors brings a wealth of industry experience and academic
+                            excellence, serving as mentors who guide learners through technical concepts and their
+                            applications. We believe in hands-on learning, with state-of-the-art labs and interactive
+                            workshops providing practical experience to apply theoretical knowledge to real-life
+                            problems. This approach enhances understanding and boosts confidence.
+
+                        </p>
+                        <p class="text-slate-600 leading-[30px] my-4">
+                            To ensure a smooth transition from academia to industry, we have strong partnerships with
+                            leading tech companies, keeping our programs updated with the latest industry demands. Our
+                            robust placement assistance services, including career counseling, resume building, and
+                            interview preparation, have helped numerous learners secure positions in top organizations.
+
+                        </p>
+                        <p class="text-slate-600 leading-[30px] my-4">
+                            “Mantrabytes Innovations” incorporates the latest technological advancements into
+                            educational programs, ensuring students are proficient in current and emerging tools and
+                            platforms. We offer tailored training solutions addressing the specific needs of
+                            universities and institutes, enhancing the relevance and impact on students' learning
+                            experiences. By focusing on critical soft skills, our programs significantly improve
+                            students' employability, giving them a competitive edge in the job market.
                         </p>
                         <div class="max-w-24">
                             <span
@@ -622,9 +743,9 @@
 
             <div class="expertise pb-12 pt-12 px-8 sm:px-12 md:px-32 gradientbackground w-full h-auto mx-auto">
                 <div class="max-w-[900px] mx-auto text-center">
-                    <h1 class="text-[26px] text-slate-700 font-semibold">Our Expertise</h1>
-                    <div class="w-16 h-4 rounded-t-full border-orange-500 border-b-[7px] mx-auto"></div>
-                    <div class="flex flex-wrap -m-4 mt-8" id="expertise-cards">
+                    <h1 class="text-[26px] text-blue-600 font-semibold">Our Expertise</h1>
+                    <div class="w-16 h-4 rounded-t-full border-orange-500 text-blue-600 border-b-[7px] mx-auto"></div>
+                    <div class="flex flex-wrap -m-4 mt-8 text-slate-600" id="expertise-cards">
                         <!-- Cards will be dynamically inserted here by JavaScript -->
                     </div>
                 </div>
@@ -957,8 +1078,8 @@
                         <div>
                             <!-- Title with underline -->
                             <div class="text-center mb-16">
-                                <h2 class="text-2xl font-bold text-blue-900">Our Clients</h2>
-                                <div class="h-2 rounded-full bg-yellow-500 w-24 mx-auto mt-1"></div>
+                                <h2 class="text-2xl font-bold text-blue-600">Our Clients</h2>
+                                <div class="h-2 rounded-full bg-orange-400 w-24 mx-auto mt-2"></div>
                             </div>
                             <!-- Grid of images -->
                             <div class="grid grid-cols-3 gap-4 xl:px-4 gap-y-8">
@@ -982,8 +1103,10 @@
                         <div>
                             <!-- Title with underline -->
                             <div class="text-center mb-12">
-                                <h2 class="text-2xl font-bold text-blue-900">Testimonials</h2>
-                                <div class="h-2 rounded-full bg-yellow-500 w-24 mx-auto mt-2"></div>
+                                <h2 class="text-2xl font-bold text-blue-600">Testimonials</h2>
+                                <div class="h-2 rounded-full bg-orange-400 w-24 mx-auto mt-2"></div>
+                                {{!-- <div class="bg-orange-400 h-[6px] w-12 rounded-full mt-8 xl:ml-8"></div> --}}
+
                             </div>
                             <!-- Cards -->
                             <div class="slider-container h-80">
@@ -992,7 +1115,7 @@
                                     <div class="slide flex flex-col">
                                         <img src="https://netedgecomputing.com/wp-content/uploads/2021/03/Argus-Logo-3.jpg"
                                             alt="Card Image 1" class="mx-auto w-full sm:w-32 h-auto mb-4 cardslideimg">
-                                        <p class="text-yellow-700 my-4 italic">“I have interacted with lot of
+                                        <p class="text-slate-600 my-4 text-sm ">“I have interacted with lot of
                                             development firms
                                             and
                                             mantrabytes
@@ -1010,7 +1133,7 @@
                                     <div class="slide flex flex-col">
                                         <img src="https://netedgecomputing.com/wp-content/uploads/2021/03/earthlink-2.png"
                                             alt="Card Image 2" class="mx-auto w-full sm:w-32 h-auto mb-4 cardslideimg">
-                                        <p class="text-yellow-700 my-4  italic ">“So far, one of the best providers when
+                                        <p class="text-slate-600 my-4 text-sm">“So far, one of the best providers when
                                             it
                                             comes
                                             to
@@ -1024,7 +1147,7 @@
                                     <div class="slide flex flex-col">
                                         <img src="https://netedgecomputing.com/wp-content/uploads/2021/03/skyslope-1.png"
                                             alt="Card Image 3" class="mx-auto w-full sm:w-32 h-auto mb-4 cardslideimg">
-                                        <p class="text-yellow-700 my-4  italic">mantrabytes is one of the best companies
+                                        <p class="text-slate-600 my-4 text-sm">mantrabytes is one of the best companies
                                             I have
                                             worked
                                             with that
@@ -1042,7 +1165,8 @@
                                     <div class="slide flex flex-col">
                                         <img src="https://netedgecomputing.com/wp-content/uploads/2021/03/Gum-Drops-2.jpg"
                                             alt="Card Image 4" class="mx-auto w-full sm:w-32 h-auto mb-4 cardslideimg">
-                                        <p class="text-yellow-700 my-4  ">mantrabytes is one of the best companies I
+                                        <p class="text-slate-600 my-4 text-sm">mantrabytes is one of the best companies
+                                            I
                                             have
                                             worked
                                             with that
@@ -1062,323 +1186,295 @@
             </div>
             <!-- OUR CLIENT AND TESTIMONIAL SECTION END -->
 
+        </div>
 
+        <!--footer start  -->
 
-            <!--footer start  -->
-
-            <footer>
-                <!-- this div used to separate copyright div -->
-                <div
-                    class="pl-6 pr-4 pt-16 pb-6 text-slate-600 leading-8 text-pretty bggradientfooter text-sm md:pl-16 lg:flex lg:justify-evenly lg:pl-4 lg:pr-4 lg:pt-16">
-                    <!-- div for medium screen setup: Grouping logo, 1st list, services -->
-                    <div class="md:flex">
-
-                        <!-- div for medium screen setup: Grouping logo, 1st list -->
-                        <div class="md:pr-52 lg:p-2 lg:m-2 lg:w-60 items-center relative">
-                            <!-- Animated Logo -->
-                            <h4 id="mantraLogo" class="font-bold text-lg relative z-10">MantraBytes</h4>
-                            <hr class="border-b-2 mt-2 mb-3">
-                            <!-- Animated Logo end -->
-
-                            <!-- 1st list start -->
-                            <div class="xl:mb-20">
-                                <ul class="list-inside listchange">
-                                    <li><a href="https://netedgecomputing.com/about-us/"
-                                            class="hover:text-orange-600 text-cyan-600"><i
-                                                class="fa fa-chevron-right text-orange-600"></i>&nbsp; About Us</a></li>
-                                    <li><a href="https://netedgecomputing.com/index.php/about-us/value-proposition/"
-                                            class="hover:text-orange-600 text-cyan-600"><i
-                                                class="fa fa-chevron-right text-orange-600"></i>&nbsp;
-                                            Value Proposition</a></li>
-                                    <li><a href="https://netedgecomputing.com/index.php/about-us/methodology/"
-                                            class="hover:text-orange-600 text-cyan-600"><i
-                                                class="fa fa-chevron-right text-orange-600"></i>&nbsp;
-                                            Methodology</a></li>
-                                    <li><a href="https://netedgecomputing.com/index.php/about-us/team-netedge/"
-                                            class="hover:text-orange-600 text-cyan-600"><i
-                                                class="fa fa-chevron-right text-orange-600"></i>&nbsp;
-                                            Team</a></li>
-                                    <li><a href="https://netedgecomputing.com/index.php/about-us/management/"
-                                            class="hover:text-orange-600 text-cyan-600"><i
-                                                class="fa fa-chevron-right text-orange-600"></i>&nbsp;
-                                            Management</a></li>
-                                    <li><a href="https://netedgecomputing.com/contact-us/"
-                                            class="hover:text-orange-600 text-cyan-600"><i
-                                                class="fa fa-chevron-right text-orange-600"></i>&nbsp;
-                                            Contact us</a></li>
-                                </ul>
-                            </div>
-                            <!-- 1st list end -->
-                        </div>
-
-
-                        <!-- [div for medium screen setup: Grouping logo, 1st list] Ends here -->
-
-                        <!-- Services start -->
-                        <div class="mb-6 md:w-96 lg:p-2 lg:m-2 lg:w-60">
-                            <h4 class="font-bold text-orange-900 text-lg">Services</h4>
-                            <hr class="border-b-2 mt-2 mb-3">
+        <footer>
+            <!-- this div used to separate copyright div -->
+            <div
+                class="pl-6 pr-4 pt-16 pb-6 text-slate-600 leading-8 text-pretty bggradientfooter text-sm md:pl-16 lg:flex lg:justify-evenly lg:pl-4 lg:pr-4 lg:pt-16">
+                <!-- div for medium screen setup: Grouping logo, 1st list, services -->
+                <div class="md:flex md:mb-10">
+                    <!-- div for medium screen setup: Grouping logo, 1st list -->
+                    <div class="md:pr-52 lg:p-2 lg:m-2 lg:w-60">
+                        <!-- logo -->
+                        <!-- Animated Logo -->
+                        <h4 class="font-bold text-lg text-blue-600 relative z-10">MantraBytes</h4>
+                        <hr class="border-b-2 mt-2 mb-3">
+                        <!-- Animated Logo end -->
+                        <!-- logo end -->
+                        <!-- 1st list start -->
+                        <div class="mb-6">
                             <ul class="list-inside listchange">
-                                <li><a href="https://netedgecomputing.com/index.php/services/cloud-transformation-solutions/"
-                                        class="hover:text-orange-600 text-cyan-600"><i
+                                <li><a href="/" class="text-slate-600 hover:underline"><i
                                             class="fa fa-chevron-right text-orange-600"></i>&nbsp;
-                                        Cloud
-                                        Transformation Solutions</a></li>
-                                <li><a href="https://netedgecomputing.com/index.php/services/ai-and-cognitive-analytics/"
-                                        class="hover:text-orange-600 text-cyan-600"><i
+                                        About Us</a></li>
+                                <li><a href="/" class="text-slate-600 hover:underline"><i
                                             class="fa fa-chevron-right text-orange-600"></i>&nbsp;
-                                        AI and
-                                        Cognitive Analytics</a></li>
-                                <li><a href="https://netedgecomputing.com/index.php/services/enterprise-cyber-security/"
-                                        class="hover:text-orange-600 text-cyan-600"><i
+                                        Value
+                                        Proposition</a></li>
+                                <li><a href="/" class="text-slate-600 hover:underline"><i
                                             class="fa fa-chevron-right text-orange-600"></i>&nbsp;
-                                        Enterprise
-                                        Cyber Security</a></li>
-                                <li><a href="https://netedgecomputing.com/index.php/services/iot-and-automation/"
-                                        class="hover:text-orange-600 text-cyan-600"><i
-                                            class="fa fa-chevron-right text-orange-600"></i>&nbsp;
-                                        IoT and
-                                        Automation</a></li>
-                                <li><a href="https://netedgecomputing.com/index.php/services/application-development/"
-                                        class="hover:text-orange-600 text-cyan-600"><i
-                                            class="fa fa-chevron-right text-orange-600"></i>&nbsp;
-                                        Application
-                                        Development and
-                                        <span class="ml-3">Maintenance</span></a></li>
-                                <li><a href="https://netedgecomputing.com/index.php/services/ebusiness-digital-solutions/"
-                                        class="hover:text-orange-600 text-cyan-600"><i
-                                            class="fa fa-chevron-right text-orange-600"></i>&nbsp;
-                                        eBusiness
-                                        Digital Solutions</a></li>
-                            </ul>
-                        </div>
-                        <!-- Services Ends-->
-                    </div>
-                    <!-- [div for medium screen setup: Grouping logo, 1st list, services] Ends here-->
-
-                    <!-- div for medium screen setup: Grouping Recent Posts, Subscribe, Social Link-->
-                    <div class="md:flex">
-                        <!-- Recent Posts -->
-                        <div class="mb-6 md:pr-7 lg:p-2 lg:m-2 lg:w-60">
-                            <h4 class="font-bold text-orange-900 text-lg">Recent Posts</h4>
-                            <hr class="border-b-2 mt-2 mb-3">
-                            <ul class="listchange list-inside">
-                                <li><a href="https://netedgecomputing.com/social-computing/designing-a-cost-effective-cloud-solution-for-your-business/"
-                                        class="hover:text-orange-600 text-cyan-600"><i
-                                            class="fa fa-chevron-right text-orange-600"></i>&nbsp;
-                                        Designing
-                                        a Cost Effective Cloud <span class="ml-3">Solution for your business.</span></a>
+                                        Methodology</a>
                                 </li>
-                                <li><a href="https://netedgecomputing.com/social-computing/driving-innovation-and-automation-across-an-enterprise-to-growth-hacking/"
-                                        class="hover:text-orange-600 text-cyan-600"><i
+                                <li><a href="/" class="text-slate-600 hover:underline"><i
                                             class="fa fa-chevron-right text-orange-600"></i>&nbsp;
-                                        Driving
-                                        Innovation and <span class="ml-3"> Automation across an Enterprise </span> <span
-                                            class="ml-3">to Growth Hacking.</span></a></li>
-                                <li><a href="https://netedgecomputing.com/social-computing/ecommerce-services-guide-right-from-concept-proof-of-concept-to-implementation/"
-                                        class="hover:text-orange-600 text-cyan-600"><i
+                                        Team</a></li>
+                                <li><a href="/" class="text-slate-600 hover:underline"><i
                                             class="fa fa-chevron-right text-orange-600"></i>&nbsp;
-                                        E-Commerce
-                                        Services Guide: <span class="ml-3">Right from Proof-of-Concept to</span>
-                                        <span class="ml-3">simplementation.</span></a></li>
+                                        Management</a>
+                                </li>
+                                <li><a href="/" class="text-slate-600 hover:underline"><i
+                                            class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                        Contact us</a></li>
                             </ul>
                         </div>
-                        <!-- Recent Posts Ends -->
-
-                        <!-- div for medium screen setup: Combining Subscribe, Social Link -->
-                        <div class="md:pl-10 lg:p-2 lg:m-2 lg:w-60 xl:ml-16">
-                            <!-- Subscribe starts here -->
-                            <div class="mb-6">
-                                <h4 class="font-bold text-orange-900 text-lg">Subscribe</h4>
-                                <hr class="border-b-2 mt-2 mb-3 md:w-96 lg:w-full">
-                                <div class="mt-7">
-                                    <input type="text"
-                                        class="bg-slate-300  w-full h-12 md:w-96 lg:w-full px-4 border border-transparent outline-none focus:border-[3px] rounded border-transition focus:border-yellow-500"
-                                        id="email-input" placeholder="ENTER YOUR EMAIL">
-                                    <p id="error-message" class="text-red-500 text-sm mt-2 hidden">Field is required</p>
-                                    <button type="submit" id="subscribe-button"
-                                        class="bg-[#011bab] w-full h-12 text-white mt-5 rounded md:w-96 lg:w-full">Subscribe</button>
-
-                                </div>
-                            </div>
-                            <!-- Subscribe Ends here -->
-
-                            <!-- Social Link starts -->
-                            <div>
-                                <h4 class="font-bold text-orange-900 text-lg">Social Links</h4>
-                                <hr class="border-b-2 mt-2  md:w-96 lg:w-full">
-                                <div class="flex justify-center">
-                                    <a target="_blank"
-                                        href="http://www.linkedin.com/company/netedge-computing-solutions-pvt.-ltd."
-                                        title="Follow us on Linkedin"><img
-                                            src="https://s.yimg.com/fz/api/res/1.2/oPmnuoHGZwDmud64pDGAcQ--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpdDtoPTI0MDtxPTgwO3c9MjQw/https://s.yimg.com/zb/imgv1/051c505f-dc29-3303-81b2-5828c6e3b2e2/t_500x300"
-                                            alt="LinkedIn" class="h-5 ml-2 mr-2 mt-2"></a>
-                                    <a target="_blank"
-                                        href="https://www.facebook.com/NetEdge-Computing-Solutions-2680989805274489/"
-                                        title="Follow us on Facebook"><img
-                                            src="https://www.teahub.io/photos/full/11-115962_facebook-logo-png-transparent-background-facebook-png.png"
-                                            alt="Facebook" class="h-7 ml-2 mr-2 mt-1"></a>
-                                    <a target="_blank" href="https://www.instagram.com/netedge_computing/"
-                                        title="Follow us on Instagram"><img
-                                            src="http://clipart-library.com/images_k/instagram-transparent-png/instagram-transparent-png-4.png"
-                                            alt="Instagram" class="h-7 mt-1"></a>
-                                    <a target="_blank" href="http://www.twitter.com/Net_Edge"
-                                        title="Follow us on Twitter"><img
-                                            src="https://www.freeiconspng.com/uploads/circle-twitter-logo-png-photo-13.png"
-                                            alt="Twitter" class="h-6 ml-2 mr-2 mt-[5px]"></a>
-
-                                </div>
-                            </div>
-                            <!-- Social Link End -->
-                        </div>
-                        <!-- [div for medium screen setup: Combining Subscribe, Social Link] Ends here-->
+                        <!-- 1st list end -->
                     </div>
-                    <!-- [div for medium screen setup: Grouping Recent Posts, Subscribe, Social Link] Ends here-->
+                    <!-- [div for medium screen setup: Grouping logo, 1st list] Ends here -->
+
+                    <!-- Services start -->
+                    <div class="mb-6 md:w-96 lg:p-2 lg:m-2 lg:w-60">
+                        <h4 class="font-bold  text-blue-600 text-lg">Services</h4>
+                        <hr class="border-b-2 mt-2 mb-3">
+                        <ul class="list-inside listchange">
+                            <li><a href="/" class="text-slate-600 hover:underline"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Cloud
+                                    Transformation Solutions</a></li>
+                            <li><a href="/" class="text-slate-600 hover:underline"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    AI and
+                                    Cognitive Analytics</a></li>
+                            <li><a href="/" class="text-slate-600 hover:underline"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Enterprise
+                                    Cyber Security</a></li>
+                            <li><a href="/" class="text-slate-600 hover:underline"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    IoT and
+                                    Automation</a></li>
+                            <li><a href="/" class="text-slate-600 hover:underline"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Application
+                                    Development and
+                                    <span class="ml-3">Maintenance</span></a></li>
+                            <li><a href="/" class="text-slate-600 hover:underline"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    eBusiness
+                                    Digital Solutions</a></li>
+                        </ul>
+                    </div>
+                    <!-- Services Ends-->
                 </div>
+                <!-- [div for medium screen setup: Grouping logo, 1st list, services] Ends here-->
 
-                <!-- copyright starts here-->
-                <!-- copyright starts here-->
-                <div
-                    class="container px-5 py-8 mx-auto flex bg-blue-900 text-white body-font items-center sm:flex-row flex-col">
-                    <p class="text-sm text-center sm:text-left">© 2024 Mantrabytes Innovations — All rights reserved</p>
+                <!-- div for medium screen setup: Grouping Recent Posts, Subscribe, Social Link-->
+                <div class="md:flex">
+                    <!-- Recent Posts -->
+                    <div class="mb-6 md:pr-7 lg:p-2 lg:m-2 lg:w-60">
+                        <h4 class="font-bold  text-blue-600 text-lg">Recent Posts</h4>
+                        <hr class="border-b-1 mt-2 mb-3">
+                        <ul class="listchange">
+                            <li><a href="/" class="text-slate-600 hover:underline"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>
+                                    Designing a Cost
+                                    Effective Cloud Solution for your
+                                    business.</a>
+                            </li>
+                            <li><a href="/" class="text-slate-600 hover:underline"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Driving
+                                    Innovation and <span class="ml-3"> Automation across an Enterprise
+                                    </span> <span class="ml-3">to Growth Hacking.</span></a></li>
+                            <li><a href="/" class="text-slate-600 hover:underline"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    E-Commerce
+                                    Services Guide: <span class="ml-3">Right from Proof-of-Concept to</span>
+                                    <span class="ml-3">simplementation.</span></a></li>
+                        </ul>
+                    </div>
+                    <!-- Recent Posts Ends -->
+
+                    <!-- div for medium screen setup: Combining Subscribe, Social Link -->
+                    <div class="md:pl-10 lg:p-2 lg:m-2 lg:w-60 xl:ml-16">
+                        <!-- Subscribe starts here -->
+                        <div class="mb-6">
+                            <h4 class="font-bold  text-blue-600 text-lg">Subscribe</h4>
+                            <hr class="border-b-1 mt-2 mb-3 md:w-96 lg:w-full">
+                            <div class="mt-7">
+                                <input type="text"
+                                    class="bg-slate-300  w-full h-12 md:w-96 lg:w-full px-4 border border-transparent outline-none focus:border-[1px] rounded border-transition"
+                                    id="email-input" placeholder="ENTER YOUR EMAIL">
+                                <p id="error-message" class="text-red-500 text-sm mt-2 hidden">Field is
+                                    required</p>
+                                <button type="submit" id="subscribe-button"
+                                    class="bg-[#011bab] w-full h-12 text-white mt-5 rounded md:w-96 lg:w-full">Subscribe</button>
+
+                            </div>
+                        </div>
+                        <!-- Subscribe Ends here -->
+
+                        <!-- Social Link starts -->
+                        <div>
+                            <h4 class="font-bold  text-blue-600 text-lg">Social Links</h4>
+                            <hr class="border-b-1 mt-2 md:w-96 lg:w-full">
+                            <div class="flex justify-center">
+                                <a target="_blank" href="http://www.linkedin.com" title="Follow us on Linkedin"><img
+                                        src="https://s.yimg.com/fz/api/res/1.2/oPmnuoHGZwDmud64pDGAcQ--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpdDtoPTI0MDtxPTgwO3c9MjQw/https://s.yimg.com/zb/imgv1/051c505f-dc29-3303-81b2-5828c6e3b2e2/t_500x300"
+                                        alt="LinkedIn" class="h-5 ml-2 mr-2 mt-2"></a>
+                                <a target="_blank" href="" title="Follow us on Facebook"><img
+                                        src="https://www.teahub.io/photos/full/11-115962_facebook-logo-png-transparent-background-facebook-png.png"
+                                        alt="Facebook" class="h-7 ml-2 mr-2 mt-1"></a>
+                                <a target="_blank" href="https://www.instagram.com/" title="Follow us on Instagram"><img
+                                        src="http://clipart-library.com/images_k/instagram-transparent-png/instagram-transparent-png-4.png"
+                                        alt="Instagram" class="h-7 mt-1"></a>
+                                <a target="_blank" href="" title="Follow us on Twitter"><img
+                                        src="https://www.freeiconspng.com/uploads/circle-twitter-logo-png-photo-13.png"
+                                        alt="Twitter" class="h-6 ml-2 mr-2 mt-[5px]"></a>
+
+                            </div>
+                        </div>
+                        <!-- Social Link End -->
+                    </div>
+                    <!-- [div for medium screen setup: Combining Subscribe, Social Link] Ends here-->
                 </div>
-                <!-- copyright Ends here-->
-                <!-- copyright Ends here-->
-            </footer>
+                <!-- [div for medium screen setup: Grouping Recent Posts, Subscribe, Social Link] Ends here-->
+            </div>
 
-            <!--footer end  -->
+            <!-- copyright starts here-->
+            <div
+                class="container px-5 py-8 mx-auto flex bg-blue-900 text-white body-font items-center sm:flex-row flex-col">
+                <p class="text-sm text-center sm:text-left">© 2024 Mantrabytes Innovations — All rights
+                    reserved</p>
+            </div>
+            <!-- copyright Ends here-->
+
+        </footer>
+
+        <!--footer end  -->
 
 
-            <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
-            <!--this link for carousel slider -->
-            <script>
+        <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+        <!--this link for carousel slider -->
+        <script>
 
+            // Preloader js start here
+            window.addEventListener('load', function () {
+                const loaderContainer = document.querySelector('.loader-container');
+                // Hide the preloader container when the page is fully loaded
+                loaderContainer.style.display = 'none';
+            });
+            // Preloader js end here
 
-                // OUR CLIENT AND TESTIMONIAL SECTION START 
-                // JavaScript for cycling through cards with sliding effect
-                const slider = document.querySelector('.slider');
-                const slides = document.querySelectorAll('.slide');
-                let currentIndex = 0;
+            // OUR CLIENT AND TESTIMONIAL SECTION START 
+            // JavaScript for cycling through cards with sliding effect
+            const slider = document.querySelector('.slider');
+            const slides = document.querySelectorAll('.slide');
+            let currentIndex = 0;
 
-                function slide() {
-                    currentIndex = (currentIndex + 1) % slides.length;
-                    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+            function slide() {
+                currentIndex = (currentIndex + 1) % slides.length;
+                slider.style.transform = `translateX(-${currentIndex * 100}%)`;
 
-                    if (currentIndex === slides.length - 1) {
+                if (currentIndex === slides.length - 1) {
+                    setTimeout(() => {
+                        slider.style.transition = 'none';
+                        slider.style.transform = `translateX(0)`;
+                        currentIndex = 0;
                         setTimeout(() => {
-                            slider.style.transition = 'none';
-                            slider.style.transform = `translateX(0)`;
-                            currentIndex = 0;
-                            setTimeout(() => {
-                                slider.style.transition = 'transform 1s ease-in-out';
-                            }, 50);
-                        }, 1000);
-                    }
+                            slider.style.transition = 'transform 1s ease-in-out';
+                        }, 50);
+                    }, 1000);
                 }
+            }
 
-                setInterval(slide, 5000);
-                // OUR CLIENT AND TESTIMONIAL SECTION END 
+            setInterval(slide, 5000);
+            // OUR CLIENT AND TESTIMONIAL SECTION END 
 
 
-                // footer js star
-                const emailInput = document.getElementById('email-input');
-                const subscribeButton = document.getElementById('subscribe-button');
-                const errorMessage = document.getElementById('error-message');
+            // footer js star
+            const emailInput = document.getElementById('email-input');
+            const subscribeButton = document.getElementById('subscribe-button');
+            const errorMessage = document.getElementById('error-message');
 
-                subscribeButton.addEventListener('click', function () {
-                    if (emailInput.value.trim() === '') {
-                        errorMessage.classList.remove('hidden');
-                        emailInput.classList.add('error-border');
-                    } else {
-                        errorMessage.classList.add('hidden');
-                        emailInput.classList.remove('error-border');
-                        // Add form submission logic here if needed
-                    }
-                });
-
-                // its js for input border transition
-                emailInput.addEventListener('focus', function () {
+            subscribeButton.addEventListener('click', function () {
+                if (emailInput.value.trim() === '') {
+                    errorMessage.classList.remove('hidden');
+                    emailInput.classList.add('error-border');
+                } else {
                     errorMessage.classList.add('hidden');
                     emailInput.classList.remove('error-border');
-                });
-
-                emailInput.addEventListener('blur', function () {
-                    emailInput.classList.remove('error-border');
-                });
-                // footer js end 
-
-
-                // Our expertise cards js start here......
-                // JavaScript to dynamically create cards and add hover effect
-                document.addEventListener('DOMContentLoaded', function () {
-                    const cardsData = [
-                        {
-                            title: "Project Management",
-                            description: "We excel in managing projects from inception to completion, ensuring timely delivery and quality output.",
-                        },
-                        {
-                            title: "Client Satisfaction",
-                            description: "Our client-centric approach focuses on understanding and exceeding client expectations."
-                        },
-                        {
-                            title: "Innovation",
-                            description: "Innovation is at the heart of our operations. We constantly explore new technologies and methodologies."
-                        },
-                        {
-                            title: "Award-Winning Solutions",
-                            description: "Our solutions have been recognized with numerous awards, underscoring our commitment to excellence."
-                        },
-                        {
-                            title: "Technical Expertise",
-                            description: "Our team comprises skilled professionals with deep technical expertise in various fields."
-                        },
-                        {
-                            title: "Continuous Improvement",
-                            description: "We are committed to continuous improvement, constantly refining our processes and methodologies."
-                        }
-                    ];
-
-                    const cardsContainer = document.getElementById('expertise-cards');
-
-                    cardsData.forEach(card => {
-                        const cardElement = document.createElement('div');
-                        cardElement.classList.add('p-4', 'sm:px-8', 'w-full', 'sm:w-1/2', 'lg:w-1/3');
-                        cardElement.innerHTML = `
-                    <div class="h-full card p-8 rounded shadow-lg">
-                        <h2 class="text-lg text-rose-600 font-medium title-font mb-2">${card.title}</h2>
-                        <p class="leading-relaxed text-white font-bold">${card.description}</p>
-                    </div>
-                `;
-                        cardsContainer.appendChild(cardElement);
-                    });
-                });
-
-                // Our expertise cards js end here .......
-
-                //footer  logo js start here
-                // JavaScript to add diagonal movement to the logo
-                // JavaScript to add size change and diagonal movement to the logo
-                const logo = document.getElementById('mantraLogo');
-
-                let angle = 0;
-                let amplitude = 10;
-                let frequency = 0.03;
-                let baseFontSize = 13; // Initial font size in pixels
-
-                function animateLogo() {
-                    angle += frequency;
-                    let translateY = Math.sin(angle) * amplitude;
-                    let newSize = baseFontSize + Math.abs(translateY); // Adjust font size based on translateY
-                    logo.style.transform = `translateY(${translateY}px)`;
-                    logo.style.fontSize = `${newSize}px`; // Apply new font size
-                    requestAnimationFrame(animateLogo);
+                    // Add form submission logic here if needed
                 }
+            });
 
-                animateLogo();
+            // its js for input border transition
+            emailInput.addEventListener('focus', function () {
+                errorMessage.classList.add('hidden');
+                emailInput.classList.remove('error-border');
+            });
+
+            emailInput.addEventListener('blur', function () {
+                emailInput.classList.remove('error-border');
+            });
+            // footer js end 
+
+
+            // Our expertise cards js start here......
+            // JavaScript to dynamically create cards and add hover effect
+            document.addEventListener('DOMContentLoaded', function () {
+                const cardsData = [
+                    {
+                        title: "Project Management",
+                        description: "We excel in managing projects from inception to completion, ensuring timely delivery and quality output.",
+                    },
+                    {
+                        title: "Client Satisfaction",
+                        description: "Our client-centric approach focuses on understanding and exceeding client expectations."
+                    },
+                    {
+                        title: "Innovation",
+                        description: "Innovation is at the heart of our operations. We constantly explore new technologies and methodologies."
+                    },
+                    {
+                        title: "Award-Winning Solutions",
+                        description: "Our solutions have been recognized with numerous awards, underscoring our commitment to excellence."
+                    },
+                    {
+                        title: "Technical Expertise",
+                        description: "Our team comprises skilled professionals with deep technical expertise in various fields."
+                    },
+                    {
+                        title: "Continuous Improvement",
+                        description: "We are committed to continuous improvement, constantly refining our processes and methodologies."
+                    }
+                ];
+
+                const cardsContainer = document.getElementById('expertise-cards');
+
+                cardsData.forEach(card => {
+                    const cardElement = document.createElement('div');
+                    cardElement.classList.add('p-4', 'sm:px-20', 'w-full', 'sm:w-1/2', 'lg:w-1/3');
+                    cardElement.innerHTML = `
+                   <div class="h-full card p-8 rounded shadow-lg group">
+                    <h2 class="text-lg font-medium mb-2 text-blue-600 group-hover:text-orange-500">${card.title}</h2>
+                    <p class="leading-relaxed text-slate-300 font-md">${card.description}</p>
+                    </div>
+
+                `;
+                    cardsContainer.appendChild(cardElement);
+                });
+            });
+
+            // Our expertise cards js end here .......
 
 
 
-            </script>
+
+
+        </script>
 </body>
 
 </html>

@@ -1,14 +1,17 @@
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 8000;
-const path = require('path')
+const path = require('path');
 const hbs = require('hbs');
 const temp_Path = path.join(__dirname, 'views/view');
 const partials_path = path.join(__dirname, 'views/partials');
+
 app.set('view engine', 'hbs');
 app.set('views', temp_Path);
 hbs.registerPartials(partials_path);
-app.use(express.static(path.join(__dirname, 'public')))
+
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.get('/', (req, res) => {
     res.render('index')
 });
@@ -70,6 +73,38 @@ app.get('/infrastructure-management', (req, res) => {
 app.get('/fullstack', (req, res) => {
     res.render('fullstack');
 });
-app.listen(port, (req, res) => {
-    console.log(`server is runing port no. ${port}`);
-})
+
+// 404 error handling middleware
+app.use((req, res, next) => {
+    res.status(404).render('error', {
+        statusCode: 404,
+        errorMessage: 'Page Not Found',
+        errorDescription: 'Sorry, the page you are looking for does not exist.'
+    });
+});
+
+// 400 Bad Request error handling middleware
+app.use((err, req, res, next) => {
+    if (err.status === 400) {
+        res.status(400).render('error', {
+            statusCode: 400,
+            errorMessage: 'Bad Request',
+            errorDescription: 'The server could not understand your request.'
+        });
+    } else {
+        next(err);
+    }
+});
+
+// Generic error handling middleware
+app.use((err, req, res, next) => {
+    res.status(err.status || 500).render('error', {
+        statusCode: err.status || 500,
+        errorMessage: err.message,
+        errorDescription: 'An unexpected error occurred.'
+    });
+});
+
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+});

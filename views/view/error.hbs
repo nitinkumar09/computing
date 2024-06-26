@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mantrabytes Error Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        @keyframes moveBirdsLeftToRight {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        @keyframes moveBirdsRightToLeft {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @keyframes move404 {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        @keyframes colorChange {
+            0% {
+                color: #f87171;
+            }
+
+            25% {
+                color: #fbbf24;
+            }
+
+            50% {
+                color: #34d399;
+            }
+
+            75% {
+                color: #60a5fa;
+            }
+
+            100% {
+                color: #f87171;
+            }
+        }
+
+        @keyframes resize {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        @keyframes rain {
+            0% {
+                transform: translateY(-100%);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+
+        .moving-birds-left-to-right {
+            animation: moveBirdsLeftToRight 15s linear infinite;
+        }
+
+        .moving-birds-right-to-left {
+            animation: moveBirdsRightToLeft 15s linear infinite;
+        }
+
+        .moving-404 {
+            animation: move404 10s linear infinite, colorChange 5s linear infinite, resize 3s ease-in-out infinite;
+        }
+
+        .falling-rain {
+            position: absolute;
+            top: -100px;
+            left: 50%;
+            width: 10px;
+            height: 50px;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+            opacity: 0;
+            animation: rain 1s linear infinite;
+        }
+
+        .bg {
+            background-image: linear-gradient(to right, #cdeab0 0%, #d7d6d6 50%, #afdc93 100%);
+        }
+
+        /* bg-gradient-to-r from-green-200*/
+    </style>
+</head>
+
+<body
+    class="bg via-blue-200 to-purple-200 flex items-center justify-center min-h-screen text-white relative overflow-hidden">
+    <div
+        class="border mx-8 sm:mx-2 bg-opacity-20 backdrop-blur-lg p-8 rounded-lg shadow-lg text-center text-gray-800 relative z-10">
+        <div class="flex justify-center mb-4">
+            <img src="https://img.icons8.com/emoji/96/000000/confused-face.png" alt="Bad Request Icon"
+                class="w-24 h-24">
+        </div>
+        <h1 class="text-4xl font-bold text-red-600">400</h1>
+        <h2 class="text-2xl font-semibold text-gray-800 mt-4">Bad Request</h2>
+        <p class="text-gray-600 mt-2">Oops! The server could not understand your request.</p>
+        <div class="mt-6">
+            <a href="/"
+                class="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300">Go
+                Back Home</a>
+        </div>
+        <div class="mt-10 relative overflow-hidden h-16">
+            <div class="moving-404 flex items-center justify-center text-6xl text-gray-400">
+                <span>404 😢</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Falling rain elements -->
+    <div class="falling-rain" style="left: 20%; animation-delay: 0s;"></div>
+    <div class="falling-rain" style="left: 40%; animation-delay: 0.5s;"></div>
+    <div class="falling-rain" style="left: 60%; animation-delay: 1s;"></div>
+    <div class="falling-rain" style="left: 80%; animation-delay: 1.5s;"></div>
+
+    <!-- Birds moving left to right -->
+    <div class="absolute top-10 left-0 w-full moving-birds-left-to-right">
+        <img src="https://img.icons8.com/color/48/000000/bird.png" alt="Birds" class="inline-block ml-4">
+        <img src="https://img.icons8.com/color/48/000000/bird.png" alt="Birds" class="inline-block ml-4">
+        <img src="https://img.icons8.com/color/48/000000/bird.png" alt="Birds" class="inline-block ml-4">
+    </div>
+    <!-- Birds moving right to left -->
+    <div class="absolute bottom-10 left-0 w-full moving-birds-right-to-left">
+        <img src="https://img.icons8.com/color/48/000000/bird.png" alt="Birds" class="inline-block ml-4">
+        <img src="https://img.icons8.com/color/48/000000/bird.png" alt="Birds" class="inline-block ml-4">
+        <img src="https://img.icons8.com/color/48/000000/bird.png" alt="Birds" class="inline-block ml-4">
+    </div>
+</body>
+
+</html>
