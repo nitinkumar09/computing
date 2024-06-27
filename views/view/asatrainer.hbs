@@ -328,10 +328,10 @@
             <div class="flex flex-wrap -m-4 container mb-20 mx-auto justify-center items-center p-4">
                 <!-- First Card -->
                 <div class="p-4 sm:px-8 w-full sm:w-1/2 lg:w-1/3">
-                    <div class="h-full card p-8 rounded gradient-bg">
+                    <div class="h-full card p-8 rounded gradient-bg toggle-button" data-target="section1">
                         <button class="text-lg text-blue-600 font-medium title-font mb-2 toggle-button"
                             data-target="section1">Course Design and Curriculum Development</button>
-                        <p id="section1" class="leading-relaxed mb-6 text-orange-800 hover:text-slate-600 hidden">Create
+                        <p id="section1" class="text-sm mb-6 text-slate-600 hidden">Create
                             and
                             design comprehensive computer science courses tailored to the needs of our students. This
                             stage
@@ -341,10 +341,10 @@
 
                 <!-- Second Card -->
                 <div class="p-4 sm:px-8 w-full sm:w-1/2 lg:w-1/3">
-                    <div class="h-full card p-8 rounded gradient-bg">
+                    <div class="h-full card p-8 rounded gradient-bg toggle-button" data-target="section2">
                         <button class="text-lg text-blue-600 font-medium title-font mb-2 toggle-button"
                             data-target="section2">Interactive Teaching Methods</button>
-                        <p id="section2" class="leading-relaxed mb-6 text-orange-800 hover:text-slate-600 hidden">
+                        <p id="section2" class="text-sm mb-6 text-slate-600 hidden">
                             Implement
                             engaging and interactive teaching techniques to enhance student understanding and retention.
                             This includes the use of multimedia and hands-on activities.</p>
@@ -353,10 +353,10 @@
 
                 <!-- Third Card -->
                 <div class="p-4 sm:px-8 w-full sm:w-1/2 lg:w-1/3">
-                    <div class="h-full card p-8 rounded gradient-bg">
+                    <div class="h-full card p-8 rounded gradient-bg toggle-button" data-target="section3">
                         <button class="text-lg text-blue-600 font-medium title-font mb-2 toggle-button"
                             data-target="section3">Assessment and Evaluation</button>
-                        <p id="section3" class="leading-relaxed mb-6 text-orange-800 hover:text-slate-600 hidden">
+                        <p id="section3" class="text-sm mb-6 text-slate-600 hidden">
                             Develop
                             and administer assessments to evaluate student progress and understanding. Use data-driven
                             insights to adjust teaching strategies as needed.</p>
@@ -365,10 +365,10 @@
 
                 <!-- Fourth Card -->
                 <div class="p-4 sm:px-8 w-full sm:w-1/2 lg:w-1/3">
-                    <div class="h-full card p-8 rounded gradient-bg">
+                    <div class="h-full card p-8 rounded gradient-bg toggle-button" data-target="section4">
                         <button class="text-lg text-blue-600 font-medium title-font mb-2 toggle-button"
                             data-target="section4">Mentorship and Guidance</button>
-                        <p id="section4" class="leading-relaxed mb-6 text-orange-800 hover:text-slate-600 hidden">
+                        <p id="section4" class="text-sm mb-6 text-slate-600 hidden">
                             Provide
                             mentorship and guidance to students, helping them navigate their academic and career paths
                             in
@@ -378,10 +378,10 @@
 
                 <!-- Fifth Card -->
                 <div class="p-4 sm:px-8 w-full sm:w-1/2 lg:w-1/3">
-                    <div class="h-full card p-8 rounded gradient-bg">
+                    <div class="h-full card p-8 rounded gradient-bg toggle-button" data-target="section5">
                         <button class="text-lg text-blue-600 font-medium title-font mb-2 toggle-button"
                             data-target="section5">Industry Collaboration</button>
-                        <p id="section5" class="leading-relaxed mb-6 text-orange-800 hover:text-slate-600 hidden">Foster
+                        <p id="section5" class="text-sm mb-6 text-slate-600 hidden">Foster
                             collaboration with industry professionals to provide students with real-world insights and
                             opportunities. Organize guest lectures, internships, and project collaborations.</p>
                     </div>
@@ -389,10 +389,10 @@
 
                 <!-- Sixth Card -->
                 <div class="p-4 sm:px-8 w-full sm:w-1/2 lg:w-1/3">
-                    <div class="h-full card p-8 rounded gradient-bg">
+                    <div class="h-full card p-8 rounded gradient-bg toggle-button" data-target="section6">
                         <button class="text-lg text-blue-600 font-medium title-font mb-2 toggle-button"
                             data-target="section6">Continuous Improvement</button>
-                        <p id="section6" class="leading-relaxed mb-6 text-orange-800 hover:text-slate-600 hidden">Engage
+                        <p id="section6" class="text-sm mb-6 text-slate-600 hidden">Engage
                             in
                             continuous professional development to stay updated with the latest trends and technologies
                             in
@@ -403,278 +403,274 @@
 
             <!-- full middle part  end here -->
 
-            <div>
 
-                <div>
 
-                    {{!-- signup page start here --}}
-                    <div class="">
-                        {{>signuppage}}
+            {{!-- signup page start here --}}
+            <div class="">
+                {{>signuppage}}
+            </div>
+            {{!-- signup page end here --}}
+
+
+            {{!-- Our client with Testimonial page start here --}}
+            <div class="pb-28 clientbg">
+                {{>clienttestimo}}
+            </div>
+            {{!-- Our client with Testimonial page end here --}}
+
+
+            {{!-- NetEdge At a Glance(video img) page start here --}}
+            {{>videoimg}}
+            {{!-- NetEdge At a Glance(video img) page end here --}}
+
+
+        </div>
+    </div>
+    <!--footer start  -->
+
+    <footer>
+        <!-- this div used to separate copyright div -->
+        <div
+            class="pl-6 pr-4 pt-16 pb-6 text-slate-600 leading-8 text-pretty bggradientfooter text-sm md:pl-16 lg:flex lg:justify-evenly lg:pl-4 lg:pr-4 lg:pt-16">
+            <!-- div for medium screen setup: Grouping logo, 1st list, services -->
+            <div class="md:flex md:mb-10">
+                <!-- div for medium screen setup: Grouping logo, 1st list -->
+                <div class="md:pr-52 lg:p-2 lg:m-2 lg:w-60">
+                    <!-- logo -->
+                    <!-- Animated Logo -->
+                    <h4 class="font-bold text-lg text-blue-600 relative z-10">MantraBytes</h4>
+                    <hr class="border-b-2 mt-2 mb-3">
+                    <!-- Animated Logo end -->
+                    <!-- logo end -->
+                    <!-- 1st list start -->
+                    <div class="mb-6">
+                        <ul class="list-inside listchange">
+                            <li><a href="/" class="text-slate-600 hover:underline"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    About Us</a></li>
+                            <li><a href="/" class="text-slate-600 hover:underline"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Value
+                                    Proposition</a></li>
+                            <li><a href="/" class="text-slate-600 hover:underline"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Methodology</a>
+                            </li>
+                            <li><a href="/" class="text-slate-600 hover:underline"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Team</a></li>
+                            <li><a href="/" class="text-slate-600 hover:underline"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Management</a>
+                            </li>
+                            <li><a href="/" class="text-slate-600 hover:underline"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Contact us</a></li>
+                        </ul>
                     </div>
-                    {{!-- signup page end here --}}
+                    <!-- 1st list end -->
+                </div>
+                <!-- [div for medium screen setup: Grouping logo, 1st list] Ends here -->
 
+                <!-- Services start -->
+                <div class="mb-6 md:w-96 lg:p-2 lg:m-2 lg:w-60">
+                    <h4 class="font-bold  text-blue-600 text-lg">Services</h4>
+                    <hr class="border-b-2 mt-2 mb-3">
+                    <ul class="list-inside listchange">
+                        <li><a href="/" class="text-slate-600 hover:underline"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Cloud
+                                Transformation Solutions</a></li>
+                        <li><a href="/" class="text-slate-600 hover:underline"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                AI and
+                                Cognitive Analytics</a></li>
+                        <li><a href="/" class="text-slate-600 hover:underline"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Enterprise
+                                Cyber Security</a></li>
+                        <li><a href="/" class="text-slate-600 hover:underline"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                IoT and
+                                Automation</a></li>
+                        <li><a href="/" class="text-slate-600 hover:underline"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Application
+                                Development and
+                                <span class="ml-3">Maintenance</span></a></li>
+                        <li><a href="/" class="text-slate-600 hover:underline"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                eBusiness
+                                Digital Solutions</a></li>
+                    </ul>
+                </div>
+                <!-- Services Ends-->
+            </div>
+            <!-- [div for medium screen setup: Grouping logo, 1st list, services] Ends here-->
 
-                    {{!-- Our client with Testimonial page start here --}}
-                    <div class="pb-28 clientbg">
-                        {{>clienttestimo}}
+            <!-- div for medium screen setup: Grouping Recent Posts, Subscribe, Social Link-->
+            <div class="md:flex">
+                <!-- Recent Posts -->
+                <div class="mb-6 md:pr-7 lg:p-2 lg:m-2 lg:w-60">
+                    <h4 class="font-bold  text-blue-600 text-lg">Recent Posts</h4>
+                    <hr class="border-b-1 mt-2 mb-3">
+                    <ul class="listchange">
+                        <li><a href="/" class="text-slate-600 hover:underline"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>
+                                Designing a Cost
+                                Effective Cloud Solution for your
+                                business.</a>
+                        </li>
+                        <li><a href="/" class="text-slate-600 hover:underline"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Driving
+                                Innovation and <span class="ml-3"> Automation across an Enterprise
+                                </span> <span class="ml-3">to Growth Hacking.</span></a></li>
+                        <li><a href="/" class="text-slate-600 hover:underline"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                E-Commerce
+                                Services Guide: <span class="ml-3">Right from Proof-of-Concept to</span>
+                                <span class="ml-3">simplementation.</span></a></li>
+                    </ul>
+                </div>
+                <!-- Recent Posts Ends -->
+
+                <!-- div for medium screen setup: Combining Subscribe, Social Link -->
+                <div class="md:pl-10 lg:p-2 lg:m-2 lg:w-60 xl:ml-16">
+                    <!-- Subscribe starts here -->
+                    <div class="mb-6">
+                        <h4 class="font-bold  text-blue-600 text-lg">Subscribe</h4>
+                        <hr class="border-b-1 mt-2 mb-3 md:w-96 lg:w-full">
+                        <div class="mt-7">
+                            <input type="text"
+                                class="bg-slate-300  w-full h-12 md:w-96 lg:w-full px-4 border border-transparent outline-none focus:border-[1px] rounded border-transition"
+                                id="email-input" placeholder="ENTER YOUR EMAIL">
+                            <p id="error-message" class="text-red-500 text-sm mt-2 hidden">Field is
+                                required</p>
+                            <button type="submit" id="subscribe-button"
+                                class="bg-[#011bab] w-full h-12 text-white mt-5 rounded md:w-96 lg:w-full">Subscribe</button>
+
+                        </div>
                     </div>
-                    {{!-- Our client with Testimonial page end here --}}
+                    <!-- Subscribe Ends here -->
 
+                    <!-- Social Link starts -->
+                    <div>
+                        <h4 class="font-bold  text-blue-600 text-lg">Social Links</h4>
+                        <hr class="border-b-1 mt-2 md:w-96 lg:w-full">
+                        <div class="flex justify-center">
+                            <a target="_blank" href="http://www.linkedin.com" title="Follow us on Linkedin"><img
+                                    src="https://s.yimg.com/fz/api/res/1.2/oPmnuoHGZwDmud64pDGAcQ--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpdDtoPTI0MDtxPTgwO3c9MjQw/https://s.yimg.com/zb/imgv1/051c505f-dc29-3303-81b2-5828c6e3b2e2/t_500x300"
+                                    alt="LinkedIn" class="h-5 ml-2 mr-2 mt-2"></a>
+                            <a target="_blank" href="" title="Follow us on Facebook"><img
+                                    src="https://www.teahub.io/photos/full/11-115962_facebook-logo-png-transparent-background-facebook-png.png"
+                                    alt="Facebook" class="h-7 ml-2 mr-2 mt-1"></a>
+                            <a target="_blank" href="https://www.instagram.com/" title="Follow us on Instagram"><img
+                                    src="http://clipart-library.com/images_k/instagram-transparent-png/instagram-transparent-png-4.png"
+                                    alt="Instagram" class="h-7 mt-1"></a>
+                            <a target="_blank" href="" title="Follow us on Twitter"><img
+                                    src="https://www.freeiconspng.com/uploads/circle-twitter-logo-png-photo-13.png"
+                                    alt="Twitter" class="h-6 ml-2 mr-2 mt-[5px]"></a>
 
-                    {{!-- NetEdge At a Glance(video img) page start here --}}
-                    {{>videoimg}}
-                    {{!-- NetEdge At a Glance(video img) page end here --}}
-
-
-
-
-                    <!--footer start  -->
-
-                    <footer>
-                        <!-- this div used to separate copyright div -->
-                        <div
-                            class="pl-6 pr-4 pt-16 pb-6 text-slate-600 leading-8 text-pretty bggradientfooter text-sm md:pl-16 lg:flex lg:justify-evenly lg:pl-4 lg:pr-4 lg:pt-16">
-                            <!-- div for medium screen setup: Grouping logo, 1st list, services -->
-                            <div class="md:flex md:mb-10">
-                                <!-- div for medium screen setup: Grouping logo, 1st list -->
-                                <div class="md:pr-52 lg:p-2 lg:m-2 lg:w-60">
-                                    <!-- logo -->
-                                    <!-- Animated Logo -->
-                                    <h4 class="font-bold text-lg text-blue-600 relative z-10">MantraBytes</h4>
-                                    <hr class="border-b-2 mt-2 mb-3">
-                                    <!-- Animated Logo end -->
-                                    <!-- logo end -->
-                                    <!-- 1st list start -->
-                                    <div class="mb-6">
-                                        <ul class="list-inside listchange">
-                                            <li><a href="/" class="text-slate-600 hover:underline"><i
-                                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
-                                                    About Us</a></li>
-                                            <li><a href="/" class="text-slate-600 hover:underline"><i
-                                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
-                                                    Value
-                                                    Proposition</a></li>
-                                            <li><a href="/" class="text-slate-600 hover:underline"><i
-                                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
-                                                    Methodology</a>
-                                            </li>
-                                            <li><a href="/" class="text-slate-600 hover:underline"><i
-                                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
-                                                    Team</a></li>
-                                            <li><a href="/" class="text-slate-600 hover:underline"><i
-                                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
-                                                    Management</a>
-                                            </li>
-                                            <li><a href="/" class="text-slate-600 hover:underline"><i
-                                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
-                                                    Contact us</a></li>
-                                        </ul>
-                                    </div>
-                                    <!-- 1st list end -->
-                                </div>
-                                <!-- [div for medium screen setup: Grouping logo, 1st list] Ends here -->
-
-                                <!-- Services start -->
-                                <div class="mb-6 md:w-96 lg:p-2 lg:m-2 lg:w-60">
-                                    <h4 class="font-bold  text-blue-600 text-lg">Services</h4>
-                                    <hr class="border-b-2 mt-2 mb-3">
-                                    <ul class="list-inside listchange">
-                                        <li><a href="/" class="text-slate-600 hover:underline"><i
-                                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
-                                                Cloud
-                                                Transformation Solutions</a></li>
-                                        <li><a href="/" class="text-slate-600 hover:underline"><i
-                                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
-                                                AI and
-                                                Cognitive Analytics</a></li>
-                                        <li><a href="/" class="text-slate-600 hover:underline"><i
-                                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
-                                                Enterprise
-                                                Cyber Security</a></li>
-                                        <li><a href="/" class="text-slate-600 hover:underline"><i
-                                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
-                                                IoT and
-                                                Automation</a></li>
-                                        <li><a href="/" class="text-slate-600 hover:underline"><i
-                                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
-                                                Application
-                                                Development and
-                                                <span class="ml-3">Maintenance</span></a></li>
-                                        <li><a href="/" class="text-slate-600 hover:underline"><i
-                                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
-                                                eBusiness
-                                                Digital Solutions</a></li>
-                                    </ul>
-                                </div>
-                                <!-- Services Ends-->
-                            </div>
-                            <!-- [div for medium screen setup: Grouping logo, 1st list, services] Ends here-->
-
-                            <!-- div for medium screen setup: Grouping Recent Posts, Subscribe, Social Link-->
-                            <div class="md:flex">
-                                <!-- Recent Posts -->
-                                <div class="mb-6 md:pr-7 lg:p-2 lg:m-2 lg:w-60">
-                                    <h4 class="font-bold  text-blue-600 text-lg">Recent Posts</h4>
-                                    <hr class="border-b-1 mt-2 mb-3">
-                                    <ul class="listchange">
-                                        <li><a href="/" class="text-slate-600 hover:underline"><i
-                                                    class="fa fa-chevron-right text-orange-600"></i>
-                                                Designing a Cost
-                                                Effective Cloud Solution for your
-                                                business.</a>
-                                        </li>
-                                        <li><a href="/" class="text-slate-600 hover:underline"><i
-                                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
-                                                Driving
-                                                Innovation and <span class="ml-3"> Automation across an Enterprise
-                                                </span> <span class="ml-3">to Growth Hacking.</span></a></li>
-                                        <li><a href="/" class="text-slate-600 hover:underline"><i
-                                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
-                                                E-Commerce
-                                                Services Guide: <span class="ml-3">Right from Proof-of-Concept to</span>
-                                                <span class="ml-3">simplementation.</span></a></li>
-                                    </ul>
-                                </div>
-                                <!-- Recent Posts Ends -->
-
-                                <!-- div for medium screen setup: Combining Subscribe, Social Link -->
-                                <div class="md:pl-10 lg:p-2 lg:m-2 lg:w-60 xl:ml-16">
-                                    <!-- Subscribe starts here -->
-                                    <div class="mb-6">
-                                        <h4 class="font-bold  text-blue-600 text-lg">Subscribe</h4>
-                                        <hr class="border-b-1 mt-2 mb-3 md:w-96 lg:w-full">
-                                        <div class="mt-7">
-                                            <input type="text"
-                                                class="bg-slate-300  w-full h-12 md:w-96 lg:w-full px-4 border border-transparent outline-none focus:border-[1px] rounded border-transition"
-                                                id="email-input" placeholder="ENTER YOUR EMAIL">
-                                            <p id="error-message" class="text-red-500 text-sm mt-2 hidden">Field is
-                                                required</p>
-                                            <button type="submit" id="subscribe-button"
-                                                class="bg-[#011bab] w-full h-12 text-white mt-5 rounded md:w-96 lg:w-full">Subscribe</button>
-
-                                        </div>
-                                    </div>
-                                    <!-- Subscribe Ends here -->
-
-                                    <!-- Social Link starts -->
-                                    <div>
-                                        <h4 class="font-bold  text-blue-600 text-lg">Social Links</h4>
-                                        <hr class="border-b-1 mt-2 md:w-96 lg:w-full">
-                                        <div class="flex justify-center">
-                                            <a target="_blank" href="http://www.linkedin.com"
-                                                title="Follow us on Linkedin"><img
-                                                    src="https://s.yimg.com/fz/api/res/1.2/oPmnuoHGZwDmud64pDGAcQ--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpdDtoPTI0MDtxPTgwO3c9MjQw/https://s.yimg.com/zb/imgv1/051c505f-dc29-3303-81b2-5828c6e3b2e2/t_500x300"
-                                                    alt="LinkedIn" class="h-5 ml-2 mr-2 mt-2"></a>
-                                            <a target="_blank" href="" title="Follow us on Facebook"><img
-                                                    src="https://www.teahub.io/photos/full/11-115962_facebook-logo-png-transparent-background-facebook-png.png"
-                                                    alt="Facebook" class="h-7 ml-2 mr-2 mt-1"></a>
-                                            <a target="_blank" href="https://www.instagram.com/"
-                                                title="Follow us on Instagram"><img
-                                                    src="http://clipart-library.com/images_k/instagram-transparent-png/instagram-transparent-png-4.png"
-                                                    alt="Instagram" class="h-7 mt-1"></a>
-                                            <a target="_blank" href="" title="Follow us on Twitter"><img
-                                                    src="https://www.freeiconspng.com/uploads/circle-twitter-logo-png-photo-13.png"
-                                                    alt="Twitter" class="h-6 ml-2 mr-2 mt-[5px]"></a>
-
-                                        </div>
-                                    </div>
-                                    <!-- Social Link End -->
-                                </div>
-                                <!-- [div for medium screen setup: Combining Subscribe, Social Link] Ends here-->
-                            </div>
-                            <!-- [div for medium screen setup: Grouping Recent Posts, Subscribe, Social Link] Ends here-->
                         </div>
+                    </div>
+                    <!-- Social Link End -->
+                </div>
+                <!-- [div for medium screen setup: Combining Subscribe, Social Link] Ends here-->
+            </div>
+            <!-- [div for medium screen setup: Grouping Recent Posts, Subscribe, Social Link] Ends here-->
+        </div>
 
-                        <!-- copyright starts here-->
-                        <div
-                            class="container px-5 py-8 mx-auto flex bg-blue-900 text-white body-font items-center sm:flex-row flex-col">
-                            <p class="text-sm text-center sm:text-left">© 2024 Mantrabytes Innovations — All rights
-                                reserved</p>
-                        </div>
-                        <!-- copyright Ends here-->
+        <!-- copyright starts here-->
+        <div
+            class="container px-5 py-8 mx-auto flex bg-blue-900 text-white body-font items-center sm:flex-row flex-col">
+            <p class="text-sm text-center sm:text-left">© 2024 Mantrabytes Innovations — All rights
+                reserved</p>
+        </div>
+        <!-- copyright Ends here-->
 
-                    </footer>
+    </footer>
 
-                    <!--footer end  -->
-
-
+    <!--footer end  -->
 
 
-                    <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
-                    <script>
 
-                        // footer js star
-                        const emailInput = document.getElementById('email-input');
-                        const subscribeButton = document.getElementById('subscribe-button');
-                        const errorMessage = document.getElementById('error-message');
 
-                        subscribeButton.addEventListener('click', function () {
-                            if (emailInput.value.trim() === '') {
-                                errorMessage.classList.remove('hidden');
-                                emailInput.classList.add('error-border');
-                            } else {
-                                errorMessage.classList.add('hidden');
-                                emailInput.classList.remove('error-border');
-                                // Add form submission logic here if needed
-                            }
-                        });
+    <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+    <script>
 
-                        // its js for input border transition
-                        emailInput.addEventListener('focus', function () {
-                            errorMessage.classList.add('hidden');
-                            emailInput.classList.remove('error-border');
-                        });
+        // footer js star
+        const emailInput = document.getElementById('email-input');
+        const subscribeButton = document.getElementById('subscribe-button');
+        const errorMessage = document.getElementById('error-message');
 
-                        emailInput.addEventListener('blur', function () {
-                            emailInput.classList.remove('error-border');
-                        });
-                        // footer js end 
-                        // collapse button
+        subscribeButton.addEventListener('click', function () {
+            if (emailInput.value.trim() === '') {
+                errorMessage.classList.remove('hidden');
+                emailInput.classList.add('error-border');
+            } else {
+                errorMessage.classList.add('hidden');
+                emailInput.classList.remove('error-border');
+                // Add form submission logic here if needed
+            }
+        });
 
-                        // Function to hide all sections except the one being toggled
-                        function hideAllSections(exceptSectionId) {
-                            const sections = ['section1', 'section2', 'section3', 'section4', 'section5', 'section6'];
-                            sections.forEach(section => {
-                                const element = document.getElementById(section);
-                                if (section !== exceptSectionId) {
-                                    element.classList.add('hidden');
-                                }
-                            });
-                        }
+        // its js for input border transition
+        emailInput.addEventListener('focus', function () {
+            errorMessage.classList.add('hidden');
+            emailInput.classList.remove('error-border');
+        });
 
-                        // Function to toggle the visibility of a section
-                        function toggleCollapse(sectionId) {
-                            const section = document.getElementById(sectionId);
-                            if (section) {
-                                if (section.classList.contains('hidden')) {
-                                    hideAllSections(sectionId);
-                                    section.classList.remove('hidden');
-                                } else {
-                                    section.classList.add('hidden');
-                                }
-                            }
-                        }
+        emailInput.addEventListener('blur', function () {
+            emailInput.classList.remove('error-border');
+        });
+        // footer js end 
+        // collapse button
 
-                        // Event listener to hide all sections when clicking outside toggle buttons and sections
-                        document.addEventListener('click', function (event) {
-                            const targetElement = event.target;
-                            const isToggleButton = targetElement.closest('.toggle-button');
-                            const isSection = targetElement.closest('.card');
+        // Function to hide all sections except the one being toggled
+        function hideAllSections(exceptSectionId) {
+            const sections = ['section1', 'section2', 'section3', 'section4', 'section5', 'section6'];
+            sections.forEach(section => {
+                const element = document.getElementById(section);
+                if (section !== exceptSectionId) {
+                    element.classList.add('hidden');
+                }
+            });
+        }
 
-                            if (!isToggleButton && !isSection) {
-                                hideAllSections(null);
-                            }
-                        });
+        // Function to toggle the visibility of a section
+        function toggleCollapse(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                if (section.classList.contains('hidden')) {
+                    hideAllSections(sectionId);
+                    section.classList.remove('hidden');
+                } else {
+                    section.classList.add('hidden');
+                }
+            }
+        }
 
-                        // Prevent hiding sections when clicking on the buttons
-                        document.querySelectorAll('.toggle-button').forEach(button => {
-                            button.addEventListener('click', function (event) {
-                                event.stopPropagation();
-                                toggleCollapse(button.dataset.target);
-                            });
-                        });
+        // Event listener to hide all sections when clicking outside toggle buttons and sections
+        document.addEventListener('click', function (event) {
+            const targetElement = event.target;
+            const isToggleButton = targetElement.closest('.toggle-button');
+            const isSection = targetElement.closest('.card');
 
-                    </script>
+            if (!isToggleButton && !isSection) {
+                hideAllSections(null);
+            }
+        });
+
+        // Prevent hiding sections when clicking on the buttons
+        document.querySelectorAll('.toggle-button').forEach(button => {
+            button.addEventListener('click', function (event) {
+                event.stopPropagation();
+                toggleCollapse(button.dataset.target);
+            });
+        });
+
+    </script>
 </body>
 
 </html>

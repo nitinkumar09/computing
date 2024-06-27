@@ -52,6 +52,9 @@ app.get('/Value-Proposition', (req, res) => {
 app.get('/services', (req, res) => {
     res.render('service')
 });
+app.get('/career', (req, res) => {
+    res.render('career')
+});
 // app.get('/my-team', (req, res) => {
 //     res.render('myteam');
 // });
@@ -72,6 +75,9 @@ app.get('/infrastructure-management', (req, res) => {
 });
 app.get('/fullstack', (req, res) => {
     res.render('fullstack');
+});
+app.get('/portfolio', (req, res) => {
+    res.render('portfolio');
 });
 
 // 404 error handling middleware

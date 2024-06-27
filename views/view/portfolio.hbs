@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <!-- fontawesome icon link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- output file link in below -->
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<style>
+    /*cards design css start here */
+    .card-title {
+        color: #262626;
+        font-size: 1.5em;
+        line-height: normal;
+        font-weight: 700;
+        margin-bottom: 0.5em;
+    }
+
+    .small-desc {
+        font-size: 1em;
+        font-weight: 400;
+        line-height: 1.5em;
+        color: #452c2c;
+    }
+
+    .small-desc {
+        font-size: 1em;
+    }
+
+    .go-corner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 2em;
+        height: 2em;
+        overflow: hidden;
+        top: 0;
+        right: 0;
+        background: linear-gradient(135deg, #6293c8, #384c6c);
+        border-radius: 0 4px 0 32px;
+    }
+
+    .go-arrow {
+        margin-top: -4px;
+        margin-right: -4px;
+        color: white;
+        font-family: courier, sans;
+    }
+
+    .card1 {
+        display: block;
+        position: relative;
+        max-width: 600px;
+        max-height: 520px;
+        background-color: #f2f8f9;
+        border-radius: 10px;
+        padding: 2em 1.2em;
+        margin: 12px;
+        text-decoration: none;
+        z-index: 0;
+        overflow: hidden;
+        background: linear-gradient(to bottom, #c3e6ec, #a7d1d9);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .card1:before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: -16px;
+        right: -16px;
+        /* background: linear-gradient(135deg, #364a60, #384c6c);*/
+        background: linear-gradient(135deg, rgb(229, 236, 243)0, #dbe8c8);
+        height: 32px;
+        width: 32px;
+        border-radius: 32px;
+        transform: scale(1);
+        transform-origin: 50% 50%;
+        transition: transform 0.35s ease-out;
+    }
+
+    .card1:hover:before {
+        transform: scale(28);
+    }
+
+    .card1:hover .small-desc {
+        transition: all 0.5s ease-out;
+        /* color: rgba(255, 255, 255, 0.8);*/
+        color: orangered;
+    }
+
+    .card1:hover .card-title {
+        transition: all 0.5s ease-out;
+        /* color: #ffffff; */
+        color: orangered;
+
+    }
+
+    /*cards design css end here */
+
+
+
+    /*our client with testimonial css start*/
+    .clientbg {
+        background-image: linear-gradient(to right, #bf8cb5 0%, #bea6a6 50%, #b5d397 100%);
+    }
+
+    /*our client with testimonial css end*/
+
+    body {
+        font-family: 'Poppins', 'Montserrat', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        /* Bold for headings */
+    }
+
+
+    .bggradientfooter {
+        background-image: linear-gradient(to right, #d4edbb 0%, #f2d3d3 50%, #ecb5d3 100%);
+
+    }
+
+    .card {
+        padding: 20px;
+        box-shadow: 10px 14px 8px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        color: #333;
+        text-align: center;
+        margin: 20px auto;
+        border: 2px solid white;
+    }
+
+    .card:hover {
+        box-shadow: none;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+
+    /* Company overview start here */
+    .custom-button {
+        border-left-width: 4px;
+        border-right-width: 4px;
+        border-top-width: 1px;
+        border-bottom-width: 4px;
+        border-color: transparent;
+        transition: border-color 0.3s;
+    }
+
+    .custom-button:hover {
+        border-color: rgb(187, 26, 223);
+    }
+
+    .custom-button2 {
+        border-left-width: 4px;
+        border-right-width: 4px;
+        border-color: transparent;
+        transition: border-color 0.3s;
+    }
+
+    .custom-button2:hover {
+        border-color: rgb(207, 130, 30);
+    }
+
+    /* Company overview end here */
+
+
+
+
+    /*FOOTER start*/
+
+    .listchange {
+        list-style: none !important;
+        font-size: 14px !important;
+    }
+
+    .listchange i {
+        font-size: 10px !important;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .error-border {
+        border-color: red !important;
+    }
+
+    /* Custom CSS for border transition */
+    .border-transition {
+        transition: border-color 0.5s ease;
+    }
+
+    .focus\:border-blue-500:focus {
+        border-color: #3b82f6;
+        /* Tailwind's blue-500 color */
+    }
+
+    .gradientbgcolor {
+        background-image: linear-gradient(to right, #bcca87 0%, #dfd5d5 50%, #b8d28f 100%);
+    }
+
+    /*Footer*/
+
+    /* this css for company image move left to right start here */
+    .marquee-container {
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .marquee {
+        display: inline-flex;
+        animation: marquee 20s linear infinite;
+    }
+
+    .marquee:hover {
+        animation-play-state: paused;
+    }
+
+    @keyframes marquee {
+        0% {
+            transform: translateX(0%);
+        }
+
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+    .bg-gradient {
+        background-image: linear-gradient(to right, #b3d8a3 0%, #e0e0e0 50%, #bdd2b2 100%);
+    }
+
+    .gradient-bg1 {
+        background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    }
+
+    /* this css for company image move left to right end here */
+    /*footer logo css*/
+    /* Styles for the animated logo */
+    #mantraLogo {
+        animation: changeColor 5s infinite alternate;
+        cursor: pointer;
+    }
+
+    /* Keyframes for color change animation */
+    @keyframes changeColor {
+        0% {
+            color: #FF9900;
+        }
+
+        25% {
+            color: #FF00FF;
+        }
+
+        50% {
+            color: #00FF00;
+        }
+
+        75% {
+            color: #00FFFF;
+        }
+
+        100% {
+            color: #FF0000;
+        }
+    }
+
+    /*COLLAPSE BUTTON*/
+    .hidden {
+        display: none;
+    }
+
+    .block {
+        display: block;
+    }
+
+    /* text change all page */
+    @media (max-width: 640px) {
+        .textxhange {
+            font-size: 12px !important;
+            font-family: 'Poppins', 'Montserrat', sans-serif;
+        }
+    }
+
+    /*career with mantrbytes start here*/
+
+    .bgimagecareer {
+        /* background-image: url('https://netedgecomputing.com/wp-content/uploads/2019/09/vision_mission-2.jpg'); */
+        /* background-image: linear-gradient(to right, #ffffff 0%, #e2e4fa 50%, #fdddd9 100%);*/
+        background-image: url('images/port.jpg');
+        object-position: 0% !important;
+        background-position: center;
+
+
+    }
+
+    /*career with mantrbytes start here*/
+
+    /*css for hover image than size incressing start here....*/
+    /* Adding transition effects */
+    .transition-transform {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .transition-z {
+        transition: z-index 0.3s ease-in-out;
+    }
+
+    .hover-z-10:hover {
+        z-index: 10;
+    }
+
+    .hover-scale-110:hover {
+        transform: scale(1.1);
+    }
+
+    /*css for hover image than size incressing end here....*/
+    .widths {
+        width: 430px !important;
+    }
+</style>
+
+<body>
+
+    <!-- NAVBAR  START HERE-->
+    {{>navbar}}
+    <!-- NAVBAR END HERE-->
+
+    <!-- CONTACTUS HOME PAGE IMAGE START HERE -->
+    <div class="overflow-hidden w-full relative h-auto b-8">
+        <div class="flex items-center absolute top-0 left-0 w-full h-full bg-black bg-opacity-30 hover:bg-opacity-10 ">
+        </div>
+        <img src="../images/portfolio.webp"
+            class="block w-full h-full sm:h-[40rem] r bg-cover bg-center bg-no-repeat bg-opacity-50"
+            alt="img not found">
+    </div>
+    <!-- CONTACTUS HOME PAGE IMAGE END HERE -->
+
+    <!-- full middle part  start here -->
+
+    <!-- new part -->
+    <section class="py-20 gradientbgcolor border">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="w-full">
+                    <h2 class="text-xl sm:text-2xl  font-bold mb-4 text-blue-600">MantraBytes: Shaping the Future with
+                        Algorithmic Brilliance</h2>
+                    <p class="text-sm  text-slate-600">
+                        At MantraBytes, we weave the magic of computer science into transformative solutions. Our team
+                        of passionate engineers combines cutting-edge expertise with a dedication to excellence,
+                        crafting a symphony of innovation.
+
+                        We don't just code, we cultivate. We believe in fostering a culture of exploration and
+                        discovery, where each line of code is a chance to push the boundaries of the possible.
+
+                        Our MantraBytes portfolio is a testament to this spirit. Within its pages, you'll find a diverse
+                        tapestry of projects, each one meticulously crafted to address real-world challenges.
+
+                        Here's a glimpse into what you can expect:
+
+                        Intelligent problem-solving: We leverage the power of algorithms and data structures to design
+                        solutions that are not only effective but also elegant.
+                        Unwavering commitment to quality: We meticulously test and refine our code, ensuring it delivers
+                        exceptional performance and reliability.
+                        Adeptness in diverse technologies: Our engineers are well-versed in a wide range of programming
+                        languages and frameworks, allowing us to tackle projects of varying complexity.
+                        Passion for user experience: We prioritize user-centric design, crafting interfaces that are
+                        intuitive, engaging, and efficient.
+                        MantraBytes is more than just a company; it's a collaborative endeavor. We partner with our
+                        clients to understand their unique needs and craft solutions that exceed expectations.
+
+                        Explore our portfolio and discover how MantraBytes can help you translate your vision into
+                        reality.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- new part -->
+
+
+    <div class=" gradientbgcolor xl:pt-16 sm:pt-40 pt-8">
+
+        <div class="w-full px-4 pt-4 pb-1">
+
+            <!-- Cards Container -->
+            {{!-- three project start here--}}
+            <div class="flex flex-wrap -m-4 w-full justify-center mt-4 mb-20 sm:mb-16">
+                <h2 class="text-xl sm:text-2xl  font-bold mb-4 text-blue-600">PROJECTS</h2>
+                <!-- First Card -->
+                <div class="p-4 sm:px-8 w-full  items-center justify-center">
+                    <div class="h-full card card1 p-8 rounded items-center flex-col flex ">
+                        <h2 class="card-title text-lg text-blue-600 font-medium title-font mb-2"> Forge Your Future: A
+                            Career
+                            Symphony
+                            at Mantra Byte
+                        </h2>
+                        <p class="text-slate-600 text-sm small-desc ">
+                            Mantra Byte isn't just a company; it's a collaborative orchestra
+                            where passionate minds in computer science come together to create groundbreaking
+                            solutions.
+                            Here, your career isn't a solo performance - it's a dynamic composition fueled by
+                            innovation and
+                            collaboration.</p>
+                        </p>
+                        <div class="go-corner">
+                            <div class="go-arrow">→</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- second Card -->
+                <div class="p-4 sm:px-8 w-full  items-center justify-center">
+                    <div class="h-full card card1 p-8 rounded items-center flex-col flex ">
+                        <h2 class="card-title text-lg text-blue-600 font-medium title-font mb-2">User-friendly
+                            E-learning Platform
+                        </h2>
+                        <p class="text-slate-600 text-sm small-desc ">
+                            Developed a user-centric e-learning platform with gamification elements to enhance student
+                            engagement technologies JavaScript, React, UI/UX Design.</p>
+                        </p>
+                        <div class="go-corner">
+                            <div class="go-arrow">→</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- third Card -->
+                <div class="p-4 sm:px-8 w-full  items-center justify-center">
+                    <div class="h-full card card1 p-8 rounded items-center flex-col flex ">
+                        <h2 class="card-title text-lg text-blue-600 font-medium title-font mb-2">Smart Traffic
+                            Management System
+                        </h2>
+                        <p class="text-slate-600 text-sm small-desc ">
+                            Our system uses AI to analyze traffic data and adjust lights in real-time, reducing
+                            congestion
+                            and improving commutes Python,
+                            Machine Learning,
+                            Internet of Things (IoT).</p>
+                        </p>
+                        <div class="go-corner">
+                            <div class="go-arrow">→</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            {{!-- three project start here--}}
+
+
+            {{!-- background image start here--}}
+            <div class="relative mt-8  h-96  bg-fixed bg-cover bg-center bgimagecareer">
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-50 hover:bg-opacity-30 flex items-center  justify-center xl:justify-between sm:px-40">
+                    <div class="text-white text-center  w-[600px] sm:w-[500px] ">
+                        <h1 class="sm:text-2xl text-xl font-bold mb-10 text-white">"Innovative, Collaborative,
+                            Transformative, Empowering, Pioneering, Cutting-edge, Impactful, Dynamic, Creative,
+                            Evolving.""</h1>
+                    </div>
+                </div>
+            </div>
+            {{!-- background image end here--}}
+
+            {{!-- READ MORE BUTTON start here--}}
+            <section class="bg-gradient-to-r from-green-300 to-rose-300 border text-white py-20">
+                <div class="container mx-auto px-6 text-center">
+                    <h1 class="sm:text-5xl text-3xl font-bold mb-4  text-blue-600">About Us</h1>
+                    {{!-- <h1 class="text-5xl font-bold mb-4 hover:text-rose-100 text-rose-300">Partner with
+                        Mantrabytes
+                    </h1>
+                    --}}
+                    <p class="text-sm mb-8 text-purple-500 text-slate-600">At MantraBytes, we weave the magic of
+                        computer science into transformative solutions. Our team of passionate engineers
+                        combines
+                        cutting-edge expertise with a dedication to excellence, crafting a symphony of
+                        innovation. We
+                        don't just code, we cultivate. We believe in fostering a culture of exploration and
+                        discovery,
+                        where each line of code is a chance to push the boundaries of the possible.
+                    </p>
+                    <a href="/aboutus"
+                        class="hover:text-white border  text-blue-500 hover:bg-indigo-200 bg-rose-200 px-6 py-3 shadow-lg rounded-full text-lg font-semibold">Learn
+                        More</a>
+                </div>
+            </section>
+
+            {{!-- READ MORE BUTTON end here--}}
+
+
+            {{!-- new part collpase button START HERE--}}
+
+            <div class="text-center my-20">
+                <h1 class="sm:text-3xl text-2xl font-bold mb-4  text-blue-600">
+                    MantraBytes: Pioneering Excellence in Technology
+                </h1>
+                <div class="flex flex-wrap -m-4 container  mx-auto justify-center items-center p-4">
+                    <div class="p-4 w-full sm:w-1/2 lg:w-1/3">
+                        <div class="h-full card card1 p-6 rounded gradient-bg toggle-button" data-target="tron-section">
+                            <button class="text-lg card-title text-blue-600 font-medium title-font mb-2 toggle-button"
+                                data-target="tron-section">Innovative Blockchain Solutions</button>
+                            <p id="tron-section"
+                                class="small-desc para mb-6 text-slate-600 text-sm hidden transition-all duration-300 ease-in-out">
+                                At MantraBytes, our blockchain solutions are at the forefront of innovation. We design
+                                and
+                                implement secure, scalable, and transparent blockchain systems that transform
+                                industries.
+                                Our expertise in protocols like Ethereum and Polkadot allows us to create robust smart
+                                contracts and decentralized applications (dApps) that enhance trust and efficiency. By
+                                leveraging the power of blockchain, we enable businesses to achieve unprecedented levels
+                                of
+                                security and operational excellence.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="p-4 w-full sm:w-1/2 lg:w-1/3">
+                        <div class="h-full card1 card p-6 rounded gradient-bg toggle-button"
+                            data-target="stellar-section">
+                            <button class="text-lg card-title text-blue-600 font-medium title-font mb-2 toggle-button"
+                                data-target="stellar-section">Data-Driven Decision Making</button>
+                            <p id="stellar-section"
+                                class="small-desc para mb-6 text-slate-600 text-sm hidden transition-all duration-300 ease-in-out">
+                                Our data scientists are masters of transforming raw data into actionable insights. At
+                                MantraBytes, we harness the power of big data to drive strategic decisions that propel
+                                businesses forward. Our team excels in analyzing complex datasets, developing predictive
+                                models, and creating intuitive data visualization tools. By uncovering hidden patterns
+                                and
+                                trends, we help organizations make informed decisions, optimize their operations, and
+                                stay
+                                ahead of the competition.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="p-4 w-full sm:w-1/2 lg:w-1/3">
+                        <div class="h-full card card1 p-6 rounded gradient-bg toggle-button"
+                            data-target="chainlink-section">
+                            <button class="card-title text-lg text-blue-600 font-medium title-font mb-2 toggle-button"
+                                data-target="chainlink-section">Cutting-Edge Artificial Intelligence</button>
+                            <p id="chainlink-section"
+                                class="small-desc para mb-6 text-slate-600 text-sm hidden transition-all duration-300 ease-in-out">
+                                Artificial Intelligence is a cornerstone of our technological innovation at MantraBytes.
+                                Our
+                                AI engineers are involved in pioneering projects that span natural language processing,
+                                computer vision, and machine learning. We design intelligent systems that learn and
+                                adapt,
+                                revolutionizing the way businesses operate. Our AI solutions are not just tools; they
+                                are
+                                strategic assets that enhance efficiency, drive growth, and create new opportunities for
+                                our
+                                clients.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="p-4 w-full sm:w-1/2 lg:w-1/3">
+                        <div class="h-full card card1 p-6 rounded gradient-bg toggle-button"
+                            data-target="tezos-section">
+                            <button class="card-title text-lg text-blue-600 font-medium title-font mb-2 toggle-button"
+                                data-target="tezos-section">Robust Software Engineering</button>
+                            <p id="tezos-section"
+                                class="small-desc para mb-6 text-slate-600 text-sm hidden transition-all duration-300 ease-in-out">
+                                Software engineering at MantraBytes is defined by excellence and innovation. Our
+                                software
+                                engineers develop robust, scalable, and efficient applications tailored to meet the
+                                unique
+                                needs of our clients. We integrate the latest technologies, including blockchain, to
+                                ensure
+                                our solutions are secure and future-proof. Whether it's a complex enterprise system or a
+                                sleek mobile app, our software solutions are designed to deliver seamless performance
+                                and
+                                exceptional user experiences.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="p-4 w-full sm:w-1/2 lg:w-1/3">
+                        <div class="h-full card card1 p-6 rounded gradient-bg toggle-button" data-target="iota-section">
+                            <button class="card-title text-lg text-blue-600 font-medium title-font mb-2 toggle-button"
+                                data-target="iota-section">Unparalleled Security Engineering</button>
+                            <p id="iota-section"
+                                class="small-desc para mb-6 text-slate-600 text-sm hidden transition-all duration-300 ease-in-out">
+                                In today’s digital landscape, security is paramount. At MantraBytes, our security
+                                engineers
+                                are the guardians of our digital infrastructure. We specialize in identifying and
+                                mitigating
+                                vulnerabilities, ensuring the integrity and security of our systems and applications.
+                                Leveraging our deep expertise in blockchain security, we protect our clients' digital
+                                assets
+                                against evolving cyber threats. Our proactive approach to security ensures that our
+                                solutions remain resilient and reliable.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="p-4 w-full sm:w-1/2 lg:w-1/3">
+                        <div class="h-full card card1 p-6 rounded gradient-bg toggle-button" data-target="bsc-section">
+                            <button class="card-title text-lg text-blue-600 font-medium title-font mb-2 toggle-button"
+                                data-target="bsc-section">Efficient DevOps Practices</button>
+                            <p id="bsc-section"
+                                class="small-desc para mb-6 text-slate-600 text-sm hidden transition-all duration-300 ease-in-out">
+                                Our DevOps engineers at MantraBytes bridge the gap between development and operations,
+                                ensuring smooth and efficient delivery of our products. By automating the software
+                                development lifecycle, we streamline processes and enhance collaboration. Our expertise
+                                in
+                                deploying and managing applications on cloud platforms enables us to deliver secure,
+                                scalable, and innovative solutions. With a focus on continuous improvement and agility,
+                                our
+                                DevOps practices drive operational efficiency and product excellence
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{!-- new part collpase button END HERE--}}
+
+
+
+
+            {{!-- full overview start here--}}
+            <section class="py-20 gradientbgcolor border">
+                <div class="container mx-auto px-6">
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="w-full">
+                            <h2 class="text-xl sm:text-2xl font-bold mb-4 text-blue-600">Innovating Tomorrow:
+                                MantraBytes' Trailblazing Portfolio in Computer Science</h2>
+                            <p class="text-sm  text-slate-600">
+                                Welcome to MantraBytes, where innovation meets excellence in the realm of
+                                computer
+                                science. Our portfolio is a testament to our relentless pursuit of technological
+                                advancement, a vivid showcase of our capabilities and achievements that set us
+                                apart in
+                                the industry. We invite you to explore a world where cutting-edge technology,
+                                creative
+                                ingenuity, and transformative solutions converge to shape the future.
+
+                                At MantraBytes, we pride ourselves on our forward-thinking approach. Our team of
+                                experts, driven by a passion for technology, constantly pushes the boundaries of
+                                what is
+                                possible. From developing robust blockchain solutions that ensure unparalleled
+                                security
+                                and transparency, to crafting intelligent AI systems that revolutionize the way
+                                businesses operate, we are at the forefront of technological innovation. Our
+                                blockchain
+                                developers are adept at designing secure, scalable solutions that integrate
+                                seamlessly
+                                with existing infrastructures. They craft smart contracts and decentralized
+                                applications
+                                (dApps) using protocols like Ethereum and Polkadot, leading the charge in the
+                                decentralized revolution.
+
+                                Our data scientists harness the power of big data to uncover insights that drive
+                                strategic decisions. By analyzing complex datasets and developing predictive
+                                models,
+                                they transform raw data into actionable intelligence. Their work empowers
+                                organizations
+                                to make informed decisions, optimize operations, and stay ahead of the
+                                competition.
+
+                                Artificial Intelligence (AI) is another cornerstone of our expertise. Our AI
+                                engineers
+                                are involved in groundbreaking projects that include natural language processing
+                                and
+                                computer vision. They design systems that learn, adapt, and perform tasks that
+                                were once
+                                the domain of human intelligence. These intelligent machines are not just tools;
+                                they
+                                are partners in innovation, enabling businesses to achieve new heights of
+                                efficiency and
+                                effectiveness.
+
+                                Software engineering at MantraBytes is all about creating robust, scalable, and
+                                efficient applications. Our software engineers are masters of their craft,
+                                developing
+                                solutions that are both elegant and powerful. They integrate the latest
+                                technologies,
+                                including blockchain, to enhance security and performance, ensuring that our
+                                applications are not only reliable but also future-proof.
+
+                                Security is paramount in today’s digital landscape, and our security engineers
+                                are the
+                                guardians of our digital frontier. They identify and mitigate vulnerabilities,
+                                leveraging their deep understanding of blockchain security to protect our
+                                systems and
+                                applications. Their work ensures the integrity of our solutions, safeguarding
+                                our
+                                clients’ assets against cyber threats.
+
+                                DevOps at MantraBytes bridges the gap between development and operations,
+                                streamlining
+                                processes to ensure seamless delivery of our products. Our DevOps engineers
+                                automate the
+                                software development lifecycle, deploy and manage applications on cloud
+                                platforms, and
+                                ensure that our solutions are delivered efficiently and securely.
+
+                                Each project in our portfolio is a story of collaboration, innovation, and
+                                success. We
+                                work closely with our clients to understand their unique challenges and
+                                requirements,
+                                developing bespoke solutions that drive their success. Our commitment to
+                                excellence and
+                                our passion for technology are reflected in every project we undertake.
+
+                                Explore our portfolio and witness the MantraBytes difference. From
+                                groundbreaking
+                                blockchain solutions and intelligent AI systems to robust software applications
+                                and
+                                bulletproof security measures, we are shaping the future of technology. Join us
+                                on this
+                                exciting journey and discover how we can help you achieve your goals. At
+                                MantraBytes, we
+                                are not just building solutions; we are creating the future.
+
+                                Welcome to a world where innovation knows no bounds. Welcome to MantraBytes.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            {{!-- full overview end here--}}
+
+
+
+
+
+            <!--    THIRD SECTION START  -->
+            <!-- New Page Content (Initially Hidden) -->
+            <div class="gradientbgcolor">
+                <div class="container mx-auto px-4 py-16">
+                    <!-- Grid layout for left and right columns -->
+                    <div class="flex flex-col space-y-8">
+                        <!-- Card 1 -->
+                        <div
+                            class="flex flex-col sm:flex-row items-center  sm:items-start space-x-4 p-4 gradientbgcolor shadow-lg hover:shadow-none border">
+                            <a href="/">
+                                <img src="../images/machine.jpg" alt="Placeholder Image"
+                                    class="w-[410px] h-52 rounded mb-12 sm:mb-1 sm:mt-1 transition-transform transition-z hover-z-10 hover-scale-110"></a>
+                            <div class="flex flex-col px-8">
+                                <h3 class="text-xl font-bold text-blue-600 mb-2 ">Machine Learning Model:</h3>
+                                <p class="text-slate-600 leading-7">This image can depict a simplified version of a
+                                    machine learning model, like a neural network, with interconnected nodes
+                                    representing data processing. Highlight the input (traffic data) and output
+                                    (optimized traffic light signals).</p>
+                                <div class="max-w-24 my-4">
+                                    <span
+                                        class="cursor-pointer text-indigo-900 font-bold hover:text-orange-500 flex items-center space-x-3 max-w-30">
+                                        <a href="/"><span>Read
+                                                more&nbsp;</span><span class="text-orange-500"><i
+                                                    class="fas fa-chevron-right text-xs"></i></span></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div
+                            class="flex flex-col sm:flex-row items-center  sm:items-start space-x-4 p-4 gradientbgcolor  hover:shadow-none shadow-lg border">
+                            <a href="/">
+                                <img src="../images/light.png" alt="Placeholder Image"
+                                    class="w-[310px] h-52 rounded mb-12 sm:mb-1 sm:mt-1 transition-transform transition-z hover-z-10 hover-scale-110"></a>
+                            <div class="flex flex-col px-8">
+                                <h3 class="text-xl font-bold text-blue-600 mb-2  ">Smart Traffic Light Interface:</h3>
+                                <p class="text-slate-600 leading-7">Show a close-up of a traffic light with a digital
+                                    display. The display can showcase real-time traffic data or the current signal
+                                    timing dynamically adjusted by the system.</p>
+                                <div class="max-w-24 my-4">
+                                    <span
+                                        class="cursor-pointer text-indigo-900 font-bold hover:text-orange-500 flex items-center space-x-3 max-w-30">
+                                        <a href=""><span>Read
+                                                more&nbsp;</span><span class="text-orange-500"><i
+                                                    class="fas fa-chevron-right text-xs"></i></span></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div
+                            class="flex flex-col sm:flex-row items-center  sm:items-start space-x-4 p-4 gradientbgcolor  hover:shadow-none border shadow-lg">
+                            <a href="/">
+                                <img src="../images/traffic.jpg" alt="Placeholder Image"
+                                    class="widths h-52 rounded mb-12 sm:mb-1 sm:mt-1 transition-transform transition-z hover-z-10 hover-scale-110"></a>
+                            <div class="flex flex-col px-8">
+                                <h3 class="text-xl font-bold text-blue-600 mb-2">Traffic Flow Animation:</h3>
+                                <p class="text-slate-600 leading-7">Create a short animation that visually represents
+                                    traffic congestion before and after implementing the smart system. This can be a map
+                                    with color-coded traffic density or a simulation of vehicles navigating the improved
+                                    traffic flow.</p>
+                                <div class="max-w-24 my-4">
+                                    <span
+                                        class="cursor-pointer text-indigo-900 font-bold hover:text-orange-500 flex items-center space-x-3 max-w-30">
+                                        <a href="/"><span>Read
+                                                more&nbsp;</span><span class="text-orange-500"><i
+                                                    class="fas fa-chevron-right text-xs"></i></span></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End section of product feature -->
+                </div>
+            </div>
+            <!-- THIRD SECTION END -->
+
+
+
+            {{!-- start here for company imgages move --}}
+            <div class="marquee-container mb-12">
+                <div class="marquee mt-20">
+                    <div class="flex items-center justify-start">
+                        <img src="/images/html2.png" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                        <img src="/images/Solana.webp" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                        <img src="/images/php.png" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                        <img src="/images/bit.png" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                        <img src="/images/nextjss.png" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                        <img src="images/etherum.png" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                        <img src="/images/sql.png" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                        <img src="images/ripple.webp" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                        <img src="/images/html.png" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                        <img src="images/litecoin.webp" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                        <img src="/images/react.png" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                        <img src="images/card.png" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                        <img src="/images/express.png" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                        <img src="images/pol.png" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                        <img src="/images/mongodb.png" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                        <img src="images/eos.png" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                        <img src="/images/css.png" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                        <img src="images/hyper.png" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                        <img src="/images/html.png" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                    </div>
+                </div>
+            </div>
+            {{!-- end here for company imgages move --}}
+
+
+            <!-- full middle part  end here -->
+
+
+
+            {{!-- signup page start here --}}
+            <div class="pt-8">
+                {{>signuppage}}
+            </div>
+            {{!-- signup page end here --}}
+
+
+            {{!-- Our client with Testimonial page start here --}}
+            <div class="pb-28 clientbg">
+                {{>clienttestimo}}
+            </div>
+            {{!-- Our client with Testimonial page end here --}}
+
+
+            {{!-- NetEdge At a Glance(video img) page start here --}}
+            {{>videoimg}}
+            {{!-- NetEdge At a Glance(video img) page end here --}}
+
+
+        </div>
+    </div>
+
+
+    <!--footer start  -->
+
+    <footer>
+        <!-- this div used to separate copyright div -->
+        <div
+            class="pl-6 pr-4 pt-16 pb-6 text-slate-600 leading-8 text-pretty bggradientfooter text-sm md:pl-16 lg:flex lg:justify-evenly lg:pl-4 lg:pr-4 lg:pt-16">
+            <!-- div for medium screen setup: Grouping logo, 1st list, services -->
+            <div class="md:flex md:mb-10">
+                <!-- div for medium screen setup: Grouping logo, 1st list -->
+                <div class="md:pr-52 lg:p-2 lg:m-2 lg:w-60">
+                    <!-- logo -->
+                    <!-- Animated Logo -->
+                    <h4 class="font-bold text-lg text-blue-600 relative z-10">MantraBytes</h4>
+                    <hr class="border-b-2 mt-2 mb-3">
+                    <!-- Animated Logo end -->
+                    <!-- logo end -->
+                    <!-- 1st list start -->
+                    <div class="mb-6">
+                        <ul class="list-inside listchange">
+                            <li><a href="/" class="text-slate-600 hover:underline"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    About Us</a></li>
+                            <li><a href="/" class="text-slate-600 hover:underline"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Value
+                                    Proposition</a></li>
+                            <li><a href="/" class="text-slate-600 hover:underline"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Methodology</a>
+                            </li>
+                            <li><a href="/" class="text-slate-600 hover:underline"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Team</a></li>
+                            <li><a href="/" class="text-slate-600 hover:underline"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Management</a>
+                            </li>
+                            <li><a href="/" class="text-slate-600 hover:underline"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Contact us</a></li>
+                        </ul>
+                    </div>
+                    <!-- 1st list end -->
+                </div>
+                <!-- [div for medium screen setup: Grouping logo, 1st list] Ends here -->
+
+                <!-- Services start -->
+                <div class="mb-6 md:w-96 lg:p-2 lg:m-2 lg:w-60">
+                    <h4 class="font-bold  text-blue-600 text-lg">Services</h4>
+                    <hr class="border-b-2 mt-2 mb-3">
+                    <ul class="list-inside listchange">
+                        <li><a href="/" class="text-slate-600 hover:underline"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Cloud
+                                Transformation Solutions</a></li>
+                        <li><a href="/" class="text-slate-600 hover:underline"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                AI and
+                                Cognitive Analytics</a></li>
+                        <li><a href="/" class="text-slate-600 hover:underline"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Enterprise
+                                Cyber Security</a></li>
+                        <li><a href="/" class="text-slate-600 hover:underline"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                IoT and
+                                Automation</a></li>
+                        <li><a href="/" class="text-slate-600 hover:underline"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Application
+                                Development and
+                                <span class="ml-3">Maintenance</span></a></li>
+                        <li><a href="/" class="text-slate-600 hover:underline"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                eBusiness
+                                Digital Solutions</a></li>
+                    </ul>
+                </div>
+                <!-- Services Ends-->
+            </div>
+            <!-- [div for medium screen setup: Grouping logo, 1st list, services] Ends here-->
+
+            <!-- div for medium screen setup: Grouping Recent Posts, Subscribe, Social Link-->
+            <div class="md:flex">
+                <!-- Recent Posts -->
+                <div class="mb-6 md:pr-7 lg:p-2 lg:m-2 lg:w-60">
+                    <h4 class="font-bold  text-blue-600 text-lg">Recent Posts</h4>
+                    <hr class="border-b-1 mt-2 mb-3">
+                    <ul class="listchange">
+                        <li><a href="/" class="text-slate-600 hover:underline"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>
+                                Designing a Cost
+                                Effective Cloud Solution for your
+                                business.</a>
+                        </li>
+                        <li><a href="/" class="text-slate-600 hover:underline"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Driving
+                                Innovation and <span class="ml-3"> Automation across an Enterprise
+                                </span> <span class="ml-3">to Growth Hacking.</span></a></li>
+                        <li><a href="/" class="text-slate-600 hover:underline"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                E-Commerce
+                                Services Guide: <span class="ml-3">Right from Proof-of-Concept
+                                    to</span>
+                                <span class="ml-3">simplementation.</span></a></li>
+                    </ul>
+                </div>
+                <!-- Recent Posts Ends -->
+
+                <!-- div for medium screen setup: Combining Subscribe, Social Link -->
+                <div class="md:pl-10 lg:p-2 lg:m-2 lg:w-60 xl:ml-16">
+                    <!-- Subscribe starts here -->
+                    <div class="mb-6">
+                        <h4 class="font-bold  text-blue-600 text-lg">Subscribe</h4>
+                        <hr class="border-b-1 mt-2 mb-3 md:w-96 lg:w-full">
+                        <div class="mt-7">
+                            <input type="text"
+                                class="bg-slate-300  w-full h-12 md:w-96 lg:w-full px-4 border border-transparent outline-none focus:border-[1px] rounded border-transition"
+                                id="email-input" placeholder="ENTER YOUR EMAIL">
+                            <p id="error-message" class="text-red-500 text-sm mt-2 hidden">Field is
+                                required</p>
+                            <button type="submit" id="subscribe-button"
+                                class="bg-[#011bab] w-full h-12 text-white mt-5 rounded md:w-96 lg:w-full">Subscribe</button>
+
+                        </div>
+                    </div>
+                    <!-- Subscribe Ends here -->
+
+                    <!-- Social Link starts -->
+                    <div>
+                        <h4 class="font-bold  text-blue-600 text-lg">Social Links</h4>
+                        <hr class="border-b-1 mt-2 md:w-96 lg:w-full">
+                        <div class="flex justify-center">
+                            <a target="_blank" href="http://www.linkedin.com" title="Follow us on Linkedin"><img
+                                    src="https://s.yimg.com/fz/api/res/1.2/oPmnuoHGZwDmud64pDGAcQ--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpdDtoPTI0MDtxPTgwO3c9MjQw/https://s.yimg.com/zb/imgv1/051c505f-dc29-3303-81b2-5828c6e3b2e2/t_500x300"
+                                    alt="LinkedIn" class="h-5 ml-2 mr-2 mt-2"></a>
+                            <a target="_blank" href="" title="Follow us on Facebook"><img
+                                    src="https://www.teahub.io/photos/full/11-115962_facebook-logo-png-transparent-background-facebook-png.png"
+                                    alt="Facebook" class="h-7 ml-2 mr-2 mt-1"></a>
+                            <a target="_blank" href="https://www.instagram.com/" title="Follow us on Instagram"><img
+                                    src="http://clipart-library.com/images_k/instagram-transparent-png/instagram-transparent-png-4.png"
+                                    alt="Instagram" class="h-7 mt-1"></a>
+                            <a target="_blank" href="" title="Follow us on Twitter"><img
+                                    src="https://www.freeiconspng.com/uploads/circle-twitter-logo-png-photo-13.png"
+                                    alt="Twitter" class="h-6 ml-2 mr-2 mt-[5px]"></a>
+
+                        </div>
+                    </div>
+                    <!-- Social Link End -->
+                </div>
+                <!-- [div for medium screen setup: Combining Subscribe, Social Link] Ends here-->
+            </div>
+            <!-- [div for medium screen setup: Grouping Recent Posts, Subscribe, Social Link] Ends here-->
+        </div>
+
+        <!-- copyright starts here-->
+        <div
+            class="container px-5 py-8 mx-auto flex bg-blue-900 text-white body-font items-center sm:flex-row flex-col">
+            <p class="text-sm text-center sm:text-left">© 2024 Mantrabytes Innovations — All rights
+                reserved</p>
+        </div>
+        <!-- copyright Ends here-->
+
+    </footer>
+
+    <!--footer end  -->
+
+    <script>
+
+        // footer js star
+        const emailInput = document.getElementById('email-input');
+        const subscribeButton = document.getElementById('subscribe-button');
+        const errorMessage = document.getElementById('error-message');
+
+        subscribeButton.addEventListener('click', function () {
+            if (emailInput.value.trim() === '') {
+                errorMessage.classList.remove('hidden');
+                emailInput.classList.add('error-border');
+            } else {
+                errorMessage.classList.add('hidden');
+                emailInput.classList.remove('error-border');
+                // Add form submission logic here if needed
+            }
+        });
+
+        // its js for input border transition
+        emailInput.addEventListener('focus', function () {
+            errorMessage.classList.add('hidden');
+            emailInput.classList.remove('error-border');
+        });
+
+        emailInput.addEventListener('blur', function () {
+            emailInput.classList.remove('error-border');
+        });
+        // footer js end 
+
+
+        // js start here for collapse button
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get all toggle buttons
+            const toggleButtons = document.querySelectorAll('.toggle-button');
+
+            // Function to hide all sections
+            const hideAllSections = () => {
+                const sections = document.querySelectorAll('.card .para');
+                sections.forEach(section => section.classList.add('hidden'));
+            };
+
+            // Add click event listener to each button
+            toggleButtons.forEach(button => {
+                button.addEventListener('click', (event) => {
+                    // Prevent click from propagating to document click listener
+                    event.stopPropagation();
+
+                    // Get the target section
+                    const target = button.getAttribute('data-target');
+                    const targetSection = document.getElementById(target);
+
+                    // Hide all sections
+                    hideAllSections();
+
+                    // Toggle the target section
+                    targetSection.classList.toggle('hidden');
+                });
+            });
+
+            // Add click event listener to document
+            document.addEventListener('click', (event) => {
+                const isClickInsideCard = event.target.closest('.card');
+
+                if (!isClickInsideCard) {
+                    hideAllSections();
+                }
+            });
+        });
+
+        // js end here for collapse button
+    </script>
+
+
+
+</body>
+
+</html>
