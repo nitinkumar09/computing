@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>soft-skill</title>
+    <!-- fontawesome icon link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- output file link in below -->
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<style>
+    /*cards design css start here */
+    body {
+        font-family: 'Poppins', 'Montserrat', sans-serif;
+    }
+
+    .card {
+        perspective: 1000px;
+    }
+
+    .card-inner {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 100%;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+    }
+
+    .card:hover .card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .card-front,
+    .card-back {
+        color: white !important;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-front {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .card-back {
+        transform: rotateY(180deg);
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    /*cards design css end here */
+
+
+
+    /*our client with testimonial css start*/
+    .clientbg {
+        background-image: linear-gradient(to right, #bf8cb5 0%, #bea6a6 50%, #b5d397 100%);
+    }
+
+    /*our client with testimonial css end*/
+
+
+
+    h1,
+    h2,
+    h3 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        /* Bold for headings */
+    }
+
+
+    .bggradientfooter {
+        background-image: linear-gradient(to right, #d4edbb 0%, #f2d3d3 50%, #ecb5d3 100%);
+
+    }
+
+
+
+
+
+
+    /*FOOTER start*/
+
+
+    .gradientbgcolor {
+        background-image: linear-gradient(to right, #bcca87 0%, #dfd5d5 50%, #b8d28f 100%);
+    }
+
+    /*Footer*/
+
+    /* this css for company image move left to right start here */
+    .marquee-container {
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .marquee {
+        display: inline-flex;
+        animation: marquee 20s linear infinite;
+    }
+
+    .marquee:hover {
+        animation-play-state: paused;
+    }
+
+    @keyframes marquee {
+        0% {
+            transform: translateX(0%);
+        }
+
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+    .bg-gradient {
+        background-image: linear-gradient(to right, #b3d8a3 0%, #e0e0e0 50%, #bdd2b2 100%);
+    }
+
+    .gradient-bg1 {
+        background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    }
+
+    /* this css for company image move left to right end here */
+    /*footer logo css*/
+    /* Styles for the animated logo */
+    #mantraLogo {
+        animation: changeColor 5s infinite alternate;
+        cursor: pointer;
+    }
+
+    /* Keyframes for color change animation */
+    @keyframes changeColor {
+        0% {
+            color: #FF9900;
+        }
+
+        25% {
+            color: #FF00FF;
+        }
+
+        50% {
+            color: #00FF00;
+        }
+
+        75% {
+            color: #00FFFF;
+        }
+
+        100% {
+            color: #FF0000;
+        }
+    }
+
+    /*COLLAPSE BUTTON*/
+    .hidden {
+        display: none;
+    }
+
+    .block {
+        display: block;
+    }
+
+    /* text change all page */
+    @media (max-width: 640px) {
+        .textxhange {
+            font-size: 12px !important;
+            font-family: 'Poppins', 'Montserrat', sans-serif;
+        }
+    }
+
+    /*softskill with mantrbytes start here*/
+
+    .bgsoftskill {
+        background-image: url('../images/softskill.webp') !important;
+    }
+
+    /*soft skill with mantrbytes start here*/
+
+    /*css for hover image than size incressing start here....*/
+    /* Adding transition effects */
+    .transition-transform {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .transition-z {
+        transition: z-index 0.3s ease-in-out;
+    }
+
+    .hover-z-10:hover {
+        z-index: 10;
+    }
+
+    .hover-scale-110:hover {
+        transform: scale(1.1);
+    }
+
+    /*css for hover image than size incressing end here....*/
+
+    /*three images widht set start here......*/
+    .width3 {
+        width: 80rem !important;
+    }
+
+    .width2 {
+        width: 65rem !important;
+    }
+
+    .width1 {
+        width: 55rem !important;
+    }
+
+    /*three images widht set start here......*/
+
+
+    @media(max-width:350px) {
+        .rotate {
+            margin: 0 -45px !important;
+            width: 19rem !important;
+        }
+    }
+</style>
+
+<body>
+
+    <!-- NAVBAR  START HERE-->
+    {{>navbar}}
+    <!-- NAVBAR END HERE-->
+
+    <!-- CONTACTUS HOME PAGE IMAGE START HERE -->
+    <div class="overflow-hidden w-full relative h-auto">
+        <div class="flex items-center absolute top-0 left-0 w-full h-full bg-black bg-opacity-30 hover:bg-opacity-10 ">
+        </div>
+        <img src="../images/softskill1.webp"
+            class="block w-full h-full sm:h-[40rem] r bg-cover bg-center bg-no-repeat bg-opacity-50"
+            alt="img not found">
+    </div>
+    <!-- CONTACTUS HOME PAGE IMAGE END HERE -->
+
+    {{!-- READ MORE BUTTON start here--}}
+    <section class="bg-gradient-to-r from-green-300 to-rose-300 border text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="sm:text-5xl text-3xl font-bold mb-4  text-blue-600">SOFT SKILL</h1>
+            {{!-- <h1 class="text-5xl font-bold mb-4 hover:text-rose-100 text-rose-300">Partner with
+                Mantrabytes
+            </h1>
+            --}}
+            <p class="text-sm mb-8 text-purple-500 text-slate-600">Mantrabytes' engineers are code whisperers, but we're
+                also masters of communication, collaboration, and creative problem-solving. We combine technical prowess
+                with soft skills like active listening and brainstorming to bridge the gap between brilliant ideas and
+                impactful results. At Mantrabytes, exceptional projects are built on a foundation of clear communication
+                and teamwork. Let's craft groundbreaking solutions together.
+            </p>
+            <a href="/aboutus"
+                class="hover:text-white border  text-blue-500 hover:bg-indigo-200 bg-rose-200 px-6 py-3 shadow-lg rounded-full text-lg font-semibold">Learn
+                More</a>
+        </div>
+    </section>
+
+    {{!-- READ MORE BUTTON end here--}}
+
+    <!-- full middle part  start here -->
+
+    <!-- new part -->
+    <section class="py-20 gradientbgcolor border">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="w-full">
+                    <h2 class="text-xl sm:text-2xl  font-bold mb-4 text-blue-600">Beyond the Code: Unveiling the
+                        Superpower of Soft Skills at Mantrabytes</h2>
+                    <p class="text-sm  text-slate-600">
+                        Mantrabytes: Where Code Meets Collaboration
+                        Forget the stereotype of the lone coder hunched over a keyboard. At Mantrabytes, we're building
+                        a new breed of tech heroes – those who wield not just coding prowess, but the superpowers of
+                        soft skills. Here, technical expertise is just the foundation. We're all about communication,
+                        collaboration, and creative problem-solving.
+
+                        Why are soft skills the secret sauce? It's simple. The best ideas in the world can fizzle out
+                        without clear communication, strong teamwork, and the ability to think outside the box. We
+                        believe in bridging the gap between brilliant minds and impactful results. We actively listen,
+                        brainstorm like champions, and translate complex technical concepts into clear, concise
+                        language.
+
+                        Here's what sets a Mantrabytes engineer apart:
+
+                        Communication Ninjas: We don't just write code, we explain it. We can translate complex
+                        technical jargon into language everyone understands, ensuring everyone's on the same page.
+                        Collaboration Champions: We thrive in a team environment. Brainstorming sessions are our
+                        battlegrounds, where we unleash creativity and tackle problems together. We believe the best
+                        solutions come from diverse perspectives working in harmony.
+                        Creative Problem-Solvers: Obstacles? We see them as opportunities to flex our mental muscles.
+                        Our engineers don't just follow instructions; they think critically, analyze situations, and
+                        come up with innovative approaches.
+                        Active Listeners: We understand the power of truly hearing someone. We pay attention to your
+                        needs, concerns, and ideas before crafting solutions. It's a two-way street at Mantrabytes.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- new part -->
+
+
+
+
+
+
+    <div class=" gradientbgcolor xl:pt-16 sm:pt-40 pt-8">
+
+        <div class="w-full px-4 pt-4 pb-1">
+
+            <!-- Cards Container -->
+            {{!-- four skill card start here--}}
+            <div class="flex flex-col my-16 sm:flex-row flex-wrap sm:-m-4 justify-center">
+                <h2 class="rotate text-xl sm:text-2xl font-bold mb-4 text-blue-600 w-full text-center">SOFT SKILLS AT
+                    MANTRABYTES</h2>
+                <!-- Communication Card -->
+                <div class="rotate p-4 mx-auto w-80 my-8 flex justify-center">
+                    <div class="w-full card p-8 justify-center items-center rounded items-center flex-col flex">
+                        <div class="card-inner">
+                            <div class="card-front p-5 flex items-center justify-center text-center">
+                                <h2 class="card-title text-lg text-blue-600 font-bold title-font mb-2">
+                                    Communication</h2>
+                            </div>
+                            <div class="card-back p-8 flex items-center justify-center text-center">
+                                <p class="text-sm">Effective communication skills are vital for
+                                    conveying ideas clearly and collaborating with team members.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Teamwork Card -->
+                <div class="rotate p-4 mx-auto w-80 my-8 flex justify-center">
+                    <div class="w-full card p-8 justify-center items-center rounded items-center flex-col flex">
+                        <div class="card-inner">
+                            <div class="card-front p-5 flex items-center justify-center text-center">
+                                <h2 class="card-title text-lg text-blue-600 font-bold title-font mb-2">
+                                    Teamwork</h2>
+                            </div>
+                            <div class="card-back p-8 flex items-center justify-center text-center">
+                                <p class="text-sm">Teamwork involves working collaboratively with others towards a
+                                    common goal, fostering a
+                                    positive team environment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Problem-Solving Card -->
+                <div class="rotate p-4 mx-auto w-80 my-8 flex justify-center">
+                    <div class="w-full card p-8 justify-center items-center rounded items-center flex-col flex">
+                        <div class="card-inner">
+                            <div class="card-front p-5 flex items-center justify-center text-center">
+                                <h2 class="card-title text-lg text-blue-600 font-bold title-font mb-2">
+                                    Problem-Solving</h2>
+                            </div>
+                            <div class="card-back p-8 flex items-center justify-center text-center">
+                                <p class="text-sm">Problem-solving skills enable you to identify issues, analyze
+                                    possible solutions, and
+                                    implement the best one.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Adaptability Card -->
+                <div class="rotate p-4 mx-auto w-80 my-8 flex justify-center">
+                    <div class="w-full card p-8 justify-center items-center rounded items-center flex-col flex">
+                        <div class="card-inner">
+                            <div class="card-front p-5 flex items-center justify-center text-center">
+                                <h2 class="card-title text-lg text-blue-600 font-bold title-font mb-2">
+                                    Adaptability</h2>
+                            </div>
+                            <div class="card-back p-8 flex items-center justify-center text-center">
+                                <p class="text-sm">Adaptability is crucial in a fast-paced environment, allowing you to
+                                    adjust to new challenges
+                                    and changes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            {{!-- four skill card start here--}}
+
+
+            {{!-- background image start here--}}
+            <div class="relative mt-8  h-96  bg-fixed bg-cover bg-center bgsoftskill">
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-50 hover:bg-opacity-30 flex items-center  justify-center xl:justify-between sm:px-40">
+                    <div class="text-white text-center  w-[600px] sm:w-[500px] ">
+                        <h1 class="sm:text-2xl text-xl font-bold mb-10 text-orange-600">Master the Art of Soft Skills at
+                            Mantrabytes</h1>
+                        <p class="">Elevate your tech career with strong
+                            communication, teamwork, and problem-solving abilities. Mantrabytes fosters a culture that
+                            empowers you to excel in both computer science and soft skills.</p>
+                    </div>
+                </div>
+            </div>
+            {{!-- background image end here--}}
+
+
+
+            {{!-- new part collpase button START HERE--}}
+
+            <div class="text-center my-20">
+                <h1 class="sm:text-3xl text-2xl font-bold mb-4  text-blue-600">
+                    Mastering the Craft: Essential Soft Skills for CS Success at Mantrabytes
+                </h1>
+                <div class="flex flex-wrap -m-4 container  mx-auto justify-center items-center p-4">
+
+                    <div class="p-4 w-full sm:w-1/2 lg:w-1/3">
+                        <div class="border shadow-lg h-full card1 card p-8 rounded gradient-bg toggle-button"
+                            data-target="tron-section">
+                            <button class="text-lg card-title text-blue-600 font-medium title-font mb-2 toggle-button"
+                                data-target="tron-section">Time Management: Balancing Efficiency and
+                                Innovation</button>
+                            <p id="tron-section"
+                                class="small-desc para mb-6 text-slate-600 text-sm hidden transition-all duration-300 ease-in-out">
+                                Juggling projects, deadlines, and keeping up with the latest trends can be a challenge.
+                                At Mantrabytes, we focus on developing strong time management skills. You'll learn to
+                                prioritize tasks effectively, set realistic goals, and manage your time efficiently.
+                                This ensures you deliver high-quality work while staying on top of your workload. Time
+                                management allows you to balance the demands of innovation with the need for efficiency,
+                                fostering a sustainable and productive work style.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="p-4 w-full sm:w-1/2 lg:w-1/3">
+                        <div class="border shadow-lg h-full card1 card p-8 rounded gradient-bg toggle-button"
+                            data-target="stellar-section">
+                            <button class="text-lg card-title text-blue-600 font-medium title-font mb-2 toggle-button"
+                                data-target="stellar-section">Self-Motivation: Fueling Your Passion for
+                                Technology</button>
+                            <p id="stellar-section"
+                                class="small-desc para mb-6 text-slate-600 text-sm hidden transition-all duration-300 ease-in-out">
+                                The world of computer science requires a constant drive to learn and improve. At
+                                Mantrabytes, we encourage self-motivation. You'll learn to set ambitious goals, take
+                                initiative, and persevere through challenges. By nurturing your intrinsic motivation,
+                                you'll maintain a long-lasting passion for technology. This fuels your desire to
+                                continuously explore, learn, and grow as a computer scientist, keeping you at the
+                                forefront of the field.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="p-4 w-full sm:w-1/2 lg:w-1/3">
+                        <div class="border shadow-lg h-full card1 card p-8 rounded gradient-bg toggle-button"
+                            data-target="chainlink-section">
+                            <button class="text-lg card-title text-blue-600 font-medium title-font mb-2 toggle-button"
+                                data-target="chainlink-section">Active Listening: Unlocking Deeper
+                                Understanding</button>
+                            <p id="chainlink-section"
+                                class="small-desc para mb-6 text-slate-600 text-sm hidden transition-all duration-300 ease-in-out">
+                                At Mantrabytes, we value active listening. This involves paying close attention, asking
+                                clarifying questions, and acknowledging the speaker's perspective. Strong active
+                                listening skills ensure you grasp requirements accurately, collaborate effectively with
+                                colleagues, and provide exceptional customer service.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="p-4 w-full sm:w-1/2 lg:w-1/3">
+                        <div class="border shadow-lg h-full card1 card p-8 rounded gradient-bg toggle-button"
+                            data-target="tezos-section">
+                            <button class="text-lg card-title text-blue-600 font-medium title-font mb-2 toggle-button"
+                                data-target="tezos-section">Attention to Detail: Delivering Excellence</button>
+                            <p id="tezos-section"
+                                class="small-desc para mb-6 text-slate-600 text-sm hidden transition-all duration-300 ease-in-out">
+                                A keen eye for detail is crucial in computer science. At Mantrabytes, we emphasize
+                                meticulousness. You'll develop the ability to identify and address even minor
+                                inconsistencies, ensuring the quality and functionality of your work. This attention to
+                                detail translates to fewer errors, a more polished product, and a higher level of user
+                                satisfaction.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="p-4 w-full sm:w-1/2 lg:w-1/3">
+                        <div class="border shadow-lg h-full card1 card p-8 rounded gradient-bg  toggle-button"
+                            data-target="iota-section">
+                            <button class="text-lg card-title text-blue-600 font-medium title-font mb-2  toggle-button"
+                                data-target="iota-section">Empathy: Designing with Users in Mind</button>
+                            <p id="iota-section"
+                                class="small-desc para mb-6 text-slate-600 text-sm hidden transition-all duration-300 ease-in-out">
+                                Understanding user needs is paramount in computer science. At Mantrabytes, we cultivate
+                                empathy. You'll learn to see things from the user's perspective, anticipating their
+                                challenges and desires. By incorporating empathy into your design process, you'll create
+                                user-centric solutions that are both functional and delightful to use.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="p-4 w-full sm:w-1/2 lg:w-1/3">
+                        <div class="border shadow-lg h-full card1 card p-8 rounded gradient-bg toggle-button"
+                            data-target="bsc-section">
+                            <button class="text-lg card-title text-blue-600 font-medium title-font mb-2 toggle-button"
+                                data-target="bsc-section"> Continuous Learning: A Growth Mindset for
+                                Success</button>
+                            <p id="bsc-section"
+                                class="small-desc para mb-6 text-slate-600 text-sm hidden transition-all duration-300 ease-in-out">
+                                The field of computer science is ever-evolving. At Mantrabytes, we champion continuous
+                                learning. You'll develop a growth mindset, embracing challenges as opportunities to
+                                learn and improve. This involves staying up-to-date with the latest trends, actively
+                                seeking new knowledge, and experimenting with innovative approaches. By fostering a love
+                                for continuous learning, you'll ensure a long and fulfilling career in computer science.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{!-- new part collpase button END HERE--}}
+
+
+
+
+            {{!-- full overview start here--}}
+            <section class="py-20 gradientbgcolor border">
+                <div class="container mx-auto px-6">
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="w-full">
+                            <h2 class="text-xl sm:text-2xl font-bold mb-4 text-blue-600">Code. Craft. Conquer:
+                                Unleashing the Power of Soft Skills for CS Mastery at Mantrabytes</h2>
+                            <p class="text-sm  text-slate-600">
+
+                                In the realm of computer science, exceptional coding skills are a foundational pillar.
+                                But at Mantrabytes, we believe the true path to mastery transcends mere technical
+                                prowess. It's the potent blend of these technical strengths with a cultivated set of
+                                soft skills that propels our developers to the forefront of the industry. We view soft
+                                skills as the secret weapon that unlocks innovation, fosters collaboration, and fuels
+                                long-term success in this dynamic field.
+
+                                Consider them the superpowers that elevate your code from lines on a screen to solutions
+                                that solve real-world problems. Our unique approach equips you with a comprehensive
+                                arsenal of soft skills, transforming you from a coder into a well-rounded tech
+                                professional.
+
+                                Imagine being able to articulate complex technical concepts with crystal clarity,
+                                captivating both technical and non-technical audiences. At Mantrabytes, you'll hone your
+                                communication skills, ensuring your ideas resonate and your solutions are understood by
+                                everyone involved. This fosters a collaborative spirit, where teamwork becomes the
+                                engine that drives innovation. You'll develop the ability to work seamlessly within
+                                diverse teams, leveraging the strengths of each member to tackle challenges from every
+                                angle.
+
+                                But problem-solving goes beyond simply fixing bugs. We cultivate a mindset that delves
+                                deeper, analyzing root causes and fostering creative solutions that extend far beyond
+                                the code itself. This translates to user experiences that are not just functional, but
+                                truly delightful.
+
+                                The ever-evolving nature of technology demands adaptability. At Mantrabytes, you'll
+                                embrace change as an opportunity for growth, readily absorbing new technologies and
+                                methodologies. This agility ensures you stay ahead of the curve, well-equipped to
+                                navigate the ever-shifting landscape of computer science.
+
+                                Time management becomes your secret weapon, allowing you to juggle projects, deadlines,
+                                and the constant influx of new knowledge. You'll master the art of prioritizing tasks,
+                                setting realistic goals, and managing your workload with laser focus. This ensures you
+                                deliver high-quality work while staying ahead of the game, fostering a sustainable and
+                                productive work style.
+
+                                The fire within – your intrinsic motivation – is what fuels your passion for technology.
+                                At Mantrabytes, we nurture this drive, empowering you to set ambitious goals, take
+                                initiative, and persevere through challenges. This unwavering self-motivation fuels your
+                                desire to continuously learn, explore, and grow as a computer scientist, keeping you at
+                                the forefront of the field.
+
+                                But it's not just about you. By actively listening to colleagues, clients, and users,
+                                you unlock a deeper understanding of their needs and perspectives. This empathy
+                                translates into user-centric solutions that resonate on a deeper level. It's the bridge
+                                between technical expertise and human-centered design.
+
+                                Finally, a keen eye for detail ensures excellence in everything you do. At Mantrabytes,
+                                you'll develop the meticulousness to identify and address even the most minor
+                                inconsistencies, resulting in a higher quality, more polished final product.
+
+                                This fusion of technical mastery and soft skill prowess is what empowers Mantrabytes
+                                developers to create groundbreaking solutions that transform the world. Join us, and
+                                embark on a journey to level up your code, not just through technical expertise, but by
+                                unlocking the true potential of your soft skills. </p>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            {{!-- full overview end here--}}
+
+
+
+
+
+            <!--    THIRD SECTION START  -->
+            <!-- New Page Content (Initially Hidden) -->
+            <div class="gradientbgcolor">
+                <div class="container mx-auto px-4 py-16">
+                    <!-- Grid layout for left and right columns -->
+                    <div class="flex flex-col space-y-8">
+                        <!-- Card 1 -->
+                        <div
+                            class="flex flex-col xl:flex-row items-center  sm:items-start space-x-4 p-4 gradientbgcolor shadow-lg hover:shadow-none border">
+                            <a href="/">
+                                <img src="../images/soft1.png" alt="Placeholder Image"
+                                    class="width1 h-52 rounded mb-12 sm:mb-1 sm:mt-1 transition-transform transition-z hover-z-10 hover-scale-110"></a>
+                            <div class="flex flex-col px-8">
+                                <h3 class="text-xl font-bold text-blue-600 mb-2 "> Collaborative Communication: Bridging
+                                    the Technical Divide</h3>
+                                <p class="text-slate-600 leading-7">The world of computer science doesn't exist in a
+                                    silo. At Mantrabytes, we foster strong collaborative communication skills. You'll
+                                    learn to articulate technical concepts clearly and concisely, bridging the gap
+                                    between developers, designers, clients, and other stakeholders. This includes
+                                    mastering written and verbal communication, actively listening to diverse
+                                    perspectives, and effectively presenting your ideas. By becoming a master
+                                    communicator, you'll ensure everyone is on the same page, leading to smoother
+                                    project execution and more innovative solutions.</p>
+                                <div class="max-w-24 my-4">
+                                    <span
+                                        class="cursor-pointer text-indigo-900 font-bold hover:text-orange-500 flex items-center space-x-3 max-w-30">
+                                        <a href="/"><span>Read
+                                                more&nbsp;</span><span class="text-orange-500"><i
+                                                    class="fas fa-chevron-right text-xs"></i></span></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div
+                            class="flex flex-col xl:flex-row items-center  sm:items-start space-x-4 p-4 gradientbgcolor  hover:shadow-none shadow-lg border">
+                            <a href="/">
+                                <img src="../images/soft2.jpg" alt="Placeholder Image"
+                                    class="width2 h-52 rounded mb-12 sm:mb-1 sm:mt-1 transition-transform transition-z hover-z-10 hover-scale-110"></a>
+                            <div class="flex flex-col px-8">
+                                <h3 class="text-xl font-bold text-blue-600 mb-2  ">Agile Problem-Solving: Embracing
+                                    Challenges with Adaptability</h3>
+                                <p class="text-slate-600 leading-7">The world of technology is constantly evolving, and
+                                    unexpected challenges are inevitable. At Mantrabytes, we equip you with agile
+                                    problem-solving skills. You'll develop the ability to approach problems critically,
+                                    analyze root causes, and think creatively to devise efficient solutions. This
+                                    involves embracing change, readily adapting to new technologies and methodologies,
+                                    and fostering a growth mindset that thrives on tackling complex issues. By being
+                                    agile and adaptable, you'll be well-equipped to navigate the ever-changing landscape
+                                    of computer science and deliver successful solutions, even in the face of unforeseen
+                                    hurdles.</p>
+                                <div class="max-w-24 my-4">
+                                    <span
+                                        class="cursor-pointer text-indigo-900 font-bold hover:text-orange-500 flex items-center space-x-3 max-w-30">
+                                        <a href=""><span>Read
+                                                more&nbsp;</span><span class="text-orange-500"><i
+                                                    class="fas fa-chevron-right text-xs"></i></span></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div
+                            class="flex flex-col xl:flex-row items-center  sm:items-start space-x-4 p-4 gradientbgcolor  hover:shadow-none border shadow-lg">
+                            <a href="/">
+                                <img src="../images/soft3.webp" alt="Placeholder Image"
+                                    class="width3 h-52 rounded mb-12 sm:mb-1 sm:mt-1 transition-transform transition-z hover-z-10 hover-scale-110"></a>
+                            <div class="flex flex-col px-8">
+                                <h3 class="text-xl font-bold text-blue-600 mb-2">Data-Driven Development: Insights that
+                                    Inform Innovation</h3>
+                                <p class="text-slate-600 leading-7">Data is the lifeblood of computer science, and at
+                                    Mantrabytes, we empower you to leverage it effectively. You'll develop the skills to
+                                    analyze data sets critically, identify trends and patterns, and translate these
+                                    insights into data-driven development practices. This involves understanding user
+                                    behavior, optimizing code for efficiency, and making informed decisions throughout
+                                    the development lifecycle. By integrating data into your workflow, you'll ensure
+                                    your solutions are not just technically sound but also address real user needs and
+                                    contribute to long-term success. Mastering these three soft skills will equip you to
+                                    collaborate seamlessly, adapt to evolving challenges, and make data-driven decisions
+                                    – all essential ingredients for a thriving career in computer science at
+                                    Mantrabytes.</p>
+                                <div class="max-w-24 my-4">
+                                    <span
+                                        class="cursor-pointer text-indigo-900 font-bold hover:text-orange-500 flex items-center space-x-3 max-w-30">
+                                        <a href="/"><span>Read
+                                                more&nbsp;</span><span class="text-orange-500"><i
+                                                    class="fas fa-chevron-right text-xs"></i></span></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End section of product feature -->
+                </div>
+            </div>
+            <!-- THIRD SECTION END -->
+
+
+
+            {{!-- start here for company imgages move --}}
+            <div class="marquee-container mb-12">
+                <div class="marquee mt-20">
+                    <div class="flex items-center justify-start">
+                        <img src="/images/html2.png" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                        <img src="/images/Solana.webp" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                        <img src="/images/php.png" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                        <img src="/images/bit.png" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                        <img src="/images/nextjss.png" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                        <img src="/images/etherum.png" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                        <img src="/images/sql.png" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                        <img src="/images/ripple.webp" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                        <img src="/images/html.png" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                        <img src="/images/litecoin.webp" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                        <img src="/images/react.png" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                        <img src="/images/card.png" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                        <img src="/images/express.png" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                        <img src="/images/pol.png" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                        <img src="/images/mongodb.png" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                        <img src="/images/eos.png" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                        <img src="/images/css.png" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                        <img src="/images/hyper.png" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                        <img src="/images/html.png" alt="Company Icon" class="sm:h-32 h-8 mx-4">
+                    </div>
+                </div>
+            </div>
+            {{!-- end here for company imgages move --}}
+
+
+            <!-- full middle part  end here -->
+
+
+
+            {{!-- signup page start here --}}
+            <div class="pt-8">
+                {{>signuppage}}
+            </div>
+            {{!-- signup page end here --}}
+
+
+            {{!-- Our client with Testimonial page start here --}}
+            <div class="pb-28 clientbg">
+                {{>clienttestimo}}
+            </div>
+            {{!-- Our client with Testimonial page end here --}}
+
+
+            {{!-- NetEdge At a Glance(video img) page start here --}}
+            {{>videoimg}}
+            {{!-- NetEdge At a Glance(video img) page end here --}}
+
+
+        </div>
+    </div>
+
+
+    <!--footer start  -->
+
+    <footer>
+        <!-- this div used to separate copyright div -->
+        <div
+            class="pl-6 pr-4 pt-16 pb-6 text-slate-600 leading-8 text-pretty bggradientfooter text-sm md:pl-16 lg:flex lg:justify-evenly lg:pl-4 lg:pr-4 lg:pt-16">
+            <!-- div for medium screen setup: Grouping logo, 1st list, services -->
+            <div class="md:flex md:mb-10">
+                <!-- div for medium screen setup: Grouping logo, 1st list -->
+                <div class="md:pr-52 lg:p-2 lg:m-2 lg:w-60">
+                    <!-- logo -->
+                    <!-- Animated Logo -->
+                    <h4 class="font-bold text-lg text-blue-600 relative z-10">MantraBytes</h4>
+                    <hr class="border-b-2 mt-2 mb-3">
+                    <!-- Animated Logo end -->
+                    <!-- logo end -->
+                    <!-- 1st list start -->
+                    <div class="mb-6">
+                        <ul class="list-inside listchange">
+                            <li><a href="/" class="text-slate-600 hover:underline"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    About Us</a></li>
+                            <li><a href="/" class="text-slate-600 hover:underline"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Value
+                                    Proposition</a></li>
+                            <li><a href="/" class="text-slate-600 hover:underline"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Methodology</a>
+                            </li>
+                            <li><a href="/" class="text-slate-600 hover:underline"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Team</a></li>
+                            <li><a href="/" class="text-slate-600 hover:underline"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Management</a>
+                            </li>
+                            <li><a href="/" class="text-slate-600 hover:underline"><i
+                                        class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                    Contact us</a></li>
+                        </ul>
+                    </div>
+                    <!-- 1st list end -->
+                </div>
+                <!-- [div for medium screen setup: Grouping logo, 1st list] Ends here -->
+
+                <!-- Services start -->
+                <div class="mb-6 md:w-96 lg:p-2 lg:m-2 lg:w-60">
+                    <h4 class="font-bold  text-blue-600 text-lg">Services</h4>
+                    <hr class="border-b-2 mt-2 mb-3">
+                    <ul class="list-inside listchange">
+                        <li><a href="/" class="text-slate-600 hover:underline"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Cloud
+                                Transformation Solutions</a></li>
+                        <li><a href="/" class="text-slate-600 hover:underline"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                AI and
+                                Cognitive Analytics</a></li>
+                        <li><a href="/" class="text-slate-600 hover:underline"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Enterprise
+                                Cyber Security</a></li>
+                        <li><a href="/" class="text-slate-600 hover:underline"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                IoT and
+                                Automation</a></li>
+                        <li><a href="/" class="text-slate-600 hover:underline"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Application
+                                Development and
+                                <span class="ml-3">Maintenance</span></a></li>
+                        <li><a href="/" class="text-slate-600 hover:underline"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                eBusiness
+                                Digital Solutions</a></li>
+                    </ul>
+                </div>
+                <!-- Services Ends-->
+            </div>
+            <!-- [div for medium screen setup: Grouping logo, 1st list, services] Ends here-->
+
+            <!-- div for medium screen setup: Grouping Recent Posts, Subscribe, Social Link-->
+            <div class="md:flex">
+                <!-- Recent Posts -->
+                <div class="mb-6 md:pr-7 lg:p-2 lg:m-2 lg:w-60">
+                    <h4 class="font-bold  text-blue-600 text-lg">Recent Posts</h4>
+                    <hr class="border-b-1 mt-2 mb-3">
+                    <ul class="listchange">
+                        <li><a href="/" class="text-slate-600 hover:underline"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>
+                                Designing a Cost
+                                Effective Cloud Solution for your
+                                business.</a>
+                        </li>
+                        <li><a href="/" class="text-slate-600 hover:underline"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                Driving
+                                Innovation and <span class="ml-3"> Automation across an Enterprise
+                                </span> <span class="ml-3">to Growth Hacking.</span></a></li>
+                        <li><a href="/" class="text-slate-600 hover:underline"><i
+                                    class="fa fa-chevron-right text-orange-600"></i>&nbsp;
+                                E-Commerce
+                                Services Guide: <span class="ml-3">Right from Proof-of-Concept
+                                    to</span>
+                                <span class="ml-3">simplementation.</span></a></li>
+                    </ul>
+                </div>
+                <!-- Recent Posts Ends -->
+
+                <!-- div for medium screen setup: Combining Subscribe, Social Link -->
+                <div class="md:pl-10 lg:p-2 lg:m-2 lg:w-60 xl:ml-16">
+                    <!-- Subscribe starts here -->
+                    <div class="mb-6">
+                        <h4 class="font-bold  text-blue-600 text-lg">Subscribe</h4>
+                        <hr class="border-b-1 mt-2 mb-3 md:w-96 lg:w-full">
+                        <div class="mt-7">
+                            <input type="text"
+                                class="bg-slate-300  w-full h-12 md:w-96 lg:w-full px-4 border border-transparent outline-none focus:border-[1px] rounded border-transition"
+                                id="email-input" placeholder="ENTER YOUR EMAIL">
+                            <p id="error-message" class="text-red-500 text-sm mt-2 hidden">Field is
+                                required</p>
+                            <button type="submit" id="subscribe-button"
+                                class="bg-[#011bab] w-full h-12 text-white mt-5 rounded md:w-96 lg:w-full">Subscribe</button>
+
+                        </div>
+                    </div>
+                    <!-- Subscribe Ends here -->
+
+                    <!-- Social Link starts -->
+                    <div>
+                        <h4 class="font-bold  text-blue-600 text-lg">Social Links</h4>
+                        <hr class="border-b-1 mt-2 md:w-96 lg:w-full">
+                        <div class="flex justify-center">
+                            <a target="_blank" href="http://www.linkedin.com" title="Follow us on Linkedin"><img
+                                    src="https://s.yimg.com/fz/api/res/1.2/oPmnuoHGZwDmud64pDGAcQ--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpdDtoPTI0MDtxPTgwO3c9MjQw/https://s.yimg.com/zb/imgv1/051c505f-dc29-3303-81b2-5828c6e3b2e2/t_500x300"
+                                    alt="LinkedIn" class="h-5 ml-2 mr-2 mt-2"></a>
+                            <a target="_blank" href="" title="Follow us on Facebook"><img
+                                    src="https://www.teahub.io/photos/full/11-115962_facebook-logo-png-transparent-background-facebook-png.png"
+                                    alt="Facebook" class="h-7 ml-2 mr-2 mt-1"></a>
+                            <a target="_blank" href="https://www.instagram.com/" title="Follow us on Instagram"><img
+                                    src="http://clipart-library.com/images_k/instagram-transparent-png/instagram-transparent-png-4.png"
+                                    alt="Instagram" class="h-7 mt-1"></a>
+                            <a target="_blank" href="" title="Follow us on Twitter"><img
+                                    src="https://www.freeiconspng.com/uploads/circle-twitter-logo-png-photo-13.png"
+                                    alt="Twitter" class="h-6 ml-2 mr-2 mt-[5px]"></a>
+
+                        </div>
+                    </div>
+                    <!-- Social Link End -->
+                </div>
+                <!-- [div for medium screen setup: Combining Subscribe, Social Link] Ends here-->
+            </div>
+            <!-- [div for medium screen setup: Grouping Recent Posts, Subscribe, Social Link] Ends here-->
+        </div>
+
+        <!-- copyright starts here-->
+        <div
+            class="container px-5 py-8 mx-auto flex bg-blue-900 text-white body-font items-center sm:flex-row flex-col">
+            <p class="text-sm text-center sm:text-left">© 2024 Mantrabytes Innovations — All rights
+                reserved</p>
+        </div>
+        <!-- copyright Ends here-->
+
+    </footer>
+
+    <!--footer end  -->
+
+    <script>
+
+        // footer js star
+        const emailInput = document.getElementById('email-input');
+        const subscribeButton = document.getElementById('subscribe-button');
+        const errorMessage = document.getElementById('error-message');
+
+        subscribeButton.addEventListener('click', function () {
+            if (emailInput.value.trim() === '') {
+                errorMessage.classList.remove('hidden');
+                emailInput.classList.add('error-border');
+            } else {
+                errorMessage.classList.add('hidden');
+                emailInput.classList.remove('error-border');
+                // Add form submission logic here if needed
+            }
+        });
+
+        // its js for input border transition
+        emailInput.addEventListener('focus', function () {
+            errorMessage.classList.add('hidden');
+            emailInput.classList.remove('error-border');
+        });
+
+        emailInput.addEventListener('blur', function () {
+            emailInput.classList.remove('error-border');
+        });
+        // footer js end 
+
+
+        // js start here for collapse button
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get all toggle buttons
+            const toggleButtons = document.querySelectorAll('.toggle-button');
+
+            // Function to hide all sections
+            const hideAllSections = () => {
+                const sections = document.querySelectorAll('.para');
+                sections.forEach(section => section.classList.add('hidden'));
+            };
+
+            // Add click event listener to each button
+            toggleButtons.forEach(button => {
+                button.addEventListener('click', (event) => {
+                    // Prevent click from propagating to document click listener
+                    event.stopPropagation();
+
+                    // Get the target section
+                    const target = button.getAttribute('data-target');
+                    const targetSection = document.getElementById(target);
+
+                    // Toggle the target section
+                    if (targetSection.classList.contains('hidden')) {
+                        hideAllSections();
+                        targetSection.classList.remove('hidden');
+                    } else {
+                        targetSection.classList.add('hidden');
+                    }
+                });
+            });
+
+            // Add click event listener to document
+            document.addEventListener('click', () => {
+                hideAllSections();
+            });
+        });
+
+        // js end here for collapse button
+    </script>
+
+
+
+</body>
+
+</html>

@@ -76,6 +76,12 @@ app.get('/infrastructure-management', (req, res) => {
 app.get('/fullstack', (req, res) => {
     res.render('fullstack');
 });
+app.get('/training/soft-skill', (req, res) => {
+    res.render('softskill');
+});
+app.get('/ai-tools-training', (req, res) => {
+    res.render('aitoolstraining');
+});
 app.get('/portfolio', (req, res) => {
     res.render('portfolio');
 });
